@@ -10,11 +10,14 @@ $logo-back: #4A89DC;
 $logo-front: #5D9CEC;
 $logo-text: #ffffff;
 
-$page-background-c1: #efefea;
-$page-background-c2: #fff;
+$page-background-c1: #fafafa;
+$page-background-c2: #fafafa;
 
-$header-background-c1: #434A54;
-$header-background-c2: #656D78;
+$header-background-c1: #fff;
+$header-background-c2: #fff;
+
+$header-border-size: 1px;
+$header-border-color: #edeeee;
 
 $footer-background-c1: $header-background-c1;
 $footer-background-c2: $header-background-c2;
@@ -22,7 +25,7 @@ $footer-background-c2: $header-background-c2;
 $button-background-c1: #4A89DC;
 $button-background-c2: #5D9CEC;
 
-$topbar-link-color: #fff;
+$topbar-link-color: #4a4a5b;
 $topbar-link-color-hover: #fff;
 $topbar-link-color-active: #fff;
 $topbar-link-font-size: em-calc(14);
