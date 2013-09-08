@@ -1,0 +1,44 @@
+.side-nav-bar {
+  padding: 10px;
+  box-shadow: 5px -1px 9px -7px #888;
+  text-align: center;
+}
+
+.brand {
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+
+.brand img {
+  max-width: 190px;
+}
+
+.side-nav {
+  list-style-type: none;
+  text-align: center;
+}
+
+/* Social list */
+.social-list {
+  margin: 0 auto;
+  li {
+    a em {
+      font-size: 25px;
+    }
+  }
+}
+
+
+@media #{$small-max} {
+  .brand {
+    width: auto;
+  }
+  .brand img {
+    max-width: 150px;
+  }
+  .side-nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

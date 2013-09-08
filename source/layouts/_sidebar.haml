@@ -1,0 +1,34 @@
+.brand
+  %a{ :href => "/"}
+    = image_tag src="brand.svg"
+%ul.side-nav
+  %li
+    = link_to 'Home', '/'
+  %li
+    = link_to 'Portfolio', '/Portfolio'
+  %li
+    = link_to 'Sketches', '/Sketches'
+  %li
+    = link_to "Photos", "/Photos"
+  %li
+    = link_to "Blog", "/Blog"
+  %li
+    = link_to "Contact", "/Contact"
+
+.side-social
+  %ul.inline-list.social-list
+    %li
+      %a{ :href => "http://fb.com/websiddu", :target => "_blank"}
+        %em.icon-facebook-sign
+    %li
+      %a{ :href => "http://twitter.com/websiddu", :target => "_blank"}
+        %em.icon-twitter-sign
+    %li
+      %a{ :href => "http://linkdin.com/websiddu", :target => "_blank"}
+        %em.icon-linkedin-sign
+    %li
+      %a{ :href => "http://github.com/websiddu", :target => "_blank"}
+        %em.icon-github-sign
+    %li
+      %a{ :href => "http://fb.com/websiddu", :target => "_blank"}
+        %em.icon-instagram

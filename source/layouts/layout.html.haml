@@ -8,34 +8,41 @@
 %html{lang: 'en', class: 'no-js'}
   /<![endif]
   %head
-    %title #{data.page.title || "The Middleman"}
-    %meta(http-equiv="content-type" content="text/html" charset="utf-8")
-    %meta(http-equiv="x-ua-compatible" content="ie=edge,chrome=1")
-    %meta(name="description" content="")
-    %meta(name="author" content="")
+  %title #{data.page.title || "Siddhartha Gudipati"}
+  %meta(http-equiv="content-type" content="text/html" charset="utf-8")
+  %meta(http-equiv="x-ua-compatible" content="ie=edge,chrome=1")
+  %meta(name="description" content="")
+  %meta(name="author" content="")
 
-    -# Standard viewport tag to set the viewport to the device's width,
-    -# Android 2.3 devices need this so 100% width works properly and
-    -# doesn't allow children to blow up the viewport width
-    %meta{content: "initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width", name: "viewport"}
+  -# Standard viewport tag to set the viewport to the device's width,
+  -# Android 2.3 devices need this so 100% width works properly and
+  -# doesn't allow children to blow up the viewport width
+  %meta{content: "initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width", name: "viewport"}
 
-    -# Fix for iPhone 5 fullscreen web apps
-    %meta(name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)")
-    %meta(name='apple-mobile-web-app-capable' content='yes')
-    %meta(name='apple-mobile-web-app-status-bar-style' content='translucent-black')
+  -# Fix for iPhone 5 fullscreen web apps
+  %meta(name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)")
+  %meta(name='apple-mobile-web-app-capable' content='yes')
+  %meta(name='apple-mobile-web-app-status-bar-style' content='translucent-black')
 
-    -# App Icons
-    %link(rel="shortcut icon" href="/images/favicon.ico")
-    %link(rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png")
-    %link(rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57-precomposed.png")
-    %link(rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png")
-    %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png")
+  -# App Icons
+  %link(rel="shortcut icon" href="/images/favicon.ico")
+  %link(rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png")
+  %link(rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57-precomposed.png")
+  %link(rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png")
+  %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png")
 
-    -# Stylesheets
-    = stylesheet_link_tag 'application'
+  -# Stylesheets
+  = stylesheet_link_tag 'application'
+  = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Arvo:400,700,400italic'
+  = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400,600'
   %body{class: current_page.data.body_class || 'page'}
-    = yield
-    -# Javascripts
-    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
-    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
-    = javascript_include_tag 'application'
+    .row
+      .large-3.columns.side-nav-bar
+        = render :haml, "layouts/_sidebar"
+      .large-9.columns
+        = yield
+
+  -# Javascripts
+  = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
+  = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
+  = javascript_include_tag 'application'
