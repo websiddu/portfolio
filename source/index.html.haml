@@ -5,12 +5,21 @@ body_class: index
 
 .landing-page
   .l-dc-area.row
-    .l-design-trigger.large-4.small-4.columns
-      = image_tag("design.png")
-    .l-avatar-default.large-4.small-4.columns
-      = image_tag("sid-default.png")
-    .l-code-trigger.large-4.small-4.columns
-      = image_tag("code.png")
+    .l-design-trigger.large-4.small-4.columns.animated
+      = image_tag("design.png", :class=>"js_design_trigger animated")
+      %p.l-d-d.animated
+        = "I design pretty websites with "
+        %del photoshop
+        = "creativity. I design usable wire-frames with"
+        %del Axure
+        = " common sense. So I am a designer."
+
+    .l-avatar-default.large-4.small-4.columns.animated
+      = image_tag("sid-default.png", :class=>"js_default_trigger")
+    .l-code-trigger.large-4.small-4.columns.animated
+      = image_tag("code.png", :class=>"js_code_trigger")
+      %p.l-d-d
+        = "I code optimal and awesome css, html and javascript, Occasionally I code ruby, python and android. So I am a frontend developer."
   .l-dc-intro
     %h2.l-n Namasthe!
     %h3.l-d

@@ -1,19 +1,28 @@
+.landing-page * {
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
 .landing-page {
   margin-top: 80px;
 }
 .l-avatar-default {
+  cursor: pointer;
   text-align: center;
 }
 .l-design-trigger {
+  cursor: pointer;
   text-align: right;
   margin-top: 50px;
-
 }
 .l-code-trigger {
+  cursor: pointer;
   text-align: left;
-  margin-top: 56px;
+  margin-top: 50px;
 }
-
+.l-d-d {
+  color: #aaa;
+  font-size: 14px;
+}
 .l-dc-intro {
 
 }
