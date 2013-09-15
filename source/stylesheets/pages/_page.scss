@@ -18,3 +18,32 @@
     margin: 10px 0 0 40px;
   }
 }
+
+.des-dev {
+  position: relative;
+  padding: 10px 40px;
+}
+
+#des_dev {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  margin-left: -165px;
+}
+
+
+@media #{$small-max} {
+  .des-dev  {
+    text-align: center;
+    .columns {
+      text-align: left;
+    }
+  }
+#des_dev {
+  position: static;
+  text-align: center;
+  left: 0;
+  margin-left: 0;
+}
+
+}
