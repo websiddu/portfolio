@@ -1,0 +1,20 @@
+.page {
+  padding: 20px 10px;
+}
+
+.page-heading {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.page-sub-heading {
+  font-size: 18px;
+  font-weight: normal;
+  color: $muted-color;
+}
+
+.chart {
+  canvas {
+    margin: 10px 0 0 40px;
+  }
+}

@@ -11,25 +11,29 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
+
+body, .animated, * { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
+  backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 .animated {
-  -webkit-animation-duration: 1s;
-     -moz-animation-duration: 1s;
-       -o-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-     -moz-animation-fill-mode: both;
-       -o-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
+  animation-fill-mode: both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000;
 
-.animated.hinge {
-  -webkit-animation-duration: 2s;
-     -moz-animation-duration: 2s;
-       -o-animation-duration: 2s;
-          animation-duration: 2s;
+  -o-animation-fill-mode: both;
+  -o-transform: translate3d(0, 0, 0);
+  -o-perspective: 1000;
+
+  -moz-animation-fill-mode: both;
+  -moz-transform: translate3d(0, 0, 0);
+  -moz-perspective: 1000;
+
+  -webkit-animation-fill-mode: both;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-perspective: 1000;
 }
 
 @-webkit-keyframes flash {
@@ -277,11 +281,11 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 }
 @-webkit-keyframes flip {
   0% {
-    -webkit-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -webkit-transform: perspective(400px) rotateY(0);
     -webkit-animation-timing-function: ease-out;
   }
   40% {
-    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg);
     -webkit-animation-timing-function: ease-out;
   }
   50% {
@@ -289,21 +293,21 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
     -webkit-animation-timing-function: ease-in;
   }
   80% {
-    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);
+    -webkit-transform: perspective(400px) rotateY(360deg) scale(.95);
     -webkit-animation-timing-function: ease-in;
   }
   100% {
-    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -webkit-transform: perspective(400px) scale(1);
     -webkit-animation-timing-function: ease-in;
   }
 }
 @-moz-keyframes flip {
   0% {
-    -moz-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -moz-transform: perspective(400px) rotateY(0);
     -moz-animation-timing-function: ease-out;
   }
   40% {
-    -moz-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    -moz-transform: perspective(400px) translateZ(150px) rotateY(170deg);
     -moz-animation-timing-function: ease-out;
   }
   50% {
@@ -311,21 +315,21 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
     -moz-animation-timing-function: ease-in;
   }
   80% {
-    -moz-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);
+    -moz-transform: perspective(400px) rotateY(360deg) scale(.95);
     -moz-animation-timing-function: ease-in;
   }
   100% {
-    -moz-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -moz-transform: perspective(400px) scale(1);
     -moz-animation-timing-function: ease-in;
   }
 }
 @-o-keyframes flip {
   0% {
-    -o-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -o-transform: perspective(400px) rotateY(0);
     -o-animation-timing-function: ease-out;
   }
   40% {
-    -o-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    -o-transform: perspective(400px) translateZ(150px) rotateY(170deg);
     -o-animation-timing-function: ease-out;
   }
   50% {
@@ -333,21 +337,21 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
     -o-animation-timing-function: ease-in;
   }
   80% {
-    -o-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);
+    -o-transform: perspective(400px) rotateY(360deg) scale(.95);
     -o-animation-timing-function: ease-in;
   }
   100% {
-    -o-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -o-transform: perspective(400px) scale(1);
     -o-animation-timing-function: ease-in;
   }
 }
 @keyframes flip {
   0% {
-    transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    transform: perspective(400px) rotateY(0);
     animation-timing-function: ease-out;
   }
   40% {
-    transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    transform: perspective(400px) translateZ(150px) rotateY(170deg);
     animation-timing-function: ease-out;
   }
   50% {
@@ -355,11 +359,11 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
     animation-timing-function: ease-in;
   }
   80% {
-    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);
+    transform: perspective(400px) rotateY(360deg) scale(.95);
     animation-timing-function: ease-in;
   }
   100% {
-    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    transform: perspective(400px) scale(1);
     animation-timing-function: ease-in;
   }
 }
@@ -3184,3 +3188,227 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
     -o-animation-duration: 0.25s;
     animation-duration: 0.25s;
 }
+
+/* originally authored by Angelo Rohit - https://github.com/angelorohit */
+
+@-webkit-keyframes wiggle {
+    0% { -webkit-transform: skewX(9deg); }
+    10% { -webkit-transform: skewX(-8deg); }
+    20% { -webkit-transform: skewX(7deg); }
+    30% { -webkit-transform: skewX(-6deg); }
+    40% { -webkit-transform: skewX(5deg); }
+    50% { -webkit-transform: skewX(-4deg); }
+    60% { -webkit-transform: skewX(3deg); }
+    70% { -webkit-transform: skewX(-2deg); }
+    80% { -webkit-transform: skewX(1deg); }
+    90% { -webkit-transform: skewX(0deg); }
+  100% { -webkit-transform: skewX(0deg); }
+}
+
+@-moz-keyframes wiggle {
+    0% { -moz-transform: skewX(9deg); }
+    10% { -moz-transform: skewX(-8deg); }
+    20% { -moz-transform: skewX(7deg); }
+    30% { -moz-transform: skewX(-6deg); }
+    40% { -moz-transform: skewX(5deg); }
+    50% { -moz-transform: skewX(-4deg); }
+    60% { -moz-transform: skewX(3deg); }
+    70% { -moz-transform: skewX(-2deg); }
+    80% { -moz-transform: skewX(1deg); }
+    90% { -moz-transform: skewX(0deg); }
+  100% { -moz-transform: skewX(0deg); }
+}
+
+@-o-keyframes wiggle {
+    0% { -o-transform: skewX(9deg); }
+    10% { -o-transform: skewX(-8deg); }
+    20% { -o-transform: skewX(7deg); }
+    30% { -o-transform: skewX(-6deg); }
+    40% { -o-transform: skewX(5deg); }
+    50% { -o-transform: skewX(-4deg); }
+    60% { -o-transform: skewX(3deg); }
+    70% { -o-transform: skewX(-2deg); }
+    80% { -o-transform: skewX(1deg); }
+    90% { -o-transform: skewX(0deg); }
+  100% { -o-transform: skewX(0deg); }
+}
+
+@keyframes wiggle {
+    0% { transform: skewX(9deg); }
+    10% { transform: skewX(-8deg); }
+    20% { transform: skewX(7deg); }
+    30% { transform: skewX(-6deg); }
+    40% { transform: skewX(5deg); }
+    50% { transform: skewX(-4deg); }
+    60% { transform: skewX(3deg); }
+    70% { transform: skewX(-2deg); }
+    80% { transform: skewX(1deg); }
+    90% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }
+}
+
+.animated.wiggle {
+    -webkit-animation-name: wiggle;
+    -moz-animation-name: wiggle;
+    -o-animation-name: wiggle;
+    animation-name: wiggle;
+
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+.animated.wiggle {
+    -webkit-animation-duration: 0.75s;
+    -moz-animation-duration: 0.75s;
+    -o-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+}
+
+
+
+/*
+
+A couple of additions for the animo.js library
+
+Daniel Raftery <@ThirvingKings>
+
+*/
+
+.animated.fade {
+  -webkit-animation-name: fade;
+  -moz-animation-name: fade;
+  -o-animation-name: fade;
+  animation-name: fade;
+}
+
+@-webkit-keyframes fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-moz-keyframes fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animated.appear {
+  -webkit-animation-name: appear;
+  -moz-animation-name: appear;
+  -o-animation-name: appear;
+  animation-name: appear;
+}
+
+@-webkit-keyframes appear {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes appear {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes appear {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes appear {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animated.spinner {
+  -webkit-animation-name: spinner;
+  -moz-animation-name: spinner;
+  -o-animation-name: spinner;
+  animation-name: spinner;
+}
+
+@-webkit-keyframes spinner {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes spinner {
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg); }
+}
+
+@-o-keyframes spinner {
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(360deg); }
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animated.twirlIn {
+  -webkit-animation-name: twirlIn;
+  -moz-animation-name: twirlIn;
+  -o-animation-name: twirlIn;
+  animation-name: twirlIn;
+}
+
+@-webkit-keyframes twirlIn {
+  0% { -webkit-transform: rotate3d( 80,-70,10,180deg ); }
+  100% { -webkit-transform: rotate3d( 0,0,0,0deg ); }
+}
+
+@-moz-keyframes twirlIn {
+  0% { -moz-transform: rotate3d( 80,70,10,180deg ); }
+  100% { -moz-transform: rotate3d( 0,0,0,0deg ); }
+}
+
+@-o-keyframes twirlIn {
+  0% { -o-transform: rotate3d( 80,70,10,180deg ); }
+  100% { -o-transform: rotate3d( 0,0,0,0deg ); }
+}
+
+@keyframes twirlIn {
+  0% { transform: rotate3d( 0,0,0,0deg ); }
+  100% { transform: rotate3d( 80,70,10,180deg ); }
+}
+
+.animated.twirlOut {
+  -webkit-animation-name: twirlOut;
+  -moz-animation-name: twirlOut;
+  -o-animation-name: twirlOut;
+  animation-name: twirlOut;
+}
+
+@-webkit-keyframes twirlOut {
+  0% { -webkit-transform: rotate3d( 0,0,0,0deg ); }
+  100% { -webkit-transform: rotate3d( 80,-70,10,180deg );  }
+}
+
+@-moz-keyframes twirlOut {
+  0% { -moz-transform: rotate3d( 0,0,0,0deg ); }
+  100% { -moz-transform: rotate3d( 80,70,10,180deg ); }
+}
+
+@-o-keyframes twirlOut {
+  0% { -o-transform: rotate3d( 0,0,0,0deg ); }
+  100% { -o-transform: rotate3d( 80,70,10,180deg ); }
+}
+
+@keyframes twirlOut {
+  0% { transform: rotate3d( 0,0,0,0deg ); }
+  100% { transform: rotate3d( 80,70,10,180deg ); }
+}
+
+

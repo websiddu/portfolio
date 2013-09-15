@@ -5,7 +5,7 @@ body_class: index
 
 .landing-page
   .l-dc-area.row
-    .l-design-trigger.large-4.small-4.columns.animated
+    .l-design.large-4.small-4.columns.animated
       = image_tag("design.png", :class=>"js_design_trigger animated")
       %p.l-d-d.animated
         = "I design pretty websites with "
@@ -14,12 +14,16 @@ body_class: index
         %del Axure
         = " common sense. So I am a designer."
 
-    .l-avatar-default.large-4.small-4.columns.animated
+    .l-avatar.large-4.small-4.columns.animated
       = image_tag("sid-default.png", :class=>"js_default_trigger")
-    .l-code-trigger.large-4.small-4.columns.animated
+      = image_tag("sid-design.png", :class=>"js_avatar_design hide")
+      = image_tag("sid-code.png", :class=>"js_avatar_code hide")
+
+    .l-code.large-4.small-4.columns.animated
       = image_tag("code.png", :class=>"js_code_trigger")
       %p.l-d-d
-        = "I code optimal and awesome css, html and javascript, Occasionally I code ruby, python and android. So I am a frontend developer."
+        = "I write elegant and efficient css, html and javascript, Occasionally I code ruby, python and android. So I am a frontend developer."
+
   .l-dc-intro
     %h2.l-n Namasthe!
     %h3.l-d

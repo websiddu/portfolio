@@ -1,31 +1,131 @@
-$design = $('.js_design_trigger')
-$design_parent = $design.parent()
+$('.l-design').hoverIntent ->
+  $('.l-code').css('opacity', 0.1)
+  $('.js_avatar_design').hide()
+  $('.js_avatar_code').hide()
+  $('.js_default_trigger').stop().show().animo
+    animation: "fadeOutUp"
+    duration: 0.5
+    keep: true
+  , ->
+    $('.js_default_trigger').hide()
+    $('.js_avatar_design').stop().show().animo
+      animation: "fadeInDown"
+      duration: 0.5
+      keep: true
+    , ->
+      $('.js_avatar_design').show()
+      $('.js_default_trigger').hide()
+      $('.js_avatar_code').hide()
+, ->
+  $('.l-code').css('opacity', 1)
+  $('.js_avatar_design').hide()
+  $('.js_avatar_code').hide()
+  $('.js_avatar_design').stop().show().animo
+    animation: "fadeOutUp"
+    duration: 0.5
+    keep: true
+  , ->
+    $('.js_avatar_design').hide()
+    $('.js_default_trigger').stop().show().animo
+      animation: "fadeInDown"
+      duration: 0.5
+      keep: true
+    , ->
+      $('.js_avatar_design').hide()
+      $('.js_default_trigger').show()
+      $('.js_avatar_code').hide()
 
-$code = $('.js_code_trigger')
-$code_parent = $code.parent()
 
-$default = $('.js_default_trigger')
-$default_parent = $default.parent()
 
-$('.l-design-trigger').on 'mouseenter', ->
-  $('.l-code-trigger').css('opacity', 0.1)
-$('.l-design-trigger').on 'mouseleave', ->
-  $('.l-code-trigger').css('opacity', 1)
-  # $code_parent.addClass('fadeOutRightBig')
-  # $('.l-design-trigger').find("p.l-d-d").addClass("fadeInBottomBig")
-  # setTimeout(->
-  #   $code_parent.hide()
-  #   $default_parent.removeClass("large-4 small-4").addClass('large-3 small-3')
-  #   $design_parent.removeClass("large-4 small-4").addClass('large-6 small-6')
-  #   $('.l-design-trigger').find("p.l-d-d").show()
-  # , 100
-  # )
+$('.l-code').hoverIntent ->
+  $('.l-design').css('opacity', 0.1)
+  $('.js_avatar_code').hide()
+  $('.js_avatar_design').hide()
+  $('.js_default_trigger').stop().show().animo
+    animation: "fadeOutUp"
+    duration: 0.5
+    keep: true
+  , ->
+    $('.js_default_trigger').hide()
+    $('.js_avatar_code').stop().show().animo
+      animation: "fadeInDown"
+      duration: 0.5
+      keep: true
+    , ->
+      $('.js_avatar_design').hide()
+      $('.js_default_trigger').hide()
+      $('.js_avatar_code').show()
+, ->
+  $('.l-design').css('opacity', 1)
+  $('.js_avatar_code').hide()
+  $('.js_avatar_code').stop().show().animo
+    animation: "fadeOutUp"
+    duration: 0.5
+    keep: true
+  , ->
+    $('.js_avatar_code').hide()
+    $('.js_avatar_design').hide()
+    $('.js_default_trigger').stop().show().animo
+      animation: "fadeInDown"
+      duration: 0.5
+      keep: true
+    , ->
+      $('.js_avatar_design').hide()
+      $('.js_default_trigger').show()
+      $('.js_avatar_code').hide()
 
-# $('.l-design-trigger').on 'mouseleave', ->
-#   $default_parent.addClass("large-4 small-4").removeClass('large-3 small-3')
-#   $design_parent.addClass("large-4 small-4").removeClass('large-6 small-6')
-#   $code_parent.removeClass('fadeOutRightBig').addClass('fadeInRightBig')
-#   setTimeout(->
-#     $code_parent.show()
-#   , 100
-#   )
+
+data = [
+  value: 30
+  color: "#F7464A"
+,
+  value: 50
+  color: "#E2EAE9"
+,
+  value: 100
+  color: "#D4CCC5"
+,
+  value: 40
+  color: "#949FB1"
+,
+  value: 120
+  color: "#4D5360"
+]
+
+
+options =
+
+  #Boolean - Whether we should show a stroke on each segment
+  segmentShowStroke: true
+
+  #String - The colour of each segment stroke
+  segmentStrokeColor: "#fff"
+
+  #Number - The width of each segment stroke
+  segmentStrokeWidth: 2
+
+  #The percentage of the chart that we cut out of the middle.
+  percentageInnerCutout: 50
+
+  #Boolean - Whether we should animate the chart
+  animation: true
+
+  #Number - Amount of animation steps
+  animationSteps: 100
+
+  #String - Animation easing effect
+  animationEasing: "easeOutBounce"
+
+  #Boolean - Whether we animate the rotation of the Doughnut
+  animateRotate: true
+
+  #Boolean - Whether we animate scaling the Doughnut from the centre
+  animateScale: true
+
+  #Function - Will fire on animation completion.
+  onAnimationComplete: null
+
+ctx = document.getElementById("des_dev").getContext("2d");
+chart = new Chart(ctx).Doughnut(data,options);
+
+
