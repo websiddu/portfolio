@@ -75,49 +75,53 @@ $('.l-code').hoverIntent ->
       $('.js_avatar_code').hide()
 
 
-data = [
-  value: 100
-  color: "#fa753a"
-,
-  value: 70
-  color: "#2ba6cb"
+$("#skills").highcharts
+  chart:
+    type: "bar"
+    backgroundColor: "transparent"
 
-]
+  title:
+    text: "Some of my programming skills"
 
+  xAxis:
+    categories: ["CSS/HTML", "jQuery", "Javascript", "Axure RP","Photoshop", "Illustrator", "Ruby on Rails", "Java/Android"]
+    title:
+      text: null
+  colors: [
+    '#89A54E'
+    '#4572A7'
+    '#80699B'
+    '#3D96AE'
+    '#DB843D'
+    '#92A8CD'
+    '#A47D7C'
+    '#B5CA92'
+    '#AA4643'
+  ]
+  legend:
+    enabled: false
+  yAxis:
+    min: 0
+    title:
+      text: "Skill level(%)"
+      align: "high"
 
-options =
+    labels:
+      overflow: "justify"
 
-  #Boolean - Whether we should show a stroke on each segment
-  segmentShowStroke: true
+  tooltip:
+    valueSuffix: " %"
 
-  #String - The colour of each segment stroke
-  segmentStrokeColor: "#fff"
+  plotOptions:
+    bar:
+      colorByPoint: true
+      dataLabels:
+        enabled: true
 
-  #Number - The width of each segment stroke
-  segmentStrokeWidth: 2
+  credits:
+    enabled: false
 
-  #The percentage of the chart that we cut out of the middle.
-  percentageInnerCutout: 50
-
-  #Boolean - Whether we should animate the chart
-  animation: true
-
-  #Number - Amount of animation steps
-  animationSteps: 100
-
-  #String - Animation easing effect
-  animationEasing: "easeOutBounce"
-
-  #Boolean - Whether we animate the rotation of the Doughnut
-  animateRotate: true
-
-  #Boolean - Whether we animate scaling the Doughnut from the centre
-  animateScale: true
-
-  #Function - Will fire on animation completion.
-  onAnimationComplete: null
-
-ctx = document.getElementById("des_dev").getContext("2d");
-chart = new Chart(ctx).Doughnut(data,options);
-
-
+  series: [
+    name: "Skill level"
+    data: [95, 92, 90, 85, 80, 40, 60, 30]
+  ]
