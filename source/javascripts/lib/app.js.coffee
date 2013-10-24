@@ -74,54 +74,63 @@ $('.l-code').hoverIntent ->
       $('.js_default_trigger').show()
       $('.js_avatar_code').hide()
 
+if $('#skills').length isnt 0
+  $("#skills").highcharts
+    chart:
+      type: "bar"
+      backgroundColor: "transparent"
 
-$("#skills").highcharts
-  chart:
-    type: "bar"
-    backgroundColor: "transparent"
-
-  title:
-    text: "Some of my programming skills"
-
-  xAxis:
-    categories: ["CSS/HTML", "jQuery", "Javascript", "Axure RP","Photoshop", "Illustrator", "Ruby on Rails", "Java/Android"]
     title:
-      text: null
-  colors: [
-    '#89A54E'
-    '#4572A7'
-    '#80699B'
-    '#3D96AE'
-    '#DB843D'
-    '#92A8CD'
-    '#A47D7C'
-    '#B5CA92'
-    '#AA4643'
-  ]
-  legend:
-    enabled: false
-  yAxis:
-    min: 0
-    title:
-      text: "Skill level(%)"
-      align: "high"
+      text: "Some of my programming skills"
 
-    labels:
-      overflow: "justify"
+    xAxis:
+      categories: ["CSS/HTML", "jQuery", "Javascript", "Axure RP","Photoshop", "Illustrator", "Ruby on Rails", "Java/Android"]
+      title:
+        text: null
+    colors: [
+      '#89A54E'
+      '#4572A7'
+      '#80699B'
+      '#3D96AE'
+      '#DB843D'
+      '#92A8CD'
+      '#A47D7C'
+      '#B5CA92'
+      '#AA4643'
+    ]
+    legend:
+      enabled: false
+    yAxis:
+      min: 0
+      title:
+        text: "Skill level(%)"
+        align: "high"
 
-  tooltip:
-    valueSuffix: " %"
+      labels:
+        overflow: "justify"
 
-  plotOptions:
-    bar:
-      colorByPoint: true
-      dataLabels:
-        enabled: true
+    tooltip:
+      valueSuffix: " %"
 
-  credits:
-    enabled: false
+    plotOptions:
+      bar:
+        colorByPoint: true
+        dataLabels:
+          enabled: true
 
-  series: [
-    name: "Skill level"
-    data: [95, 92, 90, 85, 80, 40, 60, 30]
-  ]
+    credits:
+      enabled: false
+
+    series: [
+      name: "Skill level"
+      data: [95, 92, 90, 85, 80, 40, 60, 30]
+    ]
+
+userFeed = new Instafeed(
+  get: "user"
+  userId: 223797039
+  resolution: 'standard_resolution'
+  accessToken: "223797039.467ede5.13c7e21a01c54e7daf33686ab7d1a1a6"
+  template: "<li class='instapic'><a href='{{link}}' target='_blank'> <img src='{{image}}' /> </a></li>"
+)
+userFeed.run()

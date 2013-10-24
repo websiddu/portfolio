@@ -13,6 +13,13 @@
   color: $muted-color;
 }
 
+.seciton-hedading {
+  font-size: 19px;
+  border-bottom: dotted 1px #ccc;
+  margin-bottom: 10px;
+  line-height: 1.5
+}
+
 .chart {
   canvas {
     margin: 10px 0 0 40px;
