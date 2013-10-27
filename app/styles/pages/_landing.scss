@@ -1,0 +1,48 @@
+// Primary color #E24500
+.landing-page * {
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.landing-page {
+  margin-top: 80px;
+}
+.l-avatar {
+  cursor: pointer;
+  text-align: center;
+}
+.l-design {
+  cursor: pointer;
+  text-align: right;
+  margin-top: 50px;
+}
+.l-code {
+  cursor: pointer;
+  text-align: left;
+  margin-top: 50px;
+}
+.l-d-d {
+  color: #aaa;
+  font-size: 14px;
+}
+
+h2.l-n {
+  font-size: 38px;
+  font-weight: 400;
+  text-align: center;
+}
+
+h3.l-d {
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media #{$small-max} {
+  .landing-page {
+    margin: 10px 0;
+  }
+  .l-d-d, .l-d-c {
+    display: none;
+  }
+}
+

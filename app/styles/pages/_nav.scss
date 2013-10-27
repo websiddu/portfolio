@@ -1,0 +1,51 @@
+.side-nav-bar {
+  padding: 10px 0;
+  box-shadow: 5px -1px 9px -7px #888;
+  text-align: center;
+}
+
+.brand {
+  text-align: center;
+  width: 100%;
+}
+
+.brand img {
+  max-width: 190px;
+  width: 110px;
+}
+
+.side-nav {
+  list-style-type: none;
+  text-align: center;
+}
+
+/* Social list */
+.social-list {
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  li {
+    a em {
+      font-size: 25px;
+    }
+  }
+}
+
+
+@media #{$small-max} {
+  .brand {
+    width: auto;
+    display: block;
+  }
+  .brand img {
+    width: 80px;
+  }
+  .side-nav-bar {
+    padding: 10px;
+  }
+
+  .side-nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
