@@ -1,0 +1,14 @@
+.arts-grid {
+  > li {
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    .art {
+      position: relative;
+      height: 200px;
+      img {
+        max-height: 300px;
+      }
+    }
+  }
+}

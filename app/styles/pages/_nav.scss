@@ -12,6 +12,11 @@
 .brand img {
   max-width: 190px;
   width: 110px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 .side-nav {
@@ -25,14 +30,42 @@
   text-align: center;
   display: inline-block;
   li {
-    a em {
-      font-size: 25px;
+    &:first-child {
+      margin-left: 0;
+    }
+    a {
+      em {
+        font-size: 25px;
+      }
     }
   }
 }
 
+.side-footer {
+  p.muted {
+    color: #888;
+    font-size: 13px;
+  }
+}
+
+.builton {
+  img {
+    height: 18px;
+    margin: 0 5px 0 0;
+  }
+  font-size: 13px;
+  .love {
+    margin: 0 5px 0 0;
+    font-size: 14px;
+    line-height: 18px;
+    vertical-align: middle;
+  }
+}
 
 @media #{$small-max} {
+  .side-footer {
+    display: none;
+  }
   .brand {
     width: auto;
     display: block;
@@ -43,7 +76,6 @@
   .side-nav-bar {
     padding: 10px;
   }
-
   .side-nav li {
     display: inline-block;
     margin-right: 10px;

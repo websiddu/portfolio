@@ -16,23 +16,41 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/projects/:projectId",
     templateUrl: "views/project.html"
     controller: "projectCtrl"
-    # resolve:
-    #   delay: ($q, $timeout) ->
-    #     delay = $q.defer()
-    #     $timeout(delay.resolve, 1000)
-    #     delay.promise
+    resolve:
+      project: ($q, $timeout, Project, $route) ->
+        deferred = $q.defer()
+
+        Project.get(
+          id: $route.current.params.projectId
+          , (data) ->
+            if angular.equals(data, [])
+              deferred.reject "No starship found by that name"
+            else
+              deferred.resolve data
+        )
+
+        deferred.promise
   )
-  .when("/photo",
-    templateUrl: "views/photo.html"
-    controller: "photoCtrl"
+  .when("/design",
+    templateUrl: "views/designs.html"
+    controller: "designCtrl"
+  )
+  .when("/designs/:designId",
+    templateUrl: "views/design.html"
+    controller: "designCtrl"
+    resolve:
+      # delay: ($q, $timeout) ->
+      #   delay = $q.defer()
+      #   $timeout(delay.resolve, 1000)
+      #   delay.promise
   )
   .when("/contact",
     templateUrl: "views/contact.html"
     controller: "contactCtrl"
   )
-  .when("/index",
-    templateUrl: "views/about.html"
-    controller: "aboutController"
+  .when("/code",
+    templateUrl: "views/code.html"
+    controller: "codeCtrl"
   )
   .when("/index",
     templateUrl: "views/about.html"

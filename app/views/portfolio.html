@@ -1,11 +1,11 @@
 <div class="page">
   <h2 class="page-heading left">/portfolio</h2>
-  <input type="text" placeholder="Search projects..">
-  <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 portfolio-grid">
-    <li ng-repeat="project in projects">
+  <input type="text" placeholder="Search projects.." ng-model="searchText">
+  <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-3 portfolio-grid">
+    <li ng-repeat="project in projects | filter:searchText" class="fadeInPrj">
     <a href="#/projects/{{project.id.$oid}}">
       <div class="project">
-        <img src="{{project.banner}}">
+        <img src="{{project.thumbnail}}">
         <h2 class="project-title">{{project.title}}</h2>
 <!--         <div class="mask">
           <h2 class="project-title">kkcircuits.us</h2>

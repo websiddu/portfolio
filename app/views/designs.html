@@ -1,0 +1,19 @@
+<div class="page">
+  <h2 class="page-heading left">/design</h2>
+  <input type="text" placeholder="Search design..">
+  <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 arts-grid">
+    <li ng-repeat="art in arts">
+      <a href="#/designs/{{art.id.$oid}}">
+        <div class="art" style="background: url('{{art.preview_thumb}}') center no-repeat;">
+
+         <!--  <h2 class="art-title">{{art.name}}</h2> -->
+  <!--         <div class="mask">
+            <h2 class="project-title">kkcircuits.us</h2>
+            <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+            <a href="#" class="info small right button">more details..</a>
+          </div> -->
+        </div>
+        </a>
+    </li>
+  </ul>
+</div>

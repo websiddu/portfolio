@@ -1,5 +1,3 @@
 "use strict"
-angular.module("websidduApp").controller "portfolioCtrl", ($scope, Project) ->
-  console.log "Porject controller :) "
+angular.module("websidduApp").controller "portfolioCtrl", ($scope, $rootScope, Project) ->
   $scope.projects = Project.query()
-  console.log $scope.projects

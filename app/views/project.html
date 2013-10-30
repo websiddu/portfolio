@@ -1,5 +1,27 @@
 <div class="page">
   <h2 class="page-heading left">/<a class="standalone" href="#/portfolio" >projects</a>/{{project.title}}</h2>
+  <div class="project-show-banner">
+    <div class="project-show-banner-img" style="background: transparent url('{{project.banner}}') center center no-repeat;"></div>
+  </div>
+  <div class="project-show-url">
+    <a href="{{project.projectUrl}}" target="_blank">{{project.projectUrl}}</a>
+  </div>
+  <div class="project-show-tags">
+    <ul class="tags">
+      <li ng-repeat="tag in project.tags.split(',')"> <em class="icon-bolt"></em> {{tag}} </li>
+    </ul>
+  </div>
+  <div class="project-show-description" ng-bind-html="project.description">
+  </div>
+  <div class="project-show-screenshots">
+      <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 portfolio-grid">
+    <li ng-repeat="screenshot in project.screenshots.split(',')">
+      <img src="{{screenshot}}" alt="">
+    </li>
+    </ul>
+  </div>
+
+
 
 
 </div>

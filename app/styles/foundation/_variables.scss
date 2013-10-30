@@ -6,6 +6,16 @@
 // for compatibility with browser-based text zoom or user-set defaults.
 $base-font-size: 14px !default;
 
+$c1: #76a7fa;
+$c2: #e46f61;
+$c3: #4dbfd9;
+$c4: #fbcb43;
+$c5: #8cc474;
+$c6: #bc5679;
+$c7: #6f85bf;
+$c8: #f9b256;
+
+
 // $base-line-height is 24px while $base-font-size is 16px
 // $base-line-height: 150%;
 
@@ -177,7 +187,7 @@ $portrait: "only screen and (orientation: portrait)";
 
 // Control header font styles
 
-$header-font-family: "Open sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "Oxygen", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $header-font-weight: bold;
 $header-font-style: normal;
 $header-font-color: #222;
