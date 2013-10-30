@@ -19,16 +19,13 @@ websidduApp.config(($routeProvider, $locationProvider) ->
     resolve:
       project: ($q, $timeout, Project, $route) ->
         deferred = $q.defer()
-
         Project.get(
           id: $route.current.params.projectId
           , (data) ->
-            if angular.equals(data, [])
-              deferred.reject "No starship found by that name"
-            else
               deferred.resolve data
-        )
-
+          , (data) ->
+              console.log "Unsuccess..."
+          )
         deferred.promise
   )
   .when("/design",
@@ -39,10 +36,10 @@ websidduApp.config(($routeProvider, $locationProvider) ->
     templateUrl: "views/design.html"
     controller: "designCtrl"
     resolve:
-      # delay: ($q, $timeout) ->
-      #   delay = $q.defer()
-      #   $timeout(delay.resolve, 1000)
-      #   delay.promise
+      delay: ($q, $timeout) ->
+        delay = $q.defer()
+        $timeout(delay.resolve, 1000)
+        delay.promise
   )
   .when("/contact",
     templateUrl: "views/contact.html"

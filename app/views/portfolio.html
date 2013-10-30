@@ -5,7 +5,7 @@
     <li ng-repeat="project in projects | filter:searchText" class="fadeInPrj">
     <a href="#/projects/{{project.id.$oid}}">
       <div class="project">
-        <img src="{{project.thumbnail}}">
+        <img ng-src="{{project.thumbnail}}">
         <h2 class="project-title">{{project.title}}</h2>
 <!--         <div class="mask">
           <h2 class="project-title">kkcircuits.us</h2>
