@@ -43,6 +43,15 @@ $num: 0;
   text-overflow: ellipsis;
 }
 
+.muted {
+  color: #aaa;
+  font-weight: normal;
+}
+
+.center {
+  text-align: center;
+}
+
 
 a.standalone {
   color: $body-font-color;

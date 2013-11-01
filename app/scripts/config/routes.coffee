@@ -45,13 +45,16 @@ websidduApp.config(($routeProvider, $locationProvider) ->
               deferred.resolve data
           , (data) ->
               deferred.reject "Unsuccess"
-              console.log "Unsuccess..."
           )
         deferred.promise
   )
   .when("/contact",
     templateUrl: "views/contact.html"
     controller: "contactCtrl"
+  )
+  .when("/photos",
+    templateUrl: "views/photo.html"
+    controller: "photoCtrl"
   )
   .when("/code",
     templateUrl: "views/code.html"
@@ -60,5 +63,7 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/index",
     templateUrl: "views/about.html"
     controller: "aboutController"
-  ).otherwise redirectTo: "/"
+  ).otherwise
+    templateUrl: "views/404.html"
+    controller: "404Ctrl"
 )

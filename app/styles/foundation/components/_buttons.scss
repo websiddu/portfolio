@@ -28,7 +28,7 @@ $button-font-align: center !default;
 $button-function-factor: 10% !default;
 
 // We use these to control button border styles.
-$button-border-width: 1px !default;
+$button-border-width: 0 !default;
 $button-border-style: solid !default;
 
 // We use this to set the default radius used throughout the core.
@@ -46,8 +46,9 @@ $button-disabled-opacity: 0.6 !default;
 // We use this mixin to create a default button base.
 @mixin button-base($style:true, $display:$button-display) {
   @if $style {
-    border-style: $button-border-style;
-    border-width: $button-border-width;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 4px;
     cursor: $cursor-pointer-value;
     font-family: $button-font-family;
     font-weight: $button-font-weight;
@@ -117,9 +118,13 @@ $button-disabled-opacity: 0.6 !default;
     $bg-lightness: lightness($bg);
 
     background-color: $bg;
-    border-color: darken($bg, $button-function-factor);
-    &:hover,
-    &:focus { background-color: darken($bg, $button-function-factor); }
+    box-shadow: 0px 2px 0px darken($bg, $button-function-factor);
+    &:hover {
+      background-color: darken($bg, $button-function-factor - 5);
+    }
+    &:focus {
+      background-color: darken($bg, $button-function-factor);
+    }
 
     // We control the text color for you based on the background color.
     @if $bg-lightness > 70% {
@@ -204,7 +209,6 @@ $button-disabled-opacity: 0.6 !default;
   @media only screen {
 
     button, .button {
-      @include inset-shadow();
       @include single-transition(background-color);
 
       &.large  { @include button-size($padding:false, $full-width:false); }

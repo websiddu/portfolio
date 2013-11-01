@@ -20,7 +20,7 @@
   font-size: 19px;
   border-bottom: dotted 1px #ccc;
   margin-bottom: 10px;
-  line-height: 1.5
+  line-height: 1.5;
 }
 
 .chart {
@@ -52,17 +52,19 @@
 }
 
 @media #{$small-max} {
-  .des-dev  {
+  .page {
+    padding: 10px 10px;
+  }
+  .des-dev {
     text-align: center;
     .columns {
       text-align: left;
     }
   }
-#des_dev {
-  position: static;
-  text-align: center;
-  left: 0;
-  margin-left: 0;
-}
-
+  #des_dev {
+    position: static;
+    text-align: center;
+    left: 0;
+    margin-left: 0;
+  }
 }

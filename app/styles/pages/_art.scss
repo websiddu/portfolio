@@ -3,6 +3,11 @@
     height: 200px;
     overflow: hidden;
     margin-bottom: 20px;
+    a {
+      display: block;
+      overflow: hidden;
+      background: #E8E8E7 url("../images/design_default.svg") center no-repeat;
+    }
     .art {
       position: relative;
       height: 200px;

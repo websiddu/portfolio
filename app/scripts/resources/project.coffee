@@ -1,6 +1,6 @@
 "use strict"
 angular.module('websidduApp')
-  .factory('Project', ['$resource', '$cookieStore', 'constants', ($resource, $cookieStore, constants) ->
+  .factory('Project', ['$resource', 'constants', ($resource, constants) ->
     Project = $resource( constants.base_url + 'api/projects/:id',
       id: '@id'
     ,
@@ -8,4 +8,3 @@ angular.module('websidduApp')
     )
     return Project
   ])
-
