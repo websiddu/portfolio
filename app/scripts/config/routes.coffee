@@ -24,22 +24,30 @@ websidduApp.config(($routeProvider, $locationProvider) ->
           , (data) ->
               deferred.resolve data
           , (data) ->
+              deferred.reject "Unsuccess"
               console.log "Unsuccess..."
           )
         deferred.promise
   )
   .when("/design",
     templateUrl: "views/designs.html"
-    controller: "designCtrl"
+    controller: "designsCtrl"
   )
   .when("/designs/:designId",
     templateUrl: "views/design.html"
     controller: "designCtrl"
     resolve:
-      delay: ($q, $timeout) ->
-        delay = $q.defer()
-        $timeout(delay.resolve, 1000)
-        delay.promise
+      design: ($q, $timeout, Design, $route) ->
+        deferred = $q.defer()
+        Design.get(
+          id: $route.current.params.designId
+          , (data) ->
+              deferred.resolve data
+          , (data) ->
+              deferred.reject "Unsuccess"
+              console.log "Unsuccess..."
+          )
+        deferred.promise
   )
   .when("/contact",
     templateUrl: "views/contact.html"

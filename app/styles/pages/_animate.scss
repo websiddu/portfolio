@@ -4113,6 +4113,19 @@ Daniel Raftery <@ThirvingKings>
   opacity: 1;
 }
 
+.fadeInBig {
+  -webkit-transition: all 1s;
+   -moz-transition: all 1s;
+   -ms-transition: all 1s;
+   -o-transition: all 1s;
+   transition: all 1s;
+   opacity: 1;
+}
+
+.fadeInBig.ng-hide {
+  opacity: 0;
+}
+
 // enter, leave and move
 
 .fadeInPrj.ng-enter {

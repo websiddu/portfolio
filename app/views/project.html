@@ -4,9 +4,17 @@
     <div class="project-show-banner-img" ng-style="{{style}}">
     </div>
   </div>
-  <div class="project-show-url">
-    <a href="{{project.projectUrl}}" target="_blank">{{project.projectUrl}}</a>
+  <div class="row">
+    <div class="large-9 small-12 columns">
+      <div class="project-show-url">
+        <a href="{{project.projectUrl}}" target="_blank" class="truncate">{{project.projectUrl}}</a>
+      </div>
+    </div>
+    <div class="large-3 small-12 columns">
+      <div class="project-show-date">Jan 13</div>
+    </div>
   </div>
+
   <div class="project-show-tags">
     <ul class="tags">
       <li ng-repeat="tag in project.tags.split(',')"> <em class="icon-bolt"></em> {{tag}} </li>

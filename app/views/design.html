@@ -1,13 +1,31 @@
 <div class="page">
-  <h2 class="page-heading left">/<a class="standalone" href="#/design" >designs</a>/{{art.name}}</h2>
-  <br class="clear">
-  <br>
-  <div style="clear:both;">
-      <img src="{{art.preview}}" alt="{{art.name}}">
+  <h2 class="page-heading left">/<a class="standalone" href="#/design">designs</a>/{{art.name.toLowerCase()}}</h2>
+  <div class="art-show-meta">
+    <ul>
+      <li>
+        <a href="javascript:history.back();" class="c7">
+          <em class="icon-double-angle-left"></em>
+           Back
+        </a>
+      </li>
+      <li class="art-show-date">
+        <em class="icon-date c1"></em>
+         10th Jan 2013
+      </li>
+      <li>
+      <a href="javascript:;" class="c1 fullscreen">
+        <em class="icon-fullscreen"></em>
+         Fullscreen
+      </a>
+      </li>
+      <li class="art-show-source c2">
+        <em class="icon-download-alt"></em>
+        <a href="#" class="c2">Download</a>
+      </li>
+    </ul>
   </div>
-
-
-
-
+  <div class="art-show-img">
+    <img ng-src="{{art.preview}}" class="fullscreen-img" alt="{{art.name}}">
+  </div>
 
 </div>

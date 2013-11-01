@@ -9,6 +9,8 @@
       position: relative;
       overflow: hidden;
       cursor: pointer;
+      background: #E8E8E7 url("../images/project_default.png") center no-repeat;
+      min-height: 130px;
     }
     .project-title {
       background: rgba(0, 0, 0, 0.7);

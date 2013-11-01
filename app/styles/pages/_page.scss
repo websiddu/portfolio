@@ -1,17 +1,13 @@
-a.standalone {
-  color: $body-font-color;
-  &:hover {
-    color: $primary-color;
-  }
-}
-
 .page {
   padding: 20px 10px;
 }
 
 .page-heading {
   font-size: 25px;
-  font-weight: 600;
+  font-weight: normal;
+  em {
+    vertical-align: middle;
+  }
 }
 
 .page-sub-heading {
@@ -45,6 +41,15 @@ a.standalone {
   margin-left: -165px;
 }
 
+.no-results {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  h4 {
+    color: #888;
+    font-weight: normal;
+  }
+}
 
 @media #{$small-max} {
   .des-dev  {

@@ -14,42 +14,41 @@
   }
 }
 
-.project-show-url {
+.project-show-url, .project-show-date {
   margin: 10px 0;
   background: #F0EBE8;
   padding: 10px 20px 10px 50px;
   border-radius: 10px 5px 5px 10px;
   font-size: 15px;
   position: relative;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  // box-shadow: 1px 10px 19px -15px #000;
 
   &:before {
   display: block;
   top: 0;
   position: absolute;
   font-family: 'icons';
-  content: '\e60e';
+  content: '\e609';
   color: #fff;
   background: $c2;
   left: 0;
   height: 100%;
   width: 44px;
   vertical-align: middle;
-  line-height: 34px;
+  line-height: 35px;
+  font-size: 18px;
   border-radius: 10px 0 0 10px;
   text-align: center;
-  text-shadow: 1px 1px #888;
-  }
-  &:hover {
-
-    //box-shadow: 0 0 7px 0px rgba(0,0,0,0.3);
   }
 }
+
+.project-show-date {
+  &:before {
+    content: '\e624';
+    background: $c5;
+  }
+}
+
+
 
 .tags {
   list-style-type: none;
