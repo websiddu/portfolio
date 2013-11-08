@@ -56,6 +56,10 @@ websidduApp.config(($routeProvider, $locationProvider) ->
     templateUrl: "views/photo.html"
     controller: "photoCtrl"
   )
+  .when("/blog",
+    templateUrl: "views/blog.html"
+    controller: "blogCtrl"
+  )
   .when("/code",
     templateUrl: "views/code.html"
     controller: "codeCtrl"

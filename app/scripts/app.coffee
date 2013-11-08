@@ -4,5 +4,6 @@
   "ngCookies",
   "ngRoute",
   "ngSanitize",
+  "ngProgress",
   "ngAnimate"
 ])
