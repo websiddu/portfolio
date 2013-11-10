@@ -1,0 +1,14 @@
+{
+  "name": "animo.js",
+  "homepage": "https://github.com/ThrivingKings/animo.js",
+  "_release": "8aa0fe0fe7",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "8aa0fe0fe77c366b030e3caf5a15676f0f68588a"
+  },
+  "_source": "git://github.com/ThrivingKings/animo.js.git",
+  "_target": "*",
+  "_originalSource": "animo.js",
+  "_direct": true
+}
