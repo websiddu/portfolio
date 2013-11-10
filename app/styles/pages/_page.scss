@@ -80,6 +80,17 @@
     z-index: 99999;
 }
 
+.contact-page-list {
+  list-style-type: none;
+  li {
+    display: inline-block;
+    margin: 2px 25px 0 0;
+    &:first-child {
+
+    }
+  }
+}
+
 
 @media #{$small-max} {
   .page {

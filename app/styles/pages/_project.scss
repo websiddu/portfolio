@@ -48,6 +48,23 @@
   }
 }
 
+.project-show-description {
+  > ol, > ul {
+    margin-left: 30px;
+  }
+  pre {
+    font-weight: normal;
+    padding: 10px 20px;
+    overflow-x: auto;
+    background: #efefef;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  code {
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
 
 
 .tags {
