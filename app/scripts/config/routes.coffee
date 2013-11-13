@@ -12,6 +12,15 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/portfolio",
     templateUrl: "views/portfolio.html"
     controller: "portfolioCtrl"
+    resolve:
+      projects: ($q, Project) ->
+        deferred = $q.defer()
+        Project.query((data) ->
+          deferred.resolve data
+          , (data) ->
+            deferred.reject "Unsuccess"
+        )
+        deferred.promise
   )
   .when("/projects/:projectId",
     templateUrl: "views/project.html"
@@ -25,13 +34,21 @@ websidduApp.config(($routeProvider, $locationProvider) ->
               deferred.resolve data
           , (data) ->
               deferred.reject "Unsuccess"
-              console.log "Unsuccess..."
           )
         deferred.promise
   )
   .when("/design",
     templateUrl: "views/designs.html"
     controller: "designsCtrl"
+    resolve:
+      designs: ($q, Design) ->
+        deferred = $q.defer()
+        Design.query((data) ->
+          deferred.resolve data
+          , (data) ->
+            deferred.reject "Unsuccess"
+        )
+        deferred.promise
   )
   .when("/designs/:designId",
     templateUrl: "views/design.html"

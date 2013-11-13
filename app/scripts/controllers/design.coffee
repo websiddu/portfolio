@@ -1,6 +1,6 @@
 "use strict"
-angular.module("websidduApp").controller "designsCtrl", ($scope, $routeParams, $rootScope, Design) ->
-  $scope.arts = Design.query()
+angular.module("websidduApp").controller "designsCtrl", ($scope, $routeParams, $rootScope, designs) ->
+  $scope.arts = designs
 
 
 angular.module("websidduApp").controller "designCtrl", ($scope, $routeParams, $rootScope, Design, design) ->
