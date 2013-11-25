@@ -1,5 +1,5 @@
 "use strict"
-angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $location, ngProgress, constants) ->
+angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $location, ngProgress, constants, Project) ->
 
 
   # colors = ["#76a7fa", "#e46f61", "#4dbfd9", "#fbcb43", "#8cc474", "#bc5679", "#6f85bf", "#f9b256"]
@@ -24,5 +24,6 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
     progressBar.stop()
 
   $rootScope.data = constants.data
+  projects = Project.query()
 
 angular.module("websidduApp").controller "404Ctrl", ($scope, $rootScope, $location) ->

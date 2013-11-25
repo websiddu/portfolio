@@ -174,8 +174,8 @@ $portrait: "only screen and (orientation: portrait)";
 
 // We use this to control the maximum number of block grid elements per row
 
-// $block-grid-elements: 12;
-// $block-grid-default-spacing: em-calc(20);
+$block-grid-elements: 12;
+$block-grid-default-spacing: em-calc(40);
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 

@@ -1,9 +1,12 @@
 .side-nav-bar {
   padding: 10px 0;
-  box-shadow: 5px -1px 9px -7px #888;
   text-align: center;
 }
-
+.sidbar-wrapper {
+  position: fixed;
+  padding: 0 3% 0 2%;
+  box-shadow: 5px -1px 9px -7px #888;
+}
 .brand {
   text-align: center;
   width: 100%;
@@ -79,5 +82,11 @@
   .side-nav li {
     display: inline-block;
     margin-right: 10px;
+  }
+  .sidbar-wrapper {
+    position: static;
+    padding: 0 inherit;
+    box-shadow: none;
+    width: auto;
   }
 }
