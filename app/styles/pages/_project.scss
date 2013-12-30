@@ -4,6 +4,7 @@
   padding: 3px;
   border: solid 1px #ddd;
   position: relative;
+  margin: 0 0 20px;
   background: transparent url("../images/default_banner.png") 3px 3px no-repeat;
   .project-show-banner-img {
     height: 150px;
@@ -14,17 +15,18 @@
   }
 }
 
-.project-show-url, .project-show-date {
-  margin: 10px 0;
-  background: #F0EBE8;
-  padding: 10px 20px 10px 50px;
-  border-radius: 10px 5px 5px 10px;
-  font-size: 15px;
-  position: relative;
-  a {
-    line-height: 1.2;
-  }
+.page-show-nav {
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  line-height: 1.4;
+}
 
+.project-show-url, .project-show-date {
+  margin: 0 0 20px;
+  background: #efefef;
+  padding: 10px 20px 10px 40px;
+  border-radius: 2px;
+  position: relative;
   &:before {
   display: block;
   top: 0;
@@ -32,26 +34,42 @@
   font-family: 'icons';
   content: '\e609';
   color: #fff;
-  background: $c2;
+  background: $c1;
   left: 0;
   height: 100%;
-  width: 44px;
+  text-shadow: 0;
+  width: 30px;
   vertical-align: middle;
-  line-height: 35px;
+  line-height: 37px;
   font-size: 18px;
-  border-radius: 10px 0 0 10px;
   text-align: center;
+  text-shadow: 0 1px #666;
   }
 }
 
 .project-show-date {
   &:before {
     content: '\e624';
-    background: $c5;
+    background: $c1;
   }
 }
 
 .project-show-description {
+
+  figure {
+    margin: 20px auto;
+    display: block;
+    max-width: 500px;
+    border: solid 1px #ccc;
+    cursor: pointer;
+  }
+  figcaption {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #efefef;
+    font-style: italic;
+  }
+
   > ol, > ul {
     margin-left: 30px;
   }
@@ -75,10 +93,9 @@
   > li {
     display: inline-block;
     padding: 2px 10px 2px 5px;
-    background: $c3;
+    border-radius: 2px;
+    background: $c5;
     color: #fff;
-    text-shadow: 1px 1px #888;
-    margin: 10px 10px 0 0;
-    border-radius: 20px 6px 5px 20px;
+    margin: 0 10px 10px 0;
   }
 }

@@ -1,9 +1,15 @@
 <div class="page">
   <h2 class="page-heading left">/<a class="standalone" href="#/portfolio" >projects</a>/{{project.title}}</h2>
+  <br>
+  <div class="clear page-show-nav">
+    <span class="left">&larr; Previous project</span>
+    <span class="right">Next project &rarr;</span>
+  </div>
   <div class="project-show-banner">
     <div class="project-show-banner-img" ng-style="{{style}}">
     </div>
   </div>
+
   <div class="row">
     <div class="large-9 small-12 columns">
       <div class="project-show-url">
@@ -17,7 +23,7 @@
 
   <div class="project-show-tags">
     <ul class="tags">
-      <li ng-repeat="tag in project.tags.split(',')"> <em class="icon-bolt"></em> {{tag}} </li>
+      <li ng-repeat="tag in project.tags.split(',')"> <em class="icon-tag"></em> {{tag}} </li>
     </ul>
   </div>
   <div class="project-show-description" ng-bind-html="project.description">
@@ -30,5 +36,9 @@
       </a>
     </li>
     </ul>
+  </div>
+  <div class="clear page-show-nav">
+    <span class="left">&larr; Previous project</span>
+    <span class="right">Next project &rarr;</span>
   </div>
 </div>

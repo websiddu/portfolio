@@ -36,7 +36,7 @@ $num: 0;
 }
 
 .truncate {
-  width: 100%;
+  max-width: 100%;
   white-space: nowrap;
   display: inline-block;
   overflow: hidden;

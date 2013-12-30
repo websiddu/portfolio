@@ -75,7 +75,7 @@ $default-float: left;
 
 $body-bg: #fff;
 $body-font-color: #444;
-$body-font-family: "Oxygen", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Open Sans","Oxygen", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-weight: normal;
 $body-font-style: normal;
 
@@ -220,15 +220,15 @@ $h6-font-size: 1em;
 
 // Style paragraphs
 
-// $paragraph-font-family: inherit;
-// $paragraph-font-weight: normal;
-// $paragraph-font-size: 1em;
-// $paragraph-line-height: 1.6;
-// $paragraph-margin-bottom: em-calc(20);
-// $paragraph-aside-font-size: em-calc(14);
-// $paragraph-aside-line-height: 1.35;
-// $paragraph-aside-font-style: italic;
-// $paragraph-text-rendering: optimizeLegibility;
+$paragraph-font-family: inherit;
+$paragraph-font-weight: normal;
+$paragraph-font-size: 1em;
+$paragraph-line-height: 1.6;
+$paragraph-margin-bottom: em-calc(20);
+$paragraph-aside-font-size: em-calc(14);
+$paragraph-aside-line-height: 1.35;
+$paragraph-aside-font-style: italic;
+$paragraph-text-rendering: optimizeLegibility;
 
 // Style <code> tags
 
