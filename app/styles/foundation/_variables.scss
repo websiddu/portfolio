@@ -16,8 +16,8 @@ $c7: #6f85bf;
 $c8: #f9b256;
 
 
-// $base-line-height is 24px while $base-font-size is 16px
-// $base-line-height: 150%;
+//$base-line-height is 24px while $base-font-size is 16px
+$base-line-height: 130%;
 
 // This is the default html and body font-size for the base em value.
 
@@ -207,16 +207,16 @@ $h6-font-size: 1em;
 
 // Control how subheaders are styled.
 
-// $subheader-line-height: 1.4;
-// $subheader-font-color: lighten($header-font-color, 30%);
-// $subheader-font-weight: 300;
-// $subheader-top-margin: .2em;
-// $subheader-bottom-margin: .5em;
+$subheader-line-height: 1.4;
+$subheader-font-color: lighten($header-font-color, 30%);
+$subheader-font-weight: 300;
+$subheader-top-margin: .2em;
+$subheader-bottom-margin: .5em;
 
-// A general <small> styling
+//A general <small> styling
 
-// $small-font-size: 60%;
-// $small-font-color: lighten($header-font-color, 30%);
+$small-font-size: 75%;
+$small-font-color: lighten($header-font-color, 30%);
 
 // Style paragraphs
 

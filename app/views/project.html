@@ -2,8 +2,8 @@
   <h2 class="page-heading left">/<a class="standalone" href="#/portfolio" >projects</a>/{{project.title}}</h2>
   <br>
   <div class="clear page-show-nav">
-    <span class="left">&larr; Previous project</span>
-    <span class="right">Next project &rarr;</span>
+    <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject}}">&larr; Previous project</a></span>
+    <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject}}">Next project &rarr;</a></span>
   </div>
   <div class="project-show-banner">
     <div class="project-show-banner-img" ng-style="{{style}}">
@@ -13,7 +13,12 @@
   <div class="row">
     <div class="large-9 small-12 columns">
       <div class="project-show-url">
-        <a href="{{project.projectUrl}}" target="_blank" class="truncate">{{project.projectUrl}}</a>
+        <span ng-if="project.isActive">
+          <a href="{{project.projectUrl}}" target="_blank" class="truncate">{{project.projectUrl}}</a>
+        </span>
+        <span ng-if="project.isActive == 0">
+          <del><a>{{project.projectUrl}}</a></del> <small class="muted">(This url is not active!!)</small>
+        </span>
       </div>
     </div>
     <div class="large-3 small-12 columns">
@@ -38,7 +43,7 @@
     </ul>
   </div>
   <div class="clear page-show-nav">
-    <span class="left">&larr; Previous project</span>
-    <span class="right">Next project &rarr;</span>
+    <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject}}">&larr; Previous project</a></span>
+    <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject}}">Next project &rarr;</a></span>
   </div>
 </div>

@@ -32,18 +32,17 @@
   top: 0;
   position: absolute;
   font-family: 'icons';
+  border-radius: 3px 0 0 3px;
   content: '\e609';
   color: #fff;
   background: $c1;
   left: 0;
   height: 100%;
-  text-shadow: 0;
   width: 30px;
   vertical-align: middle;
-  line-height: 37px;
+  line-height: 40px;
   font-size: 18px;
   text-align: center;
-  text-shadow: 0 1px #666;
   }
 }
 
@@ -55,7 +54,6 @@
 }
 
 .project-show-description {
-
   figure {
     margin: 20px auto;
     display: block;

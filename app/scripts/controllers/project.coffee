@@ -17,3 +17,11 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
         enabled: true
         duration: 300
     ).magnificPopup('open')
+
+  $(document).one "click", ".zoom", (e) ->
+    e.preventDefault()
+    Zoomerang.config({
+      maxHeight: $(window).height() - 40,
+      maxWidth: $(window).width() - 40
+    }).open('.zoom').listen('.zoom')
+
