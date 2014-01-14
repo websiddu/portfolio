@@ -10,16 +10,17 @@
 .brand {
   text-align: center;
   width: 100%;
-}
-
-.brand img {
-  max-width: 190px;
-  width: 110px;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -ms-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  a {
+    display: block;
+  }
+  img {
+    max-width: 110px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
 }
 
 .side-nav {

@@ -360,11 +360,11 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'copy:dist',
-    'cdnify',
+    //'cdnify',
     'ngmin',
     'cssmin',
     'uglify',
-    //'rev',
+    'rev',
     'usemin'
   ]);
 
