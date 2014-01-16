@@ -292,7 +292,7 @@ module.exports = function (grunt) {
         'coffee',
         'copy:styles',
         'imagemin',
-        'svgmin',
+        //'svgmin',
         'htmlmin'
       ]
     },
@@ -364,7 +364,7 @@ module.exports = function (grunt) {
     'ngmin',
     'cssmin',
     'uglify',
-    'rev',
+    //'rev',
     'usemin'
   ]);
 

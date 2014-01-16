@@ -23,5 +23,5 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
     Zoomerang.config({
       maxHeight: $(window).height() - 40,
       maxWidth: $(window).width() - 40
-    }).open('.zoom').listen('.zoom')
+    }).open($(this).context).listen('.zoom')
 
