@@ -7,6 +7,12 @@
   }
 }
 
+.project-filter {
+  input[type="text"] {
+    clear: both;
+  }
+}
+
 .portfolio-grid {
   > li {
     .project {

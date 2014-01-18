@@ -7,7 +7,7 @@
   z-index: 1042;
   overflow: hidden;
   position: fixed;
-  background: #fff;
+  background: #000;
   opacity: 0.8;
   filter: alpha(opacity=80); }
 
@@ -259,8 +259,7 @@ img.mfp-img {
     width: auto;
     height: auto;
     z-index: -1;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-    background: #444444; }
+     }
   .mfp-figure small {
     color: #bdbdbd;
     display: block;
