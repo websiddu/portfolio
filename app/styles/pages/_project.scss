@@ -54,6 +54,8 @@
 }
 
 .project-show-description {
+
+
   figure {
     margin: 20px auto;
     display: block;
@@ -67,6 +69,18 @@
     background-color: #efefef;
     font-style: italic;
   }
+
+ .fig-group {
+  margin: 0;
+  figure {
+    margin: 0;
+  }
+  figcaption {
+    padding: 4px 0;
+    font-size: 13px;
+  }
+ }
+
 
   > ol, > ul {
     margin-left: 30px;
