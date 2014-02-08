@@ -629,15 +629,15 @@ $button-function-factor: 10%;
 
 // We use these to style the custom select form element.
 
-// $custom-select-bg: #fff;
-// $custom-select-fade-to-color: #f3f3f3;
-// $custom-select-border-color: #ddd;
-// $custom-select-triangle-color: #aaa;
-// $custom-select-triangle-color-open: #222;
-// $custom-select-height: em-calc(13) + ($form-spacing * 1.5);
-// $custom-select-margin-bottom: em-calc(20);
-// $custom-select-font-color-selected: #141414;
-// $custom-select-disabled-color: #888;
+$custom-select-bg: #fff;
+$custom-select-fade-to-color: #f3f3f3;
+$custom-select-border-color: #ddd;
+$custom-select-triangle-color: #aaa;
+$custom-select-triangle-color-open: #222;
+$custom-select-height: em-calc(13) + ($form-spacing * 1.5);
+$custom-select-margin-bottom: em-calc(20);
+$custom-select-font-color-selected: #141414;
+$custom-select-disabled-color: #888;
 
 // We use these to control the style of the custom select dropdown element.
 

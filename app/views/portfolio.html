@@ -2,6 +2,16 @@
   <h2 class="page-heading left">/portfolio</h2>
   <div class="clear project-filter">
   <form action="">
+    <div class="left">
+     <span class="muted">Sort by</span>
+     <select name="sortedBy" id="sortedBy" ng-model="sortedBy" class="styled">
+       <option value="-size">Size △</option>
+       <option value="size">Size ▽</option>
+       <option value="date">Date △</option>
+       <option value="-date">Date ▽</option>
+
+     </select>
+   </div>
     <div class="right">
       <span class="muted">Show&nbsp;&nbsp;</span>
       <label class="normal project-filter-options" for="all"><input type="radio" ng-model="selectedSize" checked="true" name="filter" value="" id="all"> All</label>
@@ -10,11 +20,6 @@
       <label class="normal project-filter-options" for="small" ><input type="radio" ng-model="selectedSize" name="filter" value="small" id="small"> Small</label>
        <span class="muted">Projects</span>
 
-<!--        <span class="muted">and Sorted</span>
-       <select name="sortedBy" id="sortedBy" ng-model="sortedBy">
-         <option value="size">Size</option>
-         <option value="date">Date</option>
-       </select> -->
     </div>
     <input type="text" placeholder="Search projects.. e.g. jquery" ng-model="searchText">
   </form>
