@@ -1,5 +1,5 @@
 "use strict"
-angular.module("websidduApp").controller "contactCtrl", ($scope, $http) ->
+angular.module("websidduApp").controller "aboutCtrl", ($scope, $http, $rootScope) ->
   $scope.socialprofiles = []
   $http(
     url: "resources/social.json"

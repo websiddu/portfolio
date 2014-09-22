@@ -87,6 +87,10 @@ a.standalone {
   transition: all 0.4s;
 }
 
+.light {
+  font-weight: 300;
+}
+
 @-moz-document url-prefix() {
   select.styled {
     padding: 0;

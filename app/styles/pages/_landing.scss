@@ -1,24 +1,29 @@
 // Primary color #E24500
 .landing-page * {
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
+
 .landing-page {
   margin-top: 80px;
 }
+
 .l-avatar {
   text-align: center;
 }
+
 .l-design {
   cursor: pointer;
   text-align: right;
   margin-top: 50px;
 }
+
 .l-code {
   cursor: pointer;
   text-align: left;
   margin-top: 50px;
 }
+
 .l-d-d {
   color: #aaa;
   font-size: 14px;
@@ -44,4 +49,3 @@ h3.l-d {
     display: none;
   }
 }
-

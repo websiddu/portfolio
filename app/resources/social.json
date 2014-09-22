@@ -1,0 +1,45 @@
+[{
+  "name": "Linkedin",
+  "url": "http://www.linkedin.com/in/websiddu",
+  "icon": "circlelinkedin"
+}, {
+  "name": "Behance",
+  "url": "https://www.behance.net/websiddu",
+  "icon": "circlebehance"
+}, {
+  "name": "Facebook",
+  "url": "http://fb.com/websiddu",
+  "icon": "circlefacebook"
+}, {
+  "name": "Twitter",
+  "url": "http://twitter.com/websiddu",
+  "icon": "circletwitterbird"
+}, {
+  "name": "Blog",
+  "url": "http://blog.websiddu.com/",
+  "icon": "circleblogger"
+}, {
+  "name": "Pinterest",
+  "url": "http://www.pinterest.com/websiddu/",
+  "icon": "circlepinterest"
+}, {
+  "name": "Google+",
+  "url": "https://plus.google.com/u/0/+SiddharthaGudipati/posts",
+  "icon": "circlegoogleplus"
+}, {
+  "name": "Dribbble",
+  "url": "https://dribbble.com/websiddu",
+  "icon": "circledribble"
+}, {
+  "name": "Websiddu",
+  "url": "http://github.com/websiddu",
+  "icon": "circlegithubalt"
+}, {
+  "name": "Instagram",
+  "url": "http://instagram.com/websiddu",
+  "icon": "circleinstagram"
+}, {
+  "name": "Quora",
+  "url": "http://www.quora.com/Siddhartha-Gudipati",
+  "icon": "circlequora"
+}]

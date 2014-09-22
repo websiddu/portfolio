@@ -7,7 +7,7 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   )
   .when("/about",
     templateUrl: "views/about.html"
-    controller: "MainCtrl"
+    controller: "aboutCtrl"
   )
   .when("/portfolio",
     templateUrl: "views/portfolio.html"
@@ -81,10 +81,7 @@ websidduApp.config(($routeProvider, $locationProvider) ->
     templateUrl: "views/code.html"
     controller: "codeCtrl"
   )
-  .when("/index",
-    templateUrl: "views/about.html"
-    controller: "aboutController"
-  ).otherwise
+  .otherwise
     templateUrl: "views/404.html"
     controller: "404Ctrl"
 )

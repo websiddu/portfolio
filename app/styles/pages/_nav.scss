@@ -2,11 +2,13 @@
   padding: 10px 0;
   text-align: center;
 }
+
 .sidbar-wrapper {
   position: fixed;
-  padding: 0 3% 0 2%;
-  box-shadow: 5px 1px 9px -8px rgb(136, 136, 136);
+  padding: 0 2% 0 3%;
+  box-shadow: 5px 0px 9px -8px #666;
 }
+
 .brand {
   text-align: center;
   width: 100%;
@@ -14,17 +16,23 @@
     display: block;
   }
   img {
-    max-width: 110px;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+    max-width: 95px;
+    margin: 10px 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
   }
 }
 
 .side-nav {
   list-style-type: none;
   text-align: center;
+}
+.side-nav li.nav-active {
+  a {
+    color: $c5;
+  }
 }
 
 /* Social list */
@@ -38,10 +46,15 @@
     }
     a {
       em {
-        font-size: 25px;
+        font-size: 28px;
       }
     }
   }
+}
+
+hr {
+  margin: 10px 0;
+  color: #ddd;
 }
 
 .side-footer {
@@ -56,14 +69,15 @@
     height: 18px;
     margin: 0 5px 0 0;
   }
-  font-size: 13px;
+  font-size: 12px;
   .love {
-    margin: 0 5px 0 0;
+    margin: -3px 5px 0 0;
+    display: inline-block;
     em {
-      font-size: 18px;
-      font-weight: bold;
-      line-height: 18px;
+      font-size: 28px;
+      line-height: 28px;
       vertical-align: middle;
+      display: inline-block;
     }
   }
 }
