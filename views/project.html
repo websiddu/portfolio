@@ -1,13 +1,24 @@
 <div class="page">
   <h2 class="page-heading left">/<a class="standalone" href="#/portfolio">projects</a>/{{project.title}}</h2>
+  <br>
+  <div class="clear page-show-nav">
+    <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject}}">&larr; Previous project</a></span>
+    <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject}}">Next project &rarr;</a></span>
+  </div>
   <div class="project-show-banner">
     <div class="project-show-banner-img" ng-style="{{style}}">
     </div>
   </div>
+
   <div class="row">
     <div class="large-9 small-12 columns">
       <div class="project-show-url">
-        <a href="{{project.projectUrl}}" target="_blank" class="truncate">{{project.projectUrl}}</a>
+        <span ng-if="project.isActive">
+          <a href="{{project.projectUrl}}" target="_blank" class="truncate">{{project.projectUrl}}</a>
+        </span>
+        <span ng-if="project.isActive == 0">
+          <del><a>{{project.projectUrl}}</a></del> <small class="muted">(This url is not active!!)</small>
+        </span>
       </div>
     </div>
     <div class="large-3 small-12 columns">
@@ -17,18 +28,22 @@
 
   <div class="project-show-tags">
     <ul class="tags">
-      <li ng-repeat="tag in project.tags.split(',')"> <em class="icon-bolt"></em> {{tag}} </li>
+      <li ng-repeat="tag in project.tags.split(',')"> <em class="icon-tag"></em> {{tag}} </li>
     </ul>
   </div>
   <div class="project-show-description" ng-bind-html="project.description">
   </div>
   <div class="project-show-screenshots">
-    <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-3 portfolio-grid">
+    <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 portfolio-grid">
     <li ng-repeat="screenshot in project.screenshots.split(',')">
       <a href="{{screenshot}}" class="scrSht">
         <img ng-src="{{screenshot}}" alt="{{screenshot}}">
       </a>
     </li>
     </ul>
+  </div>
+  <div class="clear page-show-nav">
+    <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject}}">&larr; Previous project</a></span>
+    <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject}}">Next project &rarr;</a></span>
   </div>
 </div>
