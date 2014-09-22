@@ -17,6 +17,20 @@ module.exports = function (grunt) {
       app: require('./bower.json').appPath || 'app',
       dist: 'dist'
     },
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built from %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:websiddu/websiddu.git',
+          branch: 'gh-pages'
+        }
+      }
+    },
     watch: {
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
@@ -367,6 +381,8 @@ module.exports = function (grunt) {
     //'rev',
     'usemin'
   ]);
+
+  grunt.registerTask('deploy', 'Deploy to Github Pages', ['build', 'buildcontrol']);
 
   grunt.registerTask('default', [
     'jshint',
