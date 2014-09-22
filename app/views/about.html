@@ -51,7 +51,7 @@
     <div class="side-social animated fadeInDown" >
     <ul class="inline-list social-list">
       <li ng-repeat="item in socialprofiles">
-        <a ng-href="item.url" target="_blank" class="c{{($index % 8) + 1}}"> <em class="symbol" icon="{{item.icon}}"></em>
+        <a ng-href="{{item.url}}" target="_blank" class="c{{($index % 8) + 1}}"> <em class="symbol" icon="{{item.icon}}"></em>
         </a>
       </li>
     </ul>
