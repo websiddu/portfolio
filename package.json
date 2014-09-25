@@ -25,6 +25,7 @@
     "grunt-rev": "~0.1.0",
     "grunt-svgmin": "~0.2.0",
     "grunt-usemin": "~0.1.11",
+    "grunt-webfont": "^0.4.8",
     "karma": "~0.10.4",
     "karma-chrome-launcher": "~0.1.0",
     "karma-coffee-preprocessor": "~0.1.0",
