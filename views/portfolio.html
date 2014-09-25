@@ -31,7 +31,7 @@
     <h4>It seems that, I did'nt work on this kind of project..</h4>
   </div>
   <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 portfolio-grid">
-    <li ng-repeat="project in projects | orderBy:'date':true | filter:searchText | filter:selectedSize" class="fadeInPrj">
+    <li ng-repeat="project in projects | orderBy:sortedBy:false | filter:searchText | filter:selectedSize" class="fadeInPrj">
     <a href="#/projects/{{project.id.$oid}}">
       <div class="project">
         <img ng-src="{{project.thumbnail}}">
