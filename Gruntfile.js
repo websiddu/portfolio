@@ -99,7 +99,7 @@ module.exports = function (grunt) {
     },
     connect: {
       options: {
-        port: 9000,
+        port: 9012,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729
@@ -294,8 +294,8 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'compass',
-        'coffee:dist',
-        'copy:styles'
+        'coffee:dist'
+        //'copy:styles'
       ],
       test: [
         'compass',
