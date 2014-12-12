@@ -10,7 +10,9 @@
     "angular-sanitize": "*",
     "angular-route": "*",
     "angular-animate": "*",
-    "screenfull": "~1.1.0"
+    "screenfull": "~1.1.0",
+    "jquery-waypoints": "~2.0.5",
+    "angular-waypoints": "~1.0.1"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

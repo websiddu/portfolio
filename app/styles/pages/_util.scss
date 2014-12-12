@@ -35,6 +35,19 @@ $num: 0;
     }
 }
 
+$num: 0;
+$c9: #efefea;
+@each $c in ($c1, $c2, $c3, $c4, $c5, $c6, $c7, $c8, $c9) {
+    $num: $num + 1;
+    .bgc#{$num} {
+      background-color: $c;
+      color: #fff;
+    }
+}
+
+
+
+
 .truncate {
   max-width: 100%;
   white-space: nowrap;

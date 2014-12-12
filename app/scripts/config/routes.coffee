@@ -4,6 +4,15 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/",
     templateUrl: "views/index.html"
     controller: "MainCtrl"
+    resolve:
+      projects: ($q, Project) ->
+        deferred = $q.defer()
+        Project.query((data) ->
+          deferred.resolve data
+          , (data) ->
+            deferred.reject "Unsuccess"
+        )
+        deferred.promise
   )
   .when("/about",
     templateUrl: "views/about.html"

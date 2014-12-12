@@ -4,5 +4,6 @@
   "ngRoute",
   "ngSanitize",
   "ngProgress",
+  "zumba.angular-waypoints",
   "ngAnimate"
 ])

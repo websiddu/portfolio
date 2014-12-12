@@ -114,12 +114,13 @@ $total-columns: 12 !default;
 @if $include-html-grid-classes != false {
   /* Grid HTML Classes */
   .row {
+    position: relative;
     @include grid-row;
 
     &.collapse {
        > .column,
        > .columns { @include grid-column($collapse:true); }
-    
+
       .row {margin-left:0; margin-right:0;}
     }
 

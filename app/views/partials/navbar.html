@@ -1,0 +1,49 @@
+<div class="fixed contain-to-grid">
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <div class="brand anim">
+          <a href="/">
+            <img ng-src="images/brand_{{rand}}.png" alt="Siddhartha Gudipati" class="">
+          </a>
+        </div>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li ng-class="getClass('/home')">
+          <a href="#/">home</a>
+        </li>
+        <li ng-class="getClass('/portfolio')">
+          <a href="#/portfolio">portfolio</a>
+        </li>
+        <li ng-class="getClass('/about')">
+          <a href="#/about">about</a>
+        </li>
+        <li ng-class="getClass('/design')">
+          <a href="#/design">design</a>
+        </li>
+        <li>
+          <a href="resources/resume.pdf" target="_blank">résumé</a>
+        </li>
+
+
+<!--         <li>
+          <a href="http://codepen.io/websiddu/" target="_blank">code</a>
+        </li> -->
+        <!--     <li>
+          <a href="#/photos">foto</a>
+        </li> -->
+        <li>
+          <a href="http://blog.websiddu.com" target="_blank">blog</a>
+        </li>
+        <li ng-class="getClass('/contact')">
+          <a href="#/contact">contact</a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</div>

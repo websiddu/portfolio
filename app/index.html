@@ -28,17 +28,17 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="row" ng-controller="appCtrl">
-      <div ng-include="'views/partials/header.html'"></div>
-      <div class="large-9 columns">
-        <div class="fadeIn" ng-view="">
-        </div>
+    <div ng-include="'views/partials/navbar.html'"></div>
+    <div class="maincontent" ng-controller="appCtrl">
+      <!-- <div ng-include="'views/partials/header.html'"></div> -->
+        <div class="" ng-view="" autoscroll="true">
       </div>
     </div>
+    <div ng-include="'views/partials/footer.html'"></div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 
         <!-- build:js scripts/modules.js -->
-        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
@@ -52,6 +52,8 @@
         <script src="bower_components/ngprogress/build/ngProgress.js"></script>
         <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
         <script src="bower_components/zoomerang/zoomerang.js"></script>
+        <script src="bower_components/jquery-waypoints/waypoints.js"></script>
+        <script src="bower_components/angular-waypoints/dist/angular-waypoints.all.js"></script>
 
         <script src="scripts/app.js"></script>
         <script src="scripts/config/routes.js"></script>
