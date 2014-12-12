@@ -28,7 +28,7 @@
         background: transparent url('../images/project_default.png') center center no-repeat;
         height: 220px;
         background-size: cover;
-
+        overflow: hidden;
         -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
         -ms-transition: all 0.5s;
@@ -73,10 +73,10 @@
       font-size: 18px;
       font-weight: 300;
       position: absolute;
-      padding: 8px 10px;
+      padding: 12px 10px;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: -8px;
       text-shadow: 0 0 3px #fff;
       color: #43434a;
       margin: 0
