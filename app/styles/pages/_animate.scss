@@ -578,8 +578,12 @@
   opacity: 0.5;
   position: relative;
   opacity: 0;
-  top: 10px;
+  top: 40px;
 }
+
+// .fadeIn.ng-leave {
+//   display: none;
+// }
 
 .fadeIn.ng-enter.ng-enter-active {
   top: 0;

@@ -31,9 +31,9 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
   $scope.reachedEnd = ->
     console.log "Reached the end..."
 
-  $("body").waypoint ((direction) ->
-    # $location.path('/portfolio')
-    return
-  ),
-    offset: ->
-      $.waypoints("viewportHeight") - $(this).height() + 100
+  # $("body").waypoint ((direction) ->
+  #   # $location.path('/portfolio')
+  #   return
+  # ),
+  #   offset: ->
+  #     $.waypoints("viewportHeight") - $(this).height() + 100

@@ -1,23 +1,23 @@
 "use strict"
-angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $location, ngProgress, constants, Project) ->
+angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $location, $anchorScroll, ngProgress, constants, Project) ->
 
 
   # colors = ["#76a7fa", "#e46f61", "#4dbfd9", "#fbcb43", "#8cc474", "#bc5679", "#6f85bf", "#f9b256"]
 
   progressBar = ngProgress
 
-  $rootScope.$on "$routeChangeStart", (event, next, current) ->
-    rand = Math.floor((Math.random()*8)+1)
-    $rootScope.rand = rand
-
   progressBar.color("#76a7fa")
 
   $rootScope.$on "$routeChangeStart",  (event, next, current) ->
+    rand = Math.floor((Math.random()*8)+1)
+    $rootScope.rand = rand
     progressBar.start()
 
   $rootScope.$on "$routeChangeSuccess", (event, current, previous) ->
     progressBar.complete()
     progressBar.stop()
+    if current.templateUrl is "views/project.html"
+      $anchorScroll()
 
   $rootScope.$on "$routeChangeError", (event, current, previous) ->
     progressBar.complete()

@@ -94,3 +94,4 @@ websidduApp.config(($routeProvider, $locationProvider) ->
     templateUrl: "views/404.html"
     controller: "404Ctrl"
 )
+

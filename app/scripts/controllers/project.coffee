@@ -1,5 +1,5 @@
 "use strict"
-angular.module("websidduApp").controller "projectCtrl", ($scope, Project, project, $routeParams, $rootScope) ->
+angular.module("websidduApp").controller "projectCtrl", ($scope, Project, project, $routeParams, $rootScope, $location) ->
   $scope.project = project
   $scope.style =
     background: "transparent url('"+ $scope.project.banner + "') center center no-repeat"
