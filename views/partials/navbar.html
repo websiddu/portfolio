@@ -15,19 +15,19 @@
       <!-- Right Nav Section -->
       <ul class="right">
         <li ng-class="getClass('/home')">
-          <a href="#/">home</a>
+          <a data-href="#/" ng-click="closeNavbarInMobile('/')">home</a>
         </li>
         <li ng-class="getClass('/portfolio')">
-          <a href="#/portfolio">portfolio</a>
+          <a data-href="#/portfolio" ng-click="closeNavbarInMobile('/portfolio')">portfolio</a>
         </li>
         <li ng-class="getClass('/about')">
-          <a href="#/about">about</a>
+          <a data-href="#/about" ng-click="closeNavbarInMobile('/about')">about</a>
         </li>
         <li ng-class="getClass('/design')">
-          <a href="#/design">design</a>
+          <a data-href="#/design" ng-click="closeNavbarInMobile('/design')">design</a>
         </li>
         <li>
-          <a href="resources/resume.pdf" target="_blank">résumé</a>
+          <a data-href="resources/resume.pdf" target="_blank">résumé</a>
         </li>
 
 
@@ -40,7 +40,7 @@
         <li>
           <a href="http://blog.websiddu.com" target="_blank">blog</a>
         </li>
-        <li ng-class="getClass('/contact')">
+        <li ng-class="getClass('/contact')" ng-click="closeNavbarInMobile('/contact')">
           <a href="#/contact">contact</a>
         </li>
 
