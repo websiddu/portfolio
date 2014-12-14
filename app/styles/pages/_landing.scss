@@ -54,10 +54,9 @@ body {
 }
 
 .l-d-d {
-  color: #fff;
   font-size: 18px;
   font-weight: 200;
-  text-shadow: 0px 1px 1px #aaa;
+  //text-shadow: 0px 1px 1px #aaa;
 }
 
 h2.l-n {
@@ -70,9 +69,8 @@ h3.l-d {
   font-size: 21px;
   font-weight: 200;
   text-align: center;
-  color: #fff;
   line-height: 1.7;
-  text-shadow: 0px 1px 1px #888;
+  //text-shadow: 0px 1px 1px #888;
 }
 
 
@@ -114,9 +112,16 @@ $g-color2: #EF7D6B;
 //   bottom:
 // }
 
+$g1-color1: #efefea;
+$g1-color2: #fff;
+
 .landing-banner {
-  background: url('../images/b/b1.png') 0 0 no-repeat;
-  background-size: cover;
+  //background: url('../images/b/b1.png') 0 0 no-repeat;
+  //background-size: cover;
+  background-color: $g1-color1;
+  @include filter-gradient($g1-color1, $g1-color2, horizontal);
+  @include background-image(linear-gradient(left, $g1-color1 0%,$g1-color2 100%));
+
   position: fixed;
   top: 0;
   left: 0;
@@ -125,3 +130,29 @@ $g-color2: #EF7D6B;
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+$g2-color1: #434A54;
+$g2-color2: #656D78;
+
+$g3-color1: #967ADC;
+$g3-color2: #AC92EC;
+
+
+
+.contain-to-grid {
+  background-color: $g2-color1;
+  @include filter-gradient($g2-color1, $g2-color2, horizontal);
+  @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
+  &:after {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: $g3-color1;
+    @include filter-gradient($g3-color1, $g3-color2, horizontal);
+    @include background-image(linear-gradient(left, $g3-color1 0%,$g3-color2 100%));
+    width: 100%;
+    position: absolute;
+  }
+}
+
+
