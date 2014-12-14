@@ -47,7 +47,7 @@
     }
     a {
       em {
-        font-size: 28px;
+        font-size: 32px;
       }
     }
   }
@@ -72,8 +72,6 @@ hr {
   margin-top: 40px;
 }
 
-
-
 .builton {
   img {
     height: 18px;
@@ -92,28 +90,45 @@ hr {
   }
 }
 
+.side-footer {
+  float: right;
+}
+
+$g2-color1: #434A54;
+$g2-color2: #656D78;
+
+
 @media #{$small-max} {
   .side-footer {
-    display: none;
+    // display: none;
+    text-align: center;
+    float: none;
   }
-  .brand {
-    width: auto;
-    display: block;
+  .side-social {
+    text-align: center;
+    margin: 20px auto 50px auto;
   }
-  .brand img {
-    width: 80px;
+  .top-bar.expanded {
+    background-color: $g2-color1;
+    @include filter-gradient($g2-color1, $g2-color2, horizontal);
+    @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
   }
-  .side-nav-bar {
-    padding: 10px;
+
+  .top-bar-section ul li > a {
+    font-size: 17px;
   }
-  .side-nav li {
-    display: inline-block;
-    margin-right: 10px;
+
+  .top-bar-section ul li.active > a:before {
+    top: 0;
+    bottom: 0;
   }
-  .sidbar-wrapper {
-    position: static;
-    padding: 0 inherit;
-    box-shadow: none;
-    width: auto;
+
+  .top-bar-section ul {
+    background-color: $g2-color1;
+    @include filter-gradient($g2-color1, $g2-color2, horizontal);
+    @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
+    li > a {
+
+    }
   }
 }

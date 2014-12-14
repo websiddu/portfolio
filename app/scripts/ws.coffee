@@ -15,7 +15,10 @@ window.ws = do ->
 
 
   init: ->
-    _initFSVS()
+    setTimeout ->
+      $(document).foundation()
+    , 200
+    # _initFSVS()
 
 
 $(ws.init)

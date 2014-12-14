@@ -192,7 +192,7 @@ $g2-color2: #656D78;
     // Change things up when the top-bar is expanded
     &.expanded {
       height: auto;
-      background: transparent;
+      background: inherit;
 
       .title-area { background: $topbar-bg; }
 
@@ -435,7 +435,7 @@ $g2-color2: #656D78;
         top: 8px;
       }
 
-      &.expanded { background: $topbar-bg; }
+      //&.expanded { background: $topbar-bg; }
     }
 
     .contain-to-grid .top-bar {

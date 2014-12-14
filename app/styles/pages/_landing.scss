@@ -1,5 +1,5 @@
 .maincontent {
-  margin-top: 70px;
+  //margin-top: 70px;
   font-weight: 200;
 }
 
@@ -100,12 +100,10 @@ $g-color2: #EF7D6B;
 
 
 @media #{$small-max} {
-  .landing-page {
-    margin: 10px 0;
-  }
-  .l-d-d, .l-d-c {
+  .l-design, .l-code {
     display: none;
   }
+
 }
 
 // .full-page {
