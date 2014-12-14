@@ -171,7 +171,8 @@ $g2-color2: #656D78;
 
           span {
             position: absolute;
-            #{$opposite-direction}: 0;
+            //#{$opposite-direction}: 0;
+            left: 9px;
             display: block;
             width: 16px;
             height: 0;

@@ -13,11 +13,11 @@
   text-align: center;
   width: 100%;
   a {
-    display: block;
+    display: inline-block;
   }
   img {
     max-width: 40px;
-    margin: 10px 0 10px 30px;
+    margin: 10px;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
