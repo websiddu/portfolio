@@ -29,12 +29,12 @@
   list-style-type: none;
   text-align: center;
 }
+
 .side-nav li.nav-active {
   a {
     color: $c5;
   }
 }
-
 
 /* Social list */
 .social-list {
@@ -65,8 +65,7 @@ hr {
   }
 }
 
-.side-social {
-}
+.side-social {}
 
 .landing-footer {
   margin-top: 40px;
@@ -97,6 +96,30 @@ hr {
 $g2-color1: #434A54;
 $g2-color2: #656D78;
 
+@media #{$small-max} {
+  .top-bar.expanded {
+    background-color: $g2-color1;
+    @include filter-gradient($g2-color1, $g2-color2, horizontal);
+    @include background-image(linear-gradient(left, $g2-color1 0%, $g2-color2 100%));
+    .top-bar-section ul li > a {
+      font-size: 14px;
+    }
+    .top-bar-section ul li:hover > a:before {
+      top: 5px;
+      bottom: 5px;
+    }
+    .top-bar-section ul li.active > a:before {
+      top: 5px;
+      bottom: 5px;
+    }
+    .top-bar-section ul {
+      background-color: $g2-color1;
+      @include filter-gradient($g2-color1, $g2-color2, horizontal);
+      @include background-image(linear-gradient(left, $g2-color1 0%, $g2-color2 100%));
+      li > a {}
+    }
+  }
+}
 
 @media #{$small-max} {
   .side-footer {
@@ -107,28 +130,5 @@ $g2-color2: #656D78;
   .side-social {
     text-align: center;
     margin: 20px auto 50px auto;
-  }
-  .top-bar.expanded {
-    background-color: $g2-color1;
-    @include filter-gradient($g2-color1, $g2-color2, horizontal);
-    @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
-  }
-
-  .top-bar-section ul li > a {
-    font-size: 17px;
-  }
-
-  .top-bar-section ul li.active > a:before {
-    top: 0;
-    bottom: 0;
-  }
-
-  .top-bar-section ul {
-    background-color: $g2-color1;
-    @include filter-gradient($g2-color1, $g2-color2, horizontal);
-    @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
-    li > a {
-
-    }
   }
 }
