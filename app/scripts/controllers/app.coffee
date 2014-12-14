@@ -24,7 +24,7 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
     progressBar.stop()
 
   $rootScope.getClass = (path) ->
-    if $location.path().substr(0, path.length) is path then "nav-active" else ""
+    if $location.path().substr(0, path.length) is path then "active" else ""
 
   $rootScope.data = constants.data
   projects = Project.query()

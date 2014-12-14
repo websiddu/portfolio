@@ -34,7 +34,7 @@ $topbar-link-weight: 200 !default;
 $topbar-link-font-size: em-calc(13) !default;
 $topbar-link-hover-lightness: -30% !default; // Darken by 30%
 $topbar-link-bg-hover: adjust-color($topbar-dropdown-bg, $lightness: $topbar-link-hover-lightness) !default;
-$topbar-link-bg-active: darken($topbar-bg-color, 3%) !default;
+$topbar-link-bg-active: darken($topbar-bg-color, 10%) !default;
 
 
 $topbar-dropdown-label-color: #555 !default;
@@ -65,6 +65,9 @@ $topbar-divider-border-top: solid 1px darken($topbar-bg-color, 10%) !default;
 // Sticky Class
 $topbar-sticky-class: ".sticky" !default;
 $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
+
+$g2-color1: #434A54;
+$g2-color2: #656D78;
 
 @if $include-html-top-bar-classes != false {
 
@@ -238,6 +241,13 @@ $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
     }
 
     ul li {
+
+      // &.active {
+      //   a {
+      //     background-color: #000;
+      //   }
+      // }
+
       & > a {
         display: block;
         width: 100%;
@@ -278,16 +288,53 @@ $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
 
       }
 
+
       // Apply the hover link color when it has that class
       &:hover > a {
-        background: $topbar-link-bg-hover;
-        color: $topbar-link-color-hover;
+        //background: $topbar-link-bg-hover;
+        //color: $topbar-link-color-hover;
+        // font-weight: bold;
+
+        background-color: $g2-color1;
+        @include filter-gradient($g2-color1, $g2-color2, horizontal);
+        @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
+
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          background: rgba(0, 0, 0, 0.22);
+          position: absolute;
+          left: 10px;
+          right: 10px;
+          top: 20px;
+          bottom: 20px;
+          border-radius: 5px;
+          z-index: 1;
+        }
       }
 
       // Apply the active link color when it has that class
       &.active > a {
-        background: $topbar-link-bg-active;
-        color: $topbar-link-color-active;
+        //background: $topbar-link-bg-active;
+        //color: $topbar-link-color-active;
+        position: relative;
+
+        transition: all 0.5s ease-in;
+        -webkit-transition: all 0.5s ease-in;
+
+        &:before {
+          content: '';
+          display: block;
+          background: rgba(0, 0, 0, 0.22);
+          position: absolute;
+          left: 10px;
+          right: 10px;
+          top: 20px;
+          bottom: 20px;
+          border-radius: 5px;
+          z-index: 1;
+        }
       }
     }
 
@@ -415,7 +462,7 @@ $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
       li {
         &.hover {
           > a:not(.button) {
-            background: $topbar-link-bg-hover;
+            // background: $topbar-link-bg-hover;
             color: $topbar-link-color-hover;
           }
         }
@@ -423,7 +470,9 @@ $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
           padding: 0 $topbar-height / 3;
           line-height: $topbar-height;
           background: $topbar-bg;
-          &:hover { background: $topbar-link-bg-hover; }
+          &:hover {
+            // background: $topbar-link-bg-hover;
+          }
         }
       }
 
