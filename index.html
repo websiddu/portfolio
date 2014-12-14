@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="styles/main.css">
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300" rel="stylesheet" type="text/css">
 </head>
-  <body ng-app="websidduApp">
+  <body ng-cloak ng-app="websidduApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -26,13 +26,14 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="row" ng-controller="appCtrl">
-      <div ng-include="'views/partials/header.html'"></div>
-      <div class="large-9 columns">
-        <div class="fadeIn" ng-view="">
-        </div>
+    <div ng-include="'views/partials/navbar.html'"></div>
+
+    <div class="maincontent" ng-controller="appCtrl">
+      <!-- <div ng-include="'views/partials/header.html'"></div> -->
+        <div class="fadeIn" ng-view>
       </div>
     </div>
+    <!-- <div ng-include="'views/partials/footer.html'"></div> -->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 
         <script src="scripts/modules.js"></script>

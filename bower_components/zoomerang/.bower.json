@@ -1,6 +1,6 @@
 {
   "name": "zoomerang",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "drop-in zoomer for anything",
   "main": "zoomerang.js",
   "ignore": [
@@ -11,11 +11,11 @@
     "test.jpg"
   ],
   "homepage": "https://github.com/yyx990803/zoomerang",
-  "_release": "0.1.6",
+  "_release": "0.1.7",
   "_resolution": {
     "type": "version",
-    "tag": "0.1.6",
-    "commit": "a992101cbcd599ca3732fb50dccc112a5b9d85a6"
+    "tag": "0.1.7",
+    "commit": "aad2206e81e3ab466eed080b81a43875ff7aab0c"
   },
   "_source": "git://github.com/yyx990803/zoomerang.git",
   "_target": "~0.1.5",

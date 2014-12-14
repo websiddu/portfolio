@@ -1,12 +1,17 @@
 {
     "name": "ngprogress",
-    "version": "1.0.4",
-    "main": "build/ngProgress.js",
+    "version": "1.0.7",
+    "main": ["build/ngProgress.js", "ngProgress.css"],
     "ignore": [
         "**/.*",
         "node_modules",
         "bower_components",
         "test",
-        "tests"
+        "tests",
+        "src",
+        "Gruntfile.js",
+        "package.json",
+        "karma.conf.js",
+        "index.html"
     ]
 }

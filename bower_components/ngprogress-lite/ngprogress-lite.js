@@ -5,7 +5,18 @@
  * (c) 2013 MIT License
  */
 
-(function (window, angular, undefined) {
+(function (root, factory) {
+    if (typeof module !== 'undefined' && module.exports) {
+        // CommonJS
+        module.exports = factory(require('angular'));
+    } else if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(['angular'], factory);
+    } else {
+        // Global Variables
+        factory(root.angular);
+    }
+}(this, function (angular, undefined) {
 	'use strict';
 
 	angular.module('ngProgressLite', []).provider('ngProgressLite', function () {
@@ -20,7 +31,7 @@
 			template: '<div class="ngProgressLite"><div class="ngProgressLiteBar"><div class="ngProgressLiteBarShadow"></div></div></div>'
 		};
 
-		this.$get = ['$document', '$timeout', function ($document, $timeout) {
+		this.$get = ['$document', function ($document) {
 			var $body = $document.find('body');
 			var $progressBarEl, status, cleanForElement;
 
@@ -74,29 +85,33 @@
 					num = privateMethods.clamp(num, settings.minimum, 1);
 					status = (num === 1 ? null : num);
 
-					$timeout(function () {
-						$progress.children().css(privateMethods.positioning(num, settings.speed, settings.ease));
+					setTimeout(function () {
+						$progress.children().eq(0).css(privateMethods.positioning(num, settings.speed, settings.ease));
 					}, 100);
 
 					if (num === 1) {
-						$timeout(function () {
+						setTimeout(function () {
 							$progress.css({ 'transition': 'all ' + settings.speed + 'ms linear', 'opacity': 0 });
-							$timeout(function () {
+							setTimeout(function () {
 								privateMethods.remove();
 							}, settings.speed);
 						}, settings.speed);
 					}
 
-					return this;
+					return publicMethods;
+				},
+
+				get: function() {
+					return status;
 				},
 
 				start: function () {
 					if (!status) {
-						this.set(0);
+						publicMethods.set(0);
 					}
 
 					var worker = function () {
-						$timeout(function () {
+						setTimeout(function () {
 							if (!status) { return; }
 							privateMethods.trickle();
 							worker();
@@ -104,14 +119,14 @@
 					};
 
 					worker();
-					return this;
+					return publicMethods;
 				},
 
 				inc: function (amount) {
 					var n = status;
 
 					if (!n) {
-						return this.start();
+						return publicMethods.start();
 					}
 
 					if (typeof amount !== 'number') {
@@ -119,11 +134,13 @@
 					}
 
 					n = privateMethods.clamp(n + amount, 0, 0.994);
-					return this.set(n);
+					return publicMethods.set(n);
 				},
 
 				done: function () {
-					this.inc(0.3 + 0.5 * Math.random()).set(1);
+					if (status) {
+						publicMethods.inc(0.3 + 0.5 * Math.random()).set(1);
+					}
 				}
 			};
 
@@ -131,4 +148,4 @@
 		}];
 	});
 
-})(window, window.angular);
+}));

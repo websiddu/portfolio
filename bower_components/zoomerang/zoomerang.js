@@ -4,6 +4,9 @@
 
 (function () {
 
+    // regex
+    var percentageRE = /^([\d\.]+)%$/
+
     // elements
     var overlay = document.createElement('div'),
         wrapper = document.createElement('div'),
@@ -23,7 +26,9 @@
         bgColor: '#fff',
         bgOpacity: 1,
         maxWidth: 300,
-        maxHeight: 300
+        maxHeight: 300,
+        onOpen: null,
+        onClose: null
     }
 
     // compatibility stuff
@@ -36,7 +41,7 @@
     setStyle(overlay, {
         position: 'fixed',
         display: 'none',
-        zIndex: 99999,
+        zIndex: 99998,
         top: 0,
         left: 0,
         right: 0,
@@ -74,8 +79,8 @@
 
     function sniffTransition () {
         var ret   = {},
-            trans = ['transition', 'webkitTransition', 'mozTransition'],
-            tform = ['transform', 'webkitTransform', 'mozTransform'],
+            trans = ['webkitTransition', 'transition', 'mozTransition'],
+            tform = ['webkitTransform', 'transform', 'mozTransform'],
             end   = {
                 'transition'       : 'transitionend',
                 'mozTransition'    : 'transitionend',
@@ -154,15 +159,16 @@
             return this
         },
 
-        open: function (el) {
+        open: function (el, cb) {
 
-            if (lock || shown) return
+            if (shown || lock) return
 
             target = typeof el === 'string'
                 ? document.querySelector(el)
                 : el
 
             shown = true
+            lock = true
             parent = target.parentNode
 
             var p     = target.getBoundingClientRect(),
@@ -186,10 +192,16 @@
             }, true)
 
             // deal with % width and height
-            setStyle(wrapper, {
-                width: p.width + 'px',
-                height: p.height + 'px'
-            })
+            var wPctMatch = target.style.width.match(percentageRE),
+                hPctMatch = target.style.height.match(percentageRE)
+            if (wPctMatch || hPctMatch) {
+                var wPct = wPctMatch ? +wPctMatch[1] / 100 : 1,
+                    hPct = hPctMatch ? +hPctMatch[1] / 100 : 1
+                setStyle(wrapper, {
+                    width: ~~(p.width / wPct) + 'px',
+                    height: ~~(p.height / hPct) + 'px'
+                })
+            }
 
             // insert overlay & placeholder
             parent.appendChild(overlay)
@@ -210,10 +222,20 @@
                     options.transitionTimingFunction,
                 transform: 'scale(' + scale + ')'
             })
+
+            target.addEventListener(transEndEvent, function onEnd () {
+                target.removeEventListener(transEndEvent, onEnd)
+                lock = false
+                cb = cb || options.onOpen
+                if (cb) cb(target)
+            })
+
+            
+
             return this
         },
 
-        close: function () {
+        close: function (cb) {
 
             if (!shown || lock) return
             lock = true
@@ -227,8 +249,7 @@
                 transform: 'translate(' + dx + 'px, ' + dy + 'px)'
             })
 
-            target.addEventListener(transEndEvent, onEnd)
-            function onEnd () {
+            target.addEventListener(transEndEvent, function onEnd () {
                 target.removeEventListener(transEndEvent, onEnd)
                 setStyle(target, originalStyles)
                 parent.insertBefore(target, placeholder)
@@ -239,7 +260,11 @@
                 placeholder = null
                 shown = false
                 lock = false
-            }
+                cb = typeof cb === 'function'
+                    ? cb
+                    : options.onClose
+                if (cb) cb(target)
+            })
 
             return this
         },
@@ -269,6 +294,7 @@
     }
 
     overlay.addEventListener('click', api.close)
+    wrapper.addEventListener('click', api.close)
 
     // umd expose
     if (typeof exports == "object") {
