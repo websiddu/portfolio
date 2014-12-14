@@ -7,14 +7,15 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
 
   grunt.initConfig({
     yeoman: {
       // configurable paths
-      app: require('./bower.json').appPath || 'app',
+      app: require('./bower.json')
+        .appPath || 'app',
       dist: 'dist'
     },
     buildcontrol: {
@@ -37,8 +38,8 @@ module.exports = function (grunt) {
         tasks: ['coffee:dist']
       },
       compass: {
-          files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-          tasks: ['compass:server', 'autoprefixer']
+        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+        tasks: ['compass:server', 'autoprefixer']
       },
       coffeeTest: {
         files: ['test/spec/{,*/}*.coffee'],
@@ -72,30 +73,30 @@ module.exports = function (grunt) {
       }
     },
     compass: {
+      options: {
+        sassDir: '<%= yeoman.app %>/styles',
+        cssDir: '.tmp/styles',
+        generatedImagesDir: '.tmp/images/generated',
+        imagesDir: '<%= yeoman.app %>/images',
+        javascriptsDir: '<%= yeoman.app %>/scripts',
+        fontsDir: '<%= yeoman.app %>/styles/fonts',
+        importPath: '<%= yeoman.app %>/bower_components',
+        httpImagesPath: '/images',
+        httpGeneratedImagesPath: '/images/generated',
+        httpFontsPath: '/styles/fonts',
+        relativeAssets: false,
+        assetCacheBuster: false
+      },
+      dist: {
         options: {
-            sassDir: '<%= yeoman.app %>/styles',
-            cssDir: '.tmp/styles',
-            generatedImagesDir: '.tmp/images/generated',
-            imagesDir: '<%= yeoman.app %>/images',
-            javascriptsDir: '<%= yeoman.app %>/scripts',
-            fontsDir: '<%= yeoman.app %>/styles/fonts',
-            importPath: '<%= yeoman.app %>/bower_components',
-            httpImagesPath: '/images',
-            httpGeneratedImagesPath: '/images/generated',
-            httpFontsPath: '/styles/fonts',
-            relativeAssets: false,
-            assetCacheBuster: false
-        },
-        dist: {
-            options: {
-                generatedImagesDir: '<%= yeoman.dist %>/images/generated'
-            }
-        },
-        server: {
-            options: {
-                debugInfo: true
-            }
+          generatedImagesDir: '<%= yeoman.dist %>/images/generated'
         }
+      },
+      server: {
+        options: {
+          debugInfo: true
+        }
+      }
     },
     connect: {
       options: {
@@ -346,7 +347,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('server', function (target) {
+  grunt.registerTask('server', function(target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
