@@ -10,3 +10,7 @@ angular.module("websidduApp").controller "portfolioCtrl", ($scope, $rootScope, p
   $timeout ->
     window.sr = new scrollReveal();
   , 10
+
+  $scope.projectSeen = (prj) ->
+    localStorage[prj]
+

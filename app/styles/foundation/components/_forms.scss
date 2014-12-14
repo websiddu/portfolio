@@ -91,7 +91,7 @@ $glowing-effect-color: $input-focus-border-color !default;
   @if $experimental {
     -webkit-box-shadow: $input-box-shadow;
   }
-  box-shadow: $input-box-shadow;
+  //box-shadow: $input-box-shadow;
   color: $input-font-color;
   display: block;
   font-size: $input-font-size;
@@ -425,7 +425,9 @@ input[type=checkbox], input[type=radio] {
   }
 
   input[type=radio] {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAA6CAYAAAC9MQkMAAACxUlEQVR4AdWUz2oTURSHk3fQvbYu0ncQi21IQeyiLyAuiqvSbq1QjHs3iggd1EVx40Z3Kgh2OYJ1I2ibtMF%2FC6mpoZ3W5k8zOf4%2BSGG4mOk4GRce%2BMj03HO%2Bzsyde3J%2FirW1tQmxLDZFG7ju5yZFzsVNFMRqpVKxer1urVbLer0ecE3OWKOG2kGicRFsb2%2FbSUENtfS4Iuy7jUbDkga19NB7LMoLP%2F5OYu%2FMx4GoWK1WLW3QiwORx0tMG%2FTiQLTFjqQNenEgarO9aYNeHIiCbrebiWij2WwO%2B2g1RCs7OzupRfTiQDSVwfaXMvwghz8iY9kfWmeM%2BDx3dIyEYWjsLDnWqIkbIwB5URKeqImOOBDr5FijJn6wpeffi86KaTEvlqB%2FTW4kieiUuKq5XNaLLetll%2FWygWtyZdaooXaQ6IxY1NaWzSwWaqilxxVhv66PjMJEUEsPvdGZPRt%2FJ7F3NosD0Yg%2BMhZSQS8ORNO8xLQienEgmmdH0oroxYFoie1NK6IXB6JFzexMRHM62cM%2B2gKiGc3d1CJ6cSA6l8H2j2b6QQ57RE5nfmjdMTLLc0fHiGZ2mZ0lxxo11CaZ2aP9IbYglsQNMUeOtf94Zp%2B%2FszchlsWmaAPX%2FdykyLm4iYJYFRYLNdQOEI2LQFhCAnpcEfZdYX8JPYVjUV74wlLi40BUTNo083Dfqj%2B6du3JgbtWROQlkVz2AvvSCI34rF9n3UO0dZKkeD%2BwD9%2B7RnT0s%2FD0l1uzhagdTV55vG9vvx4Zd8DfF%2B%2Ft2btvR0aEPbNbLw%2FJu7Rz7pZ%2F%2BhkasVnv2qXlwF5VOnYct183qRko2ogmb744NP4z0ezooh%2BP3rTiHr%2BGaMVd4D9H49n7Nvk4VhBNCXN54LfsKDR7%2FrFjF%2B6Si6WU4Qc5%2FBEZy%2FzQRikkfEw%2FbowA5EVJeKImOuJArJNjjRq37zezS3H0OLowXgAAAABJRU5ErkJggg%3D%3D);
+    background-image: url('../images/select.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   input[type=checkbox] {

@@ -7,6 +7,9 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
   months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
   $scope.date = months[date.getMonth()] + " " + date.getFullYear()
 
+
+  localStorage[$location.path()] = 'seen'
+
   $(document).one "click", ".scrSht", (e) ->
     e.preventDefault()
     s = $('.scrSht').magnificPopup(
