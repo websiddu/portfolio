@@ -29,12 +29,13 @@
 
     <!-- Add your site or application content here -->
     <div ng-include="'views/partials/navbar.html'"></div>
+
     <div class="maincontent" ng-controller="appCtrl">
       <!-- <div ng-include="'views/partials/header.html'"></div> -->
         <div class="fadeIn" ng-view>
       </div>
     </div>
-    <div ng-include="'views/partials/footer.html'"></div>
+    <!-- <div ng-include="'views/partials/footer.html'"></div> -->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 
         <!-- build:js scripts/modules.js -->
@@ -44,16 +45,19 @@
         <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+        <script src="bower_components/ng-parallax/angular-parallax.js"></script>
+
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="bower_components/screenfull/dist/screenfull.js"></script>
-        <script src="bower_components/animo.js/animo.js"></script>
         <script src="bower_components/ngprogress/build/ngProgress.js"></script>
         <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
         <script src="bower_components/zoomerang/zoomerang.js"></script>
-        <script src="bower_components/jquery-waypoints/waypoints.js"></script>
-        <script src="bower_components/angular-waypoints/dist/angular-waypoints.all.js"></script>
+        <script src="bower_components/scrollReveal.js/dist/scrollReveal.js"></script>
+        <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+
 
         <script src="scripts/app.js"></script>
         <script src="scripts/config/routes.js"></script>
@@ -71,6 +75,8 @@
         <script src="scripts/resources/project.js"></script>
         <script src="scripts/resources/design.js"></script>
         <script src="scripts/resources/photos.js"></script>
+
+        <script src="scripts/ws.js"></script>
         <!-- endbuild -->
 
 </body>

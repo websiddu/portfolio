@@ -3,7 +3,6 @@
   min-height: 500px;
 }
 
-
 .page-heading {
   font-size: 25px;
   font-weight: normal;
@@ -21,6 +20,7 @@
 .about-text p {
   font-size: 14px;
   line-height: 1.6;
+  font-weight: 200;
 }
 
 .seciton-hedading {
@@ -28,12 +28,7 @@
   border-bottom: dotted 1px #ccc;
   margin-bottom: 10px;
   line-height: 1.5;
-}
-
-.chart {
-  canvas {
-    margin: 10px 0 0 40px;
-  }
+  font-weight: 200;
 }
 
 .des-dev {
