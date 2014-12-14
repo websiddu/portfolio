@@ -1,12 +1,8 @@
 "use strict"
-angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, projects, parallaxHelper, $timeout) ->
+angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, parallaxHelper, $timeout) ->
   _desingAvatar = $('.js_avatar_design')
   _defaultAvatar = $('.js_default_trigger')
   _codeAvatar = $('.js_avatar_code')
-
-  $scope.projects = projects
-  $scope.selectedSize = ""
-  $scope.sortedBy = "-date"
 
   $scope.projectThumb = (img) ->
     "background-image": "url(#{img})"

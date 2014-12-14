@@ -1,5 +1,5 @@
 "use strict"
-angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $location, $anchorScroll, ngProgress, constants, Project) ->
+angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $location, $anchorScroll, ngProgress, constants, Project, $timeout) ->
 
 
   # colors = ["#76a7fa", "#e46f61", "#4dbfd9", "#fbcb43", "#8cc474", "#bc5679", "#6f85bf", "#f9b256"]
@@ -28,5 +28,17 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
 
   $rootScope.data = constants.data
   projects = Project.query()
+
+
+  $scope.closeNavbarInMobile = (path) ->
+    $location.path(path)
+    $timeout ->
+      if $('.top-bar').hasClass('expanded')
+        $('.toggle-topbar').click()
+    , 10
+
+
+
+
 
 angular.module("websidduApp").controller "404Ctrl", ($scope, $rootScope, $location) ->
