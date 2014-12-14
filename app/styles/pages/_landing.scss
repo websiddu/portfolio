@@ -24,13 +24,12 @@ body {
     height: 160px;
     padding: 5px;
     border-radius: 100%;
-
-    border: solid 5px #FC6E51;
-    background: #E9573F;
+    border: solid 5px #F6BB42;
+    background: #FFCE54;
 
     &:hover {
-      border: solid 5px #F6BB42;
-      background: #FFCE54;
+      border: solid 5px #FC6E51;
+      background: #E9573F;
 
       transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
       -webkit-transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
@@ -77,20 +76,24 @@ h3.l-d {
 $g-color1: #E9573F;
 $g-color2: #EF7D6B;
 
+// $g-color1: #FFCE54;
+// $g-color2: #FDDE93;
+
+//linear-gradient(to right, #FFCE54 0%, #FFE29C 100%)
 
 .l-button {
   background: $sunflower-light;
-  padding: 15px 20px;
+  padding: 16px 20px;
   color: #fff;
   margin-top: 30px;
   display: inline-block;
   //border-radius: 5px;
-  border: solid 1px #fff;
+  //border: solid 1px #fff;
   background-color: $g-color1;
   @include filter-gradient($g-color1, $g-color2, horizontal);
   @include background-image(linear-gradient(left, $g-color1 0%,$g-color2 100%));
   &:hover {
-    color: #ddd;
+    color: #eee;
   }
 }
 
@@ -134,9 +137,11 @@ $g1-color2: #fff;
 $g2-color1: #434A54;
 $g2-color2: #656D78;
 
-$g3-color1: #967ADC;
-$g3-color2: #AC92EC;
+// $g3-color1: #967ADC;
+// $g3-color2: #AC92EC;
 
+$g3-color1: #F6BB42;
+$g3-color2: #FFCE54;
 
 
 .contain-to-grid {
