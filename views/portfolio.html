@@ -34,7 +34,7 @@
           <div class="project">
             <div class="project-thumb" ng-style="projectThumb(project.thumbnail)"></div>
             <h2 class="project-title">{{project.title}}</h2>
-            <div class="tick" ng-if="projectSeen(&quot;/projects/&quot;+ project.id.$oid)">
+            <div class="tick" ng-if="projectSeen(&quot;/projects/&quot;+ project.id.$oid)" title="Seen!">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 24.3 14.6" enable-background="new 0 0 24.3 14.6" xml:space="preserve" style="height: 11px">
               <g>
               <path fill="#9AC3E8" d="M0.1,7.7C0,7.9,0,8.1,0.1,8.3c0,0,6.1,6.1,6.3,6.1c0.1,0,0.5,0,0.5,0C7.2,14,15.5,2.5,15.5,2.5
