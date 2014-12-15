@@ -37,6 +37,10 @@ module.exports = function(grunt) {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
         tasks: ['coffee:dist']
       },
+      webfont: {
+        files: ['<%= yeoman.app %>/fonts/{,*/}*.svg'],
+        tasks: ['webfont:icons']
+      },
       compass: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer']
@@ -72,6 +76,29 @@ module.exports = function(grunt) {
         }]
       }
     },
+    webfont: {
+      icons: {
+        src: '<%= yeoman.app %>/fonts/icons/*.svg',
+        dest: '<%= yeoman.app %>/fonts/',
+        destCss: '<%= yeoman.app %>/styles/pages/',
+        syntax: 'bootstrap',
+
+        options: {
+          stylesheet: 'scss',
+          relativeFontPath: '../fonts/',
+          destHtml: '<%= yeoman.app %>/fonts/',
+          font: 'icons',
+          hashes: false,
+          templateOptions: {
+            classPrefix: 'icon-'
+          }
+
+        },
+
+      }
+    },
+
+
     compass: {
       options: {
         sassDir: '<%= yeoman.app %>/styles',
@@ -273,7 +300,7 @@ module.exports = function(grunt) {
             '.htaccess',
             //'bower_components/**/*',
             'images/{,*/}*.{gif,webp,svg}',
-            'styles/fonts/*',
+            'fonts/*',
             'resources/*'
           ]
         }, {
