@@ -12,12 +12,10 @@ window.ws = do ->
     #     return
     # , 100
 
-
-
   init: ->
     setTimeout ->
       $(document).foundation()
-    , 200
+    , 500
     # _initFSVS()
 
 
