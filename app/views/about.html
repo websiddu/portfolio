@@ -1,62 +1,35 @@
 <div class="row">
-<div class="large-8 small-12 columns">
-<div class="page">
-  <h2 class="page-heading">/about</h2>
-  <h3 class="page-sub-heading">I'm a Front-end Developer and UX Designer from India.</h3>
-  <div class="about-text">
-    <p>
-      I am a first year graduate student doing masters in <a href="http://www.hcde.washington.edu/" target="_blank">Department of Human Centered Design &amp; Engineering (HCDE)</a> at <a href="http://www.washington.edu/">University of Washington</a>.
-    <p>
-      I'm interested in Social Computing, Usability, Gamificaiton, On-line Communities and Information Visualization. I love to work on cutting edge front-end technologies like CSS3, HTML5, Web Components, React.js, Angular.js, jQuery etc... and Building the front-end architecture, defining standards &amp; methodologies for front-end development.
-    </p>
-    <p>
-      Prior to joining Udub, I worked as a Front-end engineer &amp; UX Designer at <a href="http://www.tcs.com/about/tcs_difference/innovation/tcs_labs/Pages/default.aspx#chennai" target="_blank">Web 2.0</a> Innovation Labs, <a href="http://tcs.com" target="_blank"> Tata Consultancy Services</a>, Chennai for 2 years and 10 months.
-    </p>
-    <p>
-      Apart from coding, designing and research, I enjoy pencil sketching, cooking and photography.
-    </p>
-    <p class="muted light">
+  <div class="large-8 small-12 columns">
+    <div class="page">
+      <h2 class="page-heading">/about</h2>
+      <h3 class="page-sub-heading">I'm a Front-end Developer and UX Designer from India.</h3>
+      <div class="about-text">
+        <p>
+        I am a first year graduate student doing masters in <a href="http://www.hcde.washington.edu/" target="_blank">Department of Human Centered Design &amp; Engineering (HCDE)</a> at <a href="http://www.washington.edu/">University of Washington</a>.
+        </p>
+        <p>
+        I'm interested in Social Computing, Usability, Gamificaiton, On-line Communities and Information Visualization. I love to work on cutting edge front-end technologies like CSS3, HTML5, Web Components, React.js, Angular.js, jQuery etc... and Building the front-end architecture, defining standards &amp; methodologies for front-end development.
+        </p>
+        <p>
+        Prior to joining Udub, I worked as a Front-end engineer &amp; UX Designer at <a href="http://www.tcs.com/about/tcs_difference/innovation/tcs_labs/Pages/default.aspx#chennai" target="_blank">Web 2.0</a> Innovation Labs, <a href="http://tcs.com" target="_blank"> Tata Consultancy Services</a>, Chennai for 2 years and 10 months.
+        </p>
+        <p>
+        Apart from coding, designing and research, I enjoy pencil sketching, cooking and photography.
+        </p>
+        <div class="side-social animated fadeInDown" >
+          <ul class="inline-list social-list">
+            <li ng-repeat="item in socialprofiles">
+              <a ng-href="{{item.url}}" target="_blank" class="c{{($index % 8) + 1}}"> <em class="symbol" icon="{{item.icon}}"></em>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <br>
+        <p class="muted light">
         I am currently searching for internship positions to help me accomplish my zeal for creating delightful and intuitive experiences, in UX design and Front-end Engineering.
-    </p>
+        </p>
+      </div>
+    </div>
   </div>
- <!--  <div class="des-dev row">
-    <div id="des_dev" style="width: 200px, height: 200">
-      <canvas id="des_dev" width="200" height="200"></canvas>
-    </div>
-    <div class="large-6 columns">
-      <h6>Designer</h6>
-      <ul>
-        <li>User Experience Design</li>
-        <li>Wire-framing</li>
-        <li>Rapid interactive prototyping</li>
-        <li>Mobile interface Design</li>
-        <li>Contextual Inquiries</li>
-        <li>Visual Design (PhotoShop, Illustrator)</li>
-        <li>OmniGraffle, Balsamiq, Axure RP</li>
-      </ul>
-    </div>
-    <div class="large-6 columns">
-      <h6>Developer</h6>
-      <ul>
-        <li>CSS3, HTML5 and JavaScript</li>
-        <li>SASS, Compass, LESS</li>
-        <li>jQuery, angular.js, backbone.js</li>
-        <li>Ruby on Rails</li>
-        <li>asp.NET</li>
-        <li>Java, Python, Node.js</li>
-        <li>Git, Yeoman, Grunt</li>
-      </ul>
-    </div>
-    <div class="side-social animated fadeInDown" >
-    <ul class="inline-list social-list">
-      <li ng-repeat="item in socialprofiles">
-        <a ng-href="{{item.url}}" target="_blank" class="c{{($index % 8) + 1}}"> <em class="symbol" icon="{{item.icon}}"></em>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div> -->
-
 </div>
-<br>
-</div>
+<div ng-include="'views/partials/footer.html'"></div>

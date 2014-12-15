@@ -1,11 +1,31 @@
+$g2-color1: #434A54;
+$g2-color2: #656D78;
+
+$g3-color1: #967ADC;
+$g3-color2: #AC92EC;
+
+// $g3-color1: #F6BB42;
+// $g3-color2: #FFCE54;
+
 .footer {
-  background: #43434b;
-  height: 60px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  //height: 100px;
+  padding: 15px 10px;
+  background-color: $g2-color1;
+  @include filter-gradient($g2-color1, $g2-color2, horizontal);
+  @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
+  // &:after {
+  //   content: '';
+  //   display: block;
+  //   height: 3px;
+  //   background-color: $g3-color1;
+  //   @include filter-gradient($g3-color1, $g3-color2, horizontal);
+  //   @include background-image(linear-gradient(left, $g3-color1 0%,$g3-color2 100%));
+  //   width: 100%;
+  //   position: absolute;
+  // }
 }
+
+
 
 
 
