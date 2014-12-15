@@ -3,15 +3,31 @@
   min-height: 500px;
 }
 
+
+$g3-color1: #76a7fa;
+$g3-color2: #9ec2fe;
+
+
+// .page-heading-bg {
+//   background-color: $g3-color1;
+//   @include filter-gradient($g3-color1, $g3-color2, horizontal);
+//   @include background-image(linear-gradient(left, $g3-color1 0%,$g3-color2 100%));
+// }
+
+
 .page-heading {
   font-size: 30px;
   font-weight: 200;
+  // padding: 15px 0;
   word-wrap: break-word;
+  // margin: 0;
   width: 95%;
+  //color: #fff;
   em {
     vertical-align: middle;
   }
 }
+
 
 .page-sub-heading {
   font-size: 18px;

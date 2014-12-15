@@ -1,19 +1,19 @@
 .project-show-banner {
   clear: both;
-  height: 158px;
-  padding: 3px;
-  border: solid 1px #ddd;
+  height: 220px;
   position: relative;
-  margin: 0 0 20px;
   background: transparent url("../images/default_banner.png") 3px 3px no-repeat;
+  margin: 0 -28px 20px;
   .project-show-banner-img {
-    height: 150px;
+    height: 220px;
     position: absolute;
     top: 3px;
     left: 3px;
     right: 3px;
   }
 }
+
+
 
 .page-show-nav {
   margin: 0 0 10px 0;
@@ -28,21 +28,21 @@
   border-radius: 2px;
   position: relative;
   &:before {
-  display: block;
-  top: 0;
-  position: absolute;
-  font-family: 'Mono Social Icons Font';
-  border-radius: 3px 0 0 3px;
-  content: '\e082';
-  color: #fff;
-  background: $c1;
-  left: 0;
-  height: 100%;
-  width: 30px;
-  vertical-align: middle;
-  line-height: 40px;
-  font-size: 18px;
-  text-align: center;
+    display: block;
+    top: 0;
+    position: absolute;
+    font-family: 'Mono Social Icons Font';
+    border-radius: 3px 0 0 3px;
+    content: '\e082';
+    color: #fff;
+    background: $c1;
+    left: 0;
+    height: 100%;
+    width: 30px;
+    vertical-align: middle;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
   }
 }
 
@@ -54,7 +54,16 @@
 }
 
 .project-show-description {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 200;
+  p {
+    font-weight: 200;
+  }
 
+  ol {
+    margin-left: 30px;
+  }
 
   figure {
     margin: 20px auto;
@@ -69,19 +78,16 @@
     background-color: #efefef;
     font-style: italic;
   }
-
- .fig-group {
-  margin: 0;
-  figure {
+  .fig-group {
     margin: 0;
+    figure {
+      margin: 0;
+    }
+    figcaption {
+      padding: 4px 0;
+      font-size: 13px;
+    }
   }
-  figcaption {
-    padding: 4px 0;
-    font-size: 13px;
-  }
- }
-
-
   > ol, > ul {
     margin-left: 30px;
   }
@@ -95,10 +101,8 @@
   }
   code {
     font-size: 16px;
-    font-weight: normal;
   }
 }
-
 
 .tags {
   list-style-type: none;
@@ -112,8 +116,45 @@
   }
 }
 
-
 .page-row {
   min-height: 1000px;
   background: #fff;
+}
+
+a[target="_blank"]:after {
+  content: url("../images/new_tab.svg");
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.social-list {
+  a[target="_blank"]:after {
+    content: '';
+    margin-left: 0;
+  }
+}
+
+
+.link-container {
+  background-color: #FCFCFC;
+  border: 1px solid #EEE;
+  border-radius: 2px;
+  padding: 10px 15px;
+  margin: 30px 0;
+  strong {
+    display: block;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+  }
+  ol {
+    li {
+      margin: 7.5px 0;
+    }
+  }
+}
+
+.project-page {
+  background-color: rgba(250, 250, 250, 0.3);
+  box-shadow: 0 0 5px #D0D0D0;
 }
