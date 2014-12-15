@@ -3,44 +3,39 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Siddhartha Gudipati, Font-end engineer &amp; UX designer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-
-        <!-- build:css(.tmp) styles/main.css -->
-          <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300' rel='stylesheet' type='text/css'>
-</head>
-  <body ng-cloak ng-app="websidduApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!--[if lt IE 9]>
-      <script src="bower_components/es5-shim/es5-shim.js"></script>
-      <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
-
-    <!-- Add your site or application content here -->
-    <div ng-controller="appCtrl">
-    <div ng-include="'views/partials/navbar.html'"></div>
-        <div class="maincontent" >
-
-      <!-- <div ng-include="'views/partials/header.html'"></div> -->
-        <div class="fadeIn" ng-view>
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300' rel='stylesheet' type='text/css'>
+    </head>
+    <body ng-cloak ng-app="websidduApp">
+        <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!--[if lt IE 9]>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/json3/lib/json3.min.js"></script>
+        <![endif]-->
+        <!-- Add your site or application content here -->
+        <div ng-controller="appCtrl">
+            <div ng-include="'views/partials/navbar.html'"></div>
+            <div class="maincontent" >
+                <!-- <div ng-include="'views/partials/header.html'"></div> -->
+                <div class="fadeIn" ng-view>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- <div ng-include="'views/partials/footer.html'"></div> -->
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-
+        <!-- <div ng-include="'views/partials/footer.html'"></div> -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
         <!-- build:js scripts/modules.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -49,22 +44,16 @@
         <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-scroll/angular-scroll.js"></script>
         <script src="bower_components/ng-parallax/angular-parallax.js"></script>
-
         <!-- endbuild -->
-
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/foundation/foundation.js"></script>
         <script src="scripts/foundation/foundation.topbar.js"></script>
-
-
         <script src="bower_components/screenfull/dist/screenfull.js"></script>
         <script src="bower_components/ngprogress/build/ngProgress.js"></script>
         <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
         <script src="bower_components/zoomerang/zoomerang.js"></script>
         <script src="bower_components/scrollReveal.js/dist/scrollReveal.js"></script>
         <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
-
-
         <script src="scripts/app.js"></script>
         <script src="scripts/config/routes.js"></script>
         <script src="scripts/config/constants.js"></script>
@@ -77,13 +66,10 @@
         <script src="scripts/controllers/photo.js"></script>
         <script src="scripts/controllers/contact.js"></script>
         <script src="scripts/controllers/about.js"></script>
-
         <script src="scripts/resources/project.js"></script>
         <script src="scripts/resources/design.js"></script>
         <script src="scripts/resources/photos.js"></script>
-
         <script src="scripts/ws.js"></script>
         <!-- endbuild -->
-
-</body>
+    </body>
 </html>

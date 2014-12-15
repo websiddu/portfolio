@@ -296,9 +296,9 @@ $g2-color2: #656D78;
         //color: $topbar-link-color-hover;
         // font-weight: bold;
 
-        background-color: $g2-color1;
-        @include filter-gradient($g2-color1, $g2-color2, horizontal);
-        @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
+        // background-color: $g2-color1;
+        // @include filter-gradient($g2-color1, $g2-color2, horizontal);
+        // @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
 
         position: relative;
         &:before {
