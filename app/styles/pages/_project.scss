@@ -13,8 +13,6 @@
   }
 }
 
-
-
 .page-show-nav {
   margin: 0 0 10px 0;
   overflow: hidden;
@@ -27,6 +25,7 @@
   padding: 10px 20px 10px 40px;
   border-radius: 2px;
   position: relative;
+  font-size: 16px;
   &:before {
     display: block;
     top: 0;
@@ -104,15 +103,23 @@
   }
 }
 
+$tg1: #92E4BE;
+$tg2: #B4F4D6;
+
 .tags {
   list-style-type: none;
   > li {
     display: inline-block;
-    padding: 2px 10px 2px 5px;
-    border-radius: 2px;
-    background: $c5;
+    padding: 2px 20px;
+    border-radius: 5px;
+
+    background-color: $tg1;
+    @include filter-gradient($tg1, $tg2, horizontal);
+    @include background-image(linear-gradient(left, $tg1 0%,$tg2 100%));
+
     color: #fff;
-    margin: 0 10px 10px 0;
+    margin: 0 15px 15px 0;
+    font-size: 15px;
   }
 }
 
