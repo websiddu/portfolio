@@ -122,14 +122,12 @@ a[target="_blank"]:after {
   display: inline-block;
   margin-left: 3px;
 }
-
-.social-list {
+.social-list, .builton {
   a[target="_blank"]:after {
     content: '';
     margin-left: 0;
   }
 }
-
 
 .link-container {
   background-color: #FCFCFC;

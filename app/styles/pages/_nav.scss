@@ -72,6 +72,10 @@ hr {
 }
 
 .builton {
+  a {
+    display: inline-block;
+    height: 18px;
+  }
   img {
     height: 18px;
     margin: 0 5px 0 0;
@@ -94,6 +98,7 @@ hr {
 
 $g2-color1: #434A54;
 $g2-color2: #656D78;
+
 
 @media #{$small-max} {
   .top-bar.expanded {
