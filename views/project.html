@@ -14,8 +14,12 @@
       <div class="row">
         <div class="large-9 small-12 columns">
           <div class="project-show-url">
+
             <span ng-if="project.isActive">
-            <a href="{{project.projectUrl}}" target="_blank" class="truncate">{{project.projectUrl}}</a>
+              <span class="truncate">
+                <em class="icon icon-link"></em>
+                <a href="{{project.projectUrl}}" target="_blank">{{project.projectUrl}}</a>
+              </span>
             </span>
             <span ng-if="project.isActive == 0">
             <del><a>{{project.projectUrl}}</a></del> <small class="muted">(This url is not active!!)</small>
@@ -23,7 +27,8 @@
           </div>
         </div>
         <div class="large-3 small-12 columns">
-          <div class="project-show-date">{{date}}</div>
+
+          <div class="project-show-date"><em class="icon icon-calendaralt"></em> {{date}}</div>
         </div>
       </div>
       <div class="project-show-tags">
