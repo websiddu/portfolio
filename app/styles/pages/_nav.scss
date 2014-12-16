@@ -75,6 +75,7 @@ hr {
   a {
     display: inline-block;
     height: 18px;
+    padding: 6px 0 0 0;
   }
   img {
     height: 18px;
@@ -83,6 +84,9 @@ hr {
   font-size: 12px;
   .love {
     display: inline-block;
+    height: 18px;
+    width: 16px;
+    padding: 6px 0 0 0;
     em {
       font-size: 14px;
       line-height: 14px;
