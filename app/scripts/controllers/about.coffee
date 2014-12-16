@@ -6,3 +6,11 @@ angular.module("websidduApp").controller "aboutCtrl", ($scope, $http, $rootScope
     method: "GET"
   ).success (data, status) ->
     $scope.socialprofiles = data
+
+
+  $scope.jobs = []
+  $http(
+    url: "resources/jobs.json"
+    method: "GET"
+  ).success (data, status) ->
+    $scope.jobs = data
