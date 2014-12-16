@@ -1,7 +1,11 @@
-<div class="row">
-  <div class="large-8 small-12 columns">
-    <div class="page">
+<div class="page">
+  <div class="row">
+    <div class="large-12 columns">
       <h2 class="page-heading">/about</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-8 small-12 columns">
       <h3 class="page-sub-heading">I'm a Front-end Developer and UX Designer from India.</h3>
       <div class="about-text">
         <p>
@@ -16,7 +20,7 @@
         <p>
         Apart from coding, designing and research, I enjoy pencil sketching, cooking and photography.
         </p>
-        <div class="side-social animated fadeInDown">
+        <div class="side-social">
           <ul class="inline-list social-list">
             <li ng-repeat="item in socialprofiles">
               <a ng-href="{{item.url}}" target="_blank" class="c{{($index % 8) + 1}}"> <em class="icon icon-{{item.icon}}"></em>
@@ -28,6 +32,18 @@
         <p class="muted light">
         I am currently searching for internship positions to help me accomplish my zeal for creating delightful and intuitive experiences, in UX design and Front-end Engineering.
         </p>
+      </div>
+    </div>
+    <div class="large-4 small-12 columns">
+
+      <div class="work-timeline">
+        <ul>
+          <li ng-repeat="job in jobs">
+            <span> {{job.time}}</span>
+            <h5>{{job.position}}</h5>
+            <h6>{{job.company}}, {{job.location}} </h6>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
