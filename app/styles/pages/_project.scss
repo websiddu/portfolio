@@ -24,34 +24,20 @@
 .project-show-url, .project-show-date {
   margin: 0 0 20px;
   background: #efefef;
-  padding: 10px 20px 10px 40px;
+  padding: 10px;
   border-radius: 2px;
   position: relative;
   font-size: 16px;
-  &:before {
-    display: block;
-    top: 0;
-    position: absolute;
-    font-family: 'Mono Social Icons Font';
-    border-radius: 3px 0 0 3px;
-    content: '\e082';
-    color: #fff;
-    background: $c1;
-    left: 0;
-    height: 100%;
-    width: 30px;
-    vertical-align: middle;
-    line-height: 40px;
-    font-size: 18px;
-    text-align: center;
+  em {
+    margin: 0 5px;
+    font-size: 16px;
+    line-height: 1;
+    color: #888;
   }
 }
 
 .project-show-date {
-  &:before {
-    content: '\e029';
-    background: $c1;
-  }
+
 }
 
 .project-show-description {
