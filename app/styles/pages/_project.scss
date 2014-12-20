@@ -14,6 +14,16 @@
   }
 }
 
+$bq-color1: #434A54;
+$bq-color2: #656D78;
+
+
+// .page-heading-bg {
+//   background-color: $g3-color1;
+//   @include filter-gradient($g3-color1, $g3-color2, horizontal);
+//   @include background-image(linear-gradient(left, $g3-color1 0%,$g3-color2 100%));
+// }
+
 
 .page-show-nav {
   margin: 0 0 10px 0;
@@ -89,6 +99,28 @@
   code {
     font-size: 16px;
   }
+
+  blockquote.full {
+    margin: 0 -25px;
+    padding: 30px 40px;
+    font-size: 22px;
+    font-family: Georgia;
+    color: #fff;
+    text-align: center;
+
+    background-color: $bq-color1;
+    @include filter-gradient($bq-color1, $bq-color2, horizontal);
+    @include background-image(linear-gradient(left, $bq-color1 0%,$bq-color2 100%));
+
+    margin-bottom: 20px;
+
+    &:before {
+      left: 10px;
+      color: #fff;
+      font-size: 50px;
+    }
+  }
+
 }
 
 $tg1: #92A3E4;
