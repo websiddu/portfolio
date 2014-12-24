@@ -107,6 +107,26 @@ $bq-color2: #656D78;
     font-size: 16px;
   }
 
+  .colloborators {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #f7f7f7;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  .company {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #444;
+    p {
+      margin: 0;
+    }
+  }
+
   blockquote.full {
     margin: 0 -25px;
     padding: 30px 40px;
