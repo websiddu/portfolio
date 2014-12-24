@@ -58,8 +58,15 @@ $bq-color2: #656D78;
     font-weight: 200;
   }
 
-  ol {
+  ol, ul {
     margin-left: 30px;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+  img {
+    margin: 0 0 20px;
   }
 
   figure {
