@@ -1,3 +1,6 @@
+$g1-color1: #efefea;
+$g1-color2: #fff;
+
 .maincontent {
   //margin-top: 70px;
   font-weight: 200;
@@ -6,6 +9,11 @@
 
 body {
   font-weight: 200;
+  background-color: $g1-color1;
+  @include filter-gradient($g1-color1, $g1-color2, horizontal);
+  @include background-image(linear-gradient(left, $g1-color1 0%,$g1-color2 100%));
+
+
 }
 
 
@@ -118,15 +126,14 @@ $g-color2: #EF7D6B;
 //   bottom:
 // }
 
-$g1-color1: #efefea;
-$g1-color2: #fff;
+
 
 .landing-banner {
   //background: url('../images/b/b1.png') 0 0 no-repeat;
   //background-size: cover;
-  background-color: $g1-color1;
-  @include filter-gradient($g1-color1, $g1-color2, horizontal);
-  @include background-image(linear-gradient(left, $g1-color1 0%,$g1-color2 100%));
+  // background-color: $g1-color1;
+  // @include filter-gradient($g1-color1, $g1-color2, horizontal);
+  // @include background-image(linear-gradient(left, $g1-color1 0%,$g1-color2 100%));
 
   position: fixed;
   top: 0;
