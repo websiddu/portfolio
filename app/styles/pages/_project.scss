@@ -1,9 +1,17 @@
+.project-page {
+  background-color: #fff;
+  box-shadow: 0 0 5px #D0D0D0;
+  overflow: hidden;
+  padding: 0 30px;
+  position: relative;
+}
+
 .project-show-banner {
   clear: both;
   height: 220px;
   position: relative;
   background: transparent url("../images/default_banner.png") 0 0 no-repeat;
-  margin: 0 -25px 20px;
+  margin: 0 -55px 20px;
   .project-show-banner-img {
     height: 220px;
     position: absolute;
@@ -128,12 +136,11 @@ $bq-color2: #656D78;
   }
 
   blockquote.full {
-    margin: 0 -25px;
+    margin: 0 -60px;
     padding: 15px 55px;
     font-size: 19px;
     font-family: Georgia;
     color: #fff;
-    text-align: center;
 
     background-color: $bq-color1;
     @include filter-gradient($bq-color1, $bq-color2, horizontal);
@@ -205,9 +212,4 @@ a[target="_blank"]:after {
       margin: 7.5px 0;
     }
   }
-}
-
-.project-page {
-  background-color: #fff;
-  box-shadow: 0 0 5px #D0D0D0;
 }
