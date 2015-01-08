@@ -213,3 +213,10 @@ a[target="_blank"]:after {
     }
   }
 }
+
+@media #{$small-max} {
+  .project-page  {
+    padding: 0;
+  }
+
+}
