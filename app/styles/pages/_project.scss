@@ -182,7 +182,7 @@ $tg2: #ABB6EF;
   background: #fff;
 }
 
-a[target="_blank"]:after {
+.svg a[target="_blank"]:after {
   content: url("../images/new_tab.svg");
   vertical-align: middle;
   display: inline-block;
