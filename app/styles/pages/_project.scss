@@ -182,17 +182,25 @@ $tg2: #ABB6EF;
   background: #fff;
 }
 
-.svg a[target="_blank"]:after {
+a[target="_blank"]:after {
   content: url("../images/new_tab.svg");
-  vertical-align: middle;
+  vertical-align: -1px;
   display: inline-block;
   margin-left: 3px;
+  height: 15px;
+  width: 15px;
 }
+
+// .no-webgl a[target="_blank"]:after {
+//   content: url("../images/new_tab.png");
+// }
 
 .social-list, .builton, .l-dc-intro {
   a[target="_blank"]:after {
     content: '';
     margin-left: 0;
+    height: 0;
+    width: 0;
   }
 }
 
