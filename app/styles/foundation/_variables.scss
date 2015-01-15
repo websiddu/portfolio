@@ -4,7 +4,7 @@
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
-$base-font-size: 14px !default;
+$base-font-size: 15px !default;
 
 $c1: #76a7fa;
 $c2: #e46f61;
@@ -59,7 +59,7 @@ $base-line-height: 130%;
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be a different size and not have it effect grid size too,
 // set the value of $em-base to $base-font-size ($em-base: $base-font-size;)
-$em-base: 14px !default;
+$em-base: $base-font-size;
 
 // It strips the unit of measure and returns it
 @function strip-unit($num) {
@@ -110,9 +110,9 @@ $default-float: left;
 
 $body-bg: transparent;
 $body-font-color: #222;
-$body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-secondary-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
-$body-font-weight: 200;
+$body-font-weight: 300;
 $body-font-style: normal;
 
 // Font-smoothing
@@ -223,7 +223,7 @@ $block-grid-default-spacing: em-calc(40);
 
 // Control header font styles
 
-$header-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $header-font-weight: bold;
 $header-font-style: normal;
 $header-font-color: #222;
@@ -669,7 +669,7 @@ $custom-select-fade-to-color: #f3f3f3;
 $custom-select-border-color: #ddd;
 $custom-select-triangle-color: #aaa;
 $custom-select-triangle-color-open: #222;
-$custom-select-height: em-calc(13) + ($form-spacing * 1.5);
+$custom-select-height: em-calc(14) + ($form-spacing * 1.5);
 $custom-select-margin-bottom: em-calc(20);
 $custom-select-font-color-selected: #141414;
 $custom-select-disabled-color: #888;
@@ -1338,7 +1338,7 @@ $side-nav-padding: em-calc(14 0);
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-weight: bold;
-// $topbar-link-font-size: em-calc(13);
+ $topbar-link-font-size: em-calc(14);
 // $topbar-link-hover-lightness: -30%; // Darken by 30%
 // $topbar-link-bg-hover: darken($topbar-bg-color, 3%);
 // $topbar-link-bg-active: darken($topbar-bg-color, 3%);
@@ -1352,7 +1352,7 @@ $side-nav-padding: em-calc(14 0);
 // Top menu icon styles
 
 // $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: em-calc(13);
+$topbar-menu-link-font-size: em-calc(14);
 // $topbar-menu-link-weight: bold;
 // $topbar-menu-link-color: #fff;
 // $topbar-menu-icon-color: #fff;

@@ -1,17 +1,20 @@
-
 <div class="row">
 <div class="project-page">
   <div class="large-12 columns">
     <div class="page">
-      <h2 class="page-heading left">/<a class="standalone" href="#/portfolio" >projects</a>/{{project.title}}</h2>
-      <br>
-      <div class="clear page-show-nav">
-        <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject}}">&larr; Previous project</a></span>
-        <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject}}">Next project &rarr;</a></span>
-      </div>
       <div class="project-show-banner">
         <div class="project-show-banner-img" ng-style="{{style}}">
         </div>
+        <h2 class="page-heading left">{{project.title}}</h2>
+      </div>
+
+      <!-- <h2 class="page-heading left">/<a class="standalone" href="#/portfolio" >projects</a>/{{project.title}}</h2> -->
+
+      <br>
+      <div class="project-show-meta">
+      <div class="clear page-show-nav">
+        <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject}}">&larr; Previous project</a></span>
+        <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject}}">Next project &rarr;</a></span>
       </div>
       <div class="row">
         <div class="large-9 small-12 columns">
@@ -38,6 +41,7 @@
           <li ng-repeat="tag in project.tags.split(',')">  {{tag}} </li>
         </ul>
       </div>
+    </div>
       <div class="project-show-description" ng-bind-html="project.description">
       </div>
       <div class="project-show-screenshots">

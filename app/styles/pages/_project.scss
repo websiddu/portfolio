@@ -2,7 +2,7 @@
   background-color: #fff;
   box-shadow: 0 0 5px #D0D0D0;
   overflow: hidden;
-  padding: 0 30px;
+  padding: 0;
   position: relative;
 }
 
@@ -11,7 +11,7 @@
   height: 220px;
   position: relative;
   background: transparent url("../images/default_banner.png") 0 0 no-repeat;
-  margin: 0 -55px 20px;
+  margin: -25px -55px 0;
   .project-show-banner-img {
     height: 220px;
     position: absolute;
@@ -22,8 +22,12 @@
   }
 }
 
-$bq-color1: #434A54;
-$bq-color2: #656D78;
+// $bq-color1: #434A54;
+// $bq-color2: #656D78;
+
+$bq-color1: #efefea;
+$bq-color2: #efefef;
+$bq-text-color: #434A54;
 
 
 // .page-heading-bg {
@@ -136,22 +140,28 @@ $bq-color2: #656D78;
   }
 
   blockquote.full {
-    margin: 0 -60px;
-    padding: 15px 55px;
+    margin: 0 -40px;
+    padding: 15px 100px;
     font-size: 19px;
-    font-family: Georgia;
-    color: #fff;
 
-    background-color: $bq-color1;
-    @include filter-gradient($bq-color1, $bq-color2, horizontal);
-    @include background-image(linear-gradient(left, $bq-color1 0%,$bq-color2 100%));
+    border-top: solid 1px $bq-color1;
+    border-bottom: solid 1px $bq-color1;
+    //font-family: Georgia;
+    color: $bq-text-color;
+    font-style: normal;
+    background: #f9f9f9;
+
+    //background-color: $bq-color1;
+    //@include filter-gradient($bq-color1, $bq-color2, horizontal);
+    //@include background-image(linear-gradient(left, $bq-color1 0%,$bq-color2 100%));
 
     margin-bottom: 20px;
 
     &:before {
       left: 10px;
-      color: #fff;
+      color: $bq-text-color;
       font-size: 50px;
+      content: '';
     }
   }
 
@@ -222,9 +232,110 @@ a[target="_blank"]:after {
   }
 }
 
+.page-heading {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin: 0;
+  width: 100%;
+  padding: 6px 70px;
+}
+
+.project-page section {
+  margin-right: 280px;
+  margin-left: 150px;
+}
+
+.section-body {
+  margin-bottom: 30px;
+}
+
+.project-page section p {
+  color: #555;
+  line-height: 1.7;
+}
+
+.project-show-meta {
+  padding: 0 20px;
+}
+
+aside .metadata {
+  margin-bottom: 30px;
+}
+
+.metadata dt {
+  color: #666;
+  font-size: 16px;
+  font-weight: bold;
+}
+.metadata dd {
+  margin-bottom: 0.5em;
+}
+
+.project-page section .section-heading {
+  width: 140px;
+  float: left;
+  margin: 0 0 0 -160px;
+  text-align: right;
+  font-size: 17px;
+  color: #666;
+  line-height: 1.7;
+  display: inline-block;
+}
+
+.project-page aside {
+  width: 220px;
+  float: right;
+  font-size: 15px;
+}
+
+
 @media #{$small-max} {
   .project-page  {
     padding: 0;
   }
+
+  .project-page aside {
+    float: none;
+    width: 100%;
+  }
+
+  .project-page section {
+    margin: 0;
+  }
+
+  .project-page blockquote.full {
+    padding: 10px 40px;
+  }
+
+  .project-show-meta {
+    padding: 0;
+  }
+
+  .project-page section .section-heading {
+    float: none;
+    text-align: left;
+    margin: 0;
+    display: block;
+  }
+
+  aside .metadata {
+    margin-bottom: 15px;
+  }
+
+.metadata dd {
+  display: inline;
+  &:after {
+    content: ', ';
+  }
+  &:last-child {
+    &:after {
+      content: '';
+    }
+  }
+}
 
 }
