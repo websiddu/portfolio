@@ -6,7 +6,7 @@
 
   return function sticky(el, top) {
 
-    var requiredOriginalStyles = ['position', 'top', 'left', 'bottom', 'z-index'];
+    var requiredOriginalStyles = ['position', 'top', 'left', 'bottom', 'padding-top', 'padding-bottom', 'font-size', 'z-index'];
 
     var requiredTop = top || 0;
     var originalRect = calcRect(el);
@@ -16,6 +16,9 @@
       left: originalRect.left + 'px',
       width: originalRect.width + 'px',
       bottom: 'auto',
+      "padding-top": '10px',
+      'padding-bottom': '10px',
+      'font-size': '20px',
       'z-index': 9999
     }
     var originalStyles = {}
