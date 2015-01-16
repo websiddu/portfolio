@@ -11,7 +11,7 @@
   height: 220px;
   position: relative;
   background: transparent url("../images/default_banner.png") 0 0 no-repeat;
-  margin: -25px -55px 0;
+  margin: -25px -25px 0;
   .project-show-banner-img {
     height: 220px;
     position: absolute;
@@ -240,10 +240,10 @@ a[target="_blank"]:after {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   margin: 0;
-  width: 100%;
-  padding: 6px 70px;
+  padding: 12px 70px;
   font-weight: 300;
   font-size: 30px;
+  line-height: 1;
 }
 
 .project-page section {

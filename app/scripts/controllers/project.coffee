@@ -12,6 +12,11 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
 
   localStorage[$location.path()] = 'seen'
 
+  setTimeout ->
+    nav = document.getElementById('prj-title')
+    sticky(nav, 73)
+  , 10
+
   $(document).one "click", ".scrSht", (e) ->
     e.preventDefault()
     s = $('.scrSht').magnificPopup(
