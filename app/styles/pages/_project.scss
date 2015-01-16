@@ -240,11 +240,41 @@ a[target="_blank"]:after {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   margin: 0;
-  padding: 12px 70px;
+  padding: 12px 50px;
   font-weight: 300;
   font-size: 30px;
   line-height: 1;
   transition: font-size 0.3s ease-in;
+
+  span {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    padding-left: 6px;
+    padding-right: 6px;
+    &:hover {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 3px;
+      }
+
+    a {
+      color: #fff;
+      font-weight: normal;
+      display: inline-block;
+    }
+  }
+
+  .leftarr {
+    right: 90px;
+  }
+
+  .rightarr {
+    right: 20px;
+  }
+
 }
 
 .project-page section {
@@ -300,6 +330,10 @@ aside .metadata {
 @media #{$small-max} {
   .project-page  {
     padding: 0;
+  }
+
+  .project-page-heading {
+    padding: 12px 10px;
   }
 
   .project-page aside {
