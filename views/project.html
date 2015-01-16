@@ -1,3 +1,6 @@
+<style>
+
+</style>
 <div class="row">
 <div class="project-page">
   <div class="large-12 columns">
@@ -5,7 +8,14 @@
       <div class="project-show-banner">
         <div class="project-show-banner-img" ng-style="{{style}}">
         </div>
-        <h2 class="project-page-heading left" id="prj-title">{{project.title}}</h2>
+        <h2 class="project-page-heading left" id="prj-title">
+          <span class="leftarr" ng-if="project.previousProject">
+            <a href="#/projects/{{project.previousProject}}"><em class="icon icon-arrow-left"></em></a>
+          </span>
+          {{project.title}}
+          <span class="rightarr" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject}}"><em class="icon icon-arrow-right"></em></a></span>
+
+        </h2>
       </div>
 
       <!-- <h2 class="page-heading left">/<a class="standalone" href="#/portfolio" >projects</a>/{{project.title}}</h2> -->
