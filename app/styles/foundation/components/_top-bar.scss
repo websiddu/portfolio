@@ -230,6 +230,7 @@ $g2-color2: #656D78;
       background: $topbar-dropdown-bg;
       font-size: $em-base;
       margin: 0;
+      transition: all 0.3s ease-in;
     }
 
     .divider,

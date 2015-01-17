@@ -275,6 +275,19 @@ a[target="_blank"]:after {
     right: 20px;
   }
 
+  &.sticky-nav {
+    position: fixed;
+    font-size: 20px;
+    padding-top: 10px;
+    top: 73px;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    padding-bottom: 10px;
+    z-index: 1030;
+    max-width: 70rem;
+    margin: 0 auto;
+  }
 }
 
 .project-page section {
@@ -340,6 +353,7 @@ aside .metadata {
     float: none;
     width: 100%;
     font-size: 16px;
+    transition: all 0.3s ease-in;
   }
 
   .project-page section {
@@ -350,6 +364,17 @@ aside .metadata {
 
   .project-page blockquote.full {
     padding: 10px 40px;
+  }
+
+  .project-page-heading {
+    &.sticky-nav {
+      margin-left: 0;
+      left: 0;
+      right: 0;
+    }
+    span {
+      display: none;
+    }
   }
 
   .project-show-meta {
@@ -366,6 +391,7 @@ aside .metadata {
 
   aside .metadata {
     margin-bottom: 15px;
+    transition: all 0.3s ease-in;
   }
 
 .metadata dd {

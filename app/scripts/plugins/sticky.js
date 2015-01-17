@@ -6,10 +6,13 @@
 
   return function sticky(el, top) {
 
-    var requiredOriginalStyles = ['position', 'top', 'left', 'bottom', 'padding-top', 'padding-bottom', 'font-size', 'z-index'];
+    console.log(el);
+
+    var requiredOriginalStyles = ['position', 'top', 'left', 'width', 'bottom', 'padding-top', 'padding-bottom', 'font-size', 'z-index'];
 
     var requiredTop = top || 0;
     var originalRect = calcRect(el);
+    var originalClass = el.className;
     var styles = {
       position: 'fixed',
       top: requiredTop + 'px',
@@ -33,13 +36,17 @@
 
     window.onscroll = function(event) {
       if (getWindowScroll().top > originalRect.top - requiredTop) {
-        for (key in styles) {
-          el.style[key] = styles[key];
-        }
+        // for (key in styles) {
+        //   el.style[key] = styles[key];
+        // }
+        el.className = originalClass + ' sticky-nav'
       } else {
-        for (key in originalStyles) {
-          el.style[key] = originalStyles[key];
-        }
+        // for (key in originalStyles) {
+        //   el.style[key] = originalStyles[key];
+        // }
+
+        el.className = originalClass;
+
       }
       onscroll && onscroll(event)
     }
