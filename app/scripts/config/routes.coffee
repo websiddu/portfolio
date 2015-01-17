@@ -95,3 +95,7 @@ websidduApp.config(($routeProvider, $locationProvider) ->
     controller: "404Ctrl"
 )
 
+websidduApp.config(($sceProvider) ->
+  $sceProvider.enabled(false);
+)
+
