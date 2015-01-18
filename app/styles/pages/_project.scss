@@ -29,13 +29,11 @@ $bq-color1: #efefea;
 $bq-color2: #efefef;
 $bq-text-color: #434A54;
 
-
 // .page-heading-bg {
 //   background-color: $g3-color1;
 //   @include filter-gradient($g3-color1, $g3-color2, horizontal);
 //   @include background-image(linear-gradient(left, $g3-color1 0%,$g3-color2 100%));
 // }
-
 
 .page-show-nav {
   margin: 0 0 10px 0;
@@ -58,9 +56,7 @@ $bq-text-color: #434A54;
   }
 }
 
-.project-show-date {
-
-}
+.project-show-date {}
 
 .project-show-description {
   font-size: 16px;
@@ -69,18 +65,16 @@ $bq-text-color: #434A54;
   p {
     font-weight: 200;
   }
-
   ol, ul {
     margin-left: 30px;
     li {
       margin-bottom: 5px;
     }
   }
-
   img {
     margin: 0 0 20px;
+    cursor: pointer;
   }
-
   figure {
     margin: 20px auto;
     display: block;
@@ -118,7 +112,6 @@ $bq-text-color: #434A54;
   code {
     font-size: 16px;
   }
-
   .colloborators {
     margin-top: 30px;
     padding: 10px 20px;
@@ -129,7 +122,6 @@ $bq-text-color: #434A54;
       margin-bottom: 0;
     }
   }
-
   .company {
     font-size: 14px;
     margin-top: 20px;
@@ -138,25 +130,20 @@ $bq-text-color: #434A54;
       margin: 0;
     }
   }
-
   blockquote.full {
     margin: 0 -40px;
     padding: 15px 100px;
     font-size: 19px;
-
     border-top: solid 1px $bq-color1;
     border-bottom: solid 1px $bq-color1;
     //font-family: Georgia;
     color: $bq-text-color;
     font-style: normal;
     background: #f9f9f9;
-
     //background-color: $bq-color1;
     //@include filter-gradient($bq-color1, $bq-color2, horizontal);
     //@include background-image(linear-gradient(left, $bq-color1 0%,$bq-color2 100%));
-
     margin-bottom: 20px;
-
     &:before {
       left: 10px;
       color: $bq-text-color;
@@ -164,7 +151,6 @@ $bq-text-color: #434A54;
       content: '';
     }
   }
-
 }
 
 $tg1: #92A3E4;
@@ -176,11 +162,9 @@ $tg2: #ABB6EF;
     display: inline-block;
     padding: 2px 20px;
     border-radius: 5px;
-
     background-color: #c4c4c4;
     //@include filter-gradient($tg1, $tg2, horizontal);
     //@include background-image(linear-gradient(left, $tg1 0%,$tg2 100%));
-
     color: #fff;
     margin: 0 15px 15px 0;
     font-size: 15px;
@@ -245,7 +229,6 @@ a[target="_blank"]:after {
   font-size: 30px;
   line-height: 1;
   transition: font-size 0.3s ease-in;
-
   span {
     position: absolute;
     right: 20px;
@@ -256,25 +239,21 @@ a[target="_blank"]:after {
     padding-left: 6px;
     padding-right: 6px;
     &:hover {
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 3px;
-      }
-
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+    }
     a {
       color: #fff;
       font-weight: normal;
       display: inline-block;
     }
   }
-
   .leftarr {
     right: 60px;
   }
-
   .rightarr {
     right: 20px;
   }
-
   &.sticky-nav {
     position: fixed;
     font-size: 20px;
@@ -317,6 +296,7 @@ aside .metadata {
   font-size: 18px;
   font-weight: bold;
 }
+
 .metadata dd {
   margin-bottom: 0.5em;
 }
@@ -339,33 +319,27 @@ aside .metadata {
   font-size: 16px;
 }
 
-
 @media #{$small-max} {
-  .project-page  {
+  .project-page {
     padding: 0;
   }
-
   .project-page-heading {
     padding: 12px 10px;
   }
-
   .project-page aside {
     float: none;
     width: 100%;
     font-size: 16px;
     transition: all 0.3s ease-in;
   }
-
   .project-page section {
     margin: 0;
     font-size: 18px;
     line-height: 1.5;
   }
-
   .project-page blockquote.full {
     padding: 10px 40px;
   }
-
   .project-page-heading {
     &.sticky-nav {
       margin-left: 0;
@@ -376,11 +350,9 @@ aside .metadata {
       display: none;
     }
   }
-
   .project-show-meta {
     padding: 0;
   }
-
   .project-page section .section-heading {
     float: none;
     text-align: left;
@@ -388,22 +360,19 @@ aside .metadata {
     display: block;
     font-size: 18px;
   }
-
   aside .metadata {
     margin-bottom: 15px;
     transition: all 0.3s ease-in;
   }
-
-.metadata dd {
-  display: inline;
-  &:after {
-    content: ', ';
-  }
-  &:last-child {
+  .metadata dd {
+    display: inline;
     &:after {
-      content: '';
+      content: ', ';
+    }
+    &:last-child {
+      &:after {
+        content: '';
+      }
     }
   }
-}
-
 }
