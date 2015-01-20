@@ -6,8 +6,6 @@
 
   return function sticky(el, top) {
 
-    console.log(el);
-
     var requiredOriginalStyles = ['position', 'top', 'left', 'width', 'bottom', 'padding-top', 'padding-bottom', 'font-size', 'z-index'];
 
     var requiredTop = top || 0;

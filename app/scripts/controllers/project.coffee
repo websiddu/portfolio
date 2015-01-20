@@ -36,9 +36,7 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
               w: this.width
               h: this.height
               title: $img.attr('alt')
-            console.log imgA
             $scope.images.push(img)
-            console.log imgA
             if imgA is $images.length - 1
               _initPhotoSwipe()
           )
