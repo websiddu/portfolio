@@ -24,7 +24,7 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
       d3.json "http://websiddu.herokuapp.com/github", (data) ->
         data = MG.convert.date(data.raw, 'date');
         MG.data_graphic({
-            title: "Github contributions",
+            title: "<a href='https://github.com/websiddu' target='_blank'>Github contributions</a>",
             description: "",
             animate_on_load: true
             data: data
