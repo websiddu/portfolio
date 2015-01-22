@@ -1,5 +1,5 @@
 "use strict"
-angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, parallaxHelper, $timeout) ->
+angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, $timeout) ->
   _desingAvatar = $('.js_avatar_design')
   _defaultAvatar = $('.js_default_trigger')
   _codeAvatar = $('.js_avatar_code')
@@ -7,12 +7,43 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
   $scope.projectThumb = (img) ->
     "background-image": "url(#{img})"
 
-  $(window).on('mousewheel', (event) ->
-    return if $location.path() != '/'
-    if $(window).scrollTop() + $(window).height() is $(document).height()
-      $location.path('/portfolio')
-    return
-  )
+  $scope.init = ->
+    _loadChart()
+    _bindMouseWeel()
+
+  _bindMouseWeel = ->
+    $(window).on('mousewheel', (event) ->
+      return if $location.path() != '/'
+      if $(window).scrollTop() + $(window).height() is $(document).height()
+        $location.path('/portfolio')
+      return
+    )
+
+  _loadChart = ->
+    setTimeout ->
+      d3.json "http://websiddu.herokuapp.com/github", (data) ->
+        data = MG.convert.date(data.raw, 'date');
+        MG.data_graphic({
+            title: "Github contributions",
+            description: "",
+            animate_on_load: true
+            data: data
+            width: $(window).width()
+            height: 220,
+            # custom_line_color_map:
+            target: '.landing-chart'
+            x_accessor: 'date'
+            xax_tick_length: 8
+            left: 70
+            y_accessor: 'score'
+            y_label: 'No. contributions'
+        })
+    , 10
+
+
+
+  $scope.init()
+
 
   # $scope.background = parallaxHelper.createAnimator(-0.2);
 

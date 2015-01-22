@@ -110,25 +110,6 @@ $g3-color2: #9ec2fe;
   }
 }
 
-@media #{$small-max} {
-  .page {
-    padding: 10px 10px;
-  }
-  .des-dev {
-    text-align: center;
-    .columns {
-      text-align: left;
-    }
-  }
-  #des_dev {
-    position: static;
-    text-align: center;
-    left: 0;
-    margin-left: 0;
-  }
-}
-
-
 .work-timeline ul {
   list-style-type: none;
   margin-left: 10px;
@@ -172,6 +153,30 @@ $g3-color2: #9ec2fe;
 }
 
 .work-timeline ul li strong {
+
+}
+
+.landing-chart {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+
+@media #{$small-max} {
+  .page {
+    padding: 10px 10px;
+  }
+
+  .landing-chart {
+    display: none;
+    z-index: -1;
+  }
 
 }
 

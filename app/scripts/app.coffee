@@ -4,6 +4,5 @@
   "ngRoute",
   "ngSanitize",
   "ngProgress",
-  "ngAnimate",
-  "duParallax"
+  "ngAnimate"
 ])
