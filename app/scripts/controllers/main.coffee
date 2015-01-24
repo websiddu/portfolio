@@ -9,7 +9,7 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
 
   $scope.init = ->
     _loadChart()
-    _bindMouseWeel()
+    #_bindMouseWeel()
 
   _bindMouseWeel = ->
     $(window).on('mousewheel', (event) ->
@@ -30,13 +30,16 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
             data: data
             width: $(window).width()
             height: 220,
+            min_y: 0
             # custom_line_color_map:
             target: '.landing-chart'
             x_accessor: 'date'
-            xax_tick_length: 8
             left: 70
             y_accessor: 'score'
             y_label: 'No. contributions'
+            interpolate: "monotone"
+            xax_count: 20
+            # bottom: 50
         })
     , 10
 
