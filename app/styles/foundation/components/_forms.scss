@@ -405,6 +405,7 @@ input[type=checkbox], input[type=radio] {
     width: 18px;
     height: 18px;
     background-image: left top;
+    background-size: 18px;
     &.checkbox-small {
       width: 13px;
       height: 13px;
@@ -425,13 +426,15 @@ input[type=checkbox], input[type=radio] {
   }
 
   input[type=radio] {
-    background-image: url('../images/select.svg');
+    background-image: url('../images/radio.svg');
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   input[type=checkbox] {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAA6CAYAAAC9MQkMAAABvklEQVR42u2UPUvDUBSG%2Bx%2Fav1DSHyGC4CQuTt0cXV2ti3V3UURQ1MnFIbqpILgqWBdBQR38GmwVDTfRtraJr%2BeFK1w6NJ%2BbOfA0be55nwR6zy1kXo1GoyzYghIQgmKvzhQIP4glOM1mE77vI6zYw15mmDVFdqvVQtxihllTpPiUuBUEAUWeKULSYjYX5aKMNmT2I1IRHC5EHVotcZg1RcTSdldACK7utcxjJBX%2FTFQUqkJNqIdQ073FQVFJmJNzuC5%2FbR3AUNjDXmaYNUVV2RdsigUzzJqimn6TWMiIUDRviriQCGZzUS7KekOmHxFzaLkQcWi1ZHBotSzBMVLKz%2BwEopFlVRZsQQkIQbFXZwqEH8QSHAExcZg1RbQjIbYpUilEnilCFKa2PNy%2B%2BpjZ%2FRxYiyGa3HDx%2BBGA9SDXRKLxNRdXLz5YPbnM7n2Fi6Z3PJw%2F9cE34O%2BxVYWL5z5YwQ%2BweNTm%2FXDR%2FXsA1t2bj4l1F8c3PfzV0kmHPdFEC4dt8MmsTk%2B%2B6No%2B63I9uojwyWbtX37zfnwR2Tztoh8AB9c9jK4MlSDLDZn9iFRSDG3FFBFL290IAlf3WuYxkgm%2FDqwrTKvo5doAAAAASUVORK5CYII%3D);
+    background-image: url('../images/checkbox.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   label.normal {
