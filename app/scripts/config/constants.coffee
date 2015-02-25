@@ -1,5 +1,6 @@
 websidduApp.constant constants:
   base_url: "http://websiddu.herokuapp.com/"
+  # base_url: "http://localhost:3000/"
   data:
     homepage:
       title: "Welcome to my website | Siddhartha Gudipati"

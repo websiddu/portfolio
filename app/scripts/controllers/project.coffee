@@ -1,5 +1,5 @@
 "use strict"
-angular.module("websidduApp").controller "projectCtrl", ($scope, Project, project, $routeParams, $rootScope, $location) ->
+angular.module("websidduApp").controller "projectCtrl", ($scope, Project, project, $routeParams, $rootScope, $location, $http, constants) ->
   $scope.project = project
   $scope.style =
     background: "transparent url('"+ $scope.project.banner + "') center no-repeat"
@@ -11,12 +11,30 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
 
   $scope.images = []
 
+  $scope.isVoted = false
+
 
   localStorage[$location.path()] = 'seen'
 
   $scope.init = ->
     _getImagesInProject()
     _initSticky()
+    _setIsVoted()
+
+
+  _setIsVoted = ->
+    if localStorage["voted_#{$routeParams.projectId}"] is true
+      $scope.isVoted = true
+
+  $scope.voteUp = ->
+    $http
+      url: "#{constants.base_url}api/vote/#{$routeParams.projectId}"
+      method: 'POST'
+    .success (data) ->
+        localStorage["voted_#{$routeParams.projectId}"] = true
+        $scope.isVoted = true
+        $scope.project.votes = data
+
 
   _initSticky = ->
     setTimeout ->

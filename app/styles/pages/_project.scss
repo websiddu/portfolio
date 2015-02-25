@@ -376,3 +376,29 @@ aside .metadata {
     }
   }
 }
+
+.voteup {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  background: rgba(132, 145, 158, 1);
+  line-height: 80px;
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+  vertical-align: middle;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  em {
+    font-size: 40px;
+  }
+  &:hover {
+    box-shadow: 0 0 0 3px rgba(132, 145, 158, 1);
+    color: #fff;
+  }
+  &:focus, &:visited {
+    color: #fff;
+  }
+}
