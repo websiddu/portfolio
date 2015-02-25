@@ -47,7 +47,7 @@
                 </div>
                 <div class="project-show-description" ng-bind-html="project.description">
                 </div>
-                <div class="project-show-screenshots">
+                <div class="project-show-screenshots" ng-if="project.screenshots != ''">
                     <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 portfolio-grid">
                         <li ng-repeat="screenshot in project.screenshots.split(',')">
                             <a href="{{screenshot}}" class="scrSht">
@@ -56,31 +56,35 @@
                         </li>
                     </ul>
                 </div>
-                <style>
-                  .voteup-anim span {
-                    font-size: 24px;
-                    font-weight: 500;
-                    color: #666;
-                  }
-
-                  .voteup b {
-                    font-size: 25px;
-                    vertical-align: middle;
-                  }
-
-                </style>
                 <div class="center">
-                  <div class="voteup-anim" ng-class="{voted: isVoted}">
-                    <a href="" ng-click="voteUp()" class="voteup">
-                      <em class="icon icon-thumbsup"></em>
-                      <b ng-if="isVoted">{{project.votes}} <i class="icon icon-thumbsup"></i></b>
-                    </a>
-                    <span ng-if="!isVoted">{{project.votes}} </span>
-                  </div>
+                    <div class="voteup-anim" ng-class="{voted: isVoted}">
+                        <a href="" ng-click="voteUp()" class="voteup">
+                            <em class="icon icon-thumbsup"></em>
+                            <b>{{project.votes}}</b>
+                        </a>
+                        <span>{{project.votes}} </span>
+                    </div>
                 </div>
-                <div class="clear page-show-nav">
-                    <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject}}">&larr; Previous project</a></span>
-                    <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject}}">Next project &rarr;</a></span>
+
+                <div class="clear prj-nav">
+                    <div class="row">
+
+                        <div class="large-6 small-12 columns">
+
+                            <a href="#/projects/{{project.previousProject.project._id.$oid}}" ng-if="project.previousProject">
+
+                                <b>{{project.previousProject.project.title}}</b>
+                                <br> &larr; Previous project</a>
+                        </div>
+
+
+                        <div class="large-6 small-12 columns next-prj">
+
+                            <a href="#/projects/{{project.nextProject.project._id.$oid}}" ng-if="project.nextProject">
+                                <b>{{project.nextProject.project.title}}</b>
+                                <br> Next project &rarr;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

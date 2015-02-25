@@ -21,12 +21,12 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
     _initSticky()
     _setIsVoted()
 
-
   _setIsVoted = ->
-    if localStorage["voted_#{$routeParams.projectId}"] is true
+    if localStorage["voted_#{$routeParams.projectId}"] is "true"
       $scope.isVoted = true
 
   $scope.voteUp = ->
+    return if $scope.isVoted is true
     $http
       url: "#{constants.base_url}api/vote/#{$routeParams.projectId}"
       method: 'POST'

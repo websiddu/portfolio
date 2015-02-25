@@ -171,7 +171,6 @@ $tg2: #ABB6EF;
   }
 }
 
-
 .page-row {
   min-height: 1000px;
   background: #fff;
@@ -388,9 +387,7 @@ aside .metadata {
   margin: 10px auto;
   vertical-align: middle;
   color: #fff;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
   em {
     font-size: 40px;
   }
@@ -401,4 +398,75 @@ aside .metadata {
   &:focus, &:visited {
     color: #fff;
   }
+}
+
+.voteup-anim {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  span {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #666;
+    transition: all 0.3s ease-in-out;
+  }
+  b {
+    font-size: 0;
+    line-height: 32px;
+    vertical-align: middle;
+    transition: font-size 0.3s ease-in-out;
+  }
+  &.voted {
+    span {
+      font-size: 0;
+      visibility: hidden;
+      line-height: 0;
+      transition: all 0.3s ease-in-out;
+    }
+    em {
+      display: block;
+      line-height: 1;
+      font-size: 25px;
+      padding-top: 14px;
+      transition: font-size 0.3s ease-in-out;
+    }
+    .voteup {
+      background-color: transparent;
+      box-shadow: 0 0 0 3px rgba(132, 145, 158, 1);
+      color: rgba(132, 145, 158, 1);
+      transition: box-shadow 0.3s ease-in-out;
+      cursor: default;
+    }
+    b {
+      display: block;
+      line-height: 32px;
+      font-size: 25px;
+      transition: font-size 0.3s ease-in-out;
+    }
+  }
+}
+
+.prj-nav {
+  margin: 10px 30px 25px;
+  overflow: hidden;
+  border-top: dotted 1px #eee;
+  b {
+    font-size: 19px;
+    color: #666;
+  }
+  a {
+    display: inline-block;
+    min-width: 260px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    &:hover {
+      background-color: #f8f8f8;
+    }
+  }
+}
+
+.next-prj {
+  text-align: right;
 }
