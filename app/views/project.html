@@ -70,9 +70,9 @@
 
                 </style>
                 <div class="center">
-                  <div class="voteup-anim">
+                  <div class="voteup-anim" ng-class="{voted: isVoted}">
                     <a href="" ng-click="voteUp()" class="voteup">
-                      <em class="icon icon-thumbsup" ng-if="!isVoted"></em>
+                      <em class="icon icon-thumbsup"></em>
                       <b ng-if="isVoted">{{project.votes}} <i class="icon icon-thumbsup"></i></b>
                     </a>
                     <span ng-if="!isVoted">{{project.votes}} </span>
@@ -80,7 +80,6 @@
                 </div>
                 <div class="clear page-show-nav">
                     <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject}}">&larr; Previous project</a></span>
-
                     <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject}}">Next project &rarr;</a></span>
                 </div>
             </div>
