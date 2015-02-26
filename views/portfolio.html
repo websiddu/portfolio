@@ -3,7 +3,7 @@
     <h2 class="page-heading left">/portfolio</h2>
     <div class="clear project-filter">
       <form action="">
-        <div class="left">
+<!--         <div class="left">
           <span class="muted">Sort by</span>
           <select name="sortedBy" id="sortedBy" ng-model="sortedBy" class="styled">
             <option value="-size">Size △</option>
@@ -11,7 +11,7 @@
             <option value="date">Date △</option>
             <option value="-date">Date ▽</option>
           </select>
-        </div>
+        </div> -->
         <div class="right">
           <span class="muted">Show&nbsp;&nbsp;</span>
           <label class="normal project-filter-options" for="all"><input type="radio" ng-model="selectedSize" checked="true" name="filter" value="" id="all"> All</label>
@@ -29,11 +29,14 @@
       <h4>It seems that, I did'nt work on this kind of project..</h4>
     </div>
     <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 portfolio-grid">
-      <li ng-repeat="project in projects | orderBy:sortedBy:false | filter:searchText | filter:selectedSize" class="fadeInPrj" data-sr="enter bottom and move 50px after 0.5s">
+      <li ng-repeat="project in projects | filter:searchText" class="fadeInPrj" data-sr="enter bottom and move 50px after 0.5s">
         <a href="#/projects/{{project.id.$oid}}" class="project-link">
           <div class="project">
             <div class="project-thumb" ng-style="projectThumb(project.thumbnail)"></div>
-            <h2 class="project-title">{{project.title}}</h2>
+            <h2 class="project-title">
+              {{project.title}} <br>
+              <small>{{project.shortDescription}}</small>
+            </h2>
             <div class="tick tip-top tip-center" ng-if="projectSeen(&quot;/projects/&quot;+ project.id.$oid)" title="You have seen this!" data-tooltip aria-haspopup="true">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 24.3 14.6" enable-background="new 0 0 24.3 14.6" xml:space="preserve" style="height: 11px">
               <g>
