@@ -15,9 +15,9 @@
         <div class="right">
           <span class="muted">Show&nbsp;&nbsp;</span>
           <label class="normal project-filter-options" for="all"><input type="radio" ng-model="selectedSize" checked="true" name="filter" value="" id="all"> All</label>
-          <label class="normal project-filter-options" for="large"><input type="radio" ng-model="selectedSize" name="filter" value="large" id="large"> Large</label>
-          <label class="normal project-filter-options" for="medium"><input type="radio" ng-model="selectedSize" name="filter" value="medium" id="medium"> Medium</label>
-          <label class="normal project-filter-options" for="small"><input type="radio" ng-model="selectedSize" name="filter" value="small" id="small"> Small</label>
+          <label class="normal project-filter-options" for="large"><input type="radio" ng-model="selectedSize" name="filter" value="ux" id="large"> UX Design</label>
+          <label class="normal project-filter-options" for="medium"><input type="radio" ng-model="selectedSize" name="filter" value="front-end" id="medium"> Front-end Dev</label>
+          <label class="normal project-filter-options" for="small"><input type="radio" ng-model="selectedSize" name="filter" value="Dev" id="small"> Dev </label>
           <span class="muted">Projects</span>
         </div>
         <input type="text" placeholder="Search projects.. e.g. jquery" ng-model="searchText">
@@ -29,7 +29,7 @@
       <h4>It seems that, I did'nt work on this kind of project..</h4>
     </div>
     <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 portfolio-grid">
-      <li ng-repeat="project in projects | filter:searchText" class="fadeInPrj" data-sr='enter bottom and move 50px after 0.5s'>
+      <li ng-repeat="project in projects | filter:searchText | filter:selectedSize" class="fadeInPrj" data-sr='enter bottom and move 50px after 0.5s'>
         <a href="#/projects/{{project.id.$oid}}" class="project-link">
           <div class="project">
             <div class="project-thumb" ng-style='projectThumb(project.thumbnail)'></div>
