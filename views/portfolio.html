@@ -1,6 +1,7 @@
 <div class="row">
   <div class="page large-12 columns">
     <h2 class="page-heading left">/portfolio</h2>
+
     <div class="clear project-filter">
       <form action="">
 <!--         <div class="left">
@@ -20,7 +21,34 @@
           <label class="normal project-filter-options" for="small"><input type="radio" ng-model="selectedSize" name="filter" value="Dev" id="small"> Dev </label>
           <span class="muted">Projects</span>
         </div>
-        <input type="text" placeholder="Search projects.. e.g. jquery" ng-model="searchText">
+<style>
+  .search {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .search em {
+    position: absolute;
+    right: 8px;
+    top: 9px;
+    color: #999;
+  }
+
+  .project-filter input[type="text"] {
+    padding-left: 10px;
+    padding-right: 40px;
+    box-shadow: none;
+  }
+
+  .project-filter input[type="text"]:focus {
+    border-color: #ccc;
+  }
+
+</style>
+        <div class="clear search">
+        <input type="text" placeholder="Search projects.. e.g. Angular.js" ng-model="searchText" class="serachbox">
+        <em class="icon icon-search"></em>
+        </div>
       </form>
     </div>
     <div class="no-results fadeInBig ng-hide" ng-show="(projects | filter:searchText | filter:selectedSize).length == 0">
