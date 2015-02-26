@@ -12,6 +12,7 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
   $scope.images = []
 
   $scope.isVoted = false
+  $scope.votes = 0
 
 
   localStorage[$location.path()] = 'seen'
@@ -19,6 +20,7 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
   $scope.init = ->
     _getImagesInProject()
     _initSticky()
+    $scope.votes = angular.copy(project.votes)
     _setIsVoted()
 
   _setIsVoted = ->
@@ -34,7 +36,6 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
         localStorage["voted_#{$routeParams.projectId}"] = true
         $scope.isVoted = true
         $scope.project.votes = data
-
 
   _initSticky = ->
     setTimeout ->

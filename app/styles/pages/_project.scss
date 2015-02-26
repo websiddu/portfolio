@@ -390,6 +390,7 @@ aside .metadata {
   transition: box-shadow 0.3s ease-in-out;
   em {
     font-size: 40px;
+    padding-top: 0;
   }
   &:hover {
     box-shadow: 0 0 0 3px rgba(132, 145, 158, 1);
@@ -401,27 +402,31 @@ aside .metadata {
 }
 
 .voteup-anim {
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   span {
     font-size: 24px;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 32px;
     color: #666;
+    visibility: visible;
     transition: all 0.3s ease-in-out;
   }
+  em {
+    padding-top: 0;
+  }
+
   b {
     font-size: 0;
     line-height: 32px;
     vertical-align: middle;
     transition: font-size 0.3s ease-in-out;
+    display: block;
   }
   &.voted {
     span {
       font-size: 0;
       visibility: hidden;
-      line-height: 0;
+      line-height: 32px;
       transition: all 0.3s ease-in-out;
     }
     em {
