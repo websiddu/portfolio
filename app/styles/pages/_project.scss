@@ -414,7 +414,6 @@ aside .metadata {
   em {
     padding-top: 0;
   }
-
   b {
     font-size: 0;
     line-height: 32px;
@@ -474,4 +473,14 @@ aside .metadata {
 
 .next-prj {
   text-align: right;
+}
+
+@media #{$small-max} {
+  .prj-nav {
+    margin: 10px 0 20px;
+    text-align: center;
+  }
+  .next-prj {
+    text-align: center;
+  }
 }
