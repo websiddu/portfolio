@@ -1,5 +1,5 @@
 "use strict"
-angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, $timeout) ->
+angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, $timeout, constants) ->
   _desingAvatar = $('.js_avatar_design')
   _defaultAvatar = $('.js_default_trigger')
   _codeAvatar = $('.js_avatar_code')
@@ -21,7 +21,7 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
 
   _loadChart = ->
     setTimeout ->
-      d3.json "http://websiddu.herokuapp.com/github", (data) ->
+      d3.json "#{constants.base_url}api/github/", (data) ->
         data = MG.convert.date(data.raw, 'date');
         MG.data_graphic({
             title: "<a href='https://github.com/websiddu' target='_blank'>Github contributions</a>",
