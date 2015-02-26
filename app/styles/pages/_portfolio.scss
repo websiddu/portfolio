@@ -24,6 +24,19 @@
       height: 270px;
       border: solid 8px #fff;
       box-shadow: 0px 2px 5px #d8d8d8;
+
+      &.archived {
+        height: 158px;
+        box-shadow: 0 0 5px #eee;
+        .project-thumb {
+          height: 100px;
+        }
+        .project-title {
+          height: 50px;
+        }
+      }
+
+
       .tick {
         position: absolute;
         bottom: 0;
@@ -90,6 +103,15 @@
     }
   }
 }
+
+.portfolio-sub-heading {
+  font-size: 20px;
+  font-weight: 200;
+  color: #666;
+  margin: 0 0 15px 0;
+}
+
+
 
 // .project img {
 //   -webkit-transition: all 0.2s linear;
