@@ -5,14 +5,6 @@
   input {}
 }
 
-.project-filter {
-  input[type="text"] {
-    clear: both;
-    font-weight: 200;
-    box-shadow: 0;
-  }
-}
-
 .portfolio-grid {
   > li {
     .project {
@@ -111,6 +103,30 @@
   margin: 0 0 15px 0;
 }
 
+
+.search {
+  position: relative;
+  overflow: hidden;
+}
+
+.search em {
+  position: absolute;
+  right: 8px;
+  top: 9px;
+  color: #999;
+}
+
+.project-filter input[type="text"] {
+  clear: both;
+  font-weight: 200;
+  padding-left: 10px;
+  padding-right: 40px;
+  box-shadow: none;
+}
+
+.project-filter input[type="text"]:focus {
+  border-color: #ccc;
+}
 
 
 // .project img {
