@@ -1,7 +1,6 @@
 <div class="row">
   <div class="page large-12 columns">
     <h2 class="page-heading left">/portfolio</h2>
-
     <div class="clear project-filter">
       <form action="">
 <!--         <div class="left">
@@ -16,35 +15,13 @@
         <div class="right">
           <span class="muted">Show&nbsp;&nbsp;</span>
           <label class="normal project-filter-options" for="all"><input type="radio" ng-model="selectedSize" checked="true" name="filter" value="" id="all"> All</label>
-          <label class="normal project-filter-options" for="large"><input type="radio" ng-model="selectedSize" name="filter" value="ux" id="large"> UX Design</label>
-          <label class="normal project-filter-options" for="medium"><input type="radio" ng-model="selectedSize" name="filter" value="front-end" id="medium"> Front-end Dev</label>
-          <label class="normal project-filter-options" for="small"><input type="radio" ng-model="selectedSize" name="filter" value="Dev" id="small"> Dev </label>
+          <label class="normal project-filter-options" for="uxd" data-tooltip aria-haspopup="true" class="tip-top" title="User Expirence Design"><input type="radio" ng-model="selectedSize" name="filter" value="ux" id="uxd"> UX Design</label>
+          <label class="normal project-filter-options" for="ixd" data-tooltip aria-haspopup="true" class="tip-top" title="Interaction Design"><input type="radio" ng-model="selectedSize" name="filter" value="Interaction" id="ixd"> IxD</label>
+          <label class="normal project-filter-options" for="vd" data-tooltip aria-haspopup="true" class="tip-top" title="Visual Design"><input type="radio" ng-model="selectedSize" name="filter" value="Visual" id="vd"> VD </label>
+          <label class="normal project-filter-options" for="fed" data-tooltip aria-haspopup="true" class="tip-top" title="Front end development"><input type="radio" ng-model="selectedSize" name="filter" value="front-end" id="fed"> Front-end</label>
+          <label class="normal project-filter-options" for="bed" data-tooltip aria-haspopup="true" class="tip-top" title="Server side development"><input type="radio" ng-model="selectedSize" name="filter" value="Dev" id="bed"> Back-end</label>
           <span class="muted">Projects</span>
         </div>
-<style>
-  .search {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .search em {
-    position: absolute;
-    right: 8px;
-    top: 9px;
-    color: #999;
-  }
-
-  .project-filter input[type="text"] {
-    padding-left: 10px;
-    padding-right: 40px;
-    box-shadow: none;
-  }
-
-  .project-filter input[type="text"]:focus {
-    border-color: #ccc;
-  }
-
-</style>
         <div class="clear search">
         <input type="text" placeholder="Search projects.. e.g. Angular.js" ng-model="searchText" class="serachbox">
         <em class="icon icon-search"></em>
@@ -57,7 +34,7 @@
       <h4>It seems that, I did'nt work on this kind of project..</h4>
     </div>
     <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 portfolio-grid">
-      <li ng-repeat="project in projects | filter:searchText | filter:selectedSize" class="fadeInPrj" data-sr="enter bottom and move 50px after 0.5s" ng-if="!project.archived">
+      <li ng-repeat="project in projects | filter:searchText | filter:selectedSize" class="fadeInPrj" data-srs="enter bottom and move 20px after 0.5s" ng-if="!project.archived">
         <a href="#/projects/{{project.id.$oid}}" class="project-link">
           <div class="project">
             <div class="project-thumb" ng-style="projectThumb(project.thumbnail)"></div>
