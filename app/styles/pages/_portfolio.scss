@@ -129,6 +129,29 @@
 }
 
 
+.search {
+  position: relative;
+  overflow: hidden;
+}
+
+.search em {
+  position: absolute;
+  right: 8px;
+  top: 9px;
+  color: #999;
+}
+
+.project-filter input[type="text"] {
+  padding-left: 10px;
+  padding-right: 40px;
+  box-shadow: none;
+}
+
+.project-filter input[type="text"]:focus {
+  border-color: #ccc;
+}
+
+
 // .project img {
 //   -webkit-transition: all 0.2s linear;
 //   -moz-transition: all 0.2s linear;
