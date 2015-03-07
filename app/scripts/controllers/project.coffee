@@ -45,7 +45,7 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
 
   _getImagesInProject = ->
     setTimeout ->
-      $images = $('.section-body img')
+      $images = $('.project-show-description .section-body img')
       $images.each (imgA) ->
         $img = $(this)
         $("<img/>").attr("src", $img.attr("src"))
@@ -68,16 +68,16 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
       pswpElement = document.querySelectorAll(".pswp")[0]
       items = angular.copy($scope.images)
 
-      $('.section-body').on 'click', 'img', ->
+      $('.project-show-description .section-body').on 'click', 'img', ->
         options =
-          index: ($('.section-body img').index(this))
+          index: ($('.project-show-description  .section-body img').index(this))
           history: false
           closeOnScroll: false
           showHideOpacity: true
           hideAnimationDuration: 500
           showAnimationDuration: 500
           getThumbBoundsFn: (index) ->
-            thumbnail = document.querySelectorAll(".section-body img")[index]
+            thumbnail = document.querySelectorAll(".project-show-description .section-body img")[index]
             pageYScroll = window.pageYOffset or document.documentElement.scrollTop
             rect = thumbnail.getBoundingClientRect()
             x: rect.left
