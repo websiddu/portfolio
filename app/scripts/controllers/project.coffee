@@ -45,7 +45,7 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
 
   _getImagesInProject = ->
     setTimeout ->
-      $images = $('.project-show-description img')
+      $images = $('.section-body img')
       $images.each (imgA) ->
         $img = $(this)
         $("<img/>").attr("src", $img.attr("src"))

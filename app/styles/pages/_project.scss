@@ -475,6 +475,13 @@ aside .metadata {
   text-align: right;
 }
 
+.tasks-icons {
+  img {
+    height: 45px;
+    margin: 10px 20px 0 0;
+  }
+}
+
 @media #{$small-max} {
   .prj-nav {
     margin: 10px 0 20px;
