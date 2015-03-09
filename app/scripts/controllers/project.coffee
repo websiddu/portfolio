@@ -29,13 +29,9 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
 
   _checkKeyPressed = (e) ->
     k = e.keyCode
-
     if k is 39
-      console.log project
       $location.path("/projects/#{project.nextProject.project._id.$oid}")
-
     if k is 37
-      console.log project
       $location.path("/projects/#{project.previousProject.project._id.$oid}")
 
   _setIsVoted = ->
