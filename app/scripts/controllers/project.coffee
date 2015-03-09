@@ -22,6 +22,21 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
     _initSticky()
     $scope.votes = angular.copy(project.votes)
     _setIsVoted()
+    _initKeyboardShortCuts()
+
+  _initKeyboardShortCuts = ->
+    window.addEventListener("keyup", _checkKeyPressed, false)
+
+  _checkKeyPressed = (e) ->
+    k = e.keyCode
+
+    if k is 39
+      console.log project
+      $location.path("/projects/#{project.nextProject.project._id.$oid}")
+
+    if k is 37
+      console.log project
+      $location.path("/projects/#{project.previousProject.project._id.$oid}")
 
   _setIsVoted = ->
     if localStorage["voted_#{$routeParams.projectId}"] is "true"
