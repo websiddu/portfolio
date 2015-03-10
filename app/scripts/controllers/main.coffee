@@ -43,23 +43,4 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
         })
     , 10
 
-
-
   $scope.init()
-
-
-  # $scope.background = parallaxHelper.createAnimator(-0.2);
-
-  # $(".l-design").hover (->
-  #   _defaultAvatar.removeClass("flipInX").addClass('hide')
-  #   _desingAvatar.removeClass('hide flipOutX').addClass("flipInX")
-  # ), ->
-  #   _defaultAvatar.addClass("flipInX").removeClass('flipOutX hide')
-  #   _desingAvatar.removeClass('flipOutX').addClass('hide')
-
-  # $(".l-code").hover (->
-  #   _defaultAvatar.removeClass("flipInX").addClass('hide')
-  #   _codeAvatar.removeClass('hide flipOutX').addClass("flipInX")
-  # ), ->
-  #   _defaultAvatar.addClass("flipInX").removeClass('flipOutX hide')
-  #   _codeAvatar.removeClass('flipOutX').addClass('hide')
