@@ -14,12 +14,12 @@
         </div> -->
         <div class="right">
           <span class="muted">Show&nbsp;&nbsp;</span>
-          <label class="normal project-filter-options" for="all"><input type="radio" ng-model="selectedSize" checked="true" name="filter" value="" id="all"> All</label>
-          <label class="normal project-filter-options" for="uxd"  data-tooltip aria-haspopup="true"  class="tip-top" title="User Expirence Design"><input type="radio" ng-model="selectedSize" name="filter" value="ux" id="uxd"> UX Design</label>
-          <label class="normal project-filter-options" for="ixd"  data-tooltip aria-haspopup="true"  class="tip-top" title="Interaction Design"><input type="radio" ng-model="selectedSize" name="filter" value="Interaction" id="ixd" > IxD</label>
-          <label class="normal project-filter-options" for="vd"  data-tooltip aria-haspopup="true"  class="tip-top" title="Visual Design"><input type="radio" ng-model="selectedSize" name="filter" value="Visual" id="vd"> VD </label>
-          <label class="normal project-filter-options" for="fed"  data-tooltip aria-haspopup="true"  class="tip-top" title="Front end development"><input type="radio" ng-model="selectedSize" name="filter" value="front-end" id="fed"> Front-end</label>
-          <label class="normal project-filter-options" for="bed"  data-tooltip aria-haspopup="true"  class="tip-top" title="Server side development"><input type="radio" ng-model="selectedSize" name="filter" value="Dev" id="bed"> Back-end</label>
+          <label class="normal project-filter-options" for="all"><input type="radio" ng-model="selectedSize" name="filter" value="" id="all"> All</label>
+          <label class="normal project-filter-options" for="uxd"  data-tooltip data-options="disable_for_touch:true" aria-haspopup="true"  class="tip-top" title="User Expirence Design"><input type="radio" ng-model="selectedSize" name="filter" value="ux" id="uxd"> UX Design</label>
+          <label class="normal project-filter-options" for="ixd"  data-tooltip data-options="disable_for_touch:true" aria-haspopup="true"  class="tip-top" title="Interaction Design"><input type="radio" ng-model="selectedSize" name="filter" value="Interaction" id="ixd" > IxD</label>
+          <label class="normal project-filter-options" for="vd"  data-tooltip data-options="disable_for_touch:true" aria-haspopup="true"  class="tip-top" title="Visual Design"><input type="radio" ng-model="selectedSize" name="filter" value="Visual" id="vd"> VD </label>
+          <label class="normal project-filter-options" for="fed"  data-tooltip data-options="disable_for_touch:true" aria-haspopup="true"  class="tip-top" title="Front end development"><input type="radio" ng-model="selectedSize" name="filter" value="front-end" id="fed"> Front-end</label>
+          <label class="normal project-filter-options" for="bed"  data-tooltip data-options="disable_for_touch:true" aria-haspopup="true"  class="tip-top" title="Server side development"><input type="radio" ng-model="selectedSize" name="filter" value="Dev" id="bed"> Back-end</label>
           <span class="muted">Projects</span>
         </div>
         <div class="clear search">
@@ -42,7 +42,7 @@
               {{project.title}} <br>
               <small>{{project.shortDescription}}</small>
             </h2>
-            <div class="tick tip-top tip-center" ng-if='projectSeen("/projects/"+ project.id.$oid)' title="You have seen this!" data-tooltip aria-haspopup="true">
+            <div class="tick tip-top tip-center" ng-if='projectSeen("/projects/"+ project.id.$oid)' title="You have seen this!" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               viewBox="0 0 24.3 14.6" enable-background="new 0 0 24.3 14.6" xml:space="preserve" style='height: 11px;'>
               <g>
@@ -72,7 +72,7 @@
             <h2 class="project-title">
               {{project.title}}
             </h2>
-            <div class="tick tip-top tip-center" ng-if='projectSeen("/projects/"+ project.id.$oid)' title="You have seen this!" data-tooltip aria-haspopup="true">
+            <div class="tick tip-top tip-center" ng-if='projectSeen("/projects/"+ project.id.$oid)' title="You have seen this!" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               viewBox="0 0 24.3 14.6" enable-background="new 0 0 24.3 14.6" xml:space="preserve" style='height: 11px;'>
               <g>

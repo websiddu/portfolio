@@ -388,7 +388,7 @@
       tooltipClass : '.tooltip',
       touchCloseText: 'tap to close',
       appendTo: 'body',
-      'disable-for-touch': false,
+      'disable-for-touch': true,
       tipTemplate : function (selector, content) {
         return '<span data-selector="' + selector + '" class="'
           + Foundation.libs.tooltips.settings.tooltipClass.substring(1)

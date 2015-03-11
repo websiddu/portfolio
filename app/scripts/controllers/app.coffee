@@ -37,8 +37,4 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
         $('.toggle-topbar').click()
     , 10
 
-
-
-
-
 angular.module("websidduApp").controller "404Ctrl", ($scope, $rootScope, $location) ->
