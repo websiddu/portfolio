@@ -24,29 +24,21 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
     _setIsVoted()
     _initHotKeys()
 
-  $scope.nextPrj = (prj) ->
-    console.log prj
-    $location.path("/projects/#{prj.nextProject.project._id.$oid}")
-
-  $scope.prevPrj = (prj) ->
-    console.log prj
-    $location.path("/projects/#{prj.previousProject.project._id.$oid}")
-
   _initHotKeys = ->
     hotkeys.del('right')
     hotkeys.del('left')
+    hotkeys.bindTo($scope)
+      .add
+        combo: 'right',
+        description: 'Move to next project',
+        callback: ->
+          $location.path("/projects/#{project.nextProject.project._id.$oid}")
 
-    hotkeys.add
-      combo: 'right',
-      description: 'Move to next project',
-      callback: ->
-        $location.path("/projects/#{project.nextProject.project._id.$oid}")
-
-    hotkeys.add
-      combo: 'left',
-      description: 'Move to previous project',
-      callback: ->
-        $location.path("/projects/#{project.previousProject.project._id.$oid}")
+      .add
+        combo: 'left',
+        description: 'Move to previous project',
+        callback: ->
+          $location.path("/projects/#{project.previousProject.project._id.$oid}")
 
 
 

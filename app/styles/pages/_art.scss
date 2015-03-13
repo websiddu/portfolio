@@ -109,11 +109,11 @@ ul.tools li.views {
   padding-left: 18px;
 }
 
-
 .ds-shot {
   float: left;
   margin: 0 0 10px 0;
 }
+
 .ds-shot-img {
   padding: 20px;
   background: #fff;
@@ -124,18 +124,70 @@ ul.tools li.views {
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
 }
+
 .ds-shot-heading {
   margin: 15px 20px;
 }
+
 .ds-shot-heading-text {
   font-size: 24px;
   color: #666;
   font-weight: 300;
 }
+
 .ds-shot-stats {
-  margin-left: -20px;
 }
 
 .ds-shot-menu {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    border-bottom: solid 1px #eee;
+    padding: 6px 10px;
+    a {
+      display: inline-block;
+    }
+    span {
+      text-align: right;
+      display: inline-block;
+      float: right;
+      color: #888;
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
+}
+
+.ds-shot-tags {
+  margin-left: 10px;
+  margin-top: 25px;
+}
+
+.ds-shot-tags-heading {
+  color: #888;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.ds-shot-tags-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 4px;
+  }
+}
+
+.ds-shot-content {
+  clear: left;
+  float: left;
+  margin: 15px 0 30px 0;
+  padding: 0 20px;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 200;
 }
