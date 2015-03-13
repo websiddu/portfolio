@@ -6,4 +6,5 @@
   "ngProgress"
   "ngAnimate"
   'cfp.hotkeys'
+  # 'ngRetina'
 ])

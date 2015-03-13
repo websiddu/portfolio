@@ -20,7 +20,8 @@
     "colorbox": "~1.5.14",
     "chartist": "~0.6.0",
     "nvd3": "~1.1.15-beta",
-    "angular-hotkeys": "chieffancypants/angular-hotkeys#~1.4.5"
+    "angular-hotkeys": "chieffancypants/angular-hotkeys#~1.4.5",
+    "angular-retina": "~0.3.1"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",
