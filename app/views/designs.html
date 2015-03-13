@@ -9,8 +9,6 @@
     </div>
     <ol class="designs small-block-grid-2 mini-block-grid-2 large-block-grid-4 arts-grid">
       <li ng-repeat="art in arts | filter:searchDesign" class="fadeInPrj">
-        <!-- {{art}} -->
-
         <div class="design">
           <div class="design-shot">
             <div class="design-img">
@@ -22,10 +20,10 @@
        (-o-min-device-pixel-ratio: 3/2),
        (min-device-pixel-ratio: 1.5),
        (min-resolution: 1.5dppx)"></div> -->
-                  <img alt="Android Webview" src="https://d13yacurqjgara.cloudfront.net/users/21258/screenshots/1970705/android-webview_1x.png">
+                  <img alt="" ng-src="{{art.preview_thumb}}" ng-srcset="{{art.preview_thumb}} 1x, {{art.preview}}  2x">
                 </div>
               </a>
-              <a class="design-over" ng-href="#/designs/{{art.id.$oid}}" style="opacity: 0;"> <strong>Android Webview</strong>
+              <a class="design-over" ng-href="#/designs/{{art.id.$oid}}"> <strong>Android Webview</strong>
                 <span class="comment">Android WebView enables Android developers to use a Chrome powered webview in their application. I worked on the logo with the Material design team as well a...</span>
 
                 <em class="timestamp">March 12, 2015</em>

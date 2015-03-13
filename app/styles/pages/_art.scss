@@ -34,6 +34,7 @@
   background: rgba(255, 255, 255, 0.96);
   overflow: hidden;
   z-index: 3;
+  transition: opacity 0.2s ease-in;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -70,6 +71,16 @@
       color: #999999;
     }
   }
+}
+
+.design-link {
+  display: block;
+  overflow: hidden;
+}
+
+.design-over:hover {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 ul.tools {
