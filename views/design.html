@@ -1,35 +1,60 @@
+<style>
+.ds-shot {
+  float: left;
+  margin: 0 0 10px 0;
+}
+.ds-shot-img {
+  padding: 20px;
+  background: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+}
+.ds-shot-heading {
+  margin: 15px 20px;
+}
+.ds-shot-heading-text {
+  font-size: 24px;
+  color: #666;
+  font-weight: 300;
+}
+.ds-shot-stats {
+  margin-left: -20px;
+}
+
+.ds-shot-menu {
+  list-style-type: none;
+}
+</style>
+
 <div class="row">
   <div class="page">
-    <h2 class="page-heading left">/<a class="standalone" href="#/design">designs</a>/{{art.name.toLowerCase()}}</h2>
-    <div class="art-show-meta">
-      <ul>
-        <li>
-          <a href="javascript:history.back();" class="c7">
-            &larr;
-             Back
-          </a>
-        </li>
-        <li class="art-show-date">
-          <em class="icon-date c1"></em>
-           {{art.date}}
-        </li>
-        <li>
-        <a href="javascript:;" class="c1 fullscreen">
-          <em class="icon-fullscreen"></em>
-           Fullscreen
-        </a>
-        </li>
-        <li class="art-show-source c2">
-          <em class="icon-download-alt"></em>
-          <a href="{{art.source}}" class="c2" target="_blank">Download</a>
-        </li>
-      </ul>
+    <div class="ds-shot-heading">
+      <h3 class="ds-shot-heading-text">{{art.name}}</h3>
     </div>
-    <div class="art-show-img">
-      <img ng-src="{{art.preview}}" class="fullscreen-img" alt="{{art.name}}">
+    <div class="large-7 small-12 columns">
+      <div class="ds-shot">
+        <div class="ds-shot-img">
+          <img alt="" ng-src="{{art.preview_thumb}}" ng-srcset="{{art.preview_thumb}} 1x, {{art.preview}}  2x">
+        </div>
+      </div>
     </div>
-
+    <div class="large-1 small-12 columns"></div>
+    <div class="large-4 small-12 columns">
+      <div class="ds-shot-stats">
+        <ul class="ds-shot-menu">
+          <li>
+            <em class="icon icon-love"></em> Likes
+          </li>
+          <li>
+            <em class="icon icon-eye"></em> Views
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
-
 <div ng-include="'views/partials/footer.html'"></div>
