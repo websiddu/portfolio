@@ -45,6 +45,11 @@ websidduApp.config(($routeProvider, $locationProvider) ->
               deferred.reject "Unsuccess"
           )
         deferred.promise
+    # hotkeys: [
+    #   ['right', 'Move to next project', 'nextPrj(project)']
+    #   ['left', 'Move to previous project', 'prevPrj(project)']
+    # ]
+
   )
   .when("/design",
     templateUrl: "views/designs.html"
