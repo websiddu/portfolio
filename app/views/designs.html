@@ -1,21 +1,53 @@
 <div class="row">
-<div class="page">
-  <h2 class="page-heading left">/design</h2>
-  <input type="text" placeholder="Search design.." ng-model="searchDesign">
-  <div class="no-results ng-hide" ng-show="(arts | filter:searchDesign).length == 0">
-    <img src="images/design_default.svg" alt="">
-    <br>
-    <h4>It seems that, I did'nt work on this kind of design..</h4>
-  </div>
-  <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 arts-grid">
-    <li ng-repeat="art in arts | filter:searchDesign" class="fadeInPrj">
-      <a href="#/designs/{{art.id.$oid}}">
-        <div class="art" style="background: url('{{art.preview_thumb}}') center no-repeat;">
-        </div>
-        </a>
-    </li>
-  </ul>
-</div>
-</div>
+  <div class="page">
+    <h2 class="page-heading left">/design</h2>
+    <input type="text" placeholder="Search design.." ng-model="searchDesign">
+    <div class="no-results ng-hide" ng-show="(arts | filter:searchDesign).length == 0">
+      <img src="images/design_default.svg" alt="">
+      <br>
+      <h4>It seems that, I did'nt work on this kind of design..</h4>
+    </div>
+    <ol class="designs small-block-grid-2 mini-block-grid-2 large-block-grid-4 arts-grid">
+      <li ng-repeat="art in arts | filter:searchDesign" class="fadeInPrj">
+        <!-- {{art}} -->
 
+        <div class="design">
+          <div class="design-shot">
+            <div class="design-img">
+              <a class="design-link" ng-href="#/designs/{{art.id.$oid}}">
+                <div data-picture="" data-alt="{{art.name}}">
+                  <!-- <div data-src="https://d13yacurqjgara.cloudfront.net/users/21258/screenshots/1970705/android-webview_teaser.png"></div>
+                  <div data-src="https://d13yacurqjgara.cloudfront.net/users/21258/screenshots/1970705/android-webview_1x.png" data-media="(-webkit-min-device-pixel-ratio: 1.5),
+       (min--moz-device-pixel-ratio: 1.5),
+       (-o-min-device-pixel-ratio: 3/2),
+       (min-device-pixel-ratio: 1.5),
+       (min-resolution: 1.5dppx)"></div> -->
+                  <img alt="Android Webview" src="https://d13yacurqjgara.cloudfront.net/users/21258/screenshots/1970705/android-webview_1x.png">
+                </div>
+              </a>
+              <a class="design-over" ng-href="#/designs/{{art.id.$oid}}" style="opacity: 0;"> <strong>Android Webview</strong>
+                <span class="comment">Android WebView enables Android developers to use a Chrome powered webview in their application. I worked on the logo with the Material design team as well a...</span>
+
+                <em class="timestamp">March 12, 2015</em>
+              </a>
+            </div>
+
+            <ul class="tools group" style="visibility: visible;">
+              <li class="fav">
+                <em class="icon icon-love"></em> 54
+              </li>
+              <li class="views">
+                <em class="icon icon-eye"></em> 717
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#/designs/{{art.id.$oid}}">
+          <div class="art" style="background: url('{{art.preview_thumb}}') center no-repeat;">
+          </div>
+        </a>
+      </li>
+    </ol>
+  </div>
+</div>
 <div ng-include="'views/partials/footer.html'"></div>
