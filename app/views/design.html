@@ -17,41 +17,44 @@
       <div class="ds-shot-stats">
         <ul class="ds-shot-menu">
           <li>
-            <a href=""><em class="icon icon-love"></em> Like? </a>
-            <span> 11 Likes</span>
+            <a href="" ng-click="voteUp()" ng-if="!isVoted"><em class="icon icon-love"></em> Like? </a>
+            <a href="" class="voted" title="I am glad that you already like this." data-tooltip aria-haspopup="true" class="tip-top" ng-if="isVoted"><em class="icon icon-love"></em> Like? </a>
+            <span> {{art.votes}} Likes</span>
           </li>
           <li>
             <em class="icon icon-eye"></em> Views
-            <span> 122 Views</span>
+            <span> {{art.views}} views</span>
           </li>
         </ul>
-        <div class="ds-shot-tags">
+        <div class="ds-shot-tags" ng-if="art.tags">
           <h5 class="ds-shot-tags-heading">Tags</h5>
           <ul class="ds-shot-tags-list">
-            <li>Illustration</li>
-            <li>Shot</li>
-            <li>PSD</li>
-            <li>Vector</li>
+            <li ng-repeat="tag in art.tags.split(',')"> {{tag}} </li>
           </ul>
         </div>
       </div>
     </div>
     <div class="large-3 small-12 columns">
-      <h5>Other stuff</h5>
+      <h5 class="">More by me</h5>
     </div>
   </div>
-
   <div class="row">
-    <div class="clear prj-nav">
-      <div class="large-6 small-12 columns prev-prj">
-        <a href="#/projects/{{project.nextProject.project._id.$oid}}">
-          <b>{{project.nextProject.project.title}}</b>
-          <br> &larr; Prev shot </a>
+    <div class="clear des-nav">
+      <div class="large-6 small-12 columns prev-des">
+        <a href="#/designs/{{art.previousArt.art._id.$oid}}"  ng-if="art.previousArt">
+          <img ng-src="{{art.previousArt.art.preview_thumb}}" alt="">
+          <span>Prev shot </span>
+          <b>{{art.previousArt.art.name}}</b>
+          <small> Use <key>&larr;</key> key to navigate </small>
+          </a>
       </div>
-      <div class="large-6 small-12 columns next-prj">
-        <a href="#/projects/{{project.nextProject.project._id.$oid}}">
-          <b>{{project.nextProject.project.title}}</b>
-          <br> Next shot &rarr;</a>
+      <div class="large-6 small-12 columns next-des" >
+        <a href="#/designs/{{art.nextArt.art._id.$oid}}" ng-if="art.nextArt">
+          <img ng-src="{{art.nextArt.art.preview_thumb}}" alt="">
+          <span>Next shot </span>
+          <b>{{art.nextArt.art.name}}</b>
+          <small> Use <key>&rarr;</key> key to navigate </small>
+        </a>
       </div>
     </div>
   </div>

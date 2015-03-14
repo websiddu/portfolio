@@ -32,15 +32,15 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
         combo: 'right',
         description: 'Move to next project',
         callback: ->
-          $location.path("/projects/#{project.nextProject.project._id.$oid}")
+          if project.nextProject
+            $location.path("/projects/#{project.nextProject.project._id.$oid}")
 
       .add
         combo: 'left',
         description: 'Move to previous project',
         callback: ->
-          $location.path("/projects/#{project.previousProject.project._id.$oid}")
-
-
+          if project.previousProject
+            $location.path("/projects/#{project.previousProject.project._id.$oid}")
 
   _setIsVoted = ->
     if localStorage["voted_#{$routeParams.projectId}"] is "true"
@@ -49,7 +49,7 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
   $scope.voteUp = ->
     return if $scope.isVoted is true
     $http
-      url: "#{constants.base_url}api/vote/#{$routeParams.projectId}"
+      url: "#{constants.base_url}api/projects/#{$routeParams.projectId}/vote"
       method: 'POST'
     .success (data) ->
         localStorage["voted_#{$routeParams.projectId}"] = true
