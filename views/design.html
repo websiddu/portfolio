@@ -40,8 +40,11 @@
         <h5 class="ds-shot-rand-heading">More random shots</h5>
         <div class="ds-shot-rand-list">
           <div class="ds-shot-rand-shot" ng-repeat="rand in randArts">
-            <a ng-href="#/designs/{{rand.id.$oid}}">
+            <a class="ds-shot-rand-shot-img" ng-href="#/designs/{{rand.id.$oid}}">
               <img ng-src="{{rand.preview_thumb}}" alt="">
+            </a>
+            <a ng-href="#/designs/{{rand.id.$oid}}" class="ds-shot-rand-shot-link">
+              <img src="images/new_tab.svg" alt="">
             </a>
           </div>
         </div>
