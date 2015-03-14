@@ -167,16 +167,7 @@ $g3-color2: #AC92EC;
   background-color: $g2-color1;
   @include filter-gradient($g2-color1, $g2-color2, horizontal);
   @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
-  &:after {
-    content: '';
-    display: block;
-    height: 3px;
-    background-color: $g3-color1;
-    @include filter-gradient($g3-color1, $g3-color2, horizontal);
-    @include background-image(linear-gradient(left, $g3-color1 0%,$g3-color2 100%));
-    width: 100%;
-    position: absolute;
-  }
+  border-bottom: solid 3px $g3-color1;
 }
 
 .f-topbar-fixed {

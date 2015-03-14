@@ -132,11 +132,18 @@ ul.tools li.views {
 .ds-shot-heading-text {
   font-size: 24px;
   color: #666;
+  margin: 0;
   font-weight: 300;
 }
 
-.ds-shot-stats {
+.ds-shot-heading-meta {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+  font-weight: 300;
 }
+
+.ds-shot-stats {}
 
 .ds-shot-menu {
   list-style-type: none;
@@ -167,8 +174,7 @@ ul.tools li.views {
 }
 
 .ds-shot-tags {
-  margin-left: 10px;
-  margin-top: 25px;
+  margin: 25px 0 25px 10px;
 }
 
 .ds-shot-tags-heading {
@@ -198,7 +204,6 @@ ul.tools li.views {
   line-height: 1.6;
   font-weight: 200;
 }
-
 
 .des-nav {
   margin: 10px 0 25px;
@@ -250,4 +255,45 @@ ul.tools li.views {
   .next-des {
     margin-top: 30px;
   }
+}
+
+.ds-shot-rand {
+  margin-left: 15px;
+}
+
+.ds-shot-rand-heading {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  color: #666;
+}
+
+.ds-shot-rand-shot {
+  position: relative;
+  float: left;
+  max-width: 100px;
+  padding: 6px;
+  background: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  margin-bottom: 20px;
+}
+
+.ds-shot-rand-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.ds-shot-rand-shot img {
+  height: 65px;
 }

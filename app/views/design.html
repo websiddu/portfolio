@@ -2,6 +2,7 @@
   <div class="row">
     <div class="ds-shot-heading">
       <h3 class="ds-shot-heading-text">{{art.name}}</h3>
+      <h5 class="ds-shot-heading-meta">{{prettyDate(art.date)}}</h5>
     </div>
     <div class="large-6 small-12 columns">
       <div class="ds-shot">
@@ -35,13 +36,22 @@
       </div>
     </div>
     <div class="large-3 small-12 columns">
-      <h5 class="">More by me</h5>
+      <div class="ds-shot-rand">
+        <h5 class="ds-shot-rand-heading">More random shots</h5>
+        <div class="ds-shot-rand-list">
+          <div class="ds-shot-rand-shot" ng-repeat="rand in randArts">
+            <a ng-href="#/designs/{{rand.id.$oid}}">
+              <img ng-src="{{rand.preview_thumb}}" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">
     <div class="clear des-nav">
       <div class="large-6 small-12 columns prev-des">
-        <a href="#/designs/{{art.previousArt.art._id.$oid}}"  ng-if="art.previousArt">
+        <a ng-href="#/designs/{{art.previousArt.art._id.$oid}}"  ng-if="art.previousArt">
           <img ng-src="{{art.previousArt.art.preview_thumb}}" alt="">
           <span>Prev shot </span>
           <b>{{art.previousArt.art.name}}</b>

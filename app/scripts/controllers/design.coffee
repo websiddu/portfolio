@@ -9,10 +9,17 @@ angular.module("websidduApp").controller "designsCtrl", ($scope, $routeParams, $
 
 angular.module("websidduApp").controller "designCtrl", ($scope, $routeParams, $http, $rootScope, design, constants, hotkeys, $location) ->
   $scope.art = design
+  $scope.randArts = null
+
+  $scope.prettyDate = (date) ->
+    dateObj = new Date(date)
+    format = d3.time.format("%B %d, %Y");
+    format(dateObj)
 
   $scope.init = ->
     _setIsVoted()
     _initHotKeys()
+    _getRand()
 
   _setIsVoted = ->
     if localStorage["voted_a_#{$routeParams.designId}"] is "true"
@@ -35,6 +42,12 @@ angular.module("websidduApp").controller "designCtrl", ($scope, $routeParams, $h
           if design.previousArt
             $location.path("/designs/#{design.previousArt.art._id.$oid}")
 
+  _getRand = ->
+    $http
+      url: "#{constants.base_url}api/arts/?rand=4"
+      method: 'GET'
+    .success (data) ->
+      $scope.randArts = data
 
   $scope.voteUp = ->
     return if $scope.isVoted is true
