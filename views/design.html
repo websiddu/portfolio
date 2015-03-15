@@ -55,18 +55,28 @@
     <div class="clear des-nav">
       <div class="large-6 small-12 columns prev-des">
         <a ng-href="#/designs/{{art.previousArt.art._id.$oid}}" ng-if="art.previousArt">
-          <img ng-src="{{art.previousArt.art.preview_thumb}}" alt="">
-          <span>Prev shot </span>
-          <b>{{art.previousArt.art.name}}</b>
-          <small> Use <key>&larr;</key> key to navigate </small>
-          </a>
+          <div class="des-nav-img">
+            <img ng-src="{{art.previousArt.art.preview_thumb}}" alt="">
+            <em class="icon icon-arrow-left"></em>
+          </div>
+          <div class="des-nav-cont">
+            <span>Prev shot </span>
+            <b>{{art.previousArt.art.name}}</b>
+            <small> Use <key>&larr;</key> key to navigate </small>
+          </div>
+        </a>
       </div>
       <div class="large-6 small-12 columns next-des">
         <a href="#/designs/{{art.nextArt.art._id.$oid}}" ng-if="art.nextArt">
-          <img ng-src="{{art.nextArt.art.preview_thumb}}" alt="">
-          <span>Next shot </span>
-          <b>{{art.nextArt.art.name}}</b>
-          <small> Use <key>&rarr;</key> key to navigate </small>
+          <div class="des-nav-img">
+            <img ng-src="{{art.nextArt.art.preview_thumb}}" alt="">
+            <em class="icon icon-arrow-right"></em>
+          </div>
+          <div class="des-nav-cont">
+            <span>Next shot </span>
+            <b>{{art.nextArt.art.name}}</b>
+            <small> Use <key>&rarr;</key> key to navigate </small>
+          </div>
         </a>
       </div>
     </div>
