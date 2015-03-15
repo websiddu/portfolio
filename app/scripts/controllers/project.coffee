@@ -32,14 +32,14 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
         combo: 'right',
         description: 'Move to next project',
         callback: ->
-          if project.nextProject
+          if project.nextProject and $(".pswp").attr('aria-hidden') is "true"
             $location.path("/projects/#{project.nextProject.project._id.$oid}")
 
       .add
         combo: 'left',
         description: 'Move to previous project',
         callback: ->
-          if project.previousProject
+          if project.previousProject and $(".pswp").attr('aria-hidden') is "true"
             $location.path("/projects/#{project.previousProject.project._id.$oid}")
 
   _setIsVoted = ->
