@@ -16,8 +16,7 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
   $rootScope.$on "$routeChangeSuccess", (event, current, previous) ->
     progressBar.complete()
     progressBar.stop()
-    if current.templateUrl is "views/project.html"
-      $anchorScroll()
+    $anchorScroll()
 
   $rootScope.$on "$routeChangeError", (event, current, previous) ->
     progressBar.complete()
