@@ -2,86 +2,85 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Siddhartha Gudipati, Front-end engineer &amp; UX designer</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Hi there, I'm Siddhartha Gudipati and this my portfolio website. I am a Front-end Engineer and User Expirence Desiger. I love cooking, coding and clicking.">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Siddhartha Gudipati, Front-end engineer &amp; UX designer</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Hi there, I'm Siddhartha Gudipati and this my portfolio website. I am a Front-end Engineer and User Expirence Desiger. I love cooking, coding and clicking.">
+  <meta property="og:title" content="Siddhartha Gudipati, Front-end engineer &amp; UX designer" />
+  <link rel="author" href="https://plus.google.com/+SiddharthaGudipati" />
+  <meta property="og:image" content="//websiddu.com/images/sid-default.png" />
+  <meta property="og:url" content="http://websiddu.com/">
+  <meta property="og:description" content="Hi there, I'm Siddhartha Gudipati and this my portfolio website. I am a Front-end Engineer and User Expirence Desiger. I love cooking, coding and clicking." />
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+</head>
 
-    <meta property="og:title" content="Siddhartha Gudipati, Front-end engineer &amp; UX designer"/>
-
-    <link rel="author" href="https://plus.google.com/+SiddharthaGudipati"/>
-    <meta property="og:image" content="//websiddu.com/images/sid-default.png"/>
-    <meta property="og:url" content="http://websiddu.com/">
-    <meta property="og:description" content="Hi there, I'm Siddhartha Gudipati and this my portfolio website. I am a Front-end Engineer and User Expirence Desiger. I love cooking, coding and clicking."/>
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
-    </head>
-    <body ng-cloak ng-app="websidduApp" class="f-topbar-fixed">
-        <!--[if lt IE 7]>
+<body ng-cloak ng-app="websidduApp" class="f-topbar-fixed">
+  <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
         <script src="bower_components/es5-shim/es5-shim.js"></script>
         <script src="bower_components/json3/lib/json3.min.js"></script>
         <![endif]-->
-        <!-- Add your site or application content here -->
-        <img src="//websiddu.com/images/sid-default.png" alt="Siddhartha Gudipati" style="visibility: hidden; height: 0; position: absolute; top: -999em;">
-        <div ng-controller="appCtrl">
-            <div ng-include="'views/partials/navbar.html'"></div>
-            <div class="maincontent" >
-                <!-- <div ng-include="'views/partials/header.html'"></div> -->
-                <div class="fadeIn" ng-view>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- <div ng-include="'views/partials/footer.html'"></div> -->
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-        <!-- build:js scripts/modules.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
-        <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.js"></script>
-        <script src="bower_components/photoswipe/dist/photoswipe.js"></script>
-        <script src="bower_components/photoswipe/dist/photoswipe-ui-default.js"></script>
-        <script src="bower_components/d3/d3.js"></script>
-        <script src="bower_components/nvd3/nv.d3.js"></script>
-        <script src="bower_components/angular-hotkeys/build/hotkeys.js"></script>
-        <script src="bower_components/angular-retina/dist/angular-retina.js"></script>
-        <script src="scripts/plugins/sticky.js"></script>
-        <!-- endbuild -->
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/foundation/foundation.js"></script>
-        <script src="scripts/foundation/foundation.topbar.js"></script>
-        <script src="bower_components/ngprogress/build/ngProgress.js"></script>
-        <script src="bower_components/scrollReveal.js/dist/scrollReveal.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/config/routes.js"></script>
-        <script src="scripts/config/constants.js"></script>
-        <script src="scripts/controllers/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/project.js"></script>
-        <script src="scripts/controllers/portfolio.js"></script>
-        <script src="scripts/controllers/design.js"></script>
-        <script src="scripts/controllers/code.js"></script>
-        <script src="scripts/controllers/photo.js"></script>
-        <script src="scripts/controllers/contact.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/resources/project.js"></script>
-        <script src="scripts/resources/design.js"></script>
-        <script src="scripts/resources/photos.js"></script>
-        <script src="scripts/ws.js"></script>
-        <!-- endbuild -->
-    </body>
+  <!-- Add your site or application content here -->
+  <img src="//websiddu.com/images/sid-default.png" alt="Siddhartha Gudipati" style="visibility: hidden; height: 0; position: absolute; top: -999em;">
+  <div ng-controller="appCtrl">
+    <div ng-include="'views/partials/navbar.html'"></div>
+    <div class="maincontent">
+      <!-- <div ng-include="'views/partials/header.html'"></div> -->
+      <div class="fadeIn" ng-view>
+      </div>
+    </div>
+  </div>
+  <!-- <div ng-include="'views/partials/footer.html'"></div> -->
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <!-- build:js scripts/modules.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/photoswipe/dist/photoswipe.js"></script>
+  <script src="bower_components/photoswipe/dist/photoswipe-ui-default.js"></script>
+  <script src="bower_components/d3/d3.js"></script>
+  <script src="bower_components/nvd3/nv.d3.js"></script>
+  <script src="bower_components/angular-hotkeys/build/hotkeys.js"></script>
+  <script src="bower_components/angular-retina/dist/angular-retina.js"></script>
+  <script src="scripts/plugins/sticky.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/foundation/foundation.js"></script>
+  <script src="scripts/foundation/foundation.topbar.js"></script>
+  <script src="bower_components/ngprogress/build/ngProgress.js"></script>
+  <script src="bower_components/scrollReveal.js/dist/scrollReveal.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/config/routes.js"></script>
+  <script src="scripts/config/constants.js"></script>
+  <script src="scripts/controllers/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/project.js"></script>
+  <script src="scripts/controllers/portfolio.js"></script>
+  <script src="scripts/controllers/design.js"></script>
+  <script src="scripts/controllers/code.js"></script>
+  <script src="scripts/controllers/photo.js"></script>
+  <script src="scripts/controllers/contact.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/resources/project.js"></script>
+  <script src="scripts/resources/design.js"></script>
+  <script src="scripts/resources/photos.js"></script>
+  <script src="scripts/ws.js"></script>
+  <!-- endbuild -->
+</body>
 </html>
