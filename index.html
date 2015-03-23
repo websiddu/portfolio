@@ -2,48 +2,47 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Siddhartha Gudipati, Front-end engineer &amp; UX designer</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Hi there, I'm Siddhartha Gudipati and this my portfolio website. I am a Front-end Engineer and User Expirence Desiger. I love cooking, coding and clicking.">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Siddhartha Gudipati, Front-end engineer &amp; UX designer</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Hi there, I'm Siddhartha Gudipati and this my portfolio website. I am a Front-end Engineer and User Expirence Desiger. I love cooking, coding and clicking.">
+  <meta property="og:title" content="Siddhartha Gudipati, Front-end engineer &amp; UX designer">
+  <link rel="author" href="https://plus.google.com/+SiddharthaGudipati">
+  <meta property="og:image" content="//websiddu.com/images/sid-default.png">
+  <meta property="og:url" content="http://websiddu.com/">
+  <meta property="og:description" content="Hi there, I'm Siddhartha Gudipati and this my portfolio website. I am a Front-end Engineer and User Expirence Desiger. I love cooking, coding and clicking.">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css">
+</head>
 
-    <meta property="og:title" content="Siddhartha Gudipati, Front-end engineer &amp; UX designer">
-
-    <link rel="author" href="https://plus.google.com/+SiddharthaGudipati">
-    <meta property="og:image" content="//websiddu.com/images/sid-default.png">
-    <meta property="og:url" content="http://websiddu.com/">
-    <meta property="og:description" content="Hi there, I'm Siddhartha Gudipati and this my portfolio website. I am a Front-end Engineer and User Expirence Desiger. I love cooking, coding and clicking.">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css">
-    </head>
-    <body ng-cloak ng-app="websidduApp" class="f-topbar-fixed">
-        <!--[if lt IE 7]>
+<body ng-cloak ng-app="websidduApp" class="f-topbar-fixed">
+  <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
         <script src="bower_components/es5-shim/es5-shim.js"></script>
         <script src="bower_components/json3/lib/json3.min.js"></script>
         <![endif]-->
-        <!-- Add your site or application content here -->
-        <img src="//websiddu.com/images/sid-default.png" alt="Siddhartha Gudipati" style="visibility: hidden; height: 0; position: absolute; top: -999em">
-        <div ng-controller="appCtrl">
-            <div ng-include="'views/partials/navbar.html'"></div>
-            <div class="maincontent">
-                <!-- <div ng-include="'views/partials/header.html'"></div> -->
-                <div class="fadeIn" ng-view>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- <div ng-include="'views/partials/footer.html'"></div> -->
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-        <script src="scripts/modules.js"></script>
-        <script src="scripts/scripts.js"></script>
-    </body>
+  <!-- Add your site or application content here -->
+  <img src="//websiddu.com/images/sid-default.png" alt="Siddhartha Gudipati" style="visibility: hidden; height: 0; position: absolute; top: -999em">
+  <div ng-controller="appCtrl">
+    <div ng-include="'views/partials/navbar.html'"></div>
+    <div class="maincontent">
+      <!-- <div ng-include="'views/partials/header.html'"></div> -->
+      <div class="fadeIn" ng-view>
+      </div>
+    </div>
+  </div>
+  <!-- <div ng-include="'views/partials/footer.html'"></div> -->
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script src="scripts/modules.js"></script>
+  <script src="scripts/scripts.js"></script>
+</body>
 </html>

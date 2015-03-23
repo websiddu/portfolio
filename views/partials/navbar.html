@@ -8,11 +8,9 @@
           </a>
         </div>
       </li>
-      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href=""><span></span></a></li>
     </ul>
     <section class="top-bar-section">
-      <!-- Right Nav Section -->
       <ul class="right">
         <li ng-class="getClass('/home')">
           <a data-href="#/" ng-click="closeNavbarInMobile('/')">home</a>
@@ -20,7 +18,6 @@
         <li ng-class="getClass('/portfolio')">
           <a data-href="#/portfolio" ng-click="closeNavbarInMobile('/portfolio')">portfolio</a>
         </li>
-
         <li ng-class="getClass('/design')">
           <a data-href="#/design" ng-click="closeNavbarInMobile('/design')">design</a>
         </li>
@@ -30,9 +27,7 @@
         <li>
           <a href="resources/resume.pdf" target="_blank">résumé</a>
         </li>
-
-
-<!--         <li>
+        <!--         <li>
           <a href="http://codepen.io/websiddu/" target="_blank">code</a>
         </li> -->
         <!--     <li>
@@ -44,7 +39,6 @@
         <li ng-class="getClass('/contact')" ng-click="closeNavbarInMobile('/contact')">
           <a href="#/contact">contact</a>
         </li>
-
       </ul>
     </section>
   </nav>
