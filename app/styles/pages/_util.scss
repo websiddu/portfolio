@@ -1,25 +1,27 @@
 $num: 0;
-@each $c in ($c1, $c2, $c3, $c4, $c5, $c6, $c7, $c8) {
-    $num: $num + 1;
-    .c#{$num} {
-      color: $c;
+
+@each $c in $c1, $c2, $c3, $c4, $c5, $c6, $c7, $c8 {
+  $num: $num + 1;
+  .c#{$num} {
+    color: $c;
+  }
+  a.c#{$num} {
+    color: $c;
+    &:hover {
+      color: darken($c, 16);
     }
-    a.c#{$num} {
-      color: $c;
-      &:hover {
-        color: darken($c, 16);
-      }
-    }
+  }
 }
 
 $num: 0;
 $c9: #efefea;
-@each $c in ($c1, $c2, $c3, $c4, $c5, $c6, $c7, $c8, $c9) {
-    $num: $num + 1;
-    .bgc#{$num} {
-      background-color: $c;
-      color: #fff;
-    }
+
+@each $c in $c1, $c2, $c3, $c4, $c5, $c6, $c7, $c8, $c9 {
+  $num: $num + 1;
+  .bgc#{$num} {
+    background-color: $c;
+    color: #fff;
+  }
 }
 
 .truncate {
@@ -44,7 +46,6 @@ $c9: #efefea;
   text-align: center;
 }
 
-
 a.standalone {
   color: $body-font-color;
   &:hover {
@@ -59,7 +60,7 @@ a.standalone {
   -moz-appearance: none !important;
   -ms-appearance: none !important;
   -o-appearance: none !important;
-  background: #fafafa url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat;
+  background: #fafafa url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==") no-repeat;
   background-position-x: 85%;
   background-position-y: center;
   border: 1px solid #cccccc;
@@ -81,19 +82,9 @@ a.standalone {
 @-moz-document url-prefix() {
   select.styled {
     padding: 0;
-    background: #fafafa; }
-
+    background: #fafafa;
+  }
   select:hover {
-    background: #f3f3f3; }
+    background: #f3f3f3;
+  }
 }
-
-
-// .ie9 img[src*=".svg"] {
-//   width: 100%;
-// }
-// /* 2 */
-// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-//   img[src*=".svg"] {
-//     width: 100%;
-//   }
-// }
