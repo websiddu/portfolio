@@ -371,7 +371,21 @@ module.exports = function(grunt) {
           ]
         }
       }
+    },
+
+    'ftp-deploy': {
+      build: {
+        auth: {
+          host: 'ftp.diamondesigners.com',
+          port: 21,
+          authKey: 'dd'
+        },
+        src: '<%= yeoman.dist %>',
+        dest: 'myworks/',
+        exclusions: ['<%= yeoman.dist %>/.git', '<%= yeoman.dist %>/resources', '<%= yeoman.dist %>/**/.DS_Store', '<%= yeoman.dist %>/**/Thumbs.db', '<%= yeoman.dist %>/tmp']
+      }
     }
+
   });
 
   grunt.registerTask('server', function(target) {
@@ -412,6 +426,8 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('deploy', 'Deploy to Github Pages', ['build', 'buildcontrol']);
+  grunt.registerTask('upload', 'Upload to server', ['ftp-deploy']);
+
 
   grunt.registerTask('default', [
     'jshint',
