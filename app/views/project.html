@@ -16,8 +16,8 @@
         <br>
         <div class="project-show-meta">
           <div class="clear page-show-nav" aria-hidden='true'>
-            <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject._id.$oid}}">&larr; Previous project</a></span>
-            <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject._id.$oid}}">Next project &rarr;</a></span>
+            <span class="left" ng-if="project.previousProject && !project.previousProject.archived"><a href="#/projects/{{project.previousProject._id.$oid}}">&larr; Previous project</a></span>
+            <span class="right" ng-if="project.nextProject && !project.nextProject.archived"><a href="#/projects/{{project.nextProject._id.$oid}}">Next project &rarr;</a></span>
           </div>
           <div class="row">
             <div class="large-9 small-12 columns">
@@ -67,12 +67,12 @@
         <footer class="clear prj-nav" role="contentinfo">
           <div class="row">
             <div class="large-6 small-12 columns">
-              <a href="#/projects/{{project.previousProject._id.$oid}}" ng-if="project.previousProject">
+              <a href="#/projects/{{project.previousProject._id.$oid}}" ng-if="project.previousProject !project.previousProject.archived">
                 <b>{{project.previousProject.title}}</b>
                 <br> &larr; Previous project</a>
             </div>
             <div class="large-6 small-12 columns next-prj">
-              <a href="#/projects/{{project.nextProject._id.$oid}}" ng-if="project.nextProject">
+              <a href="#/projects/{{project.nextProject._id.$oid}}" ng-if="project.nextProject && !project.nextProject.archived">
                 <b>{{project.nextProject.title}}</b>
                 <br> Next project &rarr;</a>
             </div>
