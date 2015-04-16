@@ -7,4 +7,5 @@
   "ngAnimate"
   "angulartics.google.analytics"
   'cfp.hotkeys'
+  'alAngularHero'
 ])

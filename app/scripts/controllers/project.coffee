@@ -2,7 +2,7 @@
 angular.module("websidduApp").controller "projectCtrl", ($scope, Project, project, $routeParams, $rootScope, $location, $http, constants, hotkeys) ->
   $scope.project = project
   $scope.style =
-    background: "transparent url('"+ $scope.project.banner + "') center no-repeat"
+    "background": "transparent url('"+ $scope.project.banner + "') center no-repeat"
     "background-size": "cover"
 
   date = new Date(project.date)

@@ -12,14 +12,11 @@
   position: relative;
   background: transparent url("../images/default_banner.png") 0 0 no-repeat;
   margin: -25px -25px 0;
-  .project-show-banner-img {
-    height: 220px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-size: cover;
-  }
+}
+
+.project-show-banner-img {
+  height: 220px;
+  width: 100%;
 }
 
 // $bq-color1: #434A54;

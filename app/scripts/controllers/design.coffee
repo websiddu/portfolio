@@ -1,11 +1,21 @@
 "use strict"
+__savedClickedIndexArt = -1;
 angular.module("websidduApp").controller "designsCtrl", ($scope, $routeParams, $rootScope, designs) ->
   $scope.arts = designs
+  $scope.clickedIndexArt = __savedClickedIndexArt;
 
   $scope.prettyDate = (date) ->
     dateObj = new Date(date)
     format = d3.time.format("%B %d, %Y");
     format(dateObj)
+
+  $scope.changeRoute = (id) ->
+    $scope.clickedIndexArt = id;
+    __savedClickedIndexArt = id;
+    setTimeout ->
+      location.hash = '#/designs/' + id;
+    , 10
+
 
 angular.module("websidduApp").controller "designCtrl", ($scope, $routeParams, $http, $rootScope, design, constants, hotkeys, $location) ->
   $scope.art = design

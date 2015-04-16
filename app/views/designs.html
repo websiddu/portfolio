@@ -16,12 +16,12 @@
         <div class="design">
           <div class="design-shot">
             <div class="design-img">
-              <a class="design-link" ng-href="#/designs/{{art.id.$oid}}">
+              <a class="design-link" data-href="#/designs/{{art.id.$oid}}" ng-click="changeRoute(art.id.$oid)">
                 <div data-picture="" data-alt="{{art.name}}">
-                  <img alt="" ng-src="{{art.preview_thumb}}" ng-srcset="{{art.preview_thumb}} 1x, {{art.preview}} 2x">
+                  <img alt="" ng-src="{{art.preview_thumb}}" ng-srcset="{{art.preview_thumb}} 1x, {{art.preview}} 2x" hero-id="art" ng-class="clickedIndexArt === art.id.$oid ? 'hero' : ''">
                 </div>
               </a>
-              <a class="design-over" ng-href="#/designs/{{art.id.$oid}}"> <strong>{{art.name}}</strong>
+              <a class="design-over" data-href="#/designs/{{art.id.$oid}}" ng-click="changeRoute(art.id.$oid)"> <strong>{{art.name}}</strong>
                 <span class="comment">{{art.content}}</span>
                 <em class="timestamp">{{prettyDate(art.date)}}</em>
               </a>
