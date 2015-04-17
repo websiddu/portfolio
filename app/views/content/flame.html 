@@ -1,0 +1,50 @@
+
+<blockquote class="full">
+  Flame is a chrome extension for <a href="http://www.tcs.com/SiteCollectionDocuments/Brochures/Innovation-Brochure-TCS-Knowledge-Ecosystem-Solution-062013-1.pdf" target="_blank">knome</a>.
+</blockquote>
+
+<div class="row">
+  <div class="large-12 columns">
+    <aside>
+      <dl class="metadata">
+        <dt> Date </dt>
+        <dd> December 2013 - August 2014</dd>
+      </dl>
+      <dl class="metadata">
+        <dt> Tasks </dt>
+        <dd> Usability Testing </dd>
+        <dd> Visual Design </dd>
+        <dd> Development</dd>
+      </dl>
+      <dl class="metadata">
+        <dt> Tool </dt>
+        <dd> JavaScript</dd>
+        <dd> Angular.js</dd>
+        <dd> Yeoman</dd>
+        <dd> CSS</dd>
+        <dd> HTML</dd>
+        <dd> Illustrator</dd>
+      </dl>
+
+    </aside>
+    <section>
+      <h5 class="section-heading">Summary</h5>
+      <div class="section-body">While working in Web2.0 Innovation labs, TCS, I started building a Chrome Extension as my side project using Angular.js and Knome's API. This was later released as an official product. I am the only designer and developer for this project. I handled everything for this product from user experience design, development to deployment. </div>
+      <div class="link-container">
+        <strong>Project Links</strong>
+        <ol>
+          <li>
+            <del class="text-muted">This is corporate product, links not available </del>
+          </li>
+        </ol>
+      </div>
+
+    </section>
+    <section>
+      <h5 class="section-heading">Video Demo</h5>
+      <div class="section-body">
+        <p> You need a password to watch this video. Please send an email to me@websiddu.com to get the password.</p>
+        <iframe src="//player.vimeo.com/video/116593620" width="100%" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </section>
+  </div>
+</div>
