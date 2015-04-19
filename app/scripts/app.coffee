@@ -7,5 +7,6 @@
   "ngSanitize"
   "ngProgress"
   "cfp.hotkeys"
-  "wu.masonry"
+  'angulartics'
+  'angulartics.google.analytics'
 ])
