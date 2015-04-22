@@ -27,8 +27,8 @@ $c9: #efefea;
 $i: 20;
 @while $i > 0 {
   .a#{$i} {
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.2s * $i;
+    animation-duration: 0.2s * $i;
    }
   $i: $i - 1;
 }

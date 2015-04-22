@@ -39,9 +39,22 @@
 
 /* Social list */
 .social-list {
+  margin: 0;
   margin: 0 auto;
   text-align: center;
   display: inline-block;
+
+  &.long {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+
   li {
     &:first-child {
       margin-left: 0;
@@ -53,6 +66,8 @@
     }
   }
 }
+
+
 
 hr {
   margin: 10px 0;
