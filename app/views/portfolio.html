@@ -40,8 +40,8 @@
       <h4>It seems that, I did'nt work on this kind of project..</h4>
     </div>
     <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-3 portfolio-grid">
-      <li ng-repeat="project in projects | filter:searchText | filter:selectedSize" class="" data-srs='enter bottom and move 20px after 0.5s' ng-if="!project.archived">
-        <a href="#/projects/{{project.id.$oid}}" class="project-link">
+      <li ng-repeat="project in projects | filter:searchText | filter:selectedSize" data-src='enter bottom and move 20px after 0.5s' ng-if="!project.archived" class="project-item">
+        <a href="#/projects/{{project.id.$oid}}" class="project-link zoomIn a{{$index+1}}">
           <div class="project">
             <div class="project-thumb" ng-style='projectThumb(project.thumbnail)'></div>
             <div class="project-title">

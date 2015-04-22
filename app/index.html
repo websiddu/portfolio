@@ -22,6 +22,39 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+
+  <style>
+.fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter{
+  -webkit-transition: all 0.7s ease-in;
+    transition: all 0.7s ease-in;
+
+}
+.fade.ng-leave {
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.fade.ng-enter {
+    opacity: 0;
+    margin-top: 20px;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+    margin-top: 0;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
+</style>
 </head>
 
 <body ng-cloak ng-app="websidduApp" class="f-topbar-fixed">
@@ -37,7 +70,7 @@
   <div ng-controller="appCtrl">
     <div ng-include="'views/partials/navbar.html'"></div>
     <div class="maincontent">
-      <div class="fadeIn" ng-view>
+      <div class="fade" ng-view>
       </div>
     </div>
   </div>

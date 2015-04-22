@@ -6,7 +6,12 @@
 }
 
 .portfolio-grid {
-  > li {
+
+  > .project-item {
+      .project-link {
+        display: block;
+      }
+
     .project {
       background-color: #fff;
       position: relative;

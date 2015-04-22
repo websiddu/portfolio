@@ -24,6 +24,15 @@ $c9: #efefea;
   }
 }
 
+$i: 20;
+@while $i > 0 {
+  .a#{$i} {
+    -webkit-animation-duration: 0.2s * $i;
+    animation-duration: 0.2s * $i;
+   }
+  $i: $i - 1;
+}
+
 .truncate {
   max-width: 100%;
   white-space: nowrap;
