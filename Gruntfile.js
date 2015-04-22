@@ -213,9 +213,9 @@ module.exports = function(grunt) {
         files: {
           src: [
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
-            '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/styles/fonts/*'
+            '<%= yeoman.dist %>/styles/{,*/}*.css'
+            //'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            //'<%= yeoman.dist %>/styles/fonts/*'
           ]
         }
       }
@@ -421,11 +421,11 @@ module.exports = function(grunt) {
     'ngmin',
     'cssmin',
     'uglify',
-    //'rev',
+    'rev',
     'usemin'
   ]);
 
-  grunt.registerTask('deploy', 'Deploy to Github Pages', ['build', 'buildcontrol']);
+  grunt.registerTask('deploy', 'Deploy to Github Pages', ['build', 'buildcontrol', 'ftp-deploy']);
   grunt.registerTask('upload', 'Upload to server', ['ftp-deploy']);
 
 
