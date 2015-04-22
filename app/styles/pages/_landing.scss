@@ -11,11 +11,8 @@ body {
   font-weight: 200;
   background-color: $g1-color1;
   @include filter-gradient($g1-color1, $g1-color2, horizontal);
-  @include background-image(linear-gradient(left, $g1-color1 0%,$g1-color2 100%));
-
-
+  @include background-image(linear-gradient(left, $g1-color1 0%, $g1-color2 100%));
 }
-
 
 // Primary color #E24500
 .landing-page * {
@@ -39,11 +36,9 @@ body {
     border-radius: 100%;
     border: solid 5px #efefea;
     background: #fff;
-
     &:hover {
       // border: solid 5px #FC6E51;
       // background: #E9573F;
-
       transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
       -webkit-transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
       -moz-transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
@@ -85,7 +80,6 @@ h3.l-d {
   //text-shadow: 0px 1px 1px #888;
 }
 
-
 $g-color1: #E9573F;
 $g-color2: #EF7D6B;
 
@@ -104,18 +98,16 @@ $g-color2: #EF7D6B;
   //border: solid 1px #fff;
   background-color: $g-color1;
   @include filter-gradient($g-color1, $g-color2, horizontal);
-  @include background-image(linear-gradient(left, $g-color1 0%,$g-color2 100%));
+  @include background-image(linear-gradient(left, $g-color1 0%, $g-color2 100%));
   &:hover {
     color: #eee;
   }
 }
 
-
 @media #{$small-max} {
   .l-design, .l-code {
     display: none;
   }
-
 }
 
 // .full-page {
@@ -126,15 +118,12 @@ $g-color2: #EF7D6B;
 //   bottom:
 // }
 
-
-
 .landing-banner {
   //background: url('../images/b/b1.png') 0 0 no-repeat;
   //background-size: cover;
   // background-color: $g1-color1;
   // @include filter-gradient($g1-color1, $g1-color2, horizontal);
   // @include background-image(linear-gradient(left, $g1-color1 0%,$g1-color2 100%));
-
   position: fixed;
   top: 0;
   left: 0;
@@ -143,7 +132,6 @@ $g-color2: #EF7D6B;
   overflow-y: auto;
   overflow-x: hidden;
 }
-
 
 body {
   //background-color: $g1-color1;
@@ -166,11 +154,10 @@ $g3-color2: #AC92EC;
 .contain-to-grid {
   background-color: $g2-color1;
   @include filter-gradient($g2-color1, $g2-color2, horizontal);
-  @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
+  @include background-image(linear-gradient(left, $g2-color1 0%, $g2-color2 100%));
   border-bottom: solid 3px $g3-color1;
 }
 
 .f-topbar-fixed {
   padding-top: 72px;
 }
-
