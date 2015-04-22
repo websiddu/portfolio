@@ -3212,3 +3212,35 @@ Copyright (c) 2015 Daniel Eden
 .fade.ng-leave-active {
     opacity: 0;
 }
+
+.zoom.ng-enter
+ {
+  -webkit-transition: all ease-in 0.5s;
+  transition: all ease-in 0.5s;
+}
+
+.zoom.ng-move {
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.zoom.ng-leave {
+    -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+.zoom.ng-leave.ng-leave-active,
+.zoom.ng-move,
+.zoom.ng-enter {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+}
+
+.zoom.ng-leave,
+.zoom.ng-move.ng-move-active,
+.zoom.ng-enter.ng-enter-active {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
