@@ -26,7 +26,7 @@ $c9: #efefea;
 
 $i: 20;
 @while $i > 0 {
-  .a#{$i} {
+  .no-touch .a#{$i} {
     -webkit-animation-duration: 0.2s + (0.2 * $i);
     animation-duration: 0.2s + (0.2 * $i);
    }
