@@ -3179,3 +3179,35 @@ Copyright (c) 2015 Daniel Eden
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+
+
+.fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter{
+  -webkit-transition: all 0.7s ease-in;
+    transition: all 0.7s ease-in;
+
+}
+.fade.ng-leave {
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.fade.ng-enter {
+    opacity: 0;
+    margin-top: 10px;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+    margin-top: 0;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
