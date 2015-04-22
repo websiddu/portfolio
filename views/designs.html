@@ -13,7 +13,7 @@
     </div>
     <ol class="designs small-block-grid-2 mini-block-grid-1 large-block-grid-4 arts-grid">
       <li ng-repeat="art in arts | filter:searchDesign" class="fadeInPrj">
-        <div class="design">
+        <div class="design zoomIn a{{$index+1}}">
           <div class="design-shot">
             <div class="design-img">
               <a class="design-link" ng-href="#/designs/{{art.id.$oid}}">
