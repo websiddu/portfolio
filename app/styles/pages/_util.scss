@@ -16,6 +16,22 @@ $num: 0;
 $num: 0;
 $c9: #efefea;
 
+$c1-dribble: #E24A83;
+$c2-linkedin: #0274B3;
+$c3-twitter: #5EA9DD;
+$c4-github: #333333;
+
+$num1: 0;
+@each $cl in $c1-dribble, $c2-linkedin, $c3-twitter, $c4-github {
+  $num1: $num1 + 1;
+  .bg-s-#{$num1} {
+    color: $cl;
+    &:hover {
+      color: darken($cl, 16);
+    }
+  }
+}
+
 @each $c in $c1, $c2, $c3, $c4, $c5, $c6, $c7, $c8, $c9 {
   $num: $num + 1;
   .bgc#{$num} {
