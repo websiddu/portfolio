@@ -1,9 +1,8 @@
-// $g2-color1: #434A54;
-// $g2-color2: #656D78;
+$g2-color1: #434A54;
+$g2-color2: #656D78;
 
-$g2-color1: #f8f8f8;
-$g2-color2: #f8f8f8;
-
+// $g2-color1: #f8f8f8;
+// $g2-color2: #f8f8f8;
 
 $g3-color1: #967ADC;
 $g3-color2: #AC92EC;
@@ -16,7 +15,7 @@ $g3-color2: #AC92EC;
   padding: 25px 10px;
   background-color: $g2-color1;
   @include filter-gradient($g2-color1, $g2-color2, horizontal);
-  @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
+  @include background-image(linear-gradient(left, $g2-color1 0%, $g2-color2 100%));
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -24,8 +23,22 @@ $g3-color2: #AC92EC;
   &:hover {
     box-shadow: 0 0 2px rgba(136, 136, 136, 0.28);
   }
+  .social-list li a {
+    position: relative;
+  }
+  .social-list li a:before {
+    content: '';
+    display: block;
+    background: #fff;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 3px;
+    border-radius: 100%;
+  }
 }
-
 
 .landing-footer {
   .footer {
@@ -39,6 +52,3 @@ $g3-color2: #AC92EC;
     }
   }
 }
-
-
-
