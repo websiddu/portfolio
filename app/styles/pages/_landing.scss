@@ -1,12 +1,6 @@
 $g1-color1: #efefea;
 $g1-color2: #fff;
 
-.maincontent {
-  //margin-top: 70px;
-  font-weight: 200;
-  //margin-top: 90px;
-}
-
 body {
   font-weight: 200;
   background-color: $g1-color1;
@@ -37,8 +31,6 @@ body {
     border: solid 5px #efefea;
     background: #fff;
     &:hover {
-      // border: solid 5px #FC6E51;
-      // background: #E9573F;
       transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
       -webkit-transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
       -moz-transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
@@ -110,20 +102,7 @@ $g-color2: #EF7D6B;
   }
 }
 
-// .full-page {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom:
-// }
-
 .landing-banner {
-  //background: url('../images/b/b1.png') 0 0 no-repeat;
-  //background-size: cover;
-  // background-color: $g1-color1;
-  // @include filter-gradient($g1-color1, $g1-color2, horizontal);
-  // @include background-image(linear-gradient(left, $g1-color1 0%,$g1-color2 100%));
   position: fixed;
   top: 0;
   left: 0;
@@ -133,9 +112,6 @@ $g-color2: #EF7D6B;
   overflow-x: hidden;
 }
 
-body {
-  //background-color: $g1-color1;
-}
 
 html {
   overflow-x: hidden;

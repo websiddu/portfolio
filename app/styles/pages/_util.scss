@@ -113,3 +113,15 @@ a.standalone {
     background: #f3f3f3;
   }
 }
+
+/* Mozilla based browsers */
+::-moz-selection {
+  background-color: #F6BB42;
+  color: #fff;
+}
+
+/* Works in Safari */
+::selection {
+  background-color: #F6BB42;
+  color: #fff;
+}
