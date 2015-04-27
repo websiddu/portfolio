@@ -12,6 +12,9 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
     rand = Math.floor((Math.random()*8)+1)
     $rootScope.rand = rand
     progressBar.start()
+    $timeout ->
+      $('.tooltip').hide()
+    , 1
 
   $rootScope.$on "$routeChangeSuccess", (event, current, previous) ->
     progressBar.complete()

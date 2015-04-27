@@ -60,7 +60,7 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
     setTimeout ->
       nav = document.getElementById('prj-title')
       sticky(nav, 73)
-    , 10
+    , 1000
 
   _getImagesInProject = ->
     setTimeout ->
@@ -106,16 +106,5 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
         gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, angular.copy(items), options)
         gallery.init()
     , 10
-
-  $(document).one "click", ".scrSht", (e) ->
-    e.preventDefault()
-    s = $('.scrSht').magnificPopup(
-      type: 'image'
-      gallery:
-        enabled: true
-      zoom:
-        enabled: true
-        duration: 300
-    ).magnificPopup('open')
 
   $scope.init()
