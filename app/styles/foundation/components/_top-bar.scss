@@ -8,7 +8,7 @@ $topbar-bg-color: transparent !default;
 $topbar-bg: $topbar-bg-color !default;
 
 // Height and margin
-$topbar-height: 70px !default;
+$topbar-height: 65px !default;
 $topbar-margin-bottom: 0 !default;
 
 // Control Input height for top bar
@@ -278,7 +278,6 @@ $g2-color2: $header-background-c2;
       &:hover > a {
         //background: $topbar-link-bg-hover;
         //color: $topbar-link-color-hover;
-        // font-weight: bold;
         // background-color: $g2-color1;
         // @include filter-gradient($g2-color1, $g2-color2, horizontal);
         // @include background-image(linear-gradient(left, $g2-color1 0%,$g2-color2 100%));
@@ -290,9 +289,9 @@ $g2-color2: $header-background-c2;
           position: absolute;
           left: 10px;
           right: 10px;
-          top: 20px;
-          bottom: 20px;
+          bottom: -1px;
           border-radius: 5px;
+          border: 1px #555 solid;
           z-index: 1;
         }
       }
@@ -301,8 +300,7 @@ $g2-color2: $header-background-c2;
         //background: $topbar-link-bg-active;
         //color: $topbar-link-color-active;
         position: relative;
-        transition: all 0.5s ease-in;
-        -webkit-transition: all 0.5s ease-in;
+        font-weight: bold;
         &:before {
           content: '';
           display: block;
@@ -310,9 +308,9 @@ $g2-color2: $header-background-c2;
           position: absolute;
           left: 10px;
           right: 10px;
-          top: 20px;
-          bottom: 20px;
+          bottom: -1px;
           border-radius: 5px;
+          border: 1px #555 solid;
           z-index: 1;
         }
       }
