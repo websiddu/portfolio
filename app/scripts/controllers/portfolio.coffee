@@ -2,10 +2,17 @@
 angular.module("websidduApp").controller "portfolioCtrl", ($scope, $rootScope, projects, $timeout) ->
   $scope.projects = projects
   $scope.selectedSize = ""
+  $scope.searchText  = ""
   $scope.sortedBy = "-date"
 
   $scope.projectThumb = (img) ->
     "background-image": "url(#{img})"
+
+  $scope.$watch "selectedSize", ->
+    $.announce("Project filtered by #{$scope.selectedSize}")
+
+  $scope.$watch "searchText", ->
+    $.announce("Project filtered according to search term")
 
   $scope.getWidth = (project) ->
     if project.size is 'large'
