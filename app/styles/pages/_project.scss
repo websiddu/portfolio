@@ -42,7 +42,8 @@ $bq-text-color: #434A54;
 
 .project-show-url, .project-show-date {
   margin: 0 0 20px;
-  background: #efefef;
+  // background: #efefef;
+  border: solid 1px #efefef;
   padding: 10px;
   border-radius: 2px;
   position: relative;
@@ -125,12 +126,13 @@ $bq-text-color: #434A54;
   }
   blockquote.full {
     margin: 0 -40px;
-    padding: 15px 100px;
-    font-size: 19px;
+    padding: 15px 70px;
+    font-size: 21px;
     border-top: solid 1px $bq-color1;
     border-bottom: solid 1px $bq-color1;
     //font-family: Georgia;
     color: $bq-text-color;
+    font-weight: 400;
     font-style: normal;
     background: #f9f9f9;
     //background-color: $bq-color1;
@@ -158,10 +160,10 @@ $tg2: #ABB6EF;
     display: inline-block;
     padding: 0px 16px;
     border-radius: 3px;
-    border: solid 1px #ddd;
+    border: solid 1px #efefef;
     color: #A7A4A4;
     margin: 0 15px 15px 0;
-    font-size: 15px;
+    font-size: 14px;
 
   }
 }
@@ -283,7 +285,10 @@ a[target="_blank"]:after {
 
 .project-page aside {
   padding-left: 20px;
-  border-left: dashed 1px #dcdcdc;
+  border: solid 1px #EEE;
+  background: #FCFCFC;
+  padding-top: 10px;
+  border-radius: 3px;
 }
 
 aside .metadata {

@@ -7,31 +7,26 @@
             <div class="project-show-banner-img" ng-style="{{style}}">
             </div>
             <h1 class="project-page-heading left" id="prj-title">
-         <!--    <span class="leftarr" ng-if="project.previousProject">
-              <a href="#/projects/{{project.previousProject._id.$oid}}"><em class="icon  icon-arrow-left"></em></a>
-            </span> -->
-            {{project.title}} <b class="project-page-heading-sec"></b>
-<!--             <span class="rightarr" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject._id.$oid}}"><em class="icon  icon-arrow-right"></em></a></span> -->
-          </h1>
+              {{project.title}} <b class="project-page-heading-sec"></b>
+            </h1>
           </header>
           <br>
           <div class="project-show-meta">
-            <div class="clear page-show-nav" aria-hidden='true'>
-              <span class="left" ng-if="project.previousProject && !project.previousProject.archived"><a href="projects/{{project.previousProject._id.$oid}}">&larr; Previous project</a></span>
-              <span class="right" ng-if="project.nextProject && !project.nextProject.archived"><a href="projects/{{project.nextProject._id.$oid}}">Next project &rarr;</a></span>
-            </div>
+            <br />
             <div class="row">
               <div class="large-9 small-12 columns">
                 <div class="project-show-url">
                   <span ng-if="project.isActive">
-              <span class="truncate">
-                <span class="icon icon-link"> <span class="sr-only">Project Link</span> </span>
+                    <span class="truncate">
+                      <span class="icon icon-link">
+                        <p class="sr-only">Project Link</p>
+                  </span>
                   <a href="{{project.projectUrl}}" target="_blank">{{project.projectUrl}}</a>
                   </span>
                   </span>
                   <span ng-if="project.isActive == 0">
-            <del><a>{{project.projectUrl}}</a></del> <small class="muted">(This url is not active!!)</small>
-            </span>
+                    <del><a>{{project.projectUrl}}</a></del> <small class="muted">(This url is not active!!)</small>
+                  </span>
                 </div>
               </div>
               <div class="large-3 small-12 columns">
