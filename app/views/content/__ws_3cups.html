@@ -1,0 +1,61 @@
+527f49b46265360002040000
+<blockquote class="full">
+  A simple 3cups games developed in HTML, CSS and jQuery.
+</blockquote>
+<div class="row">
+  <div class="large-12 columns">
+    <aside>
+      <div class="metadata">
+        <dt> Date </dt>
+        <dd> September 2011 </dd>
+      </div>
+      <div class="metadata">
+        <dt> Tasks </dt>
+        <dd> Development </dd>
+      </div>
+      <div class="metadata">
+        <dt> JavaScript </dt>
+        <dd> CSS</dd>
+        <dd> HTML</dd>
+        <dd> jQuery</dd>
+      </div>
+    </aside>
+    <section>
+      <h5 class="section-heading">Summary</h5>
+      <div class="section-body">This is a simple game implemented in jquery. When i am designing this site i thought of designing some game in jquery so started working on it with in one day i have completed the whole game.</div>
+      <div class="link-container">
+        <strong>Project Links</strong>
+        <ol>
+          <li>
+            <a href="https://websiddu.github.io/guessgame">Link to the application</a>
+          </li>
+          <li>
+            <a href="https://github.com/websiddu/guessgame">Link to the sourcecode</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section>
+      <h5 class="section-heading">Logic</h5>
+      <div class="section-body">
+        <p>I used 3 images for the boxes, the open box contains 2 parts top and bottom, next the closed box. I have used 2 images for kick 2 image for kick, one i the jumping image and next one is the smiling image.
+        </p>
+        <p>
+          Using the css Z-index i mate that effect that character is into the box and hiding in the box. And the logic is very simple. I have taken a random number first which is the answer, and placed the kick in it then next an array of [1,2,3] and for every 500ms i have called the shuffle function</p>
+        <pre>shuffle = function(o){
+    for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+  };</pre>
+      </div>
+    </section>
+    <section>
+      <h5 class="section-heading">Screenshots</h5>
+      <div class="section-body">
+        <img src="http://assets-websiddu.appspot.com/images/3cups/s/1.png" alt="" data-size="[1277, 922]" data-height="922px" data-width="1277px">
+        <img src="http://assets-websiddu.appspot.com/images/3cups/s/2.png" alt="" data-size="[1277, 922]" data-height="922px" data-width="1277px">
+        <img src="http://assets-websiddu.appspot.com/images/3cups/s/3.png" alt="" data-size="[1277, 922]" data-height="922px" data-width="1277px">
+        <img src="http://assets-websiddu.appspot.com/images/3cups/s/4.png" alt="" data-size="[1277, 922]" data-height="922px" data-width="1277px">
+      </div>
+    </section>
+  </div>
+</div>
