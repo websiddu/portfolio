@@ -18,7 +18,7 @@
     "json3": "~3.2.4",
     "modernizr": "*",
     "ngprogress": "~1.1.2",
-    "photoswipe": "*",
+    "photoswipe": "~4.1.0",
     "scrollReveal.js": "~2.1.0",
     "waypoints": "~3.1.1",
     "a11y_kit": "~0.0.4"

@@ -77,8 +77,11 @@ $bq-text-color: #434A54;
   }
 
   figure {
+    margin: 25px 0;
     figcaption {
-      display: none;
+      font-size: 12px;
+      color: #888;
+      margin-top: -13px;
     }
   }
 
@@ -89,7 +92,7 @@ $bq-text-color: #434A54;
     }
     figcaption {
       padding: 4px 0;
-      font-size: 13px;
+      font-size: 14px;
     }
   }
   > ol, > ul {
@@ -492,16 +495,23 @@ aside .metadata {
   }
 }
 
-.gallery.small {
-  figure {
-    width: 49%;
-    display: inline-block;
-    img {
-      margin-right: 0.5%;
+.gallery{
+  &.small {
+    figure {
+      width: 49%;
+      display: inline-block;
+      img {
+        margin-right: 0.5%;
+      }
+      figcaption {
+        display: inline;
+        display: none;
+      }
     }
-    figcaption {
-      display: inline;
-      display: none;
+  }
+  &.shadow {
+    img {
+      box-shadow: 0 0 10px rgba(0,0,0,0.16);
     }
   }
 }
