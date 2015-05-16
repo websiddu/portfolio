@@ -34,13 +34,13 @@ angular.module("websidduApp").controller "designCtrl", ($scope, $routeParams, $h
         description: 'Move to next desgin',
         callback: ->
           if design.nextArt
-            $location.path("/designs/#{design.nextArt.art._id.$oid}")
+            $location.path("/designs/#{design.nextArt._id.$oid}")
       .add
         combo: 'left',
         description: 'Move to previous design',
         callback: ->
           if design.previousArt
-            $location.path("/designs/#{design.previousArt.art._id.$oid}")
+            $location.path("/designs/#{design.previousArt._id.$oid}")
 
   _getRand = ->
     $http
