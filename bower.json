@@ -2,6 +2,7 @@
   "name": "websidduYo",
   "version": "0.0.0",
   "dependencies": {
+    "jquery": "*",
     "angular": "1.4.0",
     "angular-animate": "1.4.0",
     "angular-aria": "1.4.0",
@@ -21,7 +22,9 @@
     "photoswipe": "~4.1.0",
     "scrollReveal.js": "~2.1.0",
     "waypoints": "~3.1.1",
-    "a11y_kit": "~0.0.4"
+    "a11y_kit": "~0.0.4",
+    "angulartics": "*",
+    "angulartics-google-analytics": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

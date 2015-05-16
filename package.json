@@ -2,6 +2,7 @@
   "name": "websiddu-yo",
   "version": "0.0.1",
   "dependencies": {
+    "angulartics-google-analytics": "^0.1.1",
     "connect-modrewrite": "^0.8.2"
   },
   "devDependencies": {
