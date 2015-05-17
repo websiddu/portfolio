@@ -50,10 +50,8 @@ websidduApp.config(($routeProvider, $locationProvider) ->
         Project.get(
           id: $route.current.params.projectId
           , (data) ->
-              console.log data
               deferred.resolve data
           , (err) ->
-            console.log "data.."
             $http.get 'data/projects.json'
               .success (result) ->
                 currnetPrj = {}
@@ -61,7 +59,6 @@ websidduApp.config(($routeProvider, $locationProvider) ->
                   if (val.id.$oid == $route.current.params.projectId)
                     currnetPrj = val
 
-                console.log currnetPrj
                 return deferred.resolve currnetPrj
           )
         deferred.promise
