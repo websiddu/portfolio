@@ -16,8 +16,8 @@
         <br>
         <div class="project-show-meta">
           <div class="clear page-show-nav">
-            <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject}}">&larr; Previous project</a></span>
-            <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject}}">Next project &rarr;</a></span>
+            <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject._id.$oid}}">&larr; Previous project</a></span>
+            <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject._id.$oid}}">Next project &rarr;</a></span>
           </div>
           <div class="row">
             <div class="large-9 small-12 columns">
