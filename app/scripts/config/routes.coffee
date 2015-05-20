@@ -52,14 +52,9 @@ websidduApp.config(($routeProvider, $locationProvider) ->
           , (data) ->
               deferred.resolve data
           , (err) ->
-            $http.get 'data/projects.json'
+            $http.get 'data/projects/' + $route.current.params.projectId + '.json'
               .success (result) ->
-                currnetPrj = {}
-                result.forEach (val, i) ->
-                  if (val.id.$oid == $route.current.params.projectId)
-                    currnetPrj = val
-
-                return deferred.resolve currnetPrj
+                deferred.resolve result
           )
         deferred.promise
   )
