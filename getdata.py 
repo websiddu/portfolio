@@ -3,6 +3,8 @@
 import urllib2
 import sys
 import json
+import shutil
+import os
 
 BASE_URL = "http://api.websiddu.com/api/projects/"
 PROJECTS_URL = "http://api.websiddu.com/api/projects?callback="
@@ -30,6 +32,14 @@ def getProjects():
   data = opener.open(request)
   projects = json.load(data)
   projects_file.write(json.dumps(projects))
+
+  if not os.path.exists('app/data/projects/'):
+    os.makedirs('app/data/projects/')
+  else:
+    os.system("rm -rf app/data/projects/")
+
+  if not os.path.exists('app/data/projects/'):
+    os.makedirs('app/data/projects/')
 
   for prj in projects:
     print "Getting data for " + prj['title'] + " and "
