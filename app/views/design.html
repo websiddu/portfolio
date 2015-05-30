@@ -38,7 +38,7 @@
       <div class="ds-shot-rand">
         <h5 class="ds-shot-rand-heading">More random shots</h5>
         <div class="ds-shot-rand-list">
-          <div class="ds-shot-rand-shot" ng-repeat="rand in randArts">
+          <div class="ds-shot-rand-shot" ng-repeat="rand in randArts track by $index">
             <a class="ds-shot-rand-shot-img" ng-href="#/designs/{{rand.id.$oid}}">
               <img ng-src="{{rand.preview_thumb}}" alt="">
             </a>

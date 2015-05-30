@@ -44,8 +44,8 @@ angular.module("websidduApp").controller "designCtrl", ($scope, $routeParams, $h
 
   _getRand = ->
     $http
-      url: "#{constants.base_url}api/arts/?rand=4"
-      method: 'GET'
+      url: "#{constants.base_url}api/arts/?rand=4&callback=JSON_CALLBACK"
+      method: 'JSONP'
     .success (data) ->
       $scope.randArts = data
 
