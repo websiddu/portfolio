@@ -1,8 +1,5 @@
 "use strict"
 angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, $timeout, constants) ->
-  _desingAvatar = $('.js_avatar_design')
-  _defaultAvatar = $('.js_default_trigger')
-  _codeAvatar = $('.js_avatar_code')
 
   $scope.projectThumb = (img) ->
     "background-image": "url(#{img})"
