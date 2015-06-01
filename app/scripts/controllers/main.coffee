@@ -60,7 +60,7 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
             animate_on_load: true
             data: data
             width: $(window).width()
-            height: 220,
+            height: 210,
             min_y: 0
             # custom_line_color_map:
             target: '.landing-chart'
