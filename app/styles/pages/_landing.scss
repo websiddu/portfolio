@@ -6,6 +6,7 @@ body {
   background-color: $g1-color1;
   @include filter-gradient($g1-color1, $g1-color2, horizontal);
   @include background-image(linear-gradient(left, $g1-color1 0%, $g1-color2 100%));
+  letter-spacing: -0.03em;
 }
 
 // Primary color #E24500
@@ -57,11 +58,13 @@ body {
   //text-shadow: 0px 1px 1px #aaa;
 }
 
-h2.l-n {
-  font-size: 40px;
+.l-n {
+  font-size: 35px;
   font-weight: 200;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 16px auto;
+  height: 40px;
+  line-height: 1;
 }
 
 h3.l-d {
@@ -137,4 +140,26 @@ $g3-color2: #AC92EC;
 
 .f-topbar-fixed {
   padding-top: 72px;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
