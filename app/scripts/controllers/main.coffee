@@ -1,5 +1,5 @@
 "use strict"
-angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, $timeout, constants) ->
+angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, $timeout, constants, $http) ->
 
   $scope.projectThumb = (img) ->
     "background-image": "url(#{img})"
@@ -21,7 +21,7 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
 
   $scope.init = ->
     _loadChart()
-    #_initTyped()
+    _initTyped()
     #_bindMouseWeel()
 
   _initTyped = ->
@@ -47,7 +47,10 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
 
   _loadChart = ->
     setTimeout ->
-      d3.json "#{constants.base_url}api/github/", (data) ->
+      $http
+        url: "#{constants.base_url}api/github?callback=JSON_CALLBACK"
+        method: 'JSONP'
+      .success (data) ->
         data = MG.convert.date(data.raw, 'date');
         MG.data_graphic({
             title: "<a href='https://github.com/websiddu' target='_blank'>Github contributions</a>",
