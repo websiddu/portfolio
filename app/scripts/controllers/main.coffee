@@ -4,6 +4,7 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
   $scope.projectThumb = (img) ->
     "background-image": "url(#{img})"
 
+  typed = null
   sentence = [
     "Hello, I am Sid..."
     "I'm a UX Designer and Front-end Engineer..."
@@ -20,17 +21,20 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
 
   $scope.init = ->
     _loadChart()
-    _initTyped()
+    #_initTyped()
     #_bindMouseWeel()
 
   _initTyped = ->
     setTimeout ->
-      $('.l-n .text').typed
+      if typed
+        $('.l-n .text').typed('reset')
+      typed = $('.l-n .text').typed
         strings: sentence
         typeSpeed: 70
         backDelay: 5000
         loop: true
         loopCount: 3
+
     , 100
 
   _bindMouseWeel = ->
