@@ -16,9 +16,9 @@
     display: inline-block;
   }
   img {
-    max-width: 40px;
-    max-height: 50px;
-    margin: 10px;
+    max-width: 45px;
+    max-height: 90px;
+    margin: 6px;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
@@ -43,7 +43,6 @@
   margin: 0 auto;
   text-align: center;
   display: inline-block;
-
   &.long {
     display: -webkit-box;
     display: -moz-box;
@@ -54,7 +53,6 @@
     justify-content: space-between;
     list-style-type: none;
   }
-
   li {
     &:first-child {
       margin-left: 0;
@@ -66,8 +64,6 @@
     }
   }
 }
-
-
 
 hr {
   margin: 10px 0;

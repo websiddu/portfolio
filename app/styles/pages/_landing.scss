@@ -75,8 +75,8 @@ h3.l-d {
 $g-color1: #E9573F;
 $g-color2: #EF7D6B;
 
-// $g-color1: #FFCE54;
-// $g-color2: #FDDE93;
+$g-color1: #4A89DC;
+$g-color2: #5D9CEC;
 
 //linear-gradient(to right, #FFCE54 0%, #FFE29C 100%)
 
@@ -91,6 +91,7 @@ $g-color2: #EF7D6B;
   background-color: $g-color1;
   @include filter-gradient($g-color1, $g-color2, horizontal);
   @include background-image(linear-gradient(left, $g-color1 0%, $g-color2 100%));
+  border-radius: 3px;
   &:hover {
     color: #eee;
   }

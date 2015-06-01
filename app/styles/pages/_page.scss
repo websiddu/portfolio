@@ -152,16 +152,16 @@ $g3-color2: #9ec2fe;
 .work-timeline ul li strong {}
 
 .landing-chart {
-  position: fixed;
   width: 100%;
+  height: 200px;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 0;
   z-index: -1;
-  opacity: 0.3;
+  opacity: 0.5;
   &:hover {
-    opacity: 1;
+
   }
 }
 
