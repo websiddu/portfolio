@@ -17,7 +17,7 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
     "నమస్తే, నేను సిద్ధార్థ..."
     # "Now in Chinese..."
     "您好，我是悉达多..."
-    "வணக்கம், நான் சித்தார்த்தா..."
+    "வணக்கம், என் பெயர் சித்தார்த்தா..."
     # "Done... replaying..."
   ]
 
