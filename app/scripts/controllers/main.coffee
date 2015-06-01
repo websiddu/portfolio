@@ -7,15 +7,17 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
   typed = null
   sentence = [
     "Hello, I am Sid..."
-    "I'm a UX Designer and Front-end Engineer..."
-    "Hello, I am Sid..."
+    # "I'm a UX Designer and Front-end Engineer..."
+    # "Hello, I am Sid..."
     # "I love designing and building usable products..."
     # "Now in Hindi..."
-    # "नमस्ते, मैं सिद्धार्थ हूँ..."
+    "Hallo, ich bin sid..."
+    "नमस्ते, मैं सिद्धार्थ हूँ..."
     # "Now in Telugu..."
-    # "నమస్తే, నేను సిద్ధార్థ..."
+    "నమస్తే, నేను సిద్ధార్థ..."
     # "Now in Chinese..."
-    # "您好，我是悉达多..."
+    "您好，我是悉达多..."
+    "வணக்கம், என் பெயர் சித்தார்த்தா..."
     # "Done... replaying..."
   ]
 
@@ -30,8 +32,8 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
         $('.l-n .text').typed('reset')
       typed = $('.l-n .text').typed
         strings: sentence
-        typeSpeed: 70
-        backDelay: 5000
+        typeSpeed: 80
+        backDelay: 7000
         loop: true
         loopCount: 3
 
