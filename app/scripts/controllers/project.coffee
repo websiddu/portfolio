@@ -14,6 +14,8 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
   $scope.isVoted = false
   $scope.votes = 0
 
+  prev = null
+  now = null
 
   localStorage[$location.path()] = 'seen'
 
@@ -23,6 +25,28 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
     $scope.votes = angular.copy(project.votes)
     _setIsVoted()
     _initHotKeys()
+    _initWayPoints()
+
+
+  _initWayPoints = ->
+   setTimeout ->
+      $('.section-heading').waypoint
+        handler: (d) ->
+          if $(this.element).index($('.section-heading')) is 0
+            prev = ''
+          if d is 'down'
+            now = "– " + $(this.element).text()
+            prev = $('.project-page-heading-sec').text()
+            $('.project-page-heading-sec').text(now)
+          else
+            now = "– " + $(this.element).text()
+            $('.project-page-heading-sec').text(prev)
+
+        offset: 95
+
+    , 200
+
+
 
   _initHotKeys = ->
     hotkeys.del('right')
