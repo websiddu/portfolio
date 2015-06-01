@@ -53,7 +53,7 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
       .success (data) ->
         data = MG.convert.date(data.raw, 'date');
         MG.data_graphic({
-            title: "<a href='https://github.com/websiddu' target='_blank'>Github contributions</a>",
+            title: "<a href='https://github.com/websiddu' target='_blank'>My Github contributions</a>",
             description: "",
             animate_on_load: true
             data: data

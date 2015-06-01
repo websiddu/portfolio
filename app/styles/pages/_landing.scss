@@ -6,7 +6,7 @@ body {
   background-color: $g1-color1;
   @include filter-gradient($g1-color1, $g1-color2, horizontal);
   @include background-image(linear-gradient(left, $g1-color1 0%, $g1-color2 100%));
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 // Primary color #E24500
