@@ -159,15 +159,17 @@ $tg2: #ABB6EF;
 .tags {
   list-style-type: none;
   > li {
-    display: inline-block;
-    padding: 2px 20px;
-    border-radius: 5px;
-    background-color: #c4c4c4;
     //@include filter-gradient($tg1, $tg2, horizontal);
     //@include background-image(linear-gradient(left, $tg1 0%,$tg2 100%));
-    color: #fff;
+
+    display: inline-block;
+    padding: 0px 16px;
+    border-radius: 3px;
+    border: solid 1px #ddd;
+    color: #A7A4A4;
     margin: 0 15px 15px 0;
     font-size: 15px;
+
   }
 }
 
