@@ -144,24 +144,41 @@ $g3-color2: #AC92EC;
   padding-top: 72px;
 }
 
-.typed-cursor{
+.typed-cursor {
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
 }
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
 }
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+.text {
+  &:after {
+    content: " ";
+    display: inline-block;
+    height: 47px;
+    position: relative;
+    top: 10px;
+    margin-left: 3px;
+    margin-right: 7px;
+    width: 2px;
+    background: #43434A;
+    animation: blink 1s step-start 0s infinite;
+    -webkit-animation: blink 1s step-start 0s infinite;
+  }
+}
+
+.selectedText {
+  display: none;
 }
