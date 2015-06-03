@@ -27,15 +27,15 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
     #_bindMouseWeel()
 
   _initTyped = ->
-    setTimeout ->
+    $timeout ->
       if typed
         $('.l-n .text').typed('reset')
       typed = $('.l-n .text').typed
         strings: sentence
         typeSpeed: 80
-        backDelay: 7000
+        backDelay: 4000
         loop: true
-        loopCount: 3
+        # loopCount: 3
 
     , 100
 
