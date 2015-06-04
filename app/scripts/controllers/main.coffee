@@ -23,7 +23,7 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
 
   $scope.init = ->
     _loadChart()
-    _initTyped()
+    #_initTyped()
     #_bindMouseWeel()
 
   _initTyped = ->
