@@ -2,18 +2,24 @@
 <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 18 54" enable-background="new 0 0 18 54" xml:space="preserve">
+	 viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
 <g>
-	<circle fill="#5187C6" cx="9.1" cy="45.1" r="9.1"/>
-	<path fill="#FFFFFF" d="M13.4,43.3l-4.9,4.9c-0.4,0.4-0.9,0.4-1.3,0l-2.5-2.5c-0.4-0.4-0.4-0.9,0-1.3c0.4-0.4,0.9-0.4,1.3,0L8,46.2
-		l4.2-4.2c0.4-0.4,0.9-0.4,1.3,0C13.7,42.3,13.7,42.9,13.4,43.3z"/>
+	<circle fill="#DCDCDC" cx="144" cy="48" r="48"/>
+	<circle fill="#FFFFFF" cx="144" cy="48" r="42.7"/>
 </g>
 <g>
-	<circle fill="#DCDCDC" cx="9" cy="9" r="9"/>
-	<circle fill="#FFFFFF" cx="9" cy="9" r="8"/>
+	<circle fill="#DCDCDC" cx="144" cy="144" r="48"/>
+	<circle fill="#F8F8F8" cx="144" cy="144" r="42.7"/>
 </g>
 <g>
-	<circle fill="#DCDCDC" cx="9" cy="27" r="9"/>
-	<circle fill="#F8F8F8" cx="9" cy="27" r="8"/>
+	<path fill="none" d="M144,197.3c-23.6,0-42.7,19.1-42.7,42.7s19.1,42.7,42.7,42.7s42.7-19.1,42.7-42.7S167.6,197.3,144,197.3z
+		 M144,270.4c-16.8,0-30.4-13.6-30.4-30.4s13.6-30.4,30.4-30.4s30.4,13.6,30.4,30.4S160.8,270.4,144,270.4z"/>
+	<g>
+		<path fill="#4684C1" d="M144,192c-26.5,0-48,21.5-48,48s21.5,48,48,48s48-21.5,48-48S170.5,192,144,192z M144,282.7
+			c-23.6,0-42.7-19.1-42.7-42.7s19.1-42.7,42.7-42.7s42.7,19.1,42.7,42.7S167.6,282.7,144,282.7z"/>
+	</g>
+	<g>
+		<circle fill="#4684C1" cx="144" cy="240" r="30.4"/>
+	</g>
 </g>
 </svg>
