@@ -1,21 +1,8 @@
-$g2-color1: #434A54;
-$g2-color2: #656D78;
-
-// $g2-color1: #f8f8f8;
-// $g2-color2: #f8f8f8;
-
-$g3-color1: #967ADC;
-$g3-color2: #AC92EC;
-
-// $g3-color1: #F6BB42;
-// $g3-color2: #FFCE54;
-
 .footer {
-  //height: 100px;
   padding: 25px 10px;
-  background-color: $g2-color1;
-  @include filter-gradient($g2-color1, $g2-color2, horizontal);
-  @include background-image(linear-gradient(left, $g2-color1 0%, $g2-color2 100%));
+  background-color: $footer-background-c1;
+  @include filter-gradient($footer-background-c1, $footer-background-c2, horizontal);
+  @include background-image(linear-gradient(left, $footer-background-c1 0%, $footer-background-c2 100%));
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
