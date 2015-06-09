@@ -1,18 +1,21 @@
-$g1-color1: #efefea;
-$g1-color2: #fff;
-
 body {
   font-weight: 200;
-  background-color: $g1-color1;
-  @include filter-gradient($g1-color1, $g1-color2, horizontal);
-  @include background-image(linear-gradient(left, $g1-color1 0%, $g1-color2 100%));
+  background-color: $page-background-c1;
+  @include filter-gradient($page-background-c1, $page-background-c2, horizontal);
+  @include background-image(linear-gradient(left, $page-background-c1 0%, $page-background-c2 100%));
   letter-spacing: -0.01em;
 }
 
-// Primary color #E24500
-.landing-page * {
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+.logo-back {
+  fill: $logo-back;
+}
+
+.logo-front {
+  fill: $logo-front;
+}
+
+.logo-text {
+  fill: $logo-text;
 }
 
 .l-dc-intro {
@@ -74,28 +77,21 @@ h3.l-d {
   margin: 0 auto;
   text-align: center;
   line-height: 1.7;
-  //text-shadow: 0px 1px 1px #888;
 }
 
-$g-color1: #E9573F;
-$g-color2: #EF7D6B;
-
-$g-color1: #4A89DC;
-$g-color2: #5D9CEC;
-
-//linear-gradient(to right, #FFCE54 0%, #FFE29C 100%)
+.landing-page * {
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
 
 .l-button {
-  background: $sunflower-light;
   padding: 16px 20px;
   color: #fff;
   margin-top: 20px;
   display: inline-block;
-  //border-radius: 5px;
-  //border: solid 1px #fff;
-  background-color: $g-color1;
-  @include filter-gradient($g-color1, $g-color2, horizontal);
-  @include background-image(linear-gradient(left, $g-color1 0%, $g-color2 100%));
+  background-color: $button-background-c1;
+  @include filter-gradient($button-background-c1, $button-background-c2, horizontal);
+  @include background-image(linear-gradient(left, $button-background-c1 0%, $button-background-c2 100%));
   border-radius: 3px;
   &:hover {
     color: #eee;
@@ -118,50 +114,63 @@ $g-color2: #5D9CEC;
   overflow-x: hidden;
 }
 
-
 html {
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
-$g2-color1: #434A54;
-$g2-color2: #656D78;
-
-$g3-color1: #967ADC;
-$g3-color2: #AC92EC;
-
-// $g3-color1: #F6BB42;
-// $g3-color2: #FFCE54;
-
 .contain-to-grid {
-  background-color: $g2-color1;
-  @include filter-gradient($g2-color1, $g2-color2, horizontal);
-  @include background-image(linear-gradient(left, $g2-color1 0%, $g2-color2 100%));
-  border-bottom: solid 3px $g3-color1;
+  background-color: $header-background-c1;
+  @include filter-gradient($header-background-c1, $header-background-c2, horizontal);
+  @include background-image(linear-gradient(left, $header-background-c1 0%, $header-background-c2 100%));
+  border-bottom: solid 3px $primary-color;
 }
 
 .f-topbar-fixed {
   padding-top: 72px;
 }
 
-.typed-cursor{
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
     opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -7,20 +7,11 @@
 $g3-color1: #76a7fa;
 $g3-color2: #9ec2fe;
 
-// .page-heading-bg {
-//   background-color: $g3-color1;
-//   @include filter-gradient($g3-color1, $g3-color2, horizontal);
-//   @include background-image(linear-gradient(left, $g3-color1 0%,$g3-color2 100%));
-// }
-
 .page-heading {
   font-size: 30px;
   font-weight: 200;
-  // padding: 15px 0;
   word-wrap: break-word;
-  // margin: 0;
   width: 95%;
-  //color: #fff;
   em {
     vertical-align: middle;
   }
@@ -76,10 +67,8 @@ $g3-color2: #9ec2fe;
   background-color: green;
   color: green;
   box-shadow: 0 0 10px 0;
-  /* Inherits the font color */
   height: 2px;
   opacity: 0;
-  /* Add CSS3 styles for transition smoothing */
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
