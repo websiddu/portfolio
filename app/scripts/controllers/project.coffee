@@ -14,8 +14,10 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
   $scope.isVoted = false
   $scope.votes = 0
 
-  prev = null
-  now = null
+  waypoint = null
+
+  prev = ''
+  now = ''
 
   localStorage[$location.path()] = 'seen'
 
@@ -25,27 +27,28 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
     $scope.votes = angular.copy(project.votes)
     _setIsVoted()
     _initHotKeys()
-    _initWayPoints()
 
+    #$('.section-heading').waypoint('destroy')
+
+  $rootScope.$on "$routeChangeStart",  (event, next, current) ->
+    Waypoint.destroyAll()
 
   _initWayPoints = ->
-   setTimeout ->
-      $('.section-heading').waypoint
+    setTimeout ->
+      waypoint = $('.section-heading').waypoint
         handler: (d) ->
           if $(this.element).index($('.section-heading')) is 0
             prev = ''
+            now = ''
           if d is 'down'
             now = "– " + $(this.element).text()
             prev = $('.project-page-heading-sec').text()
             $('.project-page-heading-sec').text(now)
-          else
+          else if d is 'up'
             now = "– " + $(this.element).text()
             $('.project-page-heading-sec').text(prev)
-
         offset: 95
-
-    , 200
-
+    , 10
 
 
   _initHotKeys = ->
@@ -89,19 +92,25 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
   _getImagesInProject = ->
     setTimeout ->
       $images = $('.project-show-description .section-body img')
-      $images.each (imgA) ->
-        $img = $(this)
-        $("<img/>").attr("src", $img.attr("src"))
-          .load(() ->
-            img =
-              src: $img.attr('src')
-              w: this.width
-              h: this.height
-              title: $img.attr('alt')
-            $scope.images.push(img)
-            if imgA is $images.length - 1
-              _initPhotoSwipe()
-          )
+      console.log $images.length
+      if $images.length > 0
+        $images.each (imgA) ->
+          $img = $(this)
+          $("<img/>").attr("src", $img.attr("src"))
+            .load(() ->
+              img =
+                src: $img.attr('src')
+                w: this.width
+                h: this.height
+                title: $img.attr('alt')
+              $scope.images.push(img)
+              if imgA is $images.length - 1
+                _initPhotoSwipe()
+                _initWayPoints()
+            )
+      else
+        _initWayPoints()
+
     , 100
 
     return
