@@ -4,12 +4,11 @@
   position: relative;
   clear: left;
   background: #fff;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
+  // -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  // -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 1px 3px rgba(130, 130, 130, 0.18);
   border-radius: 3px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
 }
 
 .design-shot {
