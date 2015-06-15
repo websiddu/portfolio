@@ -19,7 +19,8 @@
       background: #E8E8E7 url("../images/project_default.png") center no-repeat;
       height: 270px;
       border: solid 8px #fff;
-      box-shadow: 0px 2px 5px #d8d8d8;
+      box-shadow: 0px 1px 3px rgba(130, 130, 130, 0.18);
+      border-radius: 3px;
       &.archived {
         height: 158px;
         box-shadow: 0 0 5px #eee;
