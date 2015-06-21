@@ -2,7 +2,7 @@ body {
   font-weight: 200;
   background-color: $page-background-c1;
   @include filter-gradient($page-background-c1, $page-background-c2, horizontal);
-  @include background-image(linear-gradient(left, $page-background-c1 0%, $page-background-c2 100%));
+  background-image: linear-gradient(left, $page-background-c1 0%, $page-background-c2 100%);
   letter-spacing: -0.01em;
 }
 
@@ -91,7 +91,7 @@ h3.l-d {
   display: inline-block;
   background-color: $button-background-c1;
   @include filter-gradient($button-background-c1, $button-background-c2, horizontal);
-  @include background-image(linear-gradient(left, $button-background-c1 0%, $button-background-c2 100%));
+  background-image: linear-gradient(left, $button-background-c1 0%, $button-background-c2 100%);
   border-radius: 3px;
   &:hover {
     color: #eee;
@@ -122,7 +122,7 @@ html {
 .contain-to-grid {
   background-color: $header-background-c1;
   @include filter-gradient($header-background-c1, $header-background-c2, horizontal);
-  @include background-image(linear-gradient(left, $header-background-c1 0%, $header-background-c2 100%));
+  background-image: linear-gradient(left, $header-background-c1 0%, $header-background-c2 100%);
   border-bottom: solid $header-border-size $header-border-color;
 }
 

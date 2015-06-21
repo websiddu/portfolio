@@ -41,9 +41,9 @@ module.exports = function(grunt) {
         files: ['<%= yeoman.app %>/fonts/{,*/}*.svg'],
         tasks: ['webfont:icons']
       },
-      compass: {
+      sass: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server', 'autoprefixer']
+        tasks: ['sass:server', 'autoprefixer']
       },
       coffeeTest: {
         files: ['test/spec/{,*/}*.coffee'],
@@ -98,33 +98,32 @@ module.exports = function(grunt) {
       }
     },
 
-
-    compass: {
+    sass: {
       options: {
-        sassDir: '<%= yeoman.app %>/styles',
-        cssDir: '.tmp/styles',
-        generatedImagesDir: '.tmp/images/generated',
-        imagesDir: '<%= yeoman.app %>/images',
-        javascriptsDir: '<%= yeoman.app %>/scripts',
-        fontsDir: '<%= yeoman.app %>/styles/fonts',
-        importPath: '<%= yeoman.app %>/bower_components',
-        httpImagesPath: '/images',
-        httpGeneratedImagesPath: '/images/generated',
-        httpFontsPath: '/styles/fonts',
-        relativeAssets: false,
-        assetCacheBuster: false
+        sourcemap: true,
+        loadPath: 'bower_components'
       },
       dist: {
-        options: {
-          generatedImagesDir: '<%= yeoman.dist %>/images/generated'
-        }
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/styles',
+          src: ['*.{scss,sass}'],
+          dest: '.tmp/styles',
+          ext: '.css'
+        }]
       },
       server: {
-        options: {
-          debugInfo: true
-        }
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/styles',
+          src: ['*.{scss,sass}'],
+          dest: '.tmp/styles',
+          ext: '.css'
+        }]
       }
     },
+
+
     connect: {
       options: {
         port: 9012,
@@ -321,17 +320,17 @@ module.exports = function(grunt) {
     },
     concurrent: {
       server: [
-        'compass',
+        'sass',
         'coffee:dist'
         //'copy:styles'
       ],
       test: [
-        'compass',
+        'sass',
         'coffee',
         'copy:styles'
       ],
       dist: [
-        'compass',
+        'sass',
         'coffee',
         'copy:styles',
         'imagemin',

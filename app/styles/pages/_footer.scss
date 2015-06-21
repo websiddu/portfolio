@@ -2,7 +2,7 @@
   padding: 25px 10px;
   background-color: $footer-background-c1;
   @include filter-gradient($footer-background-c1, $footer-background-c2, horizontal);
-  @include background-image(linear-gradient(left, $footer-background-c1 0%, $footer-background-c2 100%));
+  background-image: linear-gradient(left, $footer-background-c1 0%, $footer-background-c2 100%);
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;

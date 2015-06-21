@@ -14,7 +14,7 @@ $side-nav-list-margin: em-calc(0 0 7 0) !default;
 // We use these to control link styles.
 $side-nav-link-color: $primary-color !default;
 $side-nav-link-color-active: lighten(#000, 30%) !default;
-$side-nav-font-size: em-calc(15) !default;
+$side-nav-font-size: em-calc(14) !default;
 $side-nav-font-weight: bold !default;
 
 // We use these to control border styles
@@ -41,11 +41,8 @@ $side-nav-divider-color: darken(#fff, 10%) !default;
     font-size: $font-size;
 
     a {
-      display: inline-block;
+      display: block;
       color: $link-color;
-      &:hover {
-        color: $hover-color;
-      }
     }
 
     &.active > a:first-child {

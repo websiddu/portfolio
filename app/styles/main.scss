@@ -1,4 +1,8 @@
-@import "compass/css3";
+@mixin filter-gradient($c1, $c2, $d) {
+  background: $c1;
+  background: -webkit-linear-gradient($d, $c1, $c2);
+  background: linear-gradient($d, $c1, $c2);
+}
 
 @import "foundation/normalize";
 @import "foundation/foundation";
@@ -18,5 +22,7 @@
 @import "pages/chart";
 @import "pages/hotkeys";
 //@import "pages/pagepiling";
+
+
 
 

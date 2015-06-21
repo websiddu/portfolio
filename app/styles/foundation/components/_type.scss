@@ -9,8 +9,8 @@ $header-font-weight: bold !default;
 $header-font-style: normal !default;
 $header-font-color: #222 !default;
 $header-line-height: 1.4 !default;
-$header-top-margin: 0.2em !default;
-$header-bottom-margin: 0.5em !default;
+$header-top-margin: .2em !default;
+$header-bottom-margin: .5em !default;
 $header-text-rendering: optimizeLegibility !default;
 
 // We use these to control header font sizes
@@ -25,8 +25,8 @@ $h6-font-size: 1em !default;
 $subheader-line-height: 1.4 !default;
 $subheader-font-color: lighten($header-font-color, 30%) !default;
 $subheader-font-weight: 300 !default;
-$subheader-top-margin: 0.2em !default;
-$subheader-bottom-margin: 0.5em !default;
+$subheader-top-margin: .2em !default;
+$subheader-bottom-margin: .5em !default;
 
 // A general <small> styling
 $small-font-size: 60% !default;
@@ -45,7 +45,7 @@ $paragraph-text-rendering: optimizeLegibility !default;
 
 // We use these to style <code> tags
 $code-color: darken($alert-color, 15%) !default;
-$code-font-family: Consolas, "Liberation Mono", Courier, monospace !default;
+$code-font-family: Consolas, 'Liberation Mono', Courier, monospace !default;
 $code-font-weight: bold !default;
 
 // We use these to style anchors
@@ -65,7 +65,7 @@ $list-side-margin: 0 !default;
 $list-side-margin-no-bullet: $list-side-margin;
 $list-nested-margin: em-calc(20) !default;
 $definition-list-header-weight: bold !default;
-$definition-list-header-margin-bottom: 0.3em !default;
+$definition-list-header-margin-bottom: .3em !default;
 $definition-list-margin-bottom: em-calc(12) !default;
 
 // We use these to style blockquotes
@@ -102,6 +102,7 @@ $microformat-abbr-padding: em-calc(0 1) !default;
 $microformat-abbr-font-weight: bold !default;
 $microformat-abbr-font-decoration: none !default;
 
+
 //
 // Typography Placeholders
 //
@@ -121,6 +122,7 @@ $microformat-abbr-font-decoration: none !default;
 }
 
 @if $include-html-type-classes != false {
+
   /* Typography resets */
   div,
   dl,
@@ -141,22 +143,23 @@ $microformat-abbr-font-decoration: none !default;
   blockquote,
   th,
   td {
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
     direction: $text-direction;
   }
+
   /* Default Link Styles */
   a {
     color: $anchor-font-color;
     text-decoration: $anchor-text-decoration;
     line-height: inherit;
-    &:hover {
-      color: $anchor-font-color-hover;
-    }
-    img {
-      border: none;
-    }
+
+    &:hover,
+    &:focus { color: $anchor-font-color-hover; }
+
+    img { border:none; }
   }
+
   /* Default paragraph styles */
   p {
     font-family: $paragraph-font-family;
@@ -165,15 +168,16 @@ $microformat-abbr-font-decoration: none !default;
     line-height: $paragraph-line-height;
     margin-bottom: $paragraph-margin-bottom;
     text-rendering: $paragraph-text-rendering;
-    &.lead {
-      @extend %lead;
-    }
+
+    &.lead { @extend %lead; }
+
     & aside {
       font-size: $paragraph-aside-font-size;
       line-height: $paragraph-aside-line-height;
       font-style: $paragraph-aside-font-style;
     }
   }
+
   /* Default header styles */
   h1, h2, h3, h4, h5, h6 {
     font-family: $header-font-family;
@@ -184,33 +188,23 @@ $microformat-abbr-font-decoration: none !default;
     margin-top: $header-top-margin;
     margin-bottom: $header-bottom-margin;
     line-height: $header-line-height - em-calc(3);
+
     small {
       font-size: $small-font-size;
       color: $small-font-color;
       line-height: 0;
     }
   }
-  h1 {
-    font-size: $h1-font-size - em-calc(10);
-  }
-  h2 {
-    font-size: $h2-font-size - em-calc(10);
-  }
-  h3 {
-    font-size: $h3-font-size - em-calc(5);
-  }
-  h4 {
-    font-size: $h4-font-size - em-calc(5);
-  }
-  h5 {
-    font-size: $h5-font-size;
-  }
-  h6 {
-    font-size: $h6-font-size;
-  }
-  .subheader {
-    @extend %subheader;
-  }
+
+  h1 { font-size: $h1-font-size - em-calc(10); }
+  h2 { font-size: $h2-font-size - em-calc(10); }
+  h3 { font-size: $h3-font-size - em-calc(5); }
+  h4 { font-size: $h4-font-size - em-calc(5); }
+  h5 { font-size: $h5-font-size; }
+  h6 { font-size: $h6-font-size; }
+
+  .subheader { @extend %subheader; }
+
   hr {
     border: $hr-border-style $hr-border-color;
     border-width: $hr-border-width 0 0;
@@ -218,26 +212,31 @@ $microformat-abbr-font-decoration: none !default;
     margin: $hr-margin 0 ($hr-margin - em-calc(1));
     height: 0;
   }
+
   /* Helpful Typography Defaults */
   em,
   i {
     font-style: italic;
     line-height: inherit;
   }
+
   strong,
   b {
     font-weight: bold;
     line-height: inherit;
   }
+
   small {
     font-size: $small-font-size;
     line-height: inherit;
   }
+
   code {
     font-family: $code-font-family;
     font-weight: $code-font-weight;
     color: $code-color;
   }
+
   /* Lists */
   ul,
   ol,
@@ -248,12 +247,12 @@ $microformat-abbr-font-decoration: none !default;
     list-style-position: $list-style-position;
     font-family: $paragraph-font-family;
   }
+
   ul, ol {
     margin-#{$default-float}: $list-side-margin;
-    &.no-bullet {
-      margin-#{$default-float}: $list-side-margin-no-bullet;
-    }
+    &.no-bullet { margin-#{$default-float}: $list-side-margin-no-bullet; }
   }
+
   /* Unordered Lists */
   ul {
     li {
@@ -261,30 +260,21 @@ $microformat-abbr-font-decoration: none !default;
       ol {
         margin-#{$default-float}: $list-nested-margin;
         margin-bottom: 0;
-        font-size: 1em;
-        /* Override nested font-size change */
+        font-size: 1em; /* Override nested font-size change */
       }
     }
     &.square,
     &.circle,
     &.disc {
-      li ul {
-        list-style: inherit;
-      }
+      li ul { list-style: inherit; }
     }
-    &.square {
-      list-style-type: square;
-    }
-    &.circle {
-      list-style-type: circle;
-    }
-    &.disc {
-      list-style-type: disc;
-    }
-    &.no-bullet {
-      list-style: none;
-    }
+
+    &.square { list-style-type: square; }
+    &.circle { list-style-type: circle; }
+    &.disc { list-style-type: disc; }
+    &.no-bullet { list-style: none; }
   }
+
   /* Ordered Lists */
   ol {
     li {
@@ -295,16 +285,16 @@ $microformat-abbr-font-decoration: none !default;
       }
     }
   }
+
   /* Definition Lists */
   dl {
     dt {
       margin-bottom: $definition-list-header-margin-bottom;
       font-weight: $definition-list-header-weight;
     }
-    dd {
-      margin-bottom: $definition-list-margin-bottom;
-    }
+    dd { margin-bottom: $definition-list-margin-bottom; }
   }
+
   /* Abbreviations */
   abbr,
   acronym {
@@ -317,24 +307,13 @@ $microformat-abbr-font-decoration: none !default;
   abbr {
     text-transform: none;
   }
+
   /* Blockquotes */
   blockquote {
     margin: 0 0 $paragraph-margin-bottom;
     padding: $blockquote-padding;
-    // border-#{$default-float}: $blockquote-border;
-    font-style: italic;
-    position: relative;
-    font-size: 1.1rem;
-    &:before {
-      content: "\201C ";
-      position: absolute;
-      font-family: $body-secondary-family;
-      font-size: 40px;
-      left: -10px;
-      top: -1px;
-      padding: 0 10px 0 0;
-      color: #888;
-    }
+    border-#{$default-float}: $blockquote-border;
+
     cite {
       display: block;
       font-size: $blockquote-cite-font-size;
@@ -342,6 +321,7 @@ $microformat-abbr-font-decoration: none !default;
       &:before {
         content: "\2014 \0020";
       }
+
       a,
       a:visited {
         color: $blockquote-cite-link-color;
@@ -353,12 +333,14 @@ $microformat-abbr-font-decoration: none !default;
     line-height: $paragraph-line-height;
     color: $blockquote-font-color;
   }
+
   /* Microformats */
   .vcard {
     display: inline-block;
     margin: $microformat-margin;
     border: $microformat-border-width $microformat-border-style $microformat-border-color;
     padding: $microformat-padding;
+
     li {
       margin: 0;
       display: block;
@@ -368,10 +350,10 @@ $microformat-abbr-font-decoration: none !default;
       font-size: $microformat-fullname-font-size;
     }
   }
+
   .vevent {
-    .summary {
-      font-weight: $microformat-summary-font-weight;
-    }
+    .summary { font-weight: $microformat-summary-font-weight; }
+
     abbr {
       cursor: $cursor-default-value;
       text-decoration: $microformat-abbr-font-decoration;
@@ -380,23 +362,16 @@ $microformat-abbr-font-decoration: none !default;
       padding: $microformat-abbr-padding;
     }
   }
+
+
   @media #{$small} {
-    h1, h2, h3, h4, h5, h6 {
-      line-height: $header-line-height;
-    }
-    h1 {
-      font-size: $h1-font-size;
-    }
-    h2 {
-      font-size: $h2-font-size;
-    }
-    h3 {
-      font-size: $h3-font-size;
-    }
-    h4 {
-      font-size: $h4-font-size;
-    }
+    h1,h2,h3,h4,h5,h6 { line-height: $header-line-height; }
+    h1 { font-size: $h1-font-size; }
+    h2 { font-size: $h2-font-size; }
+    h3 { font-size: $h3-font-size; }
+    h4 { font-size: $h4-font-size; }
   }
+
   // Only include these styles if you want them.
   @if $include-print-styles {
     /*
@@ -405,52 +380,40 @@ $microformat-abbr-font-decoration: none !default;
      * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
      * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
     */
-    .print-only {
-      display: none !important;
-    }
+    .print-only { display: none !important; }
     @media print {
       * {
         background: transparent !important;
-        color: #000 !important;
-        /* Black prints faster: h5bp.com/s */
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
         box-shadow: none !important;
         text-shadow: none !important;
       }
+
       a,
-      a:visited {
-        text-decoration: underline;
-      }
-      a[href]:after {
-        content: " (" attr(href) ")";
-      }
-      abbr[title]:after {
-        content: " (" attr(title) ")";
-      }
+      a:visited { text-decoration: underline;}
+      a[href]:after { content: " (" attr(href) ")"; }
+
+      abbr[title]:after { content: " (" attr(title) ")"; }
+
       // Don't show links for images, or javascript/internal links
       .ir a:after,
       a[href^="javascript:"]:after,
-      a[href^="#"]:after {
-        content: "";
-      }
+      a[href^="#"]:after { content: ""; }
+
       pre,
       blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
       }
-      thead {
-        display: table-header-group;
-        /* h5bp.com/t */
-      }
+
+      thead { display: table-header-group; /* h5bp.com/t */ }
+
       tr,
-      img {
-        page-break-inside: avoid;
-      }
-      img {
-        max-width: 100% !important;
-      }
-      @page {
-        margin: 0.5cm;
-      }
+      img { page-break-inside: avoid; }
+
+      img { max-width: 100% !important; }
+
+      @page { margin: 0.5cm; }
 
       p,
       h2,
@@ -458,22 +421,15 @@ $microformat-abbr-font-decoration: none !default;
         orphans: 3;
         widows: 3;
       }
+
       h2,
-      h3 {
-        page-break-after: avoid;
-      }
-      .hide-on-print {
-        display: none !important;
-      }
-      .print-only {
-        display: block !important;
-      }
-      .hide-for-print {
-        display: none !important;
-      }
-      .show-for-print {
-        display: inherit !important;
-      }
+      h3 { page-break-after: avoid; }
+
+      .hide-on-print { display: none !important; }
+      .print-only { display: block !important; }
+      .hide-for-print { display: none !important; }
+      .show-for-print { display: inherit !important; }
     }
   }
+
 }
