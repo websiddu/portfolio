@@ -117,9 +117,8 @@ $g2-color2: #656D78;
 
 @media #{$small-max} {
   .top-bar.expanded {
-    background-color: $g2-color1;
-    @include filter-gradient($g2-color1, $g2-color2, horizontal);
-    background-image: linear-gradient(left, $g2-color1 0%, $g2-color2 100%);
+    background-color: $header-background-c1;
+    @include filter-gradient($header-background-c1, $header-background-c1, horizontal);
     .top-bar-section ul li > a {
       font-size: 14px;
     }
@@ -132,9 +131,6 @@ $g2-color2: #656D78;
       bottom: 5px;
     }
     .top-bar-section ul {
-      background-color: $g2-color1;
-      @include filter-gradient($g2-color1, $g2-color2, horizontal);
-      background-image: linear-gradient(left, $g2-color1 0%, $g2-color2 100%);
       li > a {}
     }
   }

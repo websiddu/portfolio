@@ -42,7 +42,7 @@ module.exports = function(grunt) {
         tasks: ['webfont:icons']
       },
       sass: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.scss'],
         tasks: ['sass:server', 'autoprefixer']
       },
       coffeeTest: {
@@ -100,7 +100,6 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        sourcemap: true,
         loadPath: 'bower_components'
       },
       dist: {
