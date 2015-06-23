@@ -62,7 +62,7 @@ body {
 }
 
 .l-n {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 200;
   text-align: center;
   margin: 16px auto 7px;
@@ -73,10 +73,14 @@ body {
 h3.l-d {
   font-size: 21px;
   font-weight: 200;
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
   line-height: 1.7;
+}
+
+.text-normal {
+  font-weight: normal;
 }
 
 .landing-page * {
