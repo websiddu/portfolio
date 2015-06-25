@@ -5,6 +5,5 @@
   "ngSanitize"
   "ngProgress"
   "ngAnimate"
-  "angulartics.google.analytics"
   'cfp.hotkeys'
 ])

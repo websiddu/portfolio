@@ -5,7 +5,7 @@ $include-html-grid-classes: $include-html-classes !default;
 
 // We use this to control the maximum number of block grid elements per row
 $block-grid-elements: 12 !default;
-$block-grid-default-spacing: em-calc(20) !default;
+$block-grid-default-spacing: em-calc(14) !default;
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 $block-grid-media-queries: true !default;
@@ -69,3 +69,14 @@ $block-grid-media-queries: true !default;
     }
   }
 }
+
+ @media #{$mini-max} {
+   @for $i from 1 through $block-grid-elements {
+     .mini-block-grid-#{($i)} {
+       @include block-grid($i,$block-grid-default-spacing,false);
+     }
+   }
+   @for $i from 1 through $block-grid-elements {
+     .mini-block-grid-#{($i)} > li:nth-of-type(#{$i}n+1) { clear: both; }
+   }
+ }
