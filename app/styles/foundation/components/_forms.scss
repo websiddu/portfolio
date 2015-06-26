@@ -426,32 +426,32 @@ input[type=checkbox], input[type=radio] {
     }
 }
 
-  input[type=checkbox]:active:not(:disabled), input[type=radio]:active:not(:disabled) {
-      background-position: left center;
-  }
+input[type=checkbox]:active:not(:disabled), input[type=radio]:active:not(:disabled) {
+    background-position: left center;
+}
 
-  input[type=checkbox]:checked, input[type=radio]:checked {
-      background-position: left bottom;
-  }
+input[type=checkbox]:checked, input[type=radio]:checked {
+    background-position: left bottom;
+}
 
-  input[type=checkbox]:disabled,input[type=radio]:disabled {
-      opacity: 0.75;
-  }
+input[type=checkbox]:disabled,input[type=radio]:disabled {
+    opacity: 0.75;
+}
 
-  input[type=radio] {
-    background-image: url('../images/radio.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+input[type=radio] {
+  background-image: url('../images/radio.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  input[type=checkbox] {
-    background-image: url('../images/checkbox.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+input[type=checkbox] {
+  background-image: url('../images/checkbox.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  label.normal {
-    input {
-      vertical-align: text-bottom;
-    }
+label.normal {
+  input {
+    vertical-align: text-bottom;
   }
+}

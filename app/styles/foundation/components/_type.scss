@@ -154,8 +154,7 @@ $microformat-abbr-font-decoration: none !default;
     text-decoration: $anchor-text-decoration;
     line-height: inherit;
 
-    &:hover,
-    &:focus { color: $anchor-font-color-hover; }
+    &:hover { color: $anchor-font-color-hover; }
 
     img { border:none; }
   }
