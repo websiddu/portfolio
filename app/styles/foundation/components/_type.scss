@@ -311,7 +311,19 @@ $microformat-abbr-font-decoration: none !default;
   blockquote {
     margin: 0 0 $paragraph-margin-bottom;
     padding: $blockquote-padding;
-    border-#{$default-float}: $blockquote-border;
+    font-style: italic;
+    position: relative;
+    font-size: 1.1rem;
+    &:before {
+      content: "\201C ";
+      position: absolute;
+      font-family: $body-secondary-family;
+      font-size: 40px;
+      left: -10px;
+      top: -1px;
+      padding: 0 10px 0 0;
+      color: #888;
+    }
 
     cite {
       display: block;
