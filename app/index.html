@@ -3,12 +3,12 @@
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-cloak ng-app="websidduApp">
 <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Siddhartha Gudipati, UX designer &amp; UX engineer</title>
+  <title> Siddhartha Gudipati, UX designer & Front-end Dngineer</title>
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="Hi there, I'm Siddhartha Gudipati and this my portfolio website. I am a Front-end Engineer and User Expirence Designer. I love cooking, coding and clicking.">
   <meta property="og:title" content="Siddhartha Gudipati, Front-end engineer &amp; UX designer" />
@@ -22,7 +22,7 @@
   <!-- endbuild -->
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 </head>
-<body ng-cloak ng-app="websidduApp" class="f-topbar-fixed">
+<body class="f-topbar-fixed">
   <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -31,13 +31,13 @@
         <script src="bower_components/json3/lib/json3.min.js"></script>
         <![endif]-->
   <!-- Add your site or application content here -->
-  <img src="//websiddu.com/images/sid-default.png" alt="Siddhartha Gudipati" style="visibility: hidden; height: 0; position: absolute; top: -999em;">
   <div ng-controller="appCtrl">
     <div ng-include="'views/partials/navbar.html'"></div>
-    <div class="maincontent">
+
+    <main class="maincontent" role="main">
       <div class="fade" ng-view>
       </div>
-    </div>
+    </main>
   </div>
   <!-- build:js scripts/modules.js -->
   <script src="bower_components/modernizr/modernizr.js"></script>
