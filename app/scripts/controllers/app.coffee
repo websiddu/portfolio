@@ -43,6 +43,9 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
     }
   ]
 
+  $scope.gotoMain = ->
+    $location.hash('main')
+    $anchorScroll()
 
 
   $rootScope.$on "$routeChangeStart",  (event, next, current) ->
