@@ -1,5 +1,5 @@
 "use strict"
-angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $location, $anchorScroll, ngProgressFactory, constants, Project, $timeout) ->
+angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $location, $anchorScroll, ngProgressFactory, constants, Project, $timeout, $route) ->
 
 
   # colors = ["#76a7fa", "#e46f61", "#4dbfd9", "#fbcb43", "#8cc474", "#bc5679", "#6f85bf", "#f9b256"]
@@ -57,6 +57,7 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
     , 1
 
   $rootScope.$on "$routeChangeSuccess", (event, current, previous) ->
+    $rootScope.title = $route.current.title;
     progressBar.complete()
     progressBar.stop()
     $anchorScroll()

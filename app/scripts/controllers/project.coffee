@@ -22,6 +22,8 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
   localStorage[$location.path()] = 'seen'
 
   $scope.init = ->
+    console.log project
+    $rootScope.title = "Project – #{project.title}";
     _getImagesInProject()
     _initSticky()
     $scope.votes = angular.copy(project.votes)
@@ -92,7 +94,6 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
   _getImagesInProject = ->
     setTimeout ->
       $images = $('.project-show-description .section-body img')
-      console.log $images.length
       if $images.length > 0
         $images.each (imgA) ->
           $img = $(this)

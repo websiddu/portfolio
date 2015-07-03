@@ -4,6 +4,7 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/",
     templateUrl: "views/index.html"
     controller: "MainCtrl"
+    title: "Home – Siddhartha Gudipati, UX designer & Front-end Engineer"
     # resolve:
     #   projects: ($q, Project) ->
     #     deferred = $q.defer()
@@ -17,10 +18,12 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/about",
     templateUrl: "views/about.html"
     controller: "aboutCtrl"
+    title: "About – Siddhartha Gudipati"
   )
   .when("/portfolio",
     templateUrl: "views/portfolio.html"
     controller: "portfolioCtrl"
+    title: "Portfolio – Siddhartha Gudipati"
     resolve:
       projects: ($q, Project) ->
         deferred = $q.defer()
@@ -76,7 +79,8 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   )
   .when("/contact",
     templateUrl: "views/contact.html"
-    controller: "contactCtrl"
+    controller: "contactCtrl",
+    title: "Contact details"
   )
   .when("/photos",
     templateUrl: "views/photo.html"

@@ -15,7 +15,7 @@
         </header>
         <br>
         <div class="project-show-meta">
-          <div class="clear page-show-nav">
+          <div class="clear page-show-nav" aria-hidden='true'>
             <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject._id.$oid}}">&larr; Previous project</a></span>
             <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject._id.$oid}}">Next project &rarr;</a></span>
           </div>
@@ -24,7 +24,7 @@
               <div class="project-show-url">
                 <span ng-if="project.isActive">
               <span class="truncate">
-                <span class="icon icon-link"> </span>
+                <span class="icon icon-link"> <span class="sr-only">Project Link</span> </span>
                 <a href="{{project.projectUrl}}" target="_blank">{{project.projectUrl}}</a>
               </span>
                 </span>
@@ -34,7 +34,7 @@
               </div>
             </div>
             <div class="large-3 small-12 columns">
-              <div class="project-show-date"><span class="icon icon-calendaralt"></span> {{date}}</div>
+              <div class="project-show-date"><span class="icon icon-calendaralt"><span class="sr-only">Project done in the month of </span></span> {{date}}</div>
             </div>
           </div>
           <div class="project-show-tags">
@@ -60,6 +60,7 @@
               <em class="icon icon-thumbsup"></em>
               <b>{{project.votes}}</b>
             </a>
+            <span class="sr-only">{{votes}} appreciation for this project.</span>
             <span>{{votes}} </span>
           </div>
         </div>
