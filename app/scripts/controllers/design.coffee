@@ -17,7 +17,8 @@ angular.module("websidduApp").controller "designCtrl", ($scope, $routeParams, $h
     format(dateObj)
 
   $scope.init = ->
-    $rootScope.title = "Design – #{design.name}";
+    $rootScope.title = "#{design.name}";
+    $.announce($rootScope.title + ' page loaded', 'assertive')
     _setIsVoted()
     _initHotKeys()
     _getRand()
