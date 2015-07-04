@@ -1,8 +1,8 @@
 <div class="page">
   <div class="row">
     <div class="ds-shot-heading">
-      <h3 class="ds-shot-heading-text">{{art.name}}</h3>
-      <h5 class="ds-shot-heading-meta">{{prettyDate(art.date)}}</h5>
+      <h1 class="ds-shot-heading-text">{{art.name}}</h1>
+      <p class="ds-shot-heading-meta">{{prettyDate(art.date)}}</p>
     </div>
     <div class="large-7 small-12 columns">
       <div class="ds-shot">
@@ -22,7 +22,7 @@
             <span> {{art.votes}} Likes</span>
           </li>
           <li>
-            <em class="icon icon-eye"></em> Views
+            <em class="icon icon-eye" aria-hidden="true"></em> Views
             <span> {{art.views}} views</span>
           </li>
         </ul>
@@ -40,10 +40,10 @@
         <div class="ds-shot-rand-list">
           <div class="ds-shot-rand-shot" ng-repeat="rand in randArts track by $index">
             <a class="ds-shot-rand-shot-img" ng-href="#/designs/{{rand.id.$oid}}">
-              <img ng-src="{{rand.preview_thumb}}" alt="">
+              <img ng-src="{{rand.preview_thumb}}" alt="{{rand.name}}">
             </a>
-            <a ng-href="#/designs/{{rand.id.$oid}}" class="ds-shot-rand-shot-link">
-              <img src="images/new_tab.svg" alt="">
+            <a ng-href="#/designs/{{rand.id.$oid}}" class="ds-shot-rand-shot-link" aria-hidden='true'>
+              <img src="images/new_tab.svg" alt="open in tab indicator">
             </a>
           </div>
         </div>
