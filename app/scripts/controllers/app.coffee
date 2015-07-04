@@ -44,7 +44,7 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
   ]
 
   $scope.gotoMain = ->
-    $location.hash('main')
+    $location.hash('start-of-content')
     $anchorScroll()
 
 

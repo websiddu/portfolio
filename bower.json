@@ -10,6 +10,7 @@
     "angular-resource": "1.4.0",
     "angular-route": "1.4.0",
     "angular-sanitize": "1.4.0",
+    "angular-aria": "1.4.0",
     "angulartics": "*",
     "d3": "*",
     "es5-shim": "~2.0.8",

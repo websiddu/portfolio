@@ -2,8 +2,9 @@
 @websidduApp = angular.module("websidduApp", [
   "ngResource"
   "ngRoute"
+  "ngAria"
+  "ngAnimate"
   "ngSanitize"
   "ngProgress"
-  "ngAnimate"
   'cfp.hotkeys'
 ])

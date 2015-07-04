@@ -149,4 +149,9 @@ a.standalone {
     overflow: visible;
     clip: auto;
   }
+  &.skip-to-content {
+    &:focus {
+      position: absolute;
+    }
+  }
 }
