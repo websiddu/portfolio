@@ -18,12 +18,12 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/about",
     templateUrl: "views/about.html"
     controller: "aboutCtrl"
-    title: "About – Siddhartha Gudipati"
+    title: "About"
   )
   .when("/portfolio",
     templateUrl: "views/portfolio.html"
     controller: "portfolioCtrl"
-    title: "Portfolio – Siddhartha Gudipati"
+    title: "Portfolio"
     resolve:
       projects: ($q, Project) ->
         deferred = $q.defer()
@@ -52,7 +52,7 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/design",
     templateUrl: "views/designs.html"
     controller: "designsCtrl"
-    title: "Designs – Siddhartha Gudipati"
+    title: "Designs"
     resolve:
       designs: ($q, Design) ->
         deferred = $q.defer()
@@ -81,7 +81,7 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/contact",
     templateUrl: "views/contact.html"
     controller: "contactCtrl",
-    title: "Contact – Siddhartha Gudipati"
+    title: "Contact"
   )
   .when("/photos",
     templateUrl: "views/photo.html"
@@ -136,6 +136,9 @@ websidduApp.run [
       progressBar.complete()
       progressBar.stop()
       $anchorScroll()
+      $('#main').access(true)
+      if($route.current.title)
+        $.announce($route.current.title + ' page loaded', 'assertive')
 
     $rootScope.$on "$routeChangeError", (event, current, previous) ->
       progressBar.complete()

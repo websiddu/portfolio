@@ -31,13 +31,14 @@
         <script src="bower_components/json3/lib/json3.min.js"></script>
         <![endif]-->
   <!-- Add your site or application content here -->
-  <div >
+  <div>
     <div ng-include="'views/partials/navbar.html'"></div>
     <div id="start-of-content"></div>
     <main class="maincontent" role="main" id="main">
       <div class="fade" ng-view>
       </div>
     </main>
+    <div id="a11y_announcer" class="sr-only" aria-live="polite"></div>
   </div>
   <!-- build:js scripts/modules.js -->
   <script src="bower_components/modernizr/modernizr.js"></script>
@@ -52,6 +53,7 @@
   <script src="bower_components/photoswipe/dist/photoswipe.js"></script>
   <script src="bower_components/photoswipe/dist/photoswipe-ui-default.js"></script>
   <script src="bower_components/d3/d3.js"></script>
+  <script src="bower_components/a11y_kit/dist/a11y_kit.jquery.js"></script>
 
   <script src="bower_components/angular-hotkeys/build/hotkeys.js"></script>
   <script src="bower_components/angulartics/dist/angulartics.min.js"></script>

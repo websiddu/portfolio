@@ -21,7 +21,8 @@
     "ngprogress": "~1.1.2",
     "photoswipe": "*",
     "scrollReveal.js": "~2.1.0",
-    "waypoints": "~3.1.1"
+    "waypoints": "~3.1.1",
+    "a11y_kit": "~0.0.4"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

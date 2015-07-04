@@ -281,18 +281,25 @@ a[target="_blank"]:after {
   padding: 0 20px;
 }
 
+.project-page aside {
+  padding-left: 20px;
+  border-left: dashed 1px #dcdcdc;
+}
+
 aside .metadata {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .metadata dt {
   color: #666;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
 }
 
 .metadata dd {
-  margin-bottom: 0.5em;
+  margin-bottom: 1px;
+  font-size: 13px;
+  color: #888;
 }
 
 .project-page section .section-heading {

@@ -22,7 +22,8 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
   localStorage[$location.path()] = 'seen'
 
   $scope.init = ->
-    $rootScope.title = "Project – #{project.title}";
+    $rootScope.title = "#{project.title} project ";
+    $.announce($rootScope.title + ' page loaded', 'assertive')
     _getImagesInProject()
     _initSticky()
     $scope.votes = angular.copy(project.votes)
