@@ -12,8 +12,9 @@
           <h6>Some of my social profiles</h6>
           <div class="side-social animated fadeInDown">
             <ul class="social-list long">
-              <li ng-repeat="item in socialprofiles">
+              <li ng-repeat="item in socialprofiles | orderBy:'name'">
                 <a ng-href="{{item.url}}" target="_blank" class="c{{($index % 8) + 1}}"> <em class="icon icon-{{item.icon}}"></em>
+                  <span class="sr-only">{{item.name}}</span>
                 </a>
                 </a>
               </li>
@@ -24,7 +25,7 @@
         </div>
         <div class="large-7 small-12 columns">
           <div class="bg-loader">
-            <iframe height="500" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%; border:none; " src="https://websiddu.wufoo.com/embed/zuj44yq0cai1vg/"><a href="https://websiddu.wufoo.com/forms/zuj44yq0cai1vg/"> Fill my contact form</a>
+            <iframe height="500" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%; border:none; " src="https://websiddu.wufoo.com/embed/zuj44yq0cai1vg/"><a href="https://websiddu.wufoo.com/forms/zuj44yq0cai1vg/" title="Contact form"> Fill my contact form</a>
             </iframe>
           </div>
         </div>
