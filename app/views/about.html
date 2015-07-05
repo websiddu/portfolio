@@ -6,7 +6,7 @@
         <div class="large-8 small-12 columns">
           <div class="about-img">
             <p>
-              <img src="images/me.jpg" />
+              <img src="images/me.jpg" alt="A banner picture with green background and Sid looking to the right.." />
             </p>
           </div>
           <h3 class="page-sub-heading">I'm a UX Designer &amp; Front-end Engineer.</h3>
@@ -27,8 +27,9 @@
             </p>
             <div class=" side-social long">
               <ul class="social-list long">
-                <li ng-repeat="item in socialprofiles" class="a{{$index+1}} zoomIn">
+                <li ng-repeat="item in socialprofiles | orderBy:'name'" class="a{{$index+1}} zoomIn">
                   <a ng-href="{{item.url}}" target="_blank" class="c{{($index % 8) + 1}}"> <em class="icon icon-{{item.icon}}"></em>
+                    <span class="sr-only">{{item.name}}</span>
                   </a>
                 </li>
               </ul>
@@ -43,7 +44,7 @@
           <div class="work-timeline">
             <ul>
               <li ng-repeat="job in jobs" class="a{{$index+1}} slideInRight">
-                <span> {{job.time}}</span>
+                <span>{{job.time}}</span>
                 <h5>{{job.position}}</h5>
                 <h6>{{job.company}}, {{job.location}} </h6>
               </li>
