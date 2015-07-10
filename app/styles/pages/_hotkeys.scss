@@ -79,16 +79,19 @@
   font-size: 2em;
   font-weight: bold;
   padding: 5px 10px;
-  border: 1px solid #ddd;
   border-radius: 5px;
   min-height: 45px;
   min-width: 45px;
   text-align: center;
+  background: #fff;
+  color: #43434A;
+  border: 0;
 }
 
 .cfp-hotkeys-close:hover {
   background-color: #fff;
   cursor: pointer;
+  color: #888;
 }
 
 @media all and (max-width: 500px) {

@@ -5,7 +5,7 @@
     "angular": "1.4.0",
     "angular-animate": "1.4.0",
     "angular-cookies": "1.4.0",
-    "angular-hotkeys": "chieffancypants/angular-hotkeys#~1.4.5",
+    "angular-hotkeys": "websiddu/angular-hotkeys#master",
     "angular-mousewheel": "~1.0.4",
     "angular-resource": "1.4.0",
     "angular-route": "1.4.0",
