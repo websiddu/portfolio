@@ -6,5 +6,6 @@
   "ngAnimate"
   "ngSanitize"
   "ngProgress"
-  'cfp.hotkeys'
+  "cfp.hotkeys"
+  "wu.masonry"
 ])
