@@ -7,7 +7,7 @@
 
 .portfolio-grid {
   min-height: 600px;
-  margin: 0 -12px;
+  margin: -10px -12px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -34,7 +34,7 @@
 
     .project-link {
       display: block;
-      margin: 12px 12px;
+      margin: 15px 12px;
     }
     .project {
       background-color: #fff;
