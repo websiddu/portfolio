@@ -1,6 +1,5 @@
 "use strict"
 websidduApp.config(($routeProvider, $locationProvider) ->
-  $locationProvider.html5Mode(true);
   $routeProvider
   .when("/",
     templateUrl: "views/index.html"
