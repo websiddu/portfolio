@@ -30,8 +30,8 @@ window.ws = do ->
     if delightCount > 4
       if delightEasterEggFlag is false
         delightEasterEggFlag = true
-      p.removeClass 'hide fadeOutUp animated-sm'
-      p.addClass 'slideInDown animated-sm'
+      p.removeClass 'hide flipOutX animated-sm'
+      p.addClass 'flipInX animated-sm'
 
     if delightCount > 6
       p.html("Seems like you’re really enjoying yourself!")
@@ -44,8 +44,8 @@ window.ws = do ->
 
     clearTimeout(hideHint)
     hideHint = setTimeout (->
-      p.removeClass 'slideInDown animated-sm'
-      p.addClass 'fadeOutUp animated-sm'
+      p.removeClass 'flipInX animated-sm'
+      p.addClass 'flipOutX animated-sm'
       return
     ), 2000
 

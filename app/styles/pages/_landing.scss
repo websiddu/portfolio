@@ -174,15 +174,30 @@ html {
     position: absolute;
     left: -66px;
     margin: 0;
-    top: 35px;
+    top: 38px;
     font-size: 13px;
     font-weight: 200;
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.68);
-    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
     border-radius: 5px;
     color: #fff;
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border: solid 8px transparent;
+      border-bottom: solid 8px rgba(0, 0, 0, 0.7);
+      position: absolute;
+      left: 50%;
+      top: -16px;
+      margin-left: -8px;
+    }
   }
+}
+
+.egg-c {
+  position: relative;
 }
 
 .l-d .delight:hover {
