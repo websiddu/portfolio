@@ -52,6 +52,7 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/design",
     templateUrl: "views/designs.html"
     controller: "designsCtrl"
+    title: "Designs – Siddhartha Gudipati"
     resolve:
       designs: ($q, Design) ->
         deferred = $q.defer()
@@ -80,7 +81,7 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/contact",
     templateUrl: "views/contact.html"
     controller: "contactCtrl",
-    title: "Contact details"
+    title: "Contact – Siddhartha Gudipati"
   )
   .when("/photos",
     templateUrl: "views/photo.html"

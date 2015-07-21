@@ -22,7 +22,6 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
   localStorage[$location.path()] = 'seen'
 
   $scope.init = ->
-    console.log project
     $rootScope.title = "Project – #{project.title}";
     _getImagesInProject()
     _initSticky()
