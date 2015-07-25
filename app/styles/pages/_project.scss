@@ -74,19 +74,13 @@ $bq-text-color: #434A54;
     margin: 0 0 20px;
     cursor: pointer;
   }
+
   figure {
-    margin: 20px auto;
-    display: block;
-    max-width: 500px;
-    border: solid 1px #ccc;
-    cursor: pointer;
+    figcaption {
+      display: none;
+    }
   }
-  figcaption {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #efefef;
-    font-style: italic;
-  }
+
   .fig-group {
     margin: 0;
     figure {
@@ -483,6 +477,20 @@ aside .metadata {
   img {
     height: 45px;
     margin: 10px 20px 0 0;
+  }
+}
+
+.gallery.small {
+  figure {
+    width: 49%;
+    display: inline-block;
+    img {
+      margin-right: 0.5%;
+    }
+    figcaption {
+      display: inline;
+      display: none;
+    }
   }
 }
 

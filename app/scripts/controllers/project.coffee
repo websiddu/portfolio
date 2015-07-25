@@ -96,18 +96,14 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
       if $images.length > 0
         $images.each (imgA) ->
           $img = $(this)
-          $("<img/>").attr("src", $img.attr("src"))
-            .load(() ->
-              img =
-                src: $img.attr('src')
-                w: this.width
-                h: this.height
-                title: $img.attr('alt')
-              $scope.images.push(img)
-              if imgA is $images.length - 1
-                _initPhotoSwipe()
-                _initWayPoints()
-            )
+          img =
+            src: $img.attr('src')
+            w: parseInt($img.attr('width'), 10)
+            h: parseInt($img.attr('height'), 10)
+            title: $img.parents('figure').find('figcaption').text() || $img.attr('alt')
+          $scope.images.push(img)
+        _initPhotoSwipe()
+        _initWayPoints()
       else
         _initWayPoints()
 
@@ -120,12 +116,14 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
       pswpElement = document.querySelectorAll(".pswp")[0]
       items = angular.copy($scope.images)
 
-      $('.project-show-description .section-body').on 'click', 'img', ->
+      $('.project-show-description .section-body').on 'click', 'figure', (e) ->
+        e.preventDefault()
         options =
-          index: ($('.project-show-description  .section-body img').index(this))
+          index: $('.project-show-description .section-body figure').index(this)
           history: false
           closeOnScroll: false
           showHideOpacity: true
+          bgOpacity: 0.8
           hideAnimationDuration: 500
           showAnimationDuration: 500
           getThumbBoundsFn: (index) ->
