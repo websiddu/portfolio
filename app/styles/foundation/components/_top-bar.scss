@@ -240,6 +240,7 @@ $g2-color2: $header-background-c2;
       & > a {
         display: block;
         width: 100%;
+        text-transform: uppercase;
         color: $topbar-link-color;
         padding: 12px 0 12px 0;
         padding-#{$default-float}: $topbar-height / 3;

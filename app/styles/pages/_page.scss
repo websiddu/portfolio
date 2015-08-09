@@ -153,11 +153,12 @@ $g3-color2: #9ec2fe;
 }
 
 @media #{$small-max} {
-  .page {
-    padding: 10px 10px;
-  }
   .landing-chart {
     display: none;
     z-index: -1;
+  }
+  .page-heading {
+    margin-top: 20px;
+    font-size: 33px;
   }
 }

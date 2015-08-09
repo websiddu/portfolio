@@ -110,14 +110,9 @@ body {
   overflow: hidden;
   position: relative;
   padding: 0 20px;
-  min-height: 500px;
+  min-height: 800px;
 }
 
-@media #{$small-max} {
-  .l-design, .l-code {
-    display: none;
-  }
-}
 
 .landing-banner {
   position: fixed;
@@ -326,3 +321,10 @@ html {
     opacity: 1;
   }
 }
+
+@media #{$small-max} {
+  .main-page {
+    padding: 0;
+  }
+}
+

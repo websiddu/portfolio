@@ -121,6 +121,7 @@ $g2-color2: #656D78;
     @include filter-gradient($header-background-c1, $header-background-c1, horizontal);
     .top-bar-section ul li > a {
       font-size: 14px;
+      text-transform: uppercase;
     }
     .top-bar-section ul li:hover > a:before {
       top: 5px;

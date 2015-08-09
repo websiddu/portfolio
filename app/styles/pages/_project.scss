@@ -399,13 +399,12 @@ aside .metadata {
     padding: 10px 40px;
   }
   .project-page-heading {
+    padding: 14px 35px;
+    font-size: 30px;
     &.sticky-nav {
       margin-left: 0;
       left: 0;
       right: 0;
-    }
-    span {
-      display: none;
     }
   }
   .project-show-meta {
