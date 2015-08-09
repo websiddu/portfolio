@@ -530,12 +530,9 @@ aside .metadata {
   }
 }
 
-
-
-
 @media #{$small-max} {
   .main-page {
-    padding: 0 20px;
+    padding: 0 15px;
   }
 
   .project-page-heading {
@@ -621,3 +618,10 @@ aside .metadata {
     padding: 12px 55px;
  }
 }
+
+@media #{$mini-max} {
+  .main-page {
+    padding: 0;
+  }
+}
+
