@@ -365,3 +365,22 @@ html {
   }
 }
 
+
+
+@media #{$mini-max} {
+
+  .l-n {
+    font-size: 42px;
+  }
+
+  .l-d p {
+    font-size: 18px;
+  }
+
+  .contain-to-grid .top-bar {
+    padding: 0 0px;
+  }
+
+}
+
+
