@@ -29,6 +29,15 @@ window.ws = do ->
     #       return
     #   return
 
+  _setupVideo = ->
+    options = {
+      controls: ["play", "current-time", "duration", "mute", "volume", "fullscreen"],
+      debug: true
+    }
+
+    plyr.setup(options)
+
+
 
   delightBounce = (e) ->
     delight = $(this)
