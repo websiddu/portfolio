@@ -37,7 +37,7 @@ body {
   font-weight: 200;
   margin: 16px auto 7px;
   min-height: 40px;
-  font-family: "Alegreya", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: $heading-font-family;
   small {
     font-size: 25px;
     border-bottom: dashed 1px #ddd;
