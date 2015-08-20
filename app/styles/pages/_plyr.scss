@@ -168,6 +168,7 @@ $bp-captions-large: 768px !default;
   // For video
   &-video-wrapper {
     // position: relative;
+
   }
 
   video,
@@ -216,7 +217,16 @@ $bp-captions-large: 768px !default;
 
   &.hide-controls {
     .player-controls {
+       display: none;
+    }
+  }
+
+  &.only-progress {
+    .player-controls {
+      padding: 0;
+      .player-controls-left, .player-controls-right {
         display: none;
+      }
     }
   }
 
