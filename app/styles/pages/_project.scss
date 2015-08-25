@@ -1,3 +1,52 @@
+.quote {
+  padding: 24px 20px 45px 50px;
+  background: #9BCA57;
+  color: #fff;
+  font-weight: bold;
+  font-family: $heading-font-family;
+  border-radius: 5px;
+  position: relative;
+  font-size: 21px;
+  letter-spacing: 0.5px;
+  text-rendering: geometricPrecision;
+  .icon {
+    font-size: 57px;
+    font-weight: bolder;
+    position: absolute;
+    line-height: 1;
+    top: 3px;
+    left: 13px;
+    color: rgba(0, 0, 0, 0.12);
+  }
+}
+
+.quoter {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, .15);
+  // text-align: right;
+  padding: 4px 20px;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  border-radius: 0 0 5px 5px;
+  font-family: $body-font-family;
+  letter-spacing: -0.1px;
+  color: rgba(255, 255, 255, .70);
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid 10px transparent;
+    border-bottom: solid 10px rgba(0, 0, 0, 0.15);
+    top: -20px;
+    left: 50px;
+  }
+}
+
+
+
 .project-page {
   position: relative;
 }
@@ -157,7 +206,7 @@ $bq-text-color: #434A54;
     margin: 0 -40px;
     padding: 15px 350px 0 200px;
     font-size: 24px;
-    font-family: "Alegreya", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: $heading-font-family;
     // border-top: solid 1px $bq-color1;
     // border-bottom: solid 1px $bq-color1;
     //font-family: Georgia;
@@ -400,6 +449,10 @@ aside .metadata {
   width: 240px;
   float: right;
   font-size: 16px;
+}
+
+.video-caption {
+  margin-bottom: 5px;
 }
 
 
