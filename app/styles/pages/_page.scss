@@ -12,7 +12,7 @@ $g3-color2: #9ec2fe;
   margin-top: 25px;
   word-wrap: break-word;
   width: 95%;
-  font-family: "Alegreya", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: $heading-font-family;
   em {
     vertical-align: middle;
   }
