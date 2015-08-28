@@ -110,7 +110,8 @@ module.exports = function(grunt) {
           font: 'icons',
           hashes: false,
           templateOptions: {
-            classPrefix: 'icon-'
+            classPrefix: 'icon-',
+            mixinPrefix: 'icon-'
           }
 
         },
