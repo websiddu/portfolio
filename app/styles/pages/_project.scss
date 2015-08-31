@@ -9,6 +9,8 @@
   font-size: 21px;
   letter-spacing: 0.5px;
   text-rendering: geometricPrecision;
+  margin-bottom: 2.5em;
+
   .icon {
     font-size: 57px;
     font-weight: bolder;
@@ -23,7 +25,8 @@
 .quoter {
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, .15);
+  background: rgba(0, 0, 0, 0.15);
+
   // text-align: right;
   padding: 4px 20px;
   left: 0;
@@ -32,7 +35,8 @@
   border-radius: 0 0 5px 5px;
   font-family: $body-font-family;
   letter-spacing: -0.1px;
-  color: rgba(255, 255, 255, .70);
+  color: rgba(255, 255, 255, 0.7);
+
   &:before {
     content: '';
     position: absolute;
@@ -45,8 +49,6 @@
   }
 }
 
-
-
 .project-page {
   position: relative;
 }
@@ -57,6 +59,7 @@
   position: relative;
   background: transparent url("../images/default_banner.png") center center no-repeat;
   margin: 0px -51px 0;
+
   .project-show-banner-img {
     height: 220px;
     position: absolute;
@@ -64,6 +67,7 @@
     left: 0;
     right: 0;
     background-size: cover;
+
     &:after {
       content: '';
       position: absolute;
@@ -97,12 +101,14 @@ $bq-text-color: #434A54;
 
 .project-show-url, .project-show-date {
   margin: 0 0 20px;
+
   // background: #efefef;
   border: solid 1px #efefef;
   padding: 10px;
   border-radius: 2px;
   position: relative;
   font-size: 16px;
+
   span.icon {
     margin: 0 5px;
     font-size: 16px;
@@ -117,15 +123,19 @@ $bq-text-color: #434A54;
   font-size: 16px;
   line-height: 1.6;
   font-weight: 200;
+
   p {
     font-weight: 200;
   }
+
   ol, ul {
     margin-left: 30px;
+
     li {
       margin-bottom: 5px;
     }
   }
+
   img {
     margin: 0 0 20px;
     cursor: pointer;
@@ -133,6 +143,7 @@ $bq-text-color: #434A54;
 
   figure {
     margin: 25px 0;
+
     figcaption {
       font-size: 12px;
       color: #888;
@@ -146,33 +157,34 @@ $bq-text-color: #434A54;
 
   .fig-group {
     margin: 0;
+
     figure {
       margin: 0;
     }
+
     figcaption {
       padding: 4px 0;
       font-size: 14px;
     }
   }
+
   > ol, > ul {
     margin-left: 30px;
   }
+
   a:not(.plain) {
     font-weight: normal;
     background-image: linear-gradient($primary-color 0%, $primary-color 100%);
     background-repeat: repeat-x;
     background-size: 1px 1px;
     background-position: 0 90%;
-    text-shadow: 2px 0 #fff,
-                 2px 0 #fff,
-                 1px 0 #fff,
-                -1px 0 #fff,
-                -2px 0 #fff,
-                -2px 0 #fff;
+    text-shadow: 2px 0 #fff, 2px 0 #fff, 1px 0 #fff, -1px 0 #fff, -2px 0 #fff, -2px 0 #fff;
+
     &:hover {
       background-image: linear-gradient($hover-color 0%, $hover-color 100%);
     }
   }
+
   pre {
     font-weight: normal;
     padding: 10px 20px;
@@ -181,43 +193,52 @@ $bq-text-color: #434A54;
     border: 1px solid #ddd;
     margin-bottom: 10px;
   }
+
   code {
     font-size: 16px;
   }
+
   .colloborators {
     margin-top: 30px;
     padding: 10px 20px;
     background: #f7f7f7;
     border-radius: 5px;
     margin-bottom: 15px;
+
     ul {
       margin-bottom: 0;
     }
   }
+
   .company {
     font-size: 14px;
     margin-top: 20px;
     color: #444;
+
     p {
       margin: 0;
     }
   }
+
   blockquote.full {
     margin: 0 -40px;
     padding: 15px 350px 0 200px;
     font-size: 24px;
     font-family: $heading-font-family;
+
     // border-top: solid 1px $bq-color1;
     // border-bottom: solid 1px $bq-color1;
     //font-family: Georgia;
     color: $bq-text-color;
     font-weight: 400;
     font-style: normal;
+
     // background: #f9f9f9;
     //background-color: $bq-color1;
     //@include filter-gradient($bq-color1, $bq-color2, horizontal);
     //@include background-image(linear-gradient(left, $bq-color1 0%,$bq-color2 100%));
     margin-bottom: 20px;
+
     &:before {
       left: 10px;
       color: $bq-text-color;
@@ -232,6 +253,7 @@ $tg2: #ABB6EF;
 
 .tags {
   list-style-type: none;
+
   > li {
     //@include filter-gradient($tg1, $tg2, horizontal);
     //@include background-image(linear-gradient(left, $tg1 0%,$tg2 100%));
@@ -243,7 +265,6 @@ $tg2: #ABB6EF;
     color: #A7A4A4;
     margin: 0 15px 15px 0;
     font-size: 14px;
-
   }
 }
 
@@ -264,8 +285,6 @@ a[target="_blank"]:not(.plain):after {
 //   content: url("../images/new_tab.png");
 // }
 
-
-
 .social-list, .builton, .l-dc-intro, .now-card-img, .no-a-icon {
   a[target="_blank"]:after {
     content: '';
@@ -282,11 +301,13 @@ a[target="_blank"]:not(.plain):after {
   border-radius: 2px;
   padding: 10px 15px;
   margin: 30px 0;
+
   strong {
     display: block;
     margin-bottom: 10px;
     padding: 0px 10px;
   }
+
   ol {
     li {
       margin: 7.5px 0;
@@ -299,6 +320,7 @@ a[target="_blank"]:not(.plain):after {
   bottom: 0;
   left: 0;
   right: 0;
+
   //background: rgba(0, 0, 0, 0.5);
   color: #fff;
   margin: 0;
@@ -307,6 +329,7 @@ a[target="_blank"]:not(.plain):after {
   font-weight: normal;
   line-height: 1;
   transition: font-size 0.3s ease-in;
+
   //background: linear-gradient(rgba(0, 0, 0, 0), rgba(80, 80, 80, 0.2));
 
   span.nav {
@@ -318,22 +341,27 @@ a[target="_blank"]:not(.plain):after {
     text-align: center;
     padding-left: 6px;
     padding-right: 6px;
+
     &:hover {
       background: rgba(0, 0, 0, 0.5);
       border-radius: 3px;
     }
+
     a {
       color: #fff;
       font-weight: normal;
       display: inline-block;
     }
   }
+
   .leftarr {
     right: 60px;
   }
+
   .rightarr {
     right: 20px;
   }
+
   &.sticky-nav {
     position: fixed;
     font-size: 20px;
@@ -380,41 +408,51 @@ a[target="_blank"]:not(.plain):after {
   &.yahoo {
     background: rgba(100, 61, 187, 0.81);
   }
+
   &.about {
     background: $primary-color;
   }
+
   &.green {
     background: #80AB51;
   }
+
   &.bb {
     background: #597CCC;
   }
+
   &.road {
     background: #C45238;
   }
+
   &.afv {
     background: #C84F5B;
   }
+
   &.flame {
     background: #3F3F45;
   }
+
   &.techicons {
     background: #7C488D;
   }
+
   &.track {
     background: #DA8540;
   }
+
   &.gg {
     background: #B66393;
   }
+
   &.colorstore {
     background: #364E61;
   }
-
 }
 
 aside .metadata {
   margin-bottom: 20px;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -442,6 +480,7 @@ aside .metadata {
   color: #666;
   display: inline-block;
   font-weight: 500;
+
   // font-family: "Alegreya","Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
 }
 
@@ -455,7 +494,6 @@ aside .metadata {
   margin-bottom: 5px;
 }
 
-
 .voteup {
   height: 80px;
   width: 80px;
@@ -468,14 +506,17 @@ aside .metadata {
   vertical-align: middle;
   color: #fff;
   transition: box-shadow 0.3s ease-in-out;
+
   em {
     font-size: 40px;
     padding-top: 0;
   }
+
   &:hover {
     box-shadow: 0 0 0 3px rgba(132, 145, 158, 1);
     color: #fff;
   }
+
   &:focus, &:visited {
     color: #fff;
   }
@@ -483,6 +524,7 @@ aside .metadata {
 
 .voteup-anim {
   transition: all 0.3s ease-in-out;
+
   span {
     font-size: 24px;
     font-weight: 500;
@@ -491,9 +533,11 @@ aside .metadata {
     visibility: visible;
     transition: all 0.3s ease-in-out;
   }
+
   em {
     padding-top: 0;
   }
+
   b {
     font-size: 0;
     line-height: 32px;
@@ -501,6 +545,7 @@ aside .metadata {
     transition: font-size 0.3s ease-in-out;
     display: block;
   }
+
   &.voted {
     span {
       font-size: 0;
@@ -508,6 +553,7 @@ aside .metadata {
       line-height: 32px;
       transition: all 0.3s ease-in-out;
     }
+
     em {
       display: block;
       line-height: 1;
@@ -515,6 +561,7 @@ aside .metadata {
       padding-top: 14px;
       transition: font-size 0.3s ease-in-out;
     }
+
     .voteup {
       background-color: transparent;
       box-shadow: 0 0 0 1px #B2BFCB;
@@ -522,6 +569,7 @@ aside .metadata {
       transition: box-shadow 0.3s ease-in-out;
       cursor: default;
     }
+
     b {
       display: block;
       line-height: 32px;
@@ -535,16 +583,19 @@ aside .metadata {
   margin: 10px 30px 25px;
   overflow: hidden;
   border-top: dotted 1px #D0D0D0;
+
   b {
     font-size: 19px;
     color: #666;
   }
+
   a {
     display: inline-block;
     min-width: 260px;
     margin-top: 10px;
     padding: 10px 20px;
     border-radius: 4px;
+
     &:hover {
       background-color: #f8f8f8;
     }
@@ -562,23 +613,29 @@ aside .metadata {
   }
 }
 
-.gallery{
+.gallery {
   &.small {
     figure {
-      width: 49%;
+      width: 30%;
       display: inline-block;
+      margin-right: 20px;
+      margin-bottom: 25px;
+      margin-top: 0;
+
       img {
-        margin-right: 0.5%;
+        margin: 0;
       }
+
       figcaption {
         display: inline;
         display: none;
       }
     }
   }
+
   &.shadow {
     img {
-      box-shadow: 0 0 10px rgba(0,0,0,0.16);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
     }
   }
 }
@@ -590,36 +647,44 @@ aside .metadata {
 
   .project-page-heading {
     padding: 12px 10px;
+
     &.sticky-nav {
       top: 65px;
     }
   }
+
   .project-page aside {
     float: none;
     width: 100%;
     font-size: 16px;
     transition: all 0.3s ease-in;
   }
+
   .project-page section {
     margin: 0;
     font-size: 18px;
     line-height: 1.5;
   }
+
   .project-page blockquote.full {
     padding: 10px 40px;
   }
+
   .project-page-heading {
     padding: 14px 35px;
     font-size: 30px;
+
     &.sticky-nav {
       margin-left: 0;
       left: 0;
       right: 0;
     }
   }
+
   .project-show-meta {
     padding: 0;
   }
+
   .project-page section .section-heading {
     float: none;
     text-align: left;
@@ -627,15 +692,19 @@ aside .metadata {
     display: block;
     font-size: 18px;
   }
+
   aside .metadata {
     margin-bottom: 15px;
     transition: all 0.3s ease-in;
   }
+
   .metadata dd {
     display: inline;
+
     &:after {
       content: ', ';
     }
+
     &:last-child {
       &:after {
         content: '';
@@ -647,35 +716,35 @@ aside .metadata {
     margin: 10px 0 20px;
     text-align: center;
   }
+
   .next-prj {
     text-align: center;
   }
-
 }
 
 @media #{$medium-max} {
- .project-page section {
+  .project-page section {
     margin-left: 10px;
- }
- .project-page section .section-heading {
+  }
+
+  .project-page section .section-heading {
     width: auto;
     float: none;
     clear: both;
     margin: 0;
- }
+  }
 
- .project-show-description blockquote.full {
+  .project-show-description blockquote.full {
     padding: 15px 50px;
- }
- .project-page-heading {
+  }
+
+  .project-page-heading {
     padding: 12px 55px;
- }
+  }
 }
 
 @media #{$mini-max} {
   .main-page {
     padding: 0 10px;
   }
-
 }
-
