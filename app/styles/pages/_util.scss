@@ -117,12 +117,14 @@ a.standalone {
 ::-moz-selection {
   background-color: #F6BB42;
   color: #fff;
+  text-shadow: none;
 }
 
 /* Works in Safari */
 ::selection {
   background-color: #F6BB42;
   color: #fff;
+  text-shadow: none;
 }
 
 
