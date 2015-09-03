@@ -102,7 +102,6 @@ module.exports = function(grunt) {
         dest: '<%= yeoman.app %>/fonts/',
         destCss: '<%= yeoman.app %>/styles/pages/',
         syntax: 'bootstrap',
-
         options: {
           stylesheet: 'scss',
           relativeFontPath: '../fonts/',

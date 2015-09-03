@@ -220,30 +220,49 @@ $bq-text-color: #434A54;
     }
   }
 
-  blockquote.full {
-    margin: 0 -40px;
-    padding: 15px 350px 0 200px;
-    font-size: 24px;
+  blockquote {
     font-family: $heading-font-family;
-
-    // border-top: solid 1px $bq-color1;
-    // border-bottom: solid 1px $bq-color1;
-    //font-family: Georgia;
-    color: $bq-text-color;
-    font-weight: 400;
+    font-size: 21px;
     font-style: normal;
+    line-height: 1.4;
+    padding: 15px 20px 15px 28px;
 
-    // background: #f9f9f9;
-    //background-color: $bq-color1;
-    //@include filter-gradient($bq-color1, $bq-color2, horizontal);
-    //@include background-image(linear-gradient(left, $bq-color1 0%,$bq-color2 100%));
-    margin-bottom: 20px;
+    .icon {
+      font-size: 38px;
+      position: absolute;
+      left: -20px;
+      color: rgba(0, 0, 0, .1);
+    }
 
     &:before {
-      left: 10px;
-      color: $bq-text-color;
-      font-size: 50px;
       content: '';
+    }
+
+    &.full {
+      margin: 0 -40px;
+      padding: 15px 350px 0 200px;
+      font-size: 24px;
+      font-family: $heading-font-family;
+
+      // border-top: solid 1px $bq-color1;
+      // border-bottom: solid 1px $bq-color1;
+      //font-family: Georgia;
+      color: $bq-text-color;
+      font-weight: 400;
+      font-style: normal;
+
+      // background: #f9f9f9;
+      //background-color: $bq-color1;
+      //@include filter-gradient($bq-color1, $bq-color2, horizontal);
+      //@include background-image(linear-gradient(left, $bq-color1 0%,$bq-color2 100%));
+      margin-bottom: 20px;
+
+      &:before {
+        left: 10px;
+        color: $bq-text-color;
+        font-size: 50px;
+        content: '';
+      }
     }
   }
 }
