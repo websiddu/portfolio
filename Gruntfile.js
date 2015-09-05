@@ -399,7 +399,7 @@ module.exports = function(grunt) {
         'sass',
         'coffee',
         'copy:styles',
-        'imagemin',
+        //'imagemin',
         //'svgmin',
         'htmlmin'
       ]
