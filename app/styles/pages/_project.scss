@@ -10,6 +10,9 @@
   letter-spacing: 0.5px;
   text-rendering: geometricPrecision;
   margin-bottom: 2.5em;
+  &.flame {
+    background: #585863;
+  }
 
   .icon {
     font-size: 57px;
