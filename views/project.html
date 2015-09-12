@@ -1,21 +1,21 @@
 <div class="row">
   <div class="project-page">
     <div class="large-12 columns">
-      <div class="page">
-        <div class="project-show-banner">
+      <article class="page" role="article">
+        <header class="project-show-banner" role="banner">
           <div class="project-show-banner-img" ng-style="{{style}}">
           </div>
-          <h2 class="project-page-heading left" id="prj-title">
+          <h1 class="project-page-heading left" id="prj-title">
          <!--    <span class="leftarr" ng-if="project.previousProject">
               <a href="#/projects/{{project.previousProject._id.$oid}}"><em class="icon  icon-arrow-left"></em></a>
             </span> -->
             {{project.title}} <b class="project-page-heading-sec"></b>
 <!--             <span class="rightarr" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject._id.$oid}}"><em class="icon  icon-arrow-right"></em></a></span> -->
-          </h2>
-        </div>
+          </h1>
+        </header>
         <br>
         <div class="project-show-meta">
-          <div class="clear page-show-nav">
+          <div class="clear page-show-nav" aria-hidden="true">
             <span class="left" ng-if="project.previousProject"><a href="#/projects/{{project.previousProject._id.$oid}}">&larr; Previous project</a></span>
             <span class="right" ng-if="project.nextProject"><a href="#/projects/{{project.nextProject._id.$oid}}">Next project &rarr;</a></span>
           </div>
@@ -24,7 +24,7 @@
               <div class="project-show-url">
                 <span ng-if="project.isActive">
               <span class="truncate">
-                <em class="icon icon-link"></em>
+                <span class="icon icon-link"> <span class="sr-only">Project Link</span> </span>
                 <a href="{{project.projectUrl}}" target="_blank">{{project.projectUrl}}</a>
               </span>
                 </span>
@@ -34,7 +34,7 @@
               </div>
             </div>
             <div class="large-3 small-12 columns">
-              <div class="project-show-date"><em class="icon icon-calendaralt"></em> {{date}}</div>
+              <div class="project-show-date"><span class="icon icon-calendaralt"><span class="sr-only">Project done in the month of </span></span> {{date}}</div>
             </div>
           </div>
           <div class="project-show-tags">
@@ -60,10 +60,11 @@
               <em class="icon icon-thumbsup"></em>
               <b>{{project.votes}}</b>
             </a>
+            <span class="sr-only">{{votes}} appreciation for this project.</span>
             <span>{{votes}} </span>
           </div>
         </div>
-        <div class="clear prj-nav">
+        <footer class="clear prj-nav" role="contentinfo">
           <div class="row">
             <div class="large-6 small-12 columns">
               <a href="#/projects/{{project.previousProject._id.$oid}}" ng-if="project.previousProject">
@@ -76,8 +77,8 @@
                 <br> Next project &rarr;</a>
             </div>
           </div>
-        </div>
-      </div>
+        </footer>
+      </article>
     </div>
   </div>
 </div>
