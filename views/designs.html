@@ -4,6 +4,7 @@
       <h1 class="page-heading left">/design</h1>
       <div class="clear search">
         <label for="search">
+          <span class="sr-only">Search for designs..</span>
           <input type="text" placeholder="Search design.." ng-model="searchDesign" name="search" id="search" class="serachbox">
         </label>
         <span class="icon icon-search search-icon" aria-hidden="true"> <span class="sr-only">Search Icon</span></span>
@@ -21,10 +22,11 @@
               <div class="design-img">
                 <a class="design-link" ng-href="#/designs/{{art.id.$oid}}">
                   <div data-picture="" data-alt="{{art.name}}">
-                    <img alt="" ng-src="{{art.preview_thumb}}" ng-srcset="{{art.preview_thumb}} 1x, {{art.preview}} 2x">
+                    <img alt="{{art.name}}" ng-src="{{art.preview_thumb}}" ng-srcset="{{art.preview_thumb}} 1x, {{art.preview}} 2x">
                   </div>
                 </a>
-                <a class="design-over" ng-href="#/designs/{{art.id.$oid}}"> <strong>{{art.name}}</strong>
+                <a class="design-over" title="{{art.name}}" ng-href="#/designs/{{art.id.$oid}}">
+                  <strong>{{art.name}}</strong>
                   <span class="comment">{{art.content}}</span>
                   <em class="timestamp">{{prettyDate(art.date)}}</em>
                 </a>
@@ -39,9 +41,10 @@
               </ul>
             </div>
           </div>
-          <a href="#/designs/{{art.id.$oid}}">
+          <a href="#/designs/{{art.id.$oid}}" aria-hidden="true" tabindex="-1">
             <div class="art" style="background: url('{{art.preview_thumb}}') center no-repeat">
             </div>
+            <span class="sr-only">{{art.name}}</span>
           </a>
         </li>
       </ol>
