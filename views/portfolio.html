@@ -44,12 +44,12 @@
           </form>
         </div>
         <div class="no-results fadeInBig ng-hide" ng-show="(projects | filter:searchText | filter:selectedSize).length == 0">
-          <img src="images/no-results.svg" alt="">
+          <img src="images/no-results.svg" alt="Nothing found image.">
           <br>
-          <h4>It seems that, I did'nt work on this kind of project..</h4>
+          <h4>It seems that, I didn't work on this kind of project..</h4>
         </div>
-        <ul aria-live="polite" role="region" aria-relevant="Project filtered" class="small-block-grid-2 mini-block-grid-1 large-block-grid-3 portfolio-grid">
-          <li ng-repeat="project in projects | filter:searchText | filter:selectedSize track by $index" data-src="enter bottom and move 20px after 0.5s" ng-if="!project.archived" class="project-item zoom">
+        <div aria-live="polite" role="region" aria-relevant="Project filtered" class="portfolio-grid">
+          <div ng-repeat="project in projects | filter:searchText | filter:selectedSize track by $index" data-src="enter bottom and move 20px after 0.5s" style="order: {{$index}}" ng-if="!project.archived" class="project-item zoom {{project.size}}">
             <a href="#/projects/{{project.id.$oid}}" class="project-link zoomIn a{{($index % 3)+1}}">
               <div class="project" class="">
                 <div class="project-thumb" ng-style="projectThumb(project.thumbnail)"></div>
@@ -71,8 +71,8 @@
                 </div>
               </div>
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
         <!--     <div class="archived-works">
           <a href="" class="portfolio-sub-heading" ng-click="showArchivedWorks = !showArchivedWorks">Archived work <em class="icon icon-arrow-down"></em></a>
           <ul ng-if="showArchivedWorks" class="small-block-grid-3 mini-block-grid-1 large-block-grid-3 portfolio-grid">
