@@ -3,8 +3,10 @@
     <div class="large-12 columns">
       <h2 class="page-heading left">/design</h2>
       <div class="clear search">
-        <input type="text" placeholder="Search design.." ng-model="searchDesign" class="serachbox">
-        <em class="icon icon-search"></em>
+        <label for="search">
+          <input type="text" placeholder="Search design.." ng-model="searchDesign" name="search" id="search" class="serachbox">
+        </label>
+        <span class="icon icon-search search-icon" aria-hidden="true"> <span class="sr-only">Search Icon</span></span>
       </div>
       <br>
       <div class="no-results ng-hide" ng-show="(arts | filter:searchDesign).length == 0">
