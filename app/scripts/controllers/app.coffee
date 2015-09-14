@@ -4,10 +4,6 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
 
   # colors = ["#76a7fa", "#e46f61", "#4dbfd9", "#fbcb43", "#8cc474", "#bc5679", "#6f85bf", "#f9b256"]
 
-  progressBar = ngProgressFactory.createInstance();
-
-  progressBar.setColor("#76a7fa");
-
   $rootScope.colors = [
     {
       logo: ['#D35950', '#E46F61']
@@ -46,25 +42,6 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
   $scope.gotoMain = ->
     $location.hash('start-of-content')
     $anchorScroll()
-
-
-  $rootScope.$on "$routeChangeStart",  (event, next, current) ->
-    rand = Math.floor((Math.random()*8))
-    $rootScope.rand = rand
-    progressBar.start()
-    $timeout ->
-      $('.tooltip').hide()
-    , 1
-
-  $rootScope.$on "$routeChangeSuccess", (event, current, previous) ->
-    $rootScope.title = $route.current.title;
-    progressBar.complete()
-    progressBar.stop()
-    $anchorScroll()
-
-  $rootScope.$on "$routeChangeError", (event, current, previous) ->
-    progressBar.complete()
-    progressBar.stop()
 
   $rootScope.getClass = (path) ->
     if $location.path().substr(0, path.length) is path then "active" else ""

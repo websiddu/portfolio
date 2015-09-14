@@ -1,5 +1,6 @@
 "use strict"
 websidduApp.config(($routeProvider, $locationProvider) ->
+  $locationProvider.html5Mode(true);
   $routeProvider
   .when("/",
     templateUrl: "views/index.html"
@@ -103,3 +104,46 @@ websidduApp.config(($sceProvider) ->
   $sceProvider.enabled(false);
 )
 
+
+
+websidduApp.run [
+  '$location'
+  '$rootScope'
+  '$route'
+  'ngProgressFactory'
+  '$anchorScroll'
+  '$timeout'
+  ($location, $rootScope, $route, ngProgressFactory, $anchorScroll, $timeout) ->
+    history = undefined
+    currentURL = undefined
+    progressBar = ngProgressFactory.createInstance();
+    progressBar.setColor("#76a7fa");
+
+    $rootScope.$on "$routeChangeStart",  (event, next, current) ->
+      rand = Math.floor((Math.random()*8))
+      $rootScope.rand = rand
+      progressBar.start()
+      $timeout ->
+        $('.tooltip').hide()
+      , 1
+
+    $rootScope.$on "$routeChangeError", (event, current, previous) ->
+      progressBar.complete()
+      progressBar.stop()
+
+    $rootScope.$on '$routeChangeSuccess', (event, current, previous) ->
+      $rootScope.title = $route.current.title;
+      progressBar.complete()
+      progressBar.stop()
+      $anchorScroll()
+
+    $rootScope.$on "$routeChangeError", (event, current, previous) ->
+      progressBar.complete()
+      progressBar.stop()
+
+    $rootScope.$on '$viewContentLoaded', ->
+      if history
+        $('h1').attr('tabIndex', -1).focus()
+      return
+    return
+]
