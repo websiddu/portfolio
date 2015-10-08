@@ -1,6 +1,6 @@
-<div class="fixed contain-to-grid">
+<header class="fixed contain-to-grid" role="banner">
   <a ng-click="gotoMain()" tabindex="0" class="sr-only sr-only-focusable skip-to-content">Skip to content</a>
-  <nav class="top-bar" data-topbar role="navigation">
+  <nav class="top-bar" data-topbar role="navigation" aria-label="Site Navigation">
     <ul class="title-area">
       <li class="name">
         <div class="brand anim">
@@ -14,13 +14,13 @@
     <section class="top-bar-section">
       <ul class="right">
         <li ng-class="getClass('/portfolio')">
-          <a href="#/portfolio" ng-click="closeNavbarInMobile('/portfolio')">portfolio</a>
+          <a href ng-click="closeNavbarInMobile('/portfolio')">portfolio</a>
         </li>
         <li ng-class="getClass('/design')">
-          <a href="#/design" ng-click="closeNavbarInMobile('/design')">design</a>
+          <a href="" ng-click="closeNavbarInMobile('/design')">design</a>
         </li>
         <li ng-class="getClass('/about')">
-          <a href="#/about" ng-click="closeNavbarInMobile('/about')">about</a>
+          <a href="" ng-click="closeNavbarInMobile('/about')">about</a>
         </li>
         <li>
           <a href="resources/resume.pdf" target="_blank">résumé</a>
@@ -29,9 +29,9 @@
           <a href="http://blog.websiddu.com" target="_blank">blog</a>
         </li>
         <li ng-class="getClass('/contact')">
-          <a href="#/contact" ng-click="closeNavbarInMobile('/contact')">contact</a>
+          <a href="" ng-click="closeNavbarInMobile('/contact')">contact</a>
         </li>
       </ul>
     </section>
   </nav>
-</div>
+</header>

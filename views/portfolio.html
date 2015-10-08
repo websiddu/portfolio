@@ -49,7 +49,7 @@
           <br>
           <h4>It seems that, I didn't work on this kind of project..</h4>
         </div>
-        <div aria-live="polite" role="region" aria-relevant="Project filtered" class="portfolio-grid">
+        <div role="region" aria-relevant="Project filtered" class="portfolio-grid">
           <div ng-repeat="project in projects | filter:searchText | filter:selectedSize track by $index" data-src="enter bottom and move 20px after 0.5s" style="order: {{$index}}" ng-if="!project.archived" class="project-item zoom {{project.size}}">
             <a href="#/projects/{{project.id.$oid}}" class="project-link zoomIn a{{($index % 3)+1}}">
               <div class="project" class="">
