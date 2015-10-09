@@ -1,45 +1,52 @@
-[{
-  "name": "Linkedin",
-  "url": "http://www.linkedin.com/in/websiddu",
-  "icon": "linkedin"
-}, {
-  "name": "Behance",
-  "url": "https://www.behance.net/websiddu",
-  "icon": "behance"
-}, {
-  "name": "Facebook",
-  "url": "http://fb.com/websiddu",
-  "icon": "facebook"
-}, {
-  "name": "Twitter",
-  "url": "http://twitter.com/websiddu",
-  "icon": "twitter"
-}, {
-  "name": "Blog",
-  "url": "http://blog.websiddu.com/",
-  "icon": "blogger"
-}, {
-  "name": "Pinterest",
-  "url": "http://www.pinterest.com/websiddu/",
-  "icon": "pinterest"
-}, {
-  "name": "Google+",
-  "url": "https://plus.google.com/u/0/+SiddharthaGudipati/posts",
-  "icon": "googleplus"
-}, {
-  "name": "Dribbble",
-  "url": "https://dribbble.com/websiddu",
-  "icon": "dribbble"
-}, {
-  "name": "Websiddu",
-  "url": "http://github.com/websiddu",
-  "icon": "github"
-}, {
-  "name": "Instagram",
-  "url": "http://instagram.com/websiddu",
-  "icon": "instagram"
-}, {
-  "name": "Quora",
-  "url": "http://www.quora.com/Siddhartha-Gudipati",
-  "icon": "quora"
-}]
+[
+  {
+    "name": "Linkedin",
+    "url": "http://www.linkedin.com/in/websiddu",
+    "icon": "linkedin"
+  },
+  {
+    "name": "Behance",
+    "url": "https://www.behance.net/websiddu",
+    "icon": "behance"
+  },
+  {
+    "name": "Facebook",
+    "url": "http://fb.com/websiddu",
+    "icon": "facebook"
+  },
+  {
+    "name": "Twitter",
+    "url": "http://twitter.com/websiddu",
+    "icon": "twitter"
+  },
+  {
+    "name": "Blog",
+    "url": "http://blog.websiddu.com/",
+    "icon": "blogger"
+  },
+  {
+    "name": "Pinterest",
+    "url": "http://www.pinterest.com/websiddu/",
+    "icon": "pinterest"
+  },
+  {
+    "name": "Google+",
+    "url": "https://plus.google.com/u/0/+SiddharthaGudipati/posts",
+    "icon": "googleplus"
+  },
+  {
+    "name": "Dribbble",
+    "url": "https://dribbble.com/websiddu",
+    "icon": "dribbble"
+  },
+  {
+    "name": "Github",
+    "url": "http://github.com/websiddu",
+    "icon": "github"
+  },
+  {
+    "name": "Instagram",
+    "url": "http://instagram.com/websiddu",
+    "icon": "instagram"
+  }
+]

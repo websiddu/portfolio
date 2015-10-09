@@ -1,40 +1,58 @@
-[{
-  "time": "Nov `14 – Present",
-  "position": "Designer & Developer",
-  "location": "Seattle, WA",
-  "duration": "~",
-  "company": "University of Washington",
-  "companyLink": "http://uw.edu"
-},
-{
-  "time": "Sep `14 – Present",
-  "position": "Graduate Student",
-  "location": "Seattle, WA",
-  "duration": "~",
-  "company": "University of Washington",
-  "companyLink": "http://uw.edu"
-},
-{
-  "time": "Nov `11 – Aug `14",
-  "position": "UX Designer & Front-end engineer",
-  "duration": "2 years 10 months",
-  "location": "Chennai, India",
-  "company": "Web 2.0, Innovation Labs",
-  "companyLink": "http://tcs.com"
-},
-{
-  "time": "Mar `11 – Nov `11",
-  "position": "Freelance Designer & Developer",
-  "duration": "9 months",
-  "location": "Vijayawada, India",
-  "company": "Indianservers",
-  "companyLink": "http://indianservers.com"
-},
-{
-  "time": "Sep `07 – Mar `11",
-  "position": "Undergrad Student",
-  "duration": "4 years",
-  "location": "Vijayawada, India",
-  "company": "VR Siddhartha Engineering college",
-  "companyLink": "http://vrsiddhartha.ac.in"
-}]
+[
+  {
+    "time": "Sep `15 – Present",
+    "position": "UX Designer Intern",
+    "location": "Seattle, WA",
+    "duration": "~",
+    "company": "Freshconsulting",
+    "companyLink": "http://freshconsulting.com"
+  },
+  {
+    "time": "Jul `15 – Sep `15",
+    "position": "UX/UI Engineer Intern",
+    "location": "Seattle, WA",
+    "duration": "~",
+    "company": "Yahoo!",
+    "companyLink": "https://yahoo.com"
+  },
+  {
+    "time": "Nov `14 – Present",
+    "position": "Designer & Developer",
+    "location": "Seattle, WA",
+    "duration": "~",
+    "company": "University of Washington",
+    "companyLink": "http://uw.edu"
+  },
+  {
+    "time": "Sep `14 – Present",
+    "position": "Graduate Student",
+    "location": "Seattle, WA",
+    "duration": "~",
+    "company": "University of Washington",
+    "companyLink": "http://uw.edu"
+  },
+  {
+    "time": "Nov `11 – Aug `14",
+    "position": "UX Designer & Front-end engineer",
+    "duration": "2 years 10 months",
+    "location": "Chennai, India",
+    "company": "Web 2.0, Innovation Labs",
+    "companyLink": "http://tcs.com"
+  },
+  {
+    "time": "Mar `11 – Nov `11",
+    "position": "Freelance Designer & Developer",
+    "duration": "9 months",
+    "location": "Vijayawada, India",
+    "company": "Indianservers",
+    "companyLink": "http://indianservers.com"
+  },
+  {
+    "time": "Sep `07 – Mar `11",
+    "position": "Undergrad Student",
+    "duration": "4 years",
+    "location": "Vijayawada, India",
+    "company": "VR Siddhartha Engineering college",
+    "companyLink": "http://vrsiddhartha.ac.in"
+  }
+]
