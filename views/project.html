@@ -67,7 +67,7 @@
         <footer class="clear prj-nav" role="contentinfo">
           <div class="row">
             <div class="large-6 small-12 columns">
-              <a href="#/projects/{{project.previousProject._id.$oid}}" ng-if="project.previousProject !project.previousProject.archived">
+              <a href="#/projects/{{project.previousProject._id.$oid}}" ng-if="project.previousProject && !project.previousProject.archived">
                 <b>{{project.previousProject.title}}</b>
                 <br> &larr; Previous project</a>
             </div>
