@@ -1,84 +1,86 @@
-<div class="page">
-  <div class="row">
-    <div class="ds-shot-heading">
-      <h1 class="ds-shot-heading-text">{{art.name}}</h1>
-      <p class="ds-shot-heading-meta">{{prettyDate(art.date)}}</p>
-    </div>
-    <div class="large-7 small-12 columns">
-      <div class="ds-shot">
-        <div class="ds-shot-img">
-          <img alt="{{art.name}}" ng-srcset="{{art.preview_thumb}} 1x, {{art.preview}}  2x" ng-src="{{art.preview}}">
-        </div>
-        <div class="ds-shot-content" ng-bind-html="art.content">
+<main class="maincontent" role="main" id="main">
+  <div class="page">
+    <div class="row">
+      <div class="ds-shot-heading">
+        <h1 class="ds-shot-heading-text">{{art.name}}</h1>
+        <p class="ds-shot-heading-meta">{{prettyDate(art.date)}}</p>
+      </div>
+      <div class="large-7 small-12 columns">
+        <div class="ds-shot">
+          <div class="ds-shot-img">
+            <img alt="{{art.name}}" ng-srcset="{{art.preview_thumb}} 1x, {{art.preview}}  2x" ng-src="{{art.preview}}">
+          </div>
+          <div class="ds-shot-content" ng-bind-html="art.content">
+          </div>
         </div>
       </div>
-    </div>
-    <div class="large-3 small-12 columns">
-      <div class="ds-shot-stats">
-        <ul class="ds-shot-menu">
-          <li>
-            <a href="" ng-click="voteUp()" ng-if="!isVoted"><em class="icon icon-love"></em> Like? </a>
-            <a href="" class="voted" title="I am glad that you already like this." data-tooltip aria-haspopup="true" class="tip-top" ng-if="isVoted"><em class="icon icon-love"></em> Like? </a>
-            <span> {{art.votes}} Likes</span>
-          </li>
-          <li>
-            <em class="icon icon-eye" aria-hidden="true"></em> Views
-            <span> {{art.views}} views</span>
-          </li>
-        </ul>
-        <div class="ds-shot-tags" ng-if="art.tags">
-          <h5 class="ds-shot-tags-heading">Tags</h5>
-          <ul class="ds-shot-tags-list">
-            <li ng-repeat="tag in art.tags.split(',')"> {{tag}} </li>
+      <div class="large-3 small-12 columns">
+        <div class="ds-shot-stats">
+          <ul class="ds-shot-menu">
+            <li>
+              <a href="" ng-click="voteUp()" ng-if="!isVoted"><em class="icon icon-love"></em> Like? </a>
+              <a href="" class="voted" title="I am glad that you already like this." data-tooltip aria-haspopup="true" class="tip-top" ng-if="isVoted"><em class="icon icon-love"></em> Like? </a>
+              <span> {{art.votes}} Likes</span>
+            </li>
+            <li>
+              <em class="icon icon-eye" aria-hidden="true"></em> Views
+              <span> {{art.views}} views</span>
+            </li>
           </ul>
+          <div class="ds-shot-tags" ng-if="art.tags">
+            <h5 class="ds-shot-tags-heading">Tags</h5>
+            <ul class="ds-shot-tags-list">
+              <li ng-repeat="tag in art.tags.split(',')"> {{tag}} </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="large-2 small-12 columns">
+        <div class="ds-shot-rand">
+          <h5 class="ds-shot-rand-heading">More random shots</h5>
+          <div class="ds-shot-rand-list">
+            <div class="ds-shot-rand-shot" ng-repeat="rand in randArts track by $index">
+              <a class="ds-shot-rand-shot-img" ng-href="#/designs/{{rand.id.$oid}}">
+                <img ng-src="{{rand.preview_thumb}}" alt="{{rand.name}}">
+              </a>
+              <a ng-href="#/designs/{{rand.id.$oid}}" class="ds-shot-rand-shot-link" aria-hidden="true">
+                <img src="images/new_tab.svg" alt="open in tab indicator">
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="large-2 small-12 columns">
-      <div class="ds-shot-rand">
-        <h5 class="ds-shot-rand-heading">More random shots</h5>
-        <div class="ds-shot-rand-list">
-          <div class="ds-shot-rand-shot" ng-repeat="rand in randArts track by $index">
-            <a class="ds-shot-rand-shot-img" ng-href="#/designs/{{rand.id.$oid}}">
-              <img ng-src="{{rand.preview_thumb}}" alt="{{rand.name}}">
-            </a>
-            <a ng-href="#/designs/{{rand.id.$oid}}" class="ds-shot-rand-shot-link" aria-hidden="true">
-              <img src="images/new_tab.svg" alt="open in tab indicator">
-            </a>
-          </div>
+    <div class="row">
+      <div class="clear des-nav">
+        <div class="large-6 small-12 columns prev-des">
+          <a ng-href="#/designs/{{art.previousArt._id.$oid}}" ng-if="art.previousArt">
+            <div class="des-nav-img">
+              <img ng-src="{{art.previousArt.preview_thumb}}" alt="">
+              <em class="icon icon-arrow-left"></em>
+            </div>
+            <div class="des-nav-cont">
+              <span>Prev shot </span>
+              <b>{{art.previousArt.name}}</b>
+              <small> Use <key>&larr;</key> key to navigate </small>
+            </div>
+          </a>
+        </div>
+        <div class="large-6 small-12 columns next-des">
+          <a href="#/designs/{{art.nextArt._id.$oid}}" ng-if="art.nextArt">
+            <div class="des-nav-img">
+              <img ng-src="{{art.nextArt.preview_thumb}}" alt="">
+              <em class="icon icon-arrow-right"></em>
+            </div>
+            <div class="des-nav-cont">
+              <span>Next shot </span>
+              <b>{{art.nextArt.name}}</b>
+              <small> Use <key>&rarr;</key> key to navigate </small>
+            </div>
+          </a>
         </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="clear des-nav">
-      <div class="large-6 small-12 columns prev-des">
-        <a ng-href="#/designs/{{art.previousArt._id.$oid}}" ng-if="art.previousArt">
-          <div class="des-nav-img">
-            <img ng-src="{{art.previousArt.preview_thumb}}" alt="">
-            <em class="icon icon-arrow-left"></em>
-          </div>
-          <div class="des-nav-cont">
-            <span>Prev shot </span>
-            <b>{{art.previousArt.name}}</b>
-            <small> Use <key>&larr;</key> key to navigate </small>
-          </div>
-        </a>
-      </div>
-      <div class="large-6 small-12 columns next-des">
-        <a href="#/designs/{{art.nextArt._id.$oid}}" ng-if="art.nextArt">
-          <div class="des-nav-img">
-            <img ng-src="{{art.nextArt.preview_thumb}}" alt="">
-            <em class="icon icon-arrow-right"></em>
-          </div>
-          <div class="des-nav-cont">
-            <span>Next shot </span>
-            <b>{{art.nextArt.name}}</b>
-            <small> Use <key>&rarr;</key> key to navigate </small>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+</main>
 <div ng-include="'views/partials/footer.html'"></div>

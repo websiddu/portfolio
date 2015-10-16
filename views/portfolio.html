@@ -1,10 +1,11 @@
-<div class="page">
-  <div class="row">
-    <div class="large-12 columns">
-      <h1 class="page-heading left">/portfolio</h1>
-      <div class="clear project-filter">
-        <form action="">
-          <!--         <div class="left">
+<main class="maincontent" role="main" id="main">
+  <div class="page">
+    <div class="row">
+      <div class="large-12 columns">
+        <h1 class="page-heading left">/portfolio</h1>
+        <div class="clear project-filter">
+          <form action="">
+            <!--         <div class="left">
             <span class="muted">Sort by</span>
             <select name="sortedBy" id="sortedBy" ng-model="sortedBy" class="styled">
               <option value="-size">Size △</option>
@@ -13,26 +14,26 @@
               <option value="-date">Date ▽</option>
             </select>
           </div> -->
-          <div class="right">
-            <span class="muted">Show </span>
-            <label class="normal project-filter-options" for="all">
-              <span class="sr-only">Search projects</span>
-              <input type="radio" ng-model="selectedSize" name="filter" value="" id="all"> All
-            </label>
-            <label class="normal project-filter-options" for="uxd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="User Expirence Design">
-              <input type="radio" ng-model="selectedSize" name="filter" value="ux" id="uxd"> UX Design
-            </label>
-            <label class="normal project-filter-options" for="ixd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Interaction Design">
-              <input type="radio" ng-model="selectedSize" name="filter" value="Interaction" id="ixd"> IxD
-            </label>
-            <label class="normal project-filter-options" for="vd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Visual Design">
-              <input type="radio" ng-model="selectedSize" name="filter" value="Visual" id="vd"> VD
-            </label>
-            <label class="normal project-filter-options" for="fed" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Front end development">
-              <input type="radio" ng-model="selectedSize" name="filter" value="front-end" id="fed"> Front-end
-            </label>
-            <label class="normal project-filter-options" for="bed" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Server side development">
-              <input type="radio" ng-model="selectedSize" name="filter" value="Dev" id="bed"> Back-end</label>
+            <div class="right">
+              <span class="muted">Show </span>
+              <label class="normal project-filter-options" for="all">
+                <span class="sr-only">Search projects</span>
+                <input type="radio" ng-model="selectedSize" name="filter" value="" id="all"> All
+              </label>
+              <label class="normal project-filter-options" for="uxd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="User Expirence Design">
+                <input type="radio" ng-model="selectedSize" name="filter" value="ux" id="uxd"> UX Design
+              </label>
+              <label class="normal project-filter-options" for="ixd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Interaction Design">
+                <input type="radio" ng-model="selectedSize" name="filter" value="Interaction" id="ixd"> IxD
+              </label>
+              <label class="normal project-filter-options" for="vd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Visual Design">
+                <input type="radio" ng-model="selectedSize" name="filter" value="Visual" id="vd"> VD
+              </label>
+              <label class="normal project-filter-options" for="fed" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Front end development">
+                <input type="radio" ng-model="selectedSize" name="filter" value="front-end" id="fed"> Front-end
+              </label>
+              <label class="normal project-filter-options" for="bed" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Server side development">
+                <input type="radio" ng-model="selectedSize" name="filter" value="Dev" id="bed"> Back-end</label>
               <span class="muted">Projects</span>
             </div>
             <div class="clear search">
@@ -105,4 +106,5 @@
       </div>
     </div>
   </div>
-  <div ng-include="'views/partials/footer.html'"></div>
+</main>
+<div ng-include="'views/partials/footer.html'"></div>
