@@ -1,41 +1,41 @@
 <main class="maincontent" role="main" id="main">
-<div class="page">
-  <div class="row">
-    <div class="large-12 columns">
-      <h1 class="page-heading">/contact</h1>
-      <div class="row">
-        <div class="large-5 small-12 columns">
-          <h2 class="page-sub-heading">You can reach me only thought Internet !!</h2>
-          <p>
-            Let's talk on anything that you are interested, drop a mail to <a href="mailto:me@websiddu.com">me@websiddu.com</a>. I'd love to hear from you!
-          </p>
-          <br>
-          <h6>Some of my social profiles</h6>
-          <div class="side-social animated fadeInDown">
-            <ul class="social-list long">
-              <li ng-repeat="item in socialprofiles | orderBy:'name'">
-                <a ng-href="{{item.url}}" target="_blank" class="c{{($index % 8) + 1}}"> <em class="icon icon-{{item.icon}}"></em>
-                  <span class="sr-only">{{item.name}}</span>
-                </a>
-                
-              </li>
-            </ul>
+  <div class="page">
+    <div class="row">
+      <div class="large-12 columns">
+        <h1 class="page-heading">Contact</h1>
+        <div class="row">
+          <div class="large-5 small-12 columns">
+            <h2 class="page-sub-heading">You can reach me only thought Internet !!</h2>
+            <p>
+              Let's talk on anything that you are interested, drop a mail to <a href="mailto:me@websiddu.com">me@websiddu.com</a>. I'd love to hear from you!
+            </p>
+            <br>
+            <h6>Some of my social profiles</h6>
+            <div class="side-social animated fadeInDown">
+              <ul class="social-list long">
+                <li ng-repeat="item in socialprofiles | orderBy:'name'">
+                  <a ng-href="{{item.url}}" target="_blank" class="c{{($index % 8) + 1}}"> <em class="icon icon-{{item.icon}}"></em>
+                    <span class="sr-only">{{item.name}}</span>
+                  </a>
+                  
+                </li>
+              </ul>
+            </div>
+            <br>
+            <br>
           </div>
-          <br>
-          <br>
-        </div>
-        <div class="large-7 small-12 columns">
-          <div class="bg-loader">
-            <iframe height="500" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%; border:none" src="https://websiddu.wufoo.com/embed/zuj44yq0cai1vg/">
-              <a href="https://websiddu.wufoo.com/forms/zuj44yq0cai1vg/">
+          <div class="large-7 small-12 columns">
+            <div class="bg-loader">
+              <iframe height="500" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%; border:none" src="https://websiddu.wufoo.com/embed/zuj44yq0cai1vg/">
+                <a href="https://websiddu.wufoo.com/forms/zuj44yq0cai1vg/">
                 Fill my contact form
               </a>
-            </iframe>
+              </iframe>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </main>
 <div ng-include="'views/partials/footer.html'"></div>
