@@ -100,8 +100,8 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
       if $images.length > 0
         $images.each (imgA) ->
           $img = $(this)
-          w = parseInt($img.attr('data-width'), 10)
-          h = parseInt($img.attr('data-height'), 10)
+          w = parseInt($img.attr('data-width'), 10) || parseInt($img.attr('width'), 10)
+          h = parseInt($img.attr('data-height'), 10) || parseInt($img.attr('height'), 10)
 
           img =
             src: $img.attr('src')
