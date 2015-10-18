@@ -21,6 +21,9 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
 
   localStorage[$location.path()] = 'seen'
 
+  $scope.isRetina = ->
+    ((window.matchMedia && (window.matchMedia('only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-resolution: 75.6dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)').matches)) || (window.devicePixelRatio && window.devicePixelRatio >= 2)) && /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+
   $scope.init = ->
     $rootScope.title = "#{project.title} project ";
     $.announce($rootScope.title + ' page loaded', 'assertive')
@@ -97,10 +100,13 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
       if $images.length > 0
         $images.each (imgA) ->
           $img = $(this)
+          w = parseInt($img.attr('data-width'), 10)
+          h = parseInt($img.attr('data-height'), 10)
+
           img =
             src: $img.attr('src')
-            w: parseInt($img.attr('width'), 10)
-            h: parseInt($img.attr('height'), 10)
+            w: if $scope.isRetina() then w/2 else w
+            h: if $scope.isRetina() then h/2 else h
             title: $img.parents('figure').find('figcaption').text() || $img.attr('alt')
           $scope.images.push(img)
         _initPhotoSwipe()
