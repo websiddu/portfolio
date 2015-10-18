@@ -50,14 +50,15 @@
           <br>
           <h4>It seems that, I didn't work on this kind of project..</h4>
         </div>
-        <div role="region" aria-relevant="Project filtered" class="portfolio-grid">
-          <div ng-repeat="project in projects | filter:searchText | filter:selectedSize track by $index" data-src="enter bottom and move 20px after 0.5s" style="order: {{$index}}" ng-if="!project.archived" class="project-item zoom {{project.size}}">
+        <ul role="region" aria-relevant="Project filtered" class="portfolio-grid">
+          <li ng-repeat="project in projects | filter:searchText | filter:selectedSize track by $index" data-src="enter bottom and move 20px after 0.5s" style="order: {{$index}}" ng-if="!project.archived" class="project-item zoom {{project.size}}">
             <a href="#/projects/{{project.id.$oid}}" class="project-link zoomIn a{{($index % 3)+1}}">
               <div class="project" class="">
                 <div class="project-thumb" ng-style="projectThumb(project.thumbnail)"></div>
                 <div class="project-title">
-                  <h2>{{project.title}}</h2>
-                  <small>{{project.shortDescription}}</small>
+                  <h2><span class="sr-only">Project Name: </span>{{project.title}}</h2>
+
+                  <small><span class="sr-only">Project Tags: </span>{{project.shortDescription}}</small>
                 </div>
                 <div class="tick tip-top tip-center" ng-if="projectSeen(&quot;/projects/&quot;+ project.id.$oid)" title="You have seen this project!" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 24.3 14.6" enable-background="new 0 0 24.3 14.6" xml:space="preserve" style="height: 11px">
@@ -73,8 +74,8 @@
                 </div>
               </div>
             </a>
-          </div>
-        </div>
+          </li>
+        </ul>
         <!--     <div class="archived-works">
           <a href="" class="portfolio-sub-heading" ng-click="showArchivedWorks = !showArchivedWorks">Archived work <em class="icon icon-arrow-down"></em></a>
           <ul ng-if="showArchivedWorks" class="small-block-grid-3 mini-block-grid-1 large-block-grid-3 portfolio-grid">
