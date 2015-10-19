@@ -52,7 +52,7 @@
         </div>
         <ul role="region" aria-relevant="Project filtered" class="portfolio-grid">
           <li ng-repeat="project in projects | filter:searchText | filter:selectedSize track by $index" data-src='enter bottom and move 20px after 0.5s' style="order: {{$index}};" ng-if="!project.archived" class="project-item zoom {{project.size}}">
-            <a href="#/projects/{{project.id.$oid}}" class="project-link zoomIn a{{($index % 3)+1}}">
+            <a href="projects/{{project.id.$oid}}" class="project-link zoomIn a{{($index % 3)+1}}">
               <div class="project" class="">
                 <div class="project-thumb" ng-style='projectThumb(project.thumbnail)'></div>
                 <div class="project-title">

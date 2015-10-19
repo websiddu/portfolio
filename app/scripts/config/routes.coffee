@@ -98,13 +98,13 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .otherwise
     templateUrl: "views/404.html"
     controller: "404Ctrl"
+
+  $locationProvider.html5Mode(true);
 )
 
 websidduApp.config(($sceProvider) ->
   $sceProvider.enabled(false);
 )
-
-
 
 websidduApp.run [
   '$location'
