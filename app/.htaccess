@@ -302,10 +302,14 @@ AddDefaultCharset utf-8
 # This includes directories used by version control systems such as Git and SVN.
 
 <IfModule mod_rewrite.c>
-    RewriteCond %{SCRIPT_FILENAME} -d [OR]
-    RewriteCond %{SCRIPT_FILENAME} -f
-    RewriteRule "(^|/)\." - [F]
+    Options +FollowSymlinks
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !.*\.(css|js|html|png|jpg|jpeg|gif|txt)
+    RewriteRule (.*) index.html [L]
 </IfModule>
+
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
