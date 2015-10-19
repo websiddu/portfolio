@@ -21,12 +21,12 @@
             <div class="design">
               <div class="design-shot">
                 <div class="design-img">
-                  <a class="design-link" ng-href="#/designs/{{art.id.$oid}}" aria-hidden="true">
+                  <a class="design-link" ng-href="designs/{{art.id.$oid}}" aria-hidden="true">
                     <div data-picture="" data-alt="{{art.name}}">
                       <img alt="{{art.name}}" ng-src="{{art.preview_thumb}}" ng-srcset="{{art.preview_thumb}} 1x, {{art.preview}} 2x">
                     </div>
                   </a>
-                  <a class="design-over" title="{{art.name}}" ng-href="#/designs/{{art.id.$oid}}">
+                  <a class="design-over" title="{{art.name}}" ng-href="designs/{{art.id.$oid}}">
                     <strong>{{art.name}}</strong>
                     <span class="comment">{{art.content}}</span>
                     <em class="timestamp" aria-hidden="true">{{prettyDate(art.date)}}</em>
@@ -42,7 +42,7 @@
                 </ul>
               </div>
             </div>
-            <a href="#/designs/{{art.id.$oid}}" aria-hidden="true" tabindex="-1">
+            <a href="designs/{{art.id.$oid}}" aria-hidden="true" tabindex="-1">
               <div class="art" style="background: url('{{art.preview_thumb}}') center no-repeat">
               </div>
               <span class="sr-only">{{art.name}}</span>
