@@ -154,3 +154,22 @@ a.standalone {
     }
   }
 }
+
+.alert {
+  padding: 10px 20px;
+  border-radius: 3px;
+  &.info {
+    background: #EDF6FF;
+    border: solid 1px #C1DDFF;
+  }
+  &.success {
+
+  }
+  &.warning {
+    background: rgba(255, 249, 216, 0.55);
+    border: solid 1px #F5EDC2;
+  }
+  &.danger {
+
+  }
+}
