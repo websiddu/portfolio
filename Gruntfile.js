@@ -10,6 +10,7 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
+  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
     yeoman: {
@@ -53,13 +54,22 @@ module.exports = function(grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['copy:styles', 'autoprefixer']
       },
+      put: {
+        files: ['<%= yeoman.app %>/views/content/*.html'],
+        tasks: ['shell:put'],
+        options: {
+          spawn: false
+        }
+      },
       livereload: {
         options: {
-          livereload: '<%= connect.options.livereload %>'
+          livereload: '<%= connect.options.livereload %>',
+          spawn: false
         },
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
+          '<%= yeoman.app %>/views/content/*.html',
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -122,17 +132,18 @@ module.exports = function(grunt) {
       }
     },
 
-
     connect: {
       options: {
         port: 9012,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729,
-        middleware: function (connect, options) {
+        middleware: function(connect, options) {
           var optBase = (typeof options.base === 'string') ? [options.base] : options.base;
           return [require('connect-modrewrite')(['!(\\..+)$ / [L]'])].concat(
-            optBase.map(function(path){ return connect.static(path); }));
+            optBase.map(function(path) {
+              return connect.static(path);
+            }));
         }
 
       },
@@ -388,8 +399,24 @@ module.exports = function(grunt) {
         dest: 'myworks/',
         exclusions: ['<%= yeoman.dist %>/.git', '<%= yeoman.dist %>/resources', '<%= yeoman.dist %>/**/.DS_Store', '<%= yeoman.dist %>/**/Thumbs.db', '<%= yeoman.dist %>/tmp']
       }
-    }
+    },
 
+    'shell': {
+      put: {
+        options: {
+          stdout: true
+        },
+        command: function(filepath) {
+          return 'python /Users/sid/work/websiddu/new/websiddu-yo/post.py ' + filepath
+        }
+      }
+    }
+  });
+
+  grunt.event.on('watch', function(action, filepath, target) {
+    if (filepath.search('views/content/__ws_') > 0) {
+      grunt.config('watch.put.tasks', ['shell:put:/Users/sid/work/websiddu/new/websiddu-yo/'+ filepath]);
+    }
   });
 
   grunt.registerTask('server', function(target) {
@@ -431,7 +458,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('deploy', 'Deploy to Github Pages', ['build', 'buildcontrol', 'ftp-deploy']);
   grunt.registerTask('upload', 'Upload to server', ['ftp-deploy']);
-
 
   grunt.registerTask('default', [
     'jshint',
