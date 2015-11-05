@@ -18,6 +18,15 @@
     left: 0;
     right: 0;
     background-size: cover;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.33));
+    }
   }
 }
 
@@ -220,14 +229,16 @@ a[target="_blank"]:after {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  //background: rgba(0, 0, 0, 0.5);
   color: #fff;
   margin: 0;
-  padding: 12px 50px;
+  padding: 12px 50px 12px;
   font-weight: 300;
   font-size: 30px;
   line-height: 1;
   transition: font-size 0.3s ease-in;
+  //background: linear-gradient(rgba(0, 0, 0, 0), rgba(47, 46, 46, 0.6));
+
   span {
     position: absolute;
     right: 20px;
@@ -264,6 +275,7 @@ a[target="_blank"]:after {
     padding-bottom: 10px;
     z-index: 1030;
     max-width: 73.3333333rem;
+    background: rgba(0, 0, 0, 0.5);
     margin: 0 auto;
   }
 }
