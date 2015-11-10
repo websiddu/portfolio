@@ -3,6 +3,7 @@ websidduApp.constant constants:
   # base_url: "http://api-websiddu.rhcloud.com/"
   # base_url: "http://localhost:3000/"
   base_url: "http://api.websiddu.com/"
+  # base_url: "http://104.131.222.78/"
   data:
     homepage:
       title: "Welcome to my website | Siddhartha Gudipati"

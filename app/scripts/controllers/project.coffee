@@ -1,6 +1,8 @@
 "use strict"
 angular.module("websidduApp").controller "projectCtrl", ($scope, Project, project, $routeParams, $rootScope, $location, $http, constants, hotkeys) ->
+
   $scope.project = project
+
   $scope.style =
     background: "transparent url('"+ $scope.project.banner + "') center no-repeat"
     "background-size": "cover"
@@ -21,10 +23,13 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
 
   localStorage[$location.path()] = 'seen'
 
+
+
   $scope.isRetina = ->
     ((window.matchMedia && (window.matchMedia('only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-resolution: 75.6dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)').matches)) || (window.devicePixelRatio && window.devicePixelRatio >= 2)) && /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
 
   $scope.init = ->
+
     $rootScope.title = "#{project.title} project ";
     $.announce($rootScope.title + ' page loaded', 'assertive')
     _getImagesInProject()
