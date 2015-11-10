@@ -5,6 +5,7 @@ angular.module("websidduApp").controller "portfolioCtrl", ($scope, $rootScope, p
   $scope.searchText  = ""
   $scope.sortedBy = "-date"
 
+
   $scope.projectThumb = (img) ->
     "background-image": "url(#{img})"
 

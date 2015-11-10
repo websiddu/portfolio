@@ -25,27 +25,40 @@ websidduApp.config(($routeProvider, $locationProvider) ->
     controller: "portfolioCtrl"
     title: "Portfolio"
     resolve:
-      projects: ($q, Project) ->
+      projects: ($q, Project, $http) ->
         deferred = $q.defer()
+
         Project.query((data) ->
           deferred.resolve data
-          , (data) ->
-            deferred.reject "Unsuccess"
+        , (err) ->
+          #Fail safe :)
+          $http.get 'data/projects.json'
+            .success (result) ->
+              deferred.resolve result
         )
-        deferred.promise
+
+        return deferred.promise
+
+
   )
   .when("/projects/:projectId",
     templateUrl: "views/project.html"
     controller: "projectCtrl"
     resolve:
-      project: ($q, $timeout, Project, $route) ->
+      project: ($q, $timeout, Project, $route, $http) ->
         deferred = $q.defer()
         Project.get(
           id: $route.current.params.projectId
           , (data) ->
               deferred.resolve data
-          , (data) ->
-              deferred.reject "Unsuccess"
+          , (err) ->
+            $http.get 'data/projects.json'
+              .success (result) ->
+                currnetPrj = {}
+                result.forEach (val, i) ->
+                  if (val.id.$oid is $route.current.params.projectId)
+                    currnetPrj = val
+                deferred.resolve currnetPrj
           )
         deferred.promise
   )
@@ -59,7 +72,10 @@ websidduApp.config(($routeProvider, $locationProvider) ->
         Design.query((data) ->
           deferred.resolve data
           , (data) ->
-            deferred.reject "Unsuccess"
+            #Fail safe :)
+            $http.get 'data/designs.json'
+              .success (result) ->
+                deferred.resolve result
         )
         deferred.promise
   )
