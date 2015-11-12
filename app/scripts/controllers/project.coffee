@@ -88,10 +88,15 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
     $http
       url: "#{constants.base_url}api/projects/#{$routeParams.projectId}/vote"
       method: 'POST'
+      $scope.isVoted = true
+      $scope.project.votes = $scope.project.votes + 1
     .success (data) ->
         localStorage["voted_#{$routeParams.projectId}"] = true
         $scope.isVoted = true
         $scope.project.votes = data
+    .fail (data) ->
+        $scope.isVoted = false
+        $scope.project.votes =  $scope.project.votes - 1
 
   _initSticky = ->
     setTimeout ->
