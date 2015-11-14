@@ -50,6 +50,7 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
           if $(this.element).index($('.section-heading')) is 0
             prev = ''
             now = ''
+            $('.project-heading-seg-text').show()
           if d is 'down'
             now = "– " + $(this.element).text()
             prev = $('.project-page-heading-sec').text()
@@ -57,6 +58,7 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
           else if d is 'up'
             now = "– " + $(this.element).text()
             $('.project-page-heading-sec').text(prev)
+
         offset: 95
     , 10
 
