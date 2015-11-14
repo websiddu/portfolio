@@ -7,12 +7,13 @@
             <div class="project-show-banner-img" ng-style="{{style}}">
             </div>
             <h1 class="project-page-heading left" id="prj-title">
-              {{project.title}} <b class="project-page-heading-sec"></b>
+              <span class="project-heading-seg-text">{{project.title}} </span>
+              <b class="project-page-heading-sec"></b>
             </h1>
           </header>
           <br>
           <div class="project-show-meta">
-            <br>
+<!--             <br />
             <div class="row">
               <div class="large-9 small-12 columns">
                 <div class="project-show-url">
@@ -37,7 +38,7 @@
               <ul class="tags">
                 <li ng-repeat="tag in project.tags.split(',')"> {{tag}} </li>
               </ul>
-            </div>
+            </div> -->
           </div>
           <div class="project-show-description" ng-bind-html="project.description">
           </div>
