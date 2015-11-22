@@ -1,10 +1,45 @@
 <main class="maincontent" role="main" id="main">
-  <div class="page">
-    <div class="row">
+  <div class="row">
+    <div class="main-page">
       <div class="large-12 columns">
         <h1 class="page-heading left">Portfolio</h1>
         <div class="clear project-filter">
           <form action="">
+            <div class="row">
+              <div class="large-6 columns">
+                <div class="search">
+                  <label for="search">
+                    <span class="sr-only">Search for projects..</span>
+                    <input type="text" placeholder="Search projects.. e.g. Angular.js" ng-model="searchText" name='search' id='search' class="serachbox">
+                  </label>
+                  <span class="icon icon-search search-icon" aria-hidden='true'> <span class="sr-only">Search Icon</span></span>
+                </div>
+              </div>
+              <div class="large-6 columns">
+                <div class="right">
+                  <span class="muted">Show </span>
+                  <label class="normal project-filter-options" for="all">
+                    <span class="sr-only">Search projects</span>
+                    <input type="radio" ng-model="selectedSize" name="filter" value="" id="all"> All
+                  </label>
+                  <label class="normal project-filter-options" for="uxd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="User Expirence Design">
+                    <input type="radio" ng-model="selectedSize" name="filter" value="ux" id="uxd"> UX Design
+                  </label>
+                  <label class="normal project-filter-options" for="ixd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Interaction Design">
+                    <input type="radio" ng-model="selectedSize" name="filter" value="Interaction" id="ixd"> IxD
+                  </label>
+                  <label class="normal project-filter-options" for="vd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Visual Design">
+                    <input type="radio" ng-model="selectedSize" name="filter" value="Visual" id="vd"> VD
+                  </label>
+                  <label class="normal project-filter-options" for="fed" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Front end development">
+                    <input type="radio" ng-model="selectedSize" name="filter" value="front-end" id="fed"> Front-end
+                  </label>
+                  <label class="normal project-filter-options" for="bed" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Server side development">
+                    <input type="radio" ng-model="selectedSize" name="filter" value="Dev" id="bed"> Back-end</label>
+                  <span class="muted">Projects</span>
+                </div>
+              </div>
+            </div>
             <!--         <div class="left">
             <span class="muted">Sort by</span>
             <select name="sortedBy" id="sortedBy" ng-model="sortedBy" class="styled">
@@ -14,50 +49,20 @@
               <option value="-date">Date ▽</option>
             </select>
           </div> -->
-            <div class="right">
-              <span class="muted">Show </span>
-              <label class="normal project-filter-options" for="all">
-                <span class="sr-only">Search projects</span>
-                <input type="radio" ng-model="selectedSize" name="filter" value="" id="all"> All
-              </label>
-              <label class="normal project-filter-options" for="uxd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="User Expirence Design">
-                <input type="radio" ng-model="selectedSize" name="filter" value="ux" id="uxd"> UX Design
-              </label>
-              <label class="normal project-filter-options" for="ixd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Interaction Design">
-                <input type="radio" ng-model="selectedSize" name="filter" value="Interaction" id="ixd"> IxD
-              </label>
-              <label class="normal project-filter-options" for="vd" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Visual Design">
-                <input type="radio" ng-model="selectedSize" name="filter" value="Visual" id="vd"> VD
-              </label>
-              <label class="normal project-filter-options" for="fed" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Front end development">
-                <input type="radio" ng-model="selectedSize" name="filter" value="front-end" id="fed"> Front-end
-              </label>
-              <label class="normal project-filter-options" for="bed" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true" class="tip-top" title="Server side development">
-                <input type="radio" ng-model="selectedSize" name="filter" value="Dev" id="bed"> Back-end</label>
-              <span class="muted">Projects</span>
-            </div>
-            <div class="clear search">
-              <label for="search">
-                <span class="sr-only">Search for projects..</span>
-                <input type="text" placeholder="Search projects.. e.g. Angular.js" ng-model="searchText" name='search' id='search' class="serachbox">
-              </label>
-              <span class="icon icon-search search-icon" aria-hidden='true'> <span class="sr-only">Search Icon</span></span>
-            </div>
           </form>
         </div>
-        <div class="no-results fadeInBig ng-hide" ng-show="(projects | filter:searchText | filter:selectedSize).length == 0">
+        <div class=" clear no-results fadeInBig ng-hide" ng-show="(projects | filter:searchText | filter:selectedSize).length == 0">
           <img src="images/no-results.svg" alt="Nothing found image.">
           <br>
           <h4>It seems that, I didn't work on this kind of project..</h4>
         </div>
-        <ul role="region" aria-relevant="Project filtered" class="portfolio-grid">
+        <ul role="region" aria-relevant="Project filtered" class="portfolio-grid clear">
           <li ng-repeat="project in projects | filter:searchText | filter:selectedSize track by $index" data-src='enter bottom and move 20px after 0.5s' style="order: {{$index}};" ng-if="!project.archived" class="project-item zoom {{project.size}}">
             <a href="projects/{{project.id.$oid}}" class="project-link zoomIn a{{($index % 3)+1}}">
               <div class="project" class="">
                 <div class="project-thumb" ng-style='projectThumb(project.thumbnail)'></div>
                 <div class="project-title">
                   <h2><span class="sr-only">Project Name: </span>{{project.title}}</h2>
-
                   <small><span class="sr-only">Project Tags: </span>{{project.shortDescription}}</small>
                 </div>
                 <div class="tick tip-top tip-center" ng-if='projectSeen("/projects/"+ project.id.$oid)' title="You have seen this project!" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true">

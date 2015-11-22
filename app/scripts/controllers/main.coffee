@@ -1,8 +1,10 @@
 "use strict"
-angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, $timeout, constants, $http) ->
+angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, $timeout, constants, $http, projects) ->
 
   $scope.projectThumb = (img) ->
     "background-image": "url(#{img})"
+
+  $scope.projects = projects
 
   typed = null
   sentence = [
@@ -22,7 +24,7 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
   ]
 
   $scope.init = ->
-    _loadChart()
+    # _loadChart()
     #_initTyped()
     #_bindMouseWeel()
 

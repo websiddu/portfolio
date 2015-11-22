@@ -29,7 +29,6 @@ body {
 }
 
 .l-avatar {
-  text-align: center;
 
   img {
     height: 160px;
@@ -51,12 +50,6 @@ body {
 .l-design {
   cursor: pointer;
   text-align: right;
-  margin-top: 50px;
-}
-
-.l-code {
-  text-align: left;
-  margin-top: 50px;
 }
 
 .l-d-d {
@@ -67,20 +60,17 @@ body {
 }
 
 .l-n {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 200;
-  text-align: center;
   margin: 16px auto 7px;
   min-height: 40px;
-  line-height: 1;
+  font-family: "Alegreya", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
 .l-d  p {
   font-size: 21px;
   font-weight: 200;
   max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
   line-height: 1.7;
 }
 
@@ -114,6 +104,14 @@ body {
   }
 }
 
+.main-page {
+  background-color: #fff;
+  box-shadow: 0 0 5px #EAEAEA;
+  overflow: hidden;
+  position: relative;
+  padding: 0 20px;
+}
+
 @media #{$small-max} {
   .l-design, .l-code {
     display: none;
@@ -136,12 +134,16 @@ html {
 }
 
 .contain-to-grid {
-  background-color: $header-background-c1;
+  // background-color: $header-background-c1;
 
-  @include filter-gradient($header-background-c1, $header-background-c2, horizontal);
+  // @include filter-gradient($header-background-c1, $header-background-c2, horizontal);
 
-  background-image: linear-gradient(left, $header-background-c1 0%, $header-background-c2 100%);
-  border-bottom: solid $header-border-size $header-border-color;
+  // background-image: linear-gradient(left, $header-background-c1 0%, $header-background-c2 100%);
+  .top-bar {
+    background-color: $header-background-c1;
+        box-shadow: 0 0 5px #efefef;
+    // border-bottom: solid $header-border-size $header-border-color;
+  }
 }
 
 .typed-cursor {

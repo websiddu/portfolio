@@ -1,15 +1,19 @@
 .footer {
-  padding: 25px 10px;
-  background-color: $footer-background-c1;
-  @include filter-gradient($footer-background-c1, $footer-background-c2, horizontal);
-  background-image: linear-gradient(left, $footer-background-c1 0%, $footer-background-c2 100%);
-  -webkit-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
+  // padding: 25px 10px;
+  // background-color: $footer-background-c1;
+  // @include filter-gradient($footer-background-c1, $footer-background-c2, horizontal);
+  // background-image: linear-gradient(left, $footer-background-c1 0%, $footer-background-c2 100%);
+  // -webkit-transition: all 0.3s ease-in;
+  // -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-  border-top: solid 1px #ddd;
-  &:hover {
-    box-shadow: 0 0 2px rgba(136, 136, 136, 0.28);
+
+  .row {
+    padding: 25px 10px;
+    background: #fff;
+    box-shadow: 0 0 5px #efefef;
+    border-top: solid 1px #f8f8f8;
   }
+
   .social-list li a {
     position: relative;
     z-index: 22;

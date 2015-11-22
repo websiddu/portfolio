@@ -1,6 +1,6 @@
 .project-page {
   background-color: #fff;
-  box-shadow: 0 0 5px #D0D0D0;
+  box-shadow: 0 0 5px #EAEAEA;
   overflow: hidden;
   position: relative;
 }
@@ -10,7 +10,7 @@
   height: 220px;
   position: relative;
   background: transparent url("../images/default_banner.png") 0 0 no-repeat;
-  margin: -25px -25px 0;
+  margin: -25px -26px 0;
   .project-show-banner-img {
     height: 220px;
     position: absolute;
@@ -269,7 +269,7 @@ a[target="_blank"]:after {
     position: fixed;
     font-size: 20px;
     padding-top: 10px;
-    top: 67px;
+    top: 65px;
     bottom: auto;
     left: 0;
     right: 0;

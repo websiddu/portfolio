@@ -5,15 +5,20 @@ websidduApp.config(($routeProvider, $locationProvider) ->
     templateUrl: "views/index.html"
     controller: "MainCtrl"
     title: "Home – Siddhartha Gudipati, UX designer & Creative technologist"
-    # resolve:
-    #   projects: ($q, Project) ->
-    #     deferred = $q.defer()
-    #     Project.query((data) ->
-    #       deferred.resolve data
-    #       , (data) ->
-    #         deferred.reject "Unsuccess"
-    #     )
-    #     deferred.promise
+    resolve:
+      projects: ($q, Project, $http) ->
+        deferred = $q.defer()
+
+        Project.query((data) ->
+          deferred.resolve data
+        , (err) ->
+          #Fail safe :)
+          $http.get 'data/projects.json'
+            .success (result) ->
+              deferred.resolve result
+        )
+
+        return deferred.promise
   )
   .when("/about",
     templateUrl: "views/about.html"
