@@ -1,19 +1,16 @@
-<main class="maincontent" role="main" id="main">
-  <div class="row">
-    <div class="project-page">
-      <div class="large-12 columns">
-        <article class="page" role="article">
-          <header class="project-show-banner">
-            <div class="project-show-banner-img fadeIn animated" ng-style="{{style}}">
-            </div>
-            <h1 class="project-page-heading left fadeInUp animated" id="prj-title">
+<div class="project-page">
+  <article role="article">
+    <header class="project-show-banner">
+      <div class="project-show-banner-img fadeIn a4" ng-style="{{style}}">
+      </div>
+      <h1 class="project-page-heading left fadeInUp animated" id="prj-title">
               <span class="project-heading-seg-text">{{project.title}} </span>
               <b class="project-page-heading-sec"></b>
             </h1>
-          </header>
-          <br>
-          <div class="project-show-meta">
-<!--             <br />
+    </header>
+    <br>
+    <div class="project-show-meta">
+      <!--             <br />
             <div class="row">
               <div class="large-9 small-12 columns">
                 <div class="project-show-url">
@@ -39,82 +36,78 @@
                 <li ng-repeat="tag in project.tags.split(',')"> {{tag}} </li>
               </ul>
             </div> -->
-          </div>
-          <div class="project-show-description" ng-bind-html="project.description">
-          </div>
-          <div class="project-show-screenshots" ng-if="project.screenshots != ''">
-            <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 portfolio-grid">
-              <li ng-repeat="screenshot in project.screenshots.split(',')">
-                <a href="{{screenshot}}" class="scrSht">
-                  <img ng-src="{{screenshot}}" alt="{{screenshot}}">
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="center">
-            <div class="voteup-anim" ng-class="{voted: isVoted}">
-              <a href="" ng-click="voteUp()" class="voteup">
-                <em class="icon icon-thumbsup"></em>
-                <b>{{project.votes}}</b>
-              </a>
-              <span class="sr-only">{{votes}} appreciation for this project.</span>
-              <span>{{votes}} </span>
+    </div>
+    <div class="project-show-description" ng-bind-html="project.description">
+    </div>
+    <div class="project-show-screenshots" ng-if="project.screenshots != ''">
+      <ul class="small-block-grid-2 mini-block-grid-1 large-block-grid-2 portfolio-grid">
+        <li ng-repeat="screenshot in project.screenshots.split(',')">
+          <a href="{{screenshot}}" class="scrSht">
+            <img ng-src="{{screenshot}}" alt="{{screenshot}}">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="center">
+      <div class="voteup-anim" ng-class="{voted: isVoted}">
+        <a href="" ng-click="voteUp()" class="voteup">
+          <em class="icon icon-thumbsup"></em>
+          <b>{{project.votes}}</b>
+        </a>
+        <span class="sr-only">{{votes}} appreciation for this project.</span>
+        <span>{{votes}} </span>
+      </div>
+    </div>
+    <footer class="clear prj-nav" role="contentinfo">
+      <div class="row">
+        <div class="large-6 small-12 columns">
+          <a href="projects/{{project.previousProject._id.$oid}}" ng-if="project.previousProject && !project.previousProject.archived">
+            <b>{{project.previousProject.title}}</b>
+            <br> &larr; Previous project</a>
+        </div>
+        <div class="large-6 small-12 columns next-prj">
+          <a href="projects/{{project.nextProject._id.$oid}}" ng-if="project.nextProject && !project.nextProject.archived">
+            <b>{{project.nextProject.title}}</b>
+            <br> Next project &rarr;</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+</div>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="pswp__bg"></div>
+  <div class="pswp__scroll-wrap">
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <div class="pswp__counter"></div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--share" title="Share"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
             </div>
           </div>
-          <footer class="clear prj-nav" role="contentinfo">
-            <div class="row">
-              <div class="large-6 small-12 columns">
-                <a href="projects/{{project.previousProject._id.$oid}}" ng-if="project.previousProject && !project.previousProject.archived">
-                  <b>{{project.previousProject.title}}</b>
-                  <br> &larr; Previous project</a>
-              </div>
-              <div class="large-6 small-12 columns next-prj">
-                <a href="projects/{{project.nextProject._id.$oid}}" ng-if="project.nextProject && !project.nextProject.archived">
-                  <b>{{project.nextProject.title}}</b>
-                  <br> Next project &rarr;</a>
-              </div>
-            </div>
-          </footer>
-        </article>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center"></div>
       </div>
     </div>
   </div>
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-      <div class="pswp__ui pswp__ui--hidden">
-        <div class="pswp__top-bar">
-          <div class="pswp__counter"></div>
-          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-          <button class="pswp__button pswp__button--share" title="Share"></button>
-          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div>
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-        </button>
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-        </button>
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
-<div ng-include="'views/partials/footer.html'"></div>
+</div>
