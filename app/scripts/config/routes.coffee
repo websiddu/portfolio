@@ -129,8 +129,9 @@ websidduApp.run [
   '$route'
   'ngProgressFactory'
   '$anchorScroll'
+  '$templateCache'
   '$timeout'
-  ($location, $rootScope, $route, ngProgressFactory, $anchorScroll, $timeout) ->
+  ($location, $rootScope, $route, ngProgressFactory, $anchorScroll, $templateCache, $timeout) ->
     history = undefined
     currentURL = undefined
     progressBar = ngProgressFactory.createInstance();

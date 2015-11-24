@@ -8,9 +8,19 @@
 // 'test/spec/**/*.js'
 
 module.exports = function(grunt) {
-  require('load-grunt-tasks')(grunt);
+
+  //require('grunt-angular-templates')(grunt);
+  //require('load-grunt-tasks')(grunt);
+
+
+  require('jit-grunt')(grunt, {
+    useminPrepare: 'grunt-usemin',
+    ngtemplates: 'grunt-angular-templates',
+    protractor: 'grunt-protractor-runner',
+    buildcontrol: 'grunt-build-control'
+  });
+
   require('time-grunt')(grunt);
-  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
     yeoman: {
@@ -223,6 +233,7 @@ module.exports = function(grunt) {
     /*concat: {
       dist: {}
     },*/
+
     rev: {
       dist: {
         files: {
@@ -241,13 +252,22 @@ module.exports = function(grunt) {
         dest: '<%= yeoman.dist %>'
       }
     },
+    // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+      css: ['<%= yeoman.dist %>/{,*/}*.css'],
+      js: ['<%= yeoman.dist %>/{,*/}*.js'],
       options: {
-        dirs: ['<%= yeoman.dist %>']
+        dirs: ['<%= yeoman.dist %>'],
+        // This is so we update image references in our ng-templates
+        patterns: {
+          js: [
+            [/(assets\/images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
+          ]
+        }
       }
     },
+
     imagemin: {
       dist: {
         files: [{
@@ -302,6 +322,35 @@ module.exports = function(grunt) {
         }]
       }
     },
+
+    ngtemplates: {
+      options: {
+        // This should be the name of your apps angular module
+        module: 'websidduApp',
+        htmlmin: {
+          collapseBooleanAttributes: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: true,
+          removeEmptyAttributes: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true
+        },
+        usemin: 'scripts/scripts.js'
+      },
+      main: {
+        cwd: '<%= yeoman.app %>',
+        src:  ['views/*.html', 'views/partials/*.html'],
+        dest: '.tmp/templates.js'
+      },
+      tmp: {
+        cwd: '.tmp',
+        src:  ['views/*.html', 'views/partials/*.html'],
+        dest: '.tmp/tmp-templates.js'
+      }
+    },
+
+
     // Put files not handled in other tasks here
     copy: {
       dist: {
@@ -447,6 +496,7 @@ module.exports = function(grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
+    'ngtemplates',
     'concat',
     'copy:dist',
     //'cdnify',

@@ -24,11 +24,6 @@
   <!-- endbuild -->
   <link href='https://fonts.googleapis.com/css?family=Alegreya:400' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
-  <style>
-  .f-topbar-fixed {
-    padding-top: 67px;
-  }
-  </style>
 </head>
 
 <body class="f-topbar-fixed" ng-controller="appCtrl">
@@ -46,6 +41,7 @@
     <main class="maincontent" role="main" id="main">
       <div class="row">
         <div class="main-page">
+
           <div class="large-12 columns" style="position: relative;">
             <div class="fade page" ng-view>
             </div>
@@ -115,6 +111,10 @@
   ga('create', 'UA-55363605-3', 'auto');
   //ga('send', 'pageview');
   </script>
+          <style>
+          .f-topbar-fixed { padding-top: 65px; }
+          </style>
+
 </body>
 
 </html>

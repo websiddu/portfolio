@@ -106,7 +106,7 @@ body {
 
 .main-page {
   background-color: #fff;
-  box-shadow: 0 0 5px #EAEAEA;
+  // box-shadow: 0 0 5px #EAEAEA;
   overflow: hidden;
   position: relative;
   padding: 0 20px;
@@ -142,7 +142,9 @@ html {
   // background-image: linear-gradient(left, $header-background-c1 0%, $header-background-c2 100%);
   .top-bar {
     background-color: $header-background-c1;
-        box-shadow: 0 0 5px #efefef;
+    // box-shadow: 0 0 5px #EAEAEA;
+    box-shadow: 0 1px 1px -1px rgba(214, 214, 214, 0.89);
+
     // border-bottom: solid $header-border-size $header-border-color;
   }
 }
