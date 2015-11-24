@@ -110,6 +110,7 @@ body {
   overflow: hidden;
   position: relative;
   padding: 0 20px;
+  min-height: 500px;
 }
 
 @media #{$small-max} {

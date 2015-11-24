@@ -1,68 +1,58 @@
-<main class="maincontent" role="main" id="main">
-  <div class="row">
-    <div class="main-page">
-      <div class="large-12 columns">
-        <section class="landing-pag">
-          <div class="l-dc-area row">
-            <div class="l-avatar large-9 small-12 columns animated">
-              <div class="l-dc-intro animated fadeIn">
-                <br><br>
-                <h1 class="l-n text">Hello, I am Sid...</h1>
-                <div class="l-d">
-                  <span class="sr-only">I'm a UX Designer creating cool stuff on the Internet that make sense and delight users.</span>
-                  <p aria-hidden='true' style="max-width: 450px;">
-                    I'm a <strong class="text-normal">UX Designer </strong> and Creative technologist creating digital products that <span class="dotted">make sense</span> and <span class="delight">
+<div class="l-dc-area row">
+  <div class="l-avatar large-9 small-12 columns animated">
+    <div class="l-dc-intro animated fadeIn">
+      <br>
+      <br>
+      <h1 class="l-n text fadeInUp a4">Hello, I am Sid...</h1>
+      <div class="l-d fadeInUp a4">
+        <span class="sr-only ">I'm a UX Designer creating cool stuff on the Internet that make sense and delight users.</span>
+        <p aria-hidden='true' style="max-width: 450px;">
+          I'm a <strong class="text-normal">UX Designer </strong> and Creative technologist creating digital products that <span class="dotted">make sense</span> and <span class="delight">
             <span class="hide egg">Seems like you’re enjoying yourself!</span><span class="animate">
             <span>d</span><span>e</span><span>l</span><span>i</span><span>g</span><span>h</span><span>t</span></span>
-                    </span> users.
-                    <br>
-                  </p>
-                  <p>
-                    I <a href="https://dribbble.com/websiddu" target="_blank" title="Sid's design skills show off.">sketch</a>, <a href="https://github.com/websiddu" title="Sid's github account." target="_blank">build</a>, <a href="http://cook.websiddu.com/" title="Sid's cooking skills show off." target="_blank">cook</a>, <a href="https://www.flickr.com/photos/websiddu" title="Sid's photography." target="_blank"><span aria-hidden='true'>click</span> <span class="sr-only">click photos</span></a> and learn…
-                  </p>
-                </div>
-                <!-- <div class="center">
+          </span> users.
+          <br>
+        </p>
+        <p class="fadeInup a4">
+          I <a href="https://dribbble.com/websiddu" target="_blank" title="Sid's design skills show off.">sketch</a>, <a href="https://github.com/websiddu" title="Sid's github account." target="_blank">build</a>, <a href="http://cook.websiddu.com/" title="Sid's cooking skills show off." target="_blank">cook</a>, <a href="https://www.flickr.com/photos/websiddu" title="Sid's photography." target="_blank"><span aria-hidden='true'>click</span> <span class="sr-only">click photos</span></a> and learn…
+        </p>
+      </div>
+      <!-- <div class="center">
         <a href="/portfolio" class="small l-button">Check out my portfolio &rarr;</a>
       </div> -->
-              </div>
-            </div>
-          </div>
-          <br>
-          <br>
-          <ul role="region" aria-relevant="Project filtered" class="portfolio-grid">
-            <li ng-repeat="project in projects | filter:searchText | filter:selectedSize track by $index" data-src='enter bottom and move 20px after 0.5s' style="order: {{$index}};" ng-if="!project.archived" class="project-item zoom {{project.size}}">
-              <a href="projects/{{project.id.$oid}}" class="project-link zoomIn a{{($index % 3)+1}}">
-                <div class="project" class="">
-                  <div class="project-thumb" ng-style='projectThumb(project.thumbnail)'></div>
-                  <div class="project-title">
-                    <h2><span class="sr-only">Project Name: </span>{{project.title}}</h2>
-                    <small><span class="sr-only">Project Tags: </span>{{project.shortDescription}}</small>
-                  </div>
-                  <div class="tick tip-top tip-center" ng-if='projectSeen("/projects/"+ project.id.$oid)' title="You have seen this project!" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24.3 14.6" enable-background="new 0 0 24.3 14.6" xml:space="preserve" style='height: 11px;'>
-                      <g>
-                        <path fill="#fff" d="M0.1,7.7C0,7.9,0,8.1,0.1,8.3c0,0,6.1,6.1,6.3,6.1c0.1,0,0.5,0,0.5,0C7.2,14,15.5,2.5,15.5,2.5
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<ul role="region" aria-relevant="Project filtered" class="portfolio-grid">
+  <li ng-repeat="project in projects | filter:searchText | filter:selectedSize track by $index" data-src='enter bottom and move 20px after 0.5s' style="order: {{$index}};" ng-if="!project.archived" class="project-item zoom {{project.size}}">
+    <a href="projects/{{project.id.$oid}}" class="project-link fadeInUp a{{($index % 3)+3}}">
+      <div class="project" class="">
+        <div class="project-thumb" ng-style='projectThumb(project.thumbnail)'></div>
+        <div class="project-title">
+          <h2><span class="sr-only">Project Name: </span>{{project.title}}</h2>
+          <small><span class="sr-only">Project Tags: </span>{{project.shortDescription}}</small>
+        </div>
+        <div class="tick tip-top tip-center" ng-if='projectSeen("/projects/"+ project.id.$oid)' title="You have seen this project!" data-tooltip data-options="disable_for_touch:true" aria-haspopup="true">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24.3 14.6" enable-background="new 0 0 24.3 14.6" xml:space="preserve" style='height: 11px;'>
+            <g>
+              <path fill="#fff" d="M0.1,7.7C0,7.9,0,8.1,0.1,8.3c0,0,6.1,6.1,6.3,6.1c0.1,0,0.5,0,0.5,0C7.2,14,15.5,2.5,15.5,2.5
                         c0.1-0.1,0.6-0.8,0.9-1.3c0.3-0.7,0.4-1.1,0-1.2c-0.4-0.1-1,0.5-1.4,0.8c0,0-6.1,6.8-7.9,8.6C6.8,9.6,6.4,9.7,6.1,9.5L2.3,7.1
                       C2.2,7,1.1,6.5,1.1,6.5C1,6.5,0.8,6.6,0.7,6.7L0.1,7.7z"></path>
-                        <path fill="#fff" d="M10.6,11.1c0,0,2.5,2.7,3.5,3.4c0.2,0.1,0.4,0,0.5,0l0,0c0.2,0,8.6-11.9,8.6-11.9c0.1-0.1,0.6-0.8,0.9-1.3
+              <path fill="#fff" d="M10.6,11.1c0,0,2.5,2.7,3.5,3.4c0.2,0.1,0.4,0,0.5,0l0,0c0.2,0,8.6-11.9,8.6-11.9c0.1-0.1,0.6-0.8,0.9-1.3
                         c0.3-0.7,0.4-1.1,0-1.2c-0.4-0.1-1,0.5-1.4,0.8c0,0-6.2,6.9-7.9,8.6c-0.1,0.1-0.3,0.3-0.4,0.4c-0.2,0-0.3-0.2-0.5-0.3l-1.4-0.9
                       L10.6,11.1z"></path>
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <br>
-          <br>
-          <br>
-          <br>
-        </section>
+            </g>
+          </svg>
+        </div>
       </div>
-    </div>
-</main>
+    </a>
+  </li>
+</ul>
+<br>
+<br>
+<br>
+<br>
 <!-- <div class="landing-chart" aria-hidden='true'></div> -->
-<div class="landing-footer">
-  <div ng-include="'views/partials/footer.html'"></div>
-</div>
+
