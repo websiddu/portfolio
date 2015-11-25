@@ -142,7 +142,7 @@
   color: #999;
 }
 
-.search input[type="text"] {
+.search  .serachbox {
   clear: both;
   font-weight: 200;
   padding-left: 10px;
@@ -150,7 +150,7 @@
   box-shadow: none;
 }
 
-.search input[type="text"]:focus {
+.search .serachbox:focus {
   border-color: #ccc;
 }
 
