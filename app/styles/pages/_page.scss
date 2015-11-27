@@ -24,11 +24,6 @@ $g3-color2: #9ec2fe;
   color: $muted-color;
 }
 
-.about-text p {
-  font-size: 16px;
-  line-height: 1.6;
-  font-weight: 200;
-}
 
 .seciton-hedading {
   font-size: 19px;
@@ -96,56 +91,13 @@ $g3-color2: #9ec2fe;
   }
 }
 
-.work-timeline ul {
-  list-style-type: none;
-  margin-left: 10px;
-  padding-left: 15px;
-  border-left: solid 1px #ddd;
-}
-
-.work-timeline ul li {
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.work-timeline ul li:before {
-  content: '';
-  height: 11px;
-  width: 11px;
-  background: #FFF;
-  border: solid 1px #DDD;
-  border-radius: 100%;
-  position: absolute;
-  top: 10px;
-  left: -21px;
-}
-
-.work-timeline ul li h5 {
-  margin: 0;
-  font-size: 17px;
-  font-weight: normal;
-  color: #43434b;
-}
-
-.work-timeline ul li span {
-  font-size: 13px;
-  font-weight: 200;
-  color: #888;
-}
-
-.work-timeline ul li h6 {
-  margin: 0;
-  color: #888;
-  font-weight: normal;
-}
-
-.work-timeline ul li strong {}
 
 .landing-chart {
   width: 100%;
+  margin: -10px 0 0 -30px;
   height: 210px;
   position: relative;
-  z-index: -1;
+  // z-index: -1;
   opacity: 0.7;
   &:hover {
 

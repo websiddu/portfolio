@@ -6,8 +6,8 @@
   clear: both;
   height: 220px;
   position: relative;
-  background: transparent url("../images/default_banner.png") 0 0 no-repeat;
-  margin: 0px -36px 0;
+  background: transparent url("../images/default_banner.png") center center no-repeat;
+  margin: 0px -51px 0;
   .project-show-banner-img {
     height: 220px;
     position: absolute;
@@ -104,6 +104,22 @@ $bq-text-color: #434A54;
   > ol, > ul {
     margin-left: 30px;
   }
+  a:not(.plain) {
+    font-weight: normal;
+    background-image: linear-gradient($primary-color 0%, $primary-color 100%);
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    background-position: 0 90%;
+    text-shadow: 2px 0 #fff,
+                 2px 0 #fff,
+                 1px 0 #fff,
+                -1px 0 #fff,
+                -2px 0 #fff,
+                -2px 0 #fff;
+    &:hover {
+      background-image: linear-gradient($hover-color 0%, $hover-color 100%);
+    }
+  }
   pre {
     font-weight: normal;
     padding: 10px 20px;
@@ -183,7 +199,7 @@ $tg2: #ABB6EF;
   background: #fff;
 }
 
-a[target="_blank"]:after {
+a[target="_blank"]:not(.plain):after {
   content: url("../images/new_tab.svg");
   vertical-align: -1px;
   display: inline-block;
@@ -195,12 +211,15 @@ a[target="_blank"]:after {
 //   content: url("../images/new_tab.png");
 // }
 
-.social-list, .builton, .l-dc-intro {
+
+
+.social-list, .builton, .l-dc-intro, .now-card-img, .no-a-icon {
   a[target="_blank"]:after {
     content: '';
     margin-left: 0;
     height: 0;
     width: 0;
+    display: none;
   }
 }
 
@@ -230,7 +249,7 @@ a[target="_blank"]:after {
   //background: rgba(0, 0, 0, 0.5);
   color: #fff;
   margin: 0;
-  padding: 12px 350px 12px 180px;
+  padding: 12px 350px 12px 210px;
   font-size: 34px;
   font-weight: normal;
   line-height: 1;
@@ -272,20 +291,21 @@ a[target="_blank"]:after {
     right: 0;
     padding-bottom: 10px;
     z-index: 1030;
-    max-width: 78.66667rem;
+    max-width: 85rem;
     background: rgba(0, 0, 0, 0.5);
     margin: 0 auto;
   }
 }
 
 .project-page section {
-  margin-right: 270px;
+  margin-right: 300px;
   margin-left: 160px;
 }
 
 .section-body {
   margin-bottom: 30px;
   font-size: 17px;
+  position: relative;
 }
 
 .project-page section p {
@@ -303,8 +323,12 @@ a[target="_blank"]:after {
   border-radius: 4px;
   background: #43434A;
   margin-bottom: 25px;
+
   &.yahoo {
     background: rgba(100, 61, 187, 0.81);
+  }
+  &.about {
+    background: $primary-color;
   }
   &.green {
     background: #80AB51;
@@ -369,7 +393,7 @@ aside .metadata {
 }
 
 .project-page aside {
-  width: 230px;
+  width: 240px;
   float: right;
   font-size: 16px;
 }
