@@ -398,65 +398,6 @@ aside .metadata {
   font-size: 16px;
 }
 
-@media #{$small-max} {
-  .project-page {
-    padding: 0;
-  }
-  .project-page-heading {
-    padding: 12px 10px;
-    &.sticky-nav {
-      top: 65px;
-    }
-  }
-  .project-page aside {
-    float: none;
-    width: 100%;
-    font-size: 16px;
-    transition: all 0.3s ease-in;
-  }
-  .project-page section {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.5;
-  }
-  .project-page blockquote.full {
-    padding: 10px 40px;
-  }
-  .project-page-heading {
-    padding: 14px 35px;
-    font-size: 30px;
-    &.sticky-nav {
-      margin-left: 0;
-      left: 0;
-      right: 0;
-    }
-  }
-  .project-show-meta {
-    padding: 0;
-  }
-  .project-page section .section-heading {
-    float: none;
-    text-align: left;
-    margin: 0;
-    display: block;
-    font-size: 18px;
-  }
-  aside .metadata {
-    margin-bottom: 15px;
-    transition: all 0.3s ease-in;
-  }
-  .metadata dd {
-    display: inline;
-    &:after {
-      content: ', ';
-    }
-    &:last-child {
-      &:after {
-        content: '';
-      }
-    }
-  }
-}
 
 .voteup {
   height: 80px;
@@ -585,7 +526,69 @@ aside .metadata {
   }
 }
 
+
+
+
 @media #{$small-max} {
+  .main-page {
+    padding: 0 20px;
+  }
+
+  .project-page-heading {
+    padding: 12px 10px;
+    &.sticky-nav {
+      top: 65px;
+    }
+  }
+  .project-page aside {
+    float: none;
+    width: 100%;
+    font-size: 16px;
+    transition: all 0.3s ease-in;
+  }
+  .project-page section {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .project-page blockquote.full {
+    padding: 10px 40px;
+  }
+  .project-page-heading {
+    padding: 14px 35px;
+    font-size: 30px;
+    &.sticky-nav {
+      margin-left: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  .project-show-meta {
+    padding: 0;
+  }
+  .project-page section .section-heading {
+    float: none;
+    text-align: left;
+    margin: 0;
+    display: block;
+    font-size: 18px;
+  }
+  aside .metadata {
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in;
+  }
+  .metadata dd {
+    display: inline;
+    &:after {
+      content: ', ';
+    }
+    &:last-child {
+      &:after {
+        content: '';
+      }
+    }
+  }
+
   .prj-nav {
     margin: 10px 0 20px;
     text-align: center;
@@ -593,4 +596,24 @@ aside .metadata {
   .next-prj {
     text-align: center;
   }
+
+}
+
+@media #{$medium-max} {
+ .project-page section {
+    margin-left: 10px;
+ }
+ .project-page section .section-heading {
+    width: auto;
+    float: none;
+    clear: both;
+    margin: 0;
+ }
+
+ .project-show-description blockquote.full {
+    padding: 15px 50px;
+ }
+ .project-page-heading {
+    padding: 12px 55px;
+ }
 }

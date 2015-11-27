@@ -175,6 +175,7 @@ $mini-max: "only screen and (max-width: #{$mini-screen - 1})";
 $small: "only screen and (min-width: #{$small-screen})";
 $small-max: "only screen and (max-width: #{$small-screen - 1})";
 $medium: "only screen and (min-width: #{$medium-screen})";
+$medium-max: "only screen and (max-width: #{$medium-screen - 100})";
 $large: "only screen and (min-width: #{$large-screen})";
 $landscape: "only screen and (orientation: landscape)";
 $portrait: "only screen and (orientation: portrait)";
