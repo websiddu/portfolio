@@ -4,7 +4,7 @@ websidduApp.config(($routeProvider, $locationProvider) ->
   .when("/",
     templateUrl: "views/index.html"
     controller: "MainCtrl"
-    title: "Home – Siddhartha Gudipati, UX designer & Creative technologist"
+    title: "Home – Siddhartha Gudipati, Full-stack designer"
     resolve:
       projects: ($q, Project, $http) ->
         deferred = $q.defer()
