@@ -1,51 +1,210 @@
-<h1 class="page-heading">About</h1>
-<div class="row">
-  <div class="large-8 small-12 columns">
-    <div class="about-img">
-      <p>
-        <img src="images/me.jpg" alt="A banner picture with green background and Sid looking to the right..">
-      </p>
-    </div>
-    <h3 class="page-sub-heading">I'm a UX Designer &amp; Front-end Engineer.</h3>
-    <div class="about-text">
-      <p class="">
-        I am a first year graduate student doing masters in <a href="http://www.hcde.washington.edu/" target="_blank">Department of Human Centered Design &amp; Engineering (HCDE)</a> at <a href="http://www.washington.edu/">University of Washington</a>.
-      </p>
-      <p class="">
-        Prior to joining Udub, I worked as a Front-end engineer &amp; UX Designer at <a href="http://www.tcs.com/about/tcs_difference/innovation/tcs_labs/Pages/default.aspx#chennai" target="_blank">Web 2.0</a> Innovation Labs, <a href="http://tcs.com" target="_blank"> Tata Consultancy Services</a>, Chennai for 2 years and 10 months.
-      </p>
-      <p class="">
-        Apart from coding, designing and research, I enjoy pencil sketching, cooking and photography.
-      </p>
-      <div class="side-social long">
-        <ul class="social-list long">
-          <li ng-repeat="item in socialprofiles | orderBy:'name'" class="a{{$index+1}} zoomIn">
-            <a ng-href="{{item.url}}" target="_blank" class="c{{($index % 8) + 1}}"> <em class="icon icon-{{item.icon}}"></em>
-              <span class="sr-only">{{item.name}}</span>
-            </a>
-          </li>
-        </ul>
+<div class="project-page ng-scope">
+  <article role="article">
+    <header class="project-show-banner">
+      <div class="project-show-banner-img fadeIn a4" style="background: url(images/me.jpg) 50% 50% / cover no-repeat transparent">
       </div>
-      <br>
-      <p class="muted light" class="">
-        I am currently searching for full-time positions to help me accomplish my zeal for creating delightful and intuitive experiences, in UX design and Front-end Engineering.
-      </p>
+      <h1 class="project-page-heading left fadeInUp animated" id="prj-title">
+        <span class="project-heading-seg-text ng-binding">About me</span>
+        <b class="project-page-heading-sec"></b>
+      </h1>
+    </header>
+    <br>
+    <div class="project-show-meta">
     </div>
-  </div>
-  <div class="large-4 small-12 columns">
-    <div class="work-timeline">
-      <ul>
-        <li ng-repeat="job in jobs" class="a{{$index+1}} slideInRight">
-          <span>{{job.time}}</span>
-          <h5>{{job.position}}</h5>
-          <h6>{{job.company}}, {{job.location}} </h6>
-        </li>
-      </ul>
-      <div class="about-text a9 slideInRight">
-        <p>
-          Check my <a href="http://www.linkedin.com/in/websiddu" target="_blank">Linkedin</a> profile for more details.
-        </p>
+    <div class="project-show-description ng-binding">
+      <blockquote class="full">
+        I'm a Full stack designer. I create digital expirences that make sense and delight users. I am driven by empathy, curiosity and an obsessive attention to detail.
+      </blockquote>
+      <div class="row">
+        <div class="large-12 columns">
+          <aside class="about">
+            <dl class="metadata">
+              <dt> Skills </dt>
+              <dd>User research</dd>
+              <dd>Usability testing</dd>
+              <dd>User scenarios</dd>
+              <dd>Persona creation</dd>
+              <dd>Wireframing</dd>
+              <dd>Visual design</dd>
+              <dd>Front-end development</dd>
+              <dd>Rapid prototyping</dd>
+              <dd>Accessibility</dd>
+              <dd>Information visualization</dd>
+            </dl>
+            <dl class="metadata">
+              <dt> Design Tools </dt>
+              <dd> Pen &amp; Paper </dd>
+              <dd> Sketch </dd>
+              <dd> Adobe Photoshop </dd>
+              <dd> Adobe Illustrator </dd>
+            </dl>
+            <dl class="metadata">
+              <dt> Prototyping Tools </dt>
+              <dd> HTML, CSS & JS </dd>
+              <dd> Framer.js </dd>
+              <dd> inVision </dd>
+              <dd> Pixate </dd>
+              <dd> AxureRP </dd>
+              <dd> After effects </dd>
+            </dl>
+            <dl class="metadata">
+              <dt> Dev Tools </dt>
+              <dd> HTML & CSS  </dd>
+              <dd> JavaScript </dd>
+              <dd> Angular, React, Ember, D3 </dd>
+              <dd> Node.js </dd>
+              <dd> Ruby on Rails </dd>
+              <dd> Git </dd>
+              <dd> Grunt, bower, yeoman </dd>
+            </dl>
+            <dl class="metadata">
+              <dt> Gadgets  </dt>
+              <dd> MacBook Pro </dd>
+              <dd> Nexus 5 </dd>
+              <dd> Arduino Uno </dd>
+              <dd> Nikon D7200 </dd>
+            </dl>
+          </aside>
+
+          <section>
+            <h5 class="section-heading">Summary</h5>
+            <div class="section-body">
+              <p>
+                My name is Siddhartha Gudipati. I consider myself a FullStack Designer/UX Unicorn(research, user experience, interaction designer, and a front-end prototyper). I hold a degree both in Computer Science and Human-Centered Design and Engineering. I enjoy designing systems and delightful expirences around.
+              </p>
+            </div>
+          </section>
+          <section>
+            <h5 class="section-heading">TL;DR</h5>
+            <div class="section-body">
+              <ul>
+                <li>I love designing products. </li>
+                <li>I have 3+ years experience in UX Design and Front-end Engineering. </li>
+                <li>I have degrees both in CS and HCI </li>
+                <li>I am a UX Unicorn </li>
+                <li>I am looking for a full time job </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h5 class="section-heading">Story</h5>
+            <div class="section-body">
+              <p>
+                I did my bachelor's in Computer Science and Engineering. During my undergrad I did many freelance projects and even run my own web design agency for a period. Taking my experince in design & development, I joining Web 2.0 Innovation labs, TCS Chennai as UX Designer &amp; Front-end developer. There I contributed to research, design, prototype, as well as front-end development for 3 years. However, I wanted to get more formal education in the user-centered design process for creating enhanced user experience. With this in mind, I joined Human-Centered Design and Engineering (HCDE) MS program at the University of Washington.
+              </p>
+              <p>
+                Having a Computer Science background, being a UX designer &amp; Front-end developer for 3+ years and a master’s degree in HCDE make me a UX Unicorn.I am looking forward to emerging my zeal for creating delightful and intuitive user experience design as well as interaction design.
+              </p>
+              <p>
+                Feel free to explore my LinkedIn account to learn more about my work and academic experience, or reach out to me directly via the email address on my resume.
+              </p>
+            </div>
+          </section>
+          <section>
+            <h5 class="section-heading">Writing</h5>
+            <div class="section-body">
+              <p>
+                I write about life, technology and more. Here are some of my recent writings.
+              </p>
+              <ol>
+                <li><a target="_blank" href="http://blog.websiddu.com/how-i-implemented-accessibility-for-my-portfolio-website/">How I implemented accessibility for my portfolio website?</a></li>
+                <li>
+                  <a href="http://blog.websiddu.com/integrating-your-node-app-with-uw-saml/" target="_blank">Integrating node apps with UW's SAML</a>
+                </li>
+              </ol>
+              <p> Visit my personal <a href="http://blog.websiddu.com" target="_blank">blog</a> to see more posts. </p>
+            </div>
+          </section>
+          <section>
+            <h5 class="section-heading">Now</h5>
+            <div class="section-body">
+              <div class="row">
+                <div class="large-4 columns">
+                  <div class="now-card reading no-a-icon">
+                    <a target="_blank" class="no-icons" href="http://www.amazon.com/Lean-UX-Applying-Principles-Experience/dp/1449311652">
+                      <div>
+                        <h3 class="now-card-title">NOW READING</h3>
+                        <img src="http://ecx.images-amazon.com/images/I/81qJb1LmkBL.jpg" alt="">
+                        <h5 class="now-card-subtitle"> Lean UX  </h5>
+                        <p class="now-card-desc"><small class="muted"> by </small> Jeff Gothelf</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="large-4 columns">
+                  <div class="now-card music">
+                    <h3 class="now-card-title">NOW PLAYING</h3>
+                    <div class="now-card-img">
+                      <img ng-src="{{music.image[3]['#text']}}" alt="{{music.name}}" ng-if="music.image[3]['#text']">
+                      <img ng-src="images/no-cover.png" alt="{{music.name}}" ng-if="!music.image[3]['#text']">
+                      <a ng-href="{{music.url}}" target="_blank">
+                        <div class="now-card-hover">
+                          <svg focusable="false" width="21" height="20" viewbox="0 0 21 20" xmlns="http://www.w3.org/2000/svg" class="icon-playbutton">
+                            <path class="_fill-color" d="M10.5 0C4.977 0 .5 4.477.5 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm-2 14V6l6 4-6 4z" fill="#ffffff" fill-rule="evenodd" opacity="1"></path>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <h5 class="now-card-subtitle" ng-bind-html="music.name"></h5>
+                    <p class="now-card-desc"><small class="muted">by </small> <span ng-bind-html="music.artist['#text']"></span></p>
+                  </div>
+                </div>
+                <div class="large-4 columns">
+                  <div class="now-card learning">
+                    <h3 class="now-card-title">NOW LEARNING</h3>
+                    <img src="http://res.cloudinary.com/websiddu/image/upload/v1448502746/framer_fma2cw.png" alt="">
+                    <h5 class="now-card-subtitle"> Framer.js Studio </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h5 class="section-heading">Hobbies</h5>
+            <div class="section-body">
+              <p>
+                I have many hobbies. If you ask me to name the top 3, I would say <a href="http://cook.websiddu.com" target="_blank">Cooking</a>, <a href="https://www.flickr.com/photos/websiddu" target="_blank">Photography</a> and <a href="https://dribbble.com/websiddu" target="_blank">Sketching</a>.
+              </p>
+              <p>
+                I feel cooking helps me to sharpen my creativity. I cook Indian food mostly south Indian food. I also experiment by fusion of Indian, Chinese and American recipes.  Checkout my cooking blog <a href="http://cook.websiddu.com" target="_blank">here</a>.
+              </p>
+              <p>
+                I love photography, though I am an amateur some of the pictures that I took are appreciated my many. Checkout my photography skills <a href="https://www.flickr.com/photos/websiddu" target="_blank">here</a>.
+              </p>
+            </div>
+          </section>
+          <section>
+            <h5 class="section-heading">Open source</h5>
+            <div class="section-body">
+              I love contributing to open source projects and here is the graph showing my contributions over the past one year.
+              <div class="landing-chart">
+              </div>
+              <p>
+              <!-- And here is my calendar heat map scraped from github. -->
+              </p>
+              <div class="no-icons hide">
+                <a class="plain" target="_blank" href="http://github.com/websiddu"><img src="http://websiddu.herokuapp.com/githubimg.svg" alt=""></a>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h5 class="section-heading">About this site</h5>
+            <div class="section-body">
+              <p>
+                I hand-coded this website using different open source technologies like Angular.js, CSS, HTML, Ruby On Rails and Mongo DB. My primary goal is to utilize different open source free resource to build my portfolio. I wrote a detailed blogpost about how I built this website, don't forget to checkout the <a href="http://blog.websiddu.com/my-website-is-build-on-open-source/" target="_blank">blogpost here.</a>
+              </p>
+              <p>
+                This is website is completely <span class="text-normal">responsive and accessible</span>. I strived hard for making this website accessible. I wrote a <a href="http://blog.websiddu.com/how-i-implemented-accessibility-for-my-portfolio-website/" target="_blank">blogpost</a> about how I made my portfolio website accessible. Most of the development tasks are automated using grunt and python scripts. You can checkout the source code of my portoflio <a href="http://github.com/websiddu/websiddu" target="_blank">here</a>.
+              </p>
+              <p>
+                <span class="text-normal">PS:</span> There are many hidden fun easter eggs in this site have fun finding them :)
+              </p>
+            </div>
+          </section>
+
+        </div>
       </div>
     </div>
-  </div>
+  </article>
 </div>
