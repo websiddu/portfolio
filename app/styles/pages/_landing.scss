@@ -24,33 +24,6 @@ body {
   position: relative;
 }
 
-.landing-page {
-  margin: 20px 20px 0;
-}
-
-.l-avatar {
-
-  img {
-    height: 160px;
-    padding: 5px;
-    border-radius: 100%;
-    border: solid 5px #efefea;
-    background: #fff;
-
-    &:hover {
-      transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
-      -webkit-transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
-      -moz-transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
-      -o-transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
-      -ms-transform: rotate(9deg) scale(0.885) skew(1deg) translate(0px);
-    }
-  }
-}
-
-.l-design {
-  cursor: pointer;
-  text-align: right;
-}
 
 .l-d-d {
   font-size: 18px;
@@ -60,11 +33,73 @@ body {
 }
 
 .l-n {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 200;
   margin: 16px auto 7px;
   min-height: 40px;
   font-family: "Alegreya", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  small {
+    font-size: 25px;
+    border-bottom: dashed 1px #ddd;
+  }
+
+  .full-stack-card-link {
+    position: relative;
+    cursor: pointer;
+  }
+  .full-stack-card {
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    position: absolute;
+    width: 400px;
+    background: $primary-color;
+    z-index: 333;
+    left: -193px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #FFF;
+    padding: 20px;
+    box-shadow: 0 9px 26px -10px #656565;
+    border-radius: 4px;
+    &:before {
+      content: '';
+      height: 0;
+      width: 0;
+      position: absolute;
+      border: solid 10px transparent;
+      margin-left: -5px;
+      top: -20px;
+      left: 50%;
+      border-bottom: solid 10px $primary-color;
+    }
+  }
+}
+
+
+.tip { }
+
+.tip.ng-move,
+.tip.ng-enter,
+.tip.ng-leave {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.tip.ng-leave.ng-leave-active,
+.tip.ng-move,
+.tip.ng-enter {
+    -webkit-animation-name: flipOutX;
+  animation-name: flipOutX;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+
+.tip.ng-leave,
+.tip.ng-move.ng-move-active,
+.tip.ng-enter.ng-enter-active {
+      -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
 }
 
 .l-d  p {
