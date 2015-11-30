@@ -223,6 +223,7 @@
   .pswp--svg .pswp__button, .pswp--svg .pswp__button--arrow--left:before, .pswp--svg .pswp__button--arrow--right:before {
     background-image: url("../images/l/default-skin.svg");
   }
+
   .pswp--svg .pswp__button--arrow--left, .pswp--svg .pswp__button--arrow--right {
     background: none;
   }
@@ -556,56 +557,58 @@ a.pswp__share--download:hover {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
-
 
 @keyframes clockwise {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-
 @-webkit-keyframes donut-rotate {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
+
   50% {
     -webkit-transform: rotate(-140deg);
     transform: rotate(-140deg);
   }
+
   100% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
 }
-
 
 @keyframes donut-rotate {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
+
   50% {
     -webkit-transform: rotate(-140deg);
     transform: rotate(-140deg);
   }
+
   100% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
 }
-
 
 .pswp__ui {
   -webkit-font-smoothing: auto;
