@@ -12,7 +12,7 @@
     "angular-resource": "1.4.0",
     "angular-route": "1.4.0",
     "angular-sanitize": "1.4.0",
-    "angulartics": "~0.20.1",
+    "angulartics": "*",
     "d3": "*",
     "es5-shim": "~2.0.8",
     "jquery-mousewheel": "~3.1.12",
@@ -23,8 +23,8 @@
     "scrollReveal.js": "~2.1.0",
     "waypoints": "~3.1.1",
     "a11y_kit": "~0.0.4",
-    "angulartics": "*",
-    "angulartics-google-analytics": "*"
+    "angulartics-google-analytics": "*",
+    "angular-tooltips": "~1.0.4"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

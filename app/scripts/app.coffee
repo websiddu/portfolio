@@ -9,4 +9,5 @@
   "cfp.hotkeys"
   'angulartics'
   'angulartics.google.analytics'
+  '720kb.tooltips'
 ])

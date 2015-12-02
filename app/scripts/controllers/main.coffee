@@ -24,13 +24,6 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
     # "Done... replaying..."
   ]
 
-  $scope.toogleCardShow = ($event) ->
-    if $($event.target).hasClass('js-full-stack-card')
-      $scope.showCard = true
-
-  $scope.toogleCardShowHide = ($event) ->
-    if $($event.target).hasClass('js-full-stack-card')
-      $scope.showCard = false
 
   $scope.init = ->
     # _loadChart()

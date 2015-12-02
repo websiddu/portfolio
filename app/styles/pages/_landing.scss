@@ -49,28 +49,12 @@ body {
   }
   .full-stack-card {
     font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    position: absolute;
-    width: 400px;
-    background: $primary-color;
-    z-index: 333;
-    left: -193px;
+    width: 380px;
     font-size: 15px;
-    line-height: 1.55;
+    line-height: 1.43;
+    text-align: left;
     color: #FFF;
-    padding: 20px;
-    box-shadow: 0 9px 26px -10px #656565;
-    border-radius: 4px;
-    &:before {
-      content: '';
-      height: 0;
-      width: 0;
-      position: absolute;
-      border: solid 10px transparent;
-      margin-left: -5px;
-      top: -20px;
-      left: 50%;
-      border-bottom: solid 10px $primary-color;
-    }
+    padding: 10px;
   }
 }
 
@@ -87,8 +71,8 @@ body {
 .tip.ng-leave.ng-leave-active,
 .tip.ng-move,
 .tip.ng-enter {
-    -webkit-animation-name: flipOutX;
-  animation-name: flipOutX;
+    -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
 }
@@ -96,8 +80,8 @@ body {
 .tip.ng-leave,
 .tip.ng-move.ng-move-active,
 .tip.ng-enter.ng-enter-active {
-      -webkit-animation-name: flipInX;
-  animation-name: flipInX;
+      -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
 }
