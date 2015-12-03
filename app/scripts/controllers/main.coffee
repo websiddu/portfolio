@@ -1,5 +1,5 @@
 "use strict"
-angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, $timeout, constants, $http, projects) ->
+angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $location, $timeout, constants, $http, projects, hotkeys) ->
 
   $scope.projectThumb = (img) ->
     "background-image": "url(#{img})"
@@ -25,7 +25,19 @@ angular.module("websidduApp").controller "MainCtrl", ($scope, $rootScope, $locat
   ]
 
 
+  # _initKonami = ->
+  #   hotkeys.bindTo($scope)
+  #     .add
+  #       combo: 'up up down down left right left right b a',
+  #       description: '',
+  #       callback: ->
+  #         $.getScript 'http://www.cornify.com/js/cornify.js', ->
+  #           setInterval ->
+  #             cornify_add()
+  #           , 1000
+
   $scope.init = ->
+    # _initKonami()
     # _loadChart()
     #_initTyped()
     #_bindMouseWeel()

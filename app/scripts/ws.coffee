@@ -14,6 +14,22 @@ window.ws = do ->
   _initDelight = ->
     $document.on 'mouseenter mouseleave', 'span.delight', delightBounce
 
+
+
+    # kkeys = []
+    # konami = '38,38,40,40,37,39,37,39,65,65'
+    # $(document).keydown (e) ->
+    #   console.log(e)
+    #   kkeys.push e.keyCode
+    #     console.log("wath..??")
+    #     $(document).unbind 'keydown', arguments.callee
+    #     $.getScript 'http://www.cornify.com/js/cornify.js', ->
+    #       cornify_add()
+    #       $(document).keydown cornify_add
+    #       return
+    #   return
+
+
   delightBounce = (e) ->
     delight = $(this)
     p = delight.find('.egg')
