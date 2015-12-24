@@ -155,6 +155,8 @@ $bp-captions-large: 768px !default;
   max-width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
   min-width: 290px;
+  margin-top: 10px;
+  margin-bottom: 2em;
 
   // border-box everything
   // http://paulirish.com/2012/box-sizing-border-box-ftw/
@@ -199,31 +201,36 @@ $bp-captions-large: 768px !default;
     position: relative;
     cursor: pointer;
 
-    &::before {
-      background: #000 url("/images/play.svg") no-repeat center center;
-      background-size: 72px 72px;
-      bottom: 0;
-      content: '';
-      left: 0;
-      opacity: 0.4;
-      position: absolute;
-      right: 0;
-      top: 0;
-      -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      -moz-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    .player-video-wrapper {
+      position: relative;
+      cursor: pointer;
+      &::before {
+        background: #000 url("/images/play.svg") no-repeat center center;
+        background-size: 72px 72px;
+        bottom: 0;
+        content: '';
+        left: 0;
+        opacity: .4;
+        position: absolute;
+        right: 0;
+        top: 0;
+        -webkit-transition: opacity .2s cubic-bezier(.4, 0, .2, 1);
+        -moz-transition: opacity .2s cubic-bezier(.4, 0, .2, 1);
+        transition: opacity .2s cubic-bezier(.4, 0, .2, 1);
+      }
     }
   }
 
   &.hide-controls {
     .player-controls {
-       display: none;
+      display: none;
     }
   }
 
   &.only-progress {
     .player-controls {
       padding: 0;
+
       .player-controls-left, .player-controls-right {
         display: none;
       }
