@@ -38,7 +38,7 @@
       <h5 class="section-heading">The Problem</h5>
       <div class="section-body">
         <p>
-          Department of Sustainability at University of Washington has a green certification program that certifies the 4500 labs/offices and more than 6000 sorority houses around the campus based on a set of questions.
+          Department of Sustainability at University of Washington has a green certification program that certifies the 4500 labs/offices and more than 6000 sorority and fraternity houses around the campus based on a set of questions.
         </p>
         <p>
           So the problem is to <span class="text-normal"> motivate labs, offices, and sorority houses representatives to take the certification program and make survey taking and creating experience better &amp; non-frustrating.</span> In short, I was hired to improve their current experience of the certification portal.
@@ -82,35 +82,44 @@
         <p>
           Before jumping into the prototyping, I did some user research to get some inputs form the stackholders. I did ~4 interviews with the people who use the product. I didn't use a survey as the user group is small. Next I conducted a focus group to get some inputs from the people who use this products.
         </p>
+        <p>
+          Before jumping into the design I did refer to many form building application like, Google forms, WooForms, Typeforms etc... All these have some thing in common but they are completely different design and work flow. I have to come up with a work flow that is robust, easy and quick to use.
+        </p>
       </div>
     </section>
     <section>
       <h5 class="section-heading">Prototypes</h5>
       <div class="section-body">
-        <div class="gallery small" itemscope itemtype="http://schema.org/ImageGallery">
+        <div class="gallery small shadow" itemscope itemtype="http://schema.org/ImageGallery">
           <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
             <a href="http://assets.websiddu.com/green/pp1.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/pp1.png" itemprop="thumbnail" alt="Image description" data-size="[1000, 773]">
+              <img src="http://assets.websiddu.com/green/pp1.png" itemprop="thumbnail" alt="Form creation page for the admin user" data-size="[1000, 773]">
             </a>
             <figcaption itemprop="caption description">Form creation page for the admin user</figcaption>
           </figure>
           <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
             <a href="http://assets.websiddu.com/green/pp2.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/pp2.png" itemprop="thumbnail" alt="Image description" data-size="[1000, 773]">
+              <img src="http://assets.websiddu.com/green/pp2.png" itemprop="thumbnail" alt="Landing page for the admin user" data-size="[1000, 773]">
             </a>
             <figcaption itemprop="caption description">Landing page for the admin user</figcaption>
           </figure>
           <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
             <a href="http://assets.websiddu.com/green/pp3.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/pp3.png" itemprop="thumbnail" alt="Image description" data-size="[1000, 773]">
+              <img src="http://assets.websiddu.com/green/pp3.png" itemprop="thumbnail" alt="Landing page for the user" data-size="[1000, 773]">
             </a>
             <figcaption itemprop="caption description">Landing page for the user</figcaption>
           </figure>
           <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
             <a href="http://assets.websiddu.com/green/pp4.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/pp4.png" itemprop="thumbnail" alt="Image description" data-size="[1000, 773]">
+              <img src="http://assets.websiddu.com/green/pp4.png" itemprop="thumbnail" alt="Form show page for the user" data-size="[1000, 773]">
             </a>
-            <figcaption itemprop="caption description">Form show page for the users</figcaption>
+            <figcaption itemprop="caption description">Form show page for the user</figcaption>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://assets.websiddu.com/green/pp5.png" itemprop="contentUrl">
+              <img src="http://assets.websiddu.com/green/pp5.png" itemprop="thumbnail" alt="Form show page for the user" data-size="[1000, 773]">
+            </a>
+            <figcaption itemprop="caption description">Form show page for the user</figcaption>
           </figure>
         </div>
       </div>
@@ -120,118 +129,166 @@
       <div class="section-body">
         <p>From the low-fi wire-frames, I build a flow diagram to see the big picture of the total application.</p>
         <div class="gallery shadow">
-          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="http://assets.websiddu.com/green/green_sitemap@2x.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/green_sitemap@2x.png" itemprop="thumbnail" alt="Flow diagram for the administrator view." data-size="[1000, 773]">
-            </a>
-            <figcaption itemprop="caption description">Flow diagram for the administrator view.</figcaption>
-          </figure>
-          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="http://assets.websiddu.com/green/sitemap.png" itemprop="contentUrl">
-              <img style="padding: 10px" src="http://assets.websiddu.com/green/sitemap.png" itemprop="thumbnail" alt="Flow diagram for the administrator view." data-size="[1000, 773]">
-            </a>
-            <figcaption itemprop="caption description">Flow diagram for the administrator view.</figcaption>
-          </figure>
+          <div class="row">
+            <div class="column large-6 small-12">
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="http://assets.websiddu.com/green/green_sitemap@2x.png" itemprop="contentUrl">
+                  <img src="http://assets.websiddu.com/green/green_sitemap@2x.png" itemprop="thumbnail" alt="Flow diagram for the administrator view." data-size="[1000, 773]">
+                </a>
+                <figcaption itemprop="caption description">Flow diagram for the administrator view.</figcaption>
+              </figure>
+            </div>
+            <div class="column large-6 small-12">
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="http://assets.websiddu.com/green/sitemap.png" itemprop="contentUrl">
+                  <img style="padding: 10px" src="http://assets.websiddu.com/green/sitemap.png" itemprop="thumbnail" alt="Flow diagram for the administrator view." data-size="[1000, 773]">
+                </a>
+                <figcaption itemprop="caption description">Flow diagram for the administrator view.</figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section>
       <h5 class="section-heading">Design</h5>
       <div class="section-body">
-        <p>Here are some of the designs </p>
+        <p>Here are some of the designs. I did many version of prototyping and tested initial prototypes. Below are some designs that worked and that didn't work.</p>
+        <div class="gallery shadow">
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://assets.websiddu.com/green/change.png" itemprop="contentUrl">
+              <img src="http://assets.websiddu.com/green/change.png" srcset="http://assets.websiddu.com/green/change.png 2x" itemprop="thumbnail" alt="Designs that worked and didn't work" data-size="[1000, 773]">
+            </a>
+            <figcaption itemprop="caption description">Designs that worked and didn't work</figcaption>
+          </figure>
+        </div>
+        <ol>
+          <li> Unwanted empty space.</li>
+          <li> View icon was not a good idea. Most of the users didn't get it. </li>
+          <li> Give a delete button right on the screen is too dangerous. I have few instances where user clicked on the delete button accidentally.</li>
+          <li> No filtering </li>
+          <li> Navigation is kind of weird. Certificates are kind of burred under settings. </li>
+          <li> Most of the users didn't get that they can type in that field. </li>
+          <li> Same as 6 </li>
+          <li> Again delete was a bad idea</li>
+          <li> No feedback. Users didn't know the difference between disabled vs enabled buttons. And why its happening.</li>
+        </ol>
+        <p>
+          There are many other changes and learnings. I can talk more about these details in a portfolio review interview. Here are some videos and screen shots of the current application.
+        </p>
         <span class="video-caption">
           Creating a form is pretty simple and straightforward. Click to watch below video.
         </span>
-       <div class="player only-progress">
-            <video poster="" crossorigin>
-                <source src="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/create.mp4" type="video/mp4">
-                </source><source src="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/create.webm" type="video/webm">
-                <a href="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/create.mp4">Download</a>
-            </source></video>
+        <div class="player only-progress">
+          <video poster="" crossorigin>
+            <source src="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/create.mp4" type="video/mp4">
+            </source><source src="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/create.webm" type="video/webm">
+            <a href="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/create.mp4">Download</a>
+          </source></video>
         </div>
-
         <span class="video-caption">
           Viewing the reports after submission and download as CSV.
         </span>
         <div class="player only-progress">
-            <video poster="" crossorigin>
-                <source src="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/results.mp4" type="video/mp4">
-                </source><source src="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/results.webm" type="video/webm">
-                <a href="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/results.mp4">Download</a>
-            </source></video>
+          <video poster="" crossorigin>
+            <source src="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/results.mp4" type="video/mp4">
+            </source><source src="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/results.webm" type="video/webm">
+            <a href="https://dl.dropboxusercontent.com/u/139543118/Vidoes/Green/results.mp4">Download</a>
+          </source></video>
         </div>
-
-
-
         <p>I designed many version of this site and finally ended up looking like this. For each and every feature, I design some empty states concepts with can be seen below.</p>
         <p>
-           <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
             <a href="http://assets.websiddu.com/green/empty_states.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/empty_states.png" srcset="http://assets.websiddu.com/green/empty_states.png 2x" itemprop="thumbnail" alt="Empty sate when they are no forms." data-size="[1000, 773]">
+              <img src="http://assets.websiddu.com/green/empty_states.png" srcset="http://assets.websiddu.com/green/empty_states.png 2x" itemprop="thumbnail" alt="Empty states.." data-size="[1000, 773]">
             </a>
-            <figcaption itemprop="caption description">Empty state when they are no certificates.</figcaption>
+            <figcaption itemprop="caption description">Empty states..</figcaption>
           </figure>
         </p>
-
-
-
         <div class="gallery shadow">
-          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="http://assets.websiddu.com/green/s/1.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/s/1.png" itemprop="thumbnail" alt="Login page for the application" data-size="[1000, 773]">
-            </a>
-            <figcaption itemprop="caption description">Login page for the application</figcaption>
-          </figure>
-
-          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="http://assets.websiddu.com/green/s/3.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/s/3.png" itemprop="thumbnail" alt="Form creation page where users will create forms." data-size="[1000, 773]">
-            </a>
-            <figcaption itemprop="caption description">Form creation page where users will create forms. </figcaption>
-          </figure>
-          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="http://assets.websiddu.com/green/s/4.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/s/4.png" itemprop="thumbnail" alt="Form settings and publishing." data-size="[1000, 773]">
-            </a>
-            <figcaption itemprop="caption description">Form settings and publishing. </figcaption>
-          </figure>
-          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="http://assets.websiddu.com/green/s/7.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/s/7.png" itemprop="thumbnail" alt="Certification create page" data-size="[1000, 773]">
-            </a>
-            <figcaption itemprop="caption description">Certification create page </figcaption>
-          </figure>
-<!--           <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="http://assets.websiddu.com/green/s/12.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/s/12.png" itemprop="thumbnail" alt="Form responses page" data-size="[1000, 773]">
-            </a>
-            <figcaption itemprop="caption description">Form responses page </figcaption>
-          </figure> -->
-          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="http://assets.websiddu.com/green/s/15.png" itemprop="contentUrl">
-              <img src="http://assets.websiddu.com/green/s/15.png" itemprop="thumbnail" alt="Once the form is published it will look like this." data-size="[1000, 773]">
-            </a>
-            <figcaption itemprop="caption description">Once the form is published it will look like this.</figcaption>
-          </figure>
+          <div class="row">
+            <div class="large-6 columns small-12">
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="http://assets.websiddu.com/green/s/1.png" itemprop="contentUrl">
+                  <img src="http://assets.websiddu.com/green/s/1.png" itemprop="thumbnail" alt="Login page for the application" data-size="[1000, 773]">
+                </a>
+                <figcaption itemprop="caption description">Login page for the application</figcaption>
+              </figure>
+            </div>
+            <div class="large-6 columns small-12">
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="http://assets.websiddu.com/green/s/3.png" itemprop="contentUrl">
+                  <img src="http://assets.websiddu.com/green/s/3.png" itemprop="thumbnail" alt="Form creation page where users will create forms." data-size="[1000, 773]">
+                </a>
+                <figcaption itemprop="caption description">Form creation page where users will create forms. </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 columns small-12">
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="http://assets.websiddu.com/green/s/4.png" itemprop="contentUrl">
+                  <img src="http://assets.websiddu.com/green/s/4.png" itemprop="thumbnail" alt="Form settings and publishing." data-size="[1000, 773]">
+                </a>
+                <figcaption itemprop="caption description">Form settings and publishing. </figcaption>
+              </figure>
+            </div>
+            <div class="large-6 columns small-12">
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="http://assets.websiddu.com/green/s/12.png" itemprop="contentUrl">
+                  <img src="http://assets.websiddu.com/green/s/12.png" itemprop="thumbnail" alt="Form responses page" data-size="[1000, 773]">
+                </a>
+                <figcaption itemprop="caption description">Form responses page </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 columns small-12">
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="http://assets.websiddu.com/green/s/7.png" itemprop="contentUrl">
+                  <img src="http://assets.websiddu.com/green/s/7.png" itemprop="thumbnail" alt="Certification create page" data-size="[1000, 773]">
+                </a>
+                <figcaption itemprop="caption description">Certification create page </figcaption>
+              </figure>
+            </div>
+            <div class="large-6 columns small-12">
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="http://assets.websiddu.com/green/s/15.png" itemprop="contentUrl">
+                  <img src="http://assets.websiddu.com/green/s/15.png" itemprop="thumbnail" alt="Once the form is published it will look like this." data-size="[1000, 773]">
+                </a>
+                <figcaption itemprop="caption description">Once the form is published it will look like this.</figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
         <p class="alert info muted">**Work is in progress** I will update more content soon!</p>
       </div>
     </section>
     <section>
-      <h5 class="section-heading">Feedback</h5>
+      <h5 class="section-heading">Happy everyone</h5>
       <div class="section-body">
         <p>Some feedback and quotes from the users of the application</p>
         <div class="quote">
-          <span class="icon icon-left-quote"></span>
-          Oh yeah! This is way way better than what we expected!!
+          <span class="icon icon-left-quote"></span> Oh yeah! This is way way better than what we expected!!
           <div class="quoter">
             Claudia Frere-Anderson, Director, UW Sustainability
+          </div>
+        </div>
+        <div class="quote">
+          <span class="icon icon-left-quote"></span> Sid, you did a great job, hiding all the complexity of the application and coming up with a simple, clean and intuitive solution. This makes my life easier.
+          <div class="quoter">
+            Daimon Eklund, Sustainability Communications Coordinator, UW Sustainability
+          </div>
+        </div>
+        <div class="quote">
+          <span class="icon icon-left-quote"></span> I didn't find any issues using this application. Everything was pretty smooth and straightforward.
+          <div class="quoter">
+            Alex Huff, EcoReps Marketing and Outreach Coordinator, UW Sustainability
           </div>
         </div>
         <div class="clear"></div>
       </div>
     </section>
-
     <section>
       <h5 class="section-heading">Learnings</h5>
       <div class="section-body">
@@ -241,6 +298,9 @@
           </li>
           <li>
             The one line forms are confusing for the users. Form field should look like a from field.
+          </li>
+          <li>
+            <span class="text-normal">Empathy.. Empathy.. Empathy..</span>
           </li>
         </ul>
         <div class="clear"></div>
