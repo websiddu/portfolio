@@ -636,6 +636,13 @@ aside .metadata {
 }
 
 .gallery {
+  &.full {
+    margin: 0 -360px 0 -210px;
+    &.padding {
+      margin: 0 -300px 0 -150px;
+    }
+  }
+
   &.small {
     figure {
       width: 30%;
