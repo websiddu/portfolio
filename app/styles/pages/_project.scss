@@ -756,6 +756,15 @@ aside .metadata {
     margin-left: 10px;
   }
 
+  .gallery {
+    &.full {
+      margin: 0;
+      &.padding {
+        margin: 0;
+      }
+    }
+  }
+
   .project-page section .section-heading {
     width: auto;
     float: none;
