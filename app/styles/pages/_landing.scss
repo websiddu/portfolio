@@ -25,6 +25,12 @@ body {
 }
 
 
+.l-d {
+  a:not(.plain) {
+    @include fancylink;
+  }
+}
+
 .l-d-d {
   font-size: 18px;
   font-weight: 200;
@@ -33,7 +39,7 @@ body {
 }
 
 .l-n {
-  font-size: 50px;
+  font-size: 43px;
   font-weight: 200;
   margin: 16px auto 7px;
   min-height: 40px;
@@ -93,7 +99,7 @@ body {
   max-width: 700px;
   line-height: 1.7;
   color: #888;
-  margin-bottom: 13px;
+  margin-bottom: 3px;
 }
 
 .text-normal {

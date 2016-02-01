@@ -49,6 +49,21 @@ $i: 20;
   $i: $i - 1;
 }
 
+@mixin fancylink {
+  font-weight: 200;
+  background-image: linear-gradient($primary-color 0%, $primary-color 100%);
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  background-position: 0 90%;
+  text-shadow: 2px 0 #fff, 2px 0 #fff, 1px 0 #fff, -1px 0 #fff, -2px 0 #fff, -2px 0 #fff;
+
+  &:hover {
+    background-image: linear-gradient($hover-color 0%, $hover-color 100%);
+  }
+}
+
+
+
 .truncate {
   max-width: 100%;
   white-space: nowrap;
@@ -76,6 +91,7 @@ a.standalone {
     color: $primary-color;
   }
 }
+
 
 .styled {
   display: inline-block;

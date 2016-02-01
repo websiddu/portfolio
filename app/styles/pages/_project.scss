@@ -176,16 +176,7 @@ $bq-text-color: #434A54;
   }
 
   a:not(.plain) {
-    font-weight: normal;
-    background-image: linear-gradient($primary-color 0%, $primary-color 100%);
-    background-repeat: repeat-x;
-    background-size: 1px 1px;
-    background-position: 0 90%;
-    text-shadow: 2px 0 #fff, 2px 0 #fff, 1px 0 #fff, -1px 0 #fff, -2px 0 #fff, -2px 0 #fff;
-
-    &:hover {
-      background-image: linear-gradient($hover-color 0%, $hover-color 100%);
-    }
+    @include fancylink;
   }
 
   pre {
@@ -352,6 +343,9 @@ a[target="_blank"]:not(.plain):after {
   line-height: 1;
   transition: font-size 0.3s ease-in;
 
+  font-family: $heading-font-family;
+  font-weight: normal;
+
   //background: linear-gradient(rgba(0, 0, 0, 0), rgba(80, 80, 80, 0.2));
 
   span.nav {
@@ -482,8 +476,9 @@ aside .metadata {
 
 .metadata dt {
   color: #fff;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 0.93333em;
+  font-weight: 200;
+  font-family: $heading-font-family;
   text-transform: uppercase;
 }
 
@@ -502,8 +497,10 @@ aside .metadata {
   color: #666;
   display: inline-block;
   font-weight: 500;
-
-  // font-family: "Alegreya","Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
+  font-family: $heading-font-family;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-top: 4px;
 }
 
 .project-page aside {
