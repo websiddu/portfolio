@@ -1,5 +1,5 @@
 "use strict"
-angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $location, $anchorScroll, ngProgressFactory, constants, Project, $timeout, $route) ->
+angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $location, $anchorScroll, ngProgressFactory, constants, Project, $timeout, $route, hotkeys) ->
 
 
   # colors = ["#76a7fa", "#e46f61", "#4dbfd9", "#fbcb43", "#8cc474", "#bc5679", "#6f85bf", "#f9b256"]
@@ -39,9 +39,19 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
     }
   ]
 
+  initHotkeys = ->
+    hotkeys.bindTo($scope)
+      .add
+        combo: 'c h a t',
+        description: 'Chat with Sid',
+        callback: ->
+          window.open('http://chat.websiddu.com', '_blank');
+
+
   $scope.gotoMain = ->
     $location.hash('start-of-content')
     $anchorScroll()
+
 
   $rootScope.getClass = (path) ->
     if $location.path().substr(0, path.length) is path then "active" else ""
@@ -54,5 +64,7 @@ angular.module("websidduApp").controller "appCtrl", ($scope, $rootScope, $locati
       if $('.top-bar').hasClass('expanded')
         $('.toggle-topbar').click()
     , 10
+
+  initHotkeys()
 
 angular.module("websidduApp").controller "404Ctrl", ($scope, $rootScope, $location) ->
