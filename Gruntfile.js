@@ -144,10 +144,10 @@ module.exports = function(grunt) {
 
     connect: {
       options: {
-        port: 9012,
+        port: 9015,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
-        livereload: 35729,
+        hostname: '0.0.0.0',
+        livereload: 35732,
         middleware: function(connect, options) {
           var optBase = (typeof options.base === 'string') ? [options.base] : options.base;
           return [require('connect-modrewrite')(['!(\\..+)$ / [L]'])].concat(

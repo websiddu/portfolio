@@ -36,7 +36,7 @@ angular.module("websidduApp").controller "projectCtrl", ($scope, Project, projec
     $scope.votes = angular.copy(project.votes)
     _setIsVoted()
     _initHotKeys()
-    _initVideo()
+    # _initVideo()
 
     #$('.section-heading').waypoint('destroy')
 

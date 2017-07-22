@@ -17,14 +17,14 @@
     "es5-shim": "~2.0.8",
     "jquery-mousewheel": "~3.1.12",
     "json3": "~3.2.4",
-    "modernizr": "*",
+    "modernizr": "^3.5.0",
     "ngprogress": "~1.1.2",
     "photoswipe": "~4.1.0",
-    "scrollReveal.js": "~2.1.0",
     "waypoints": "~3.1.1",
     "a11y_kit": "~0.0.4",
-    "angulartics-google-analytics": "*",
-    "angular-tooltips": "~1.0.4"
+    "angulartics-google-analytics": "^0.4.0",
+    "angular-tooltips": "~1.0.4",
+    "plyr": "^2.0.13"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

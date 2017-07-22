@@ -35,7 +35,7 @@ window.ws = do ->
       debug: true
     }
 
-    plyr.setup(options)
+    # plyr.setup(options)
 
 
 
