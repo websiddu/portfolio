@@ -308,6 +308,7 @@ $cursor-text-value: text !default;
     line-height: 1; // Set to $base-line-height to take on browser default of 150%
     position: relative;
     cursor: $cursor-default-value;
+    text-rendering: optimizeLegibility;
   }
 
 a:hover { cursor: $cursor-pointer-value; }

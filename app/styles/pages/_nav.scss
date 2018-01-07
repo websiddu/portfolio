@@ -12,17 +12,23 @@
 .brand {
   text-align: center;
   width: 100%;
+  display: flex;
+  align-items: center;
+  height: 36px;
+
   a {
     display: inline-block;
   }
   img {
-    max-width: 45px;
-    max-height: 90px;
+    max-height: 36px;
     margin: 6px;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
+  }
+  .portfolio-img {
+    height: 20px;
   }
 }
 
@@ -117,11 +123,10 @@ $g2-color2: #656D78;
 
 @media #{$small-max} {
   .top-bar.expanded {
-    background-color: $header-background-c1;
-    @include filter-gradient($header-background-c1, $header-background-c1, horizontal);
+    // background-color: $header-background-c1;
+    // @include filter-gradient($header-background-c1, $header-background-c1, horizontal);
     .top-bar-section ul li > a {
       font-size: 14px;
-      text-transform: uppercase;
     }
     .top-bar-section ul li:hover > a:before {
       top: 5px;

@@ -4,8 +4,13 @@
     <ul class="title-area">
       <li class="name">
         <div class="brand anim">
+          <a href="http://websiddu.com" ng-click="closeNavbarInMobile('/')" title="Homepage">
+            <!-- <ng-include src="'images/brand.svg'"></ng-include> -->
+            <img src="/images/logo.svg"></img>
+          </a>
+          <span class="nav-item is-direction">→</span>
           <a href="/" ng-click="closeNavbarInMobile('/')" title="Homepage">
-            <ng-include src="'images/brand.svg'"></ng-include>
+            <img class="portfolio-img" src="/images/portfolio.svg"></img>
           </a>
         </div>
       </li>
@@ -19,18 +24,25 @@
 <!--         <li ng-class="getClass('/design')">
           <a href="" ng-click="closeNavbarInMobile('/design')">Design</a>
         </li>
- -->        <li ng-class="getClass('/about')">
+         <li ng-class="getClass('/about')">
           <a href="" ng-click="closeNavbarInMobile('/about')">About</a>
         </li>
-        <li>
-          <a href="resources/resume.pdf" target="_blank">Résumé</a>
-        </li>
+-->
         <li>
           <a href="http://blog.websiddu.com">Blog</a>
         </li>
-        <li ng-class="getClass('/contact')">
-          <a href="" ng-click="closeNavbarInMobile('/contact')">Contact</a>
+        <li>
+          <a href="http://photos.websiddu.com">Photos</a>
         </li>
+        <li>
+          <a href="http://cook.websiddu.com">Cook</a>
+        </li>
+        <li>
+          <a href="http://about.websiddu.com">About</a>
+        </li>
+        <!-- <li ng-class="getClass('/contact')">
+          <a href="" ng-click="closeNavbarInMobile('/contact')">About</a>
+        </li> -->
       </ul>
     </section>
   </nav>

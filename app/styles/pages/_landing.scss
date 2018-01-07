@@ -1,11 +1,7 @@
 body {
-  font-weight: 200;
   background-color: $page-background-c1;
-
   @include filter-gradient($page-background-c1, $page-background-c2, horizontal);
-
   background-image: linear-gradient(left, $page-background-c1 0%, $page-background-c2 100%);
-  letter-spacing: -0.01em;
 }
 
 .logo-back {

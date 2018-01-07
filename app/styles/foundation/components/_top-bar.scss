@@ -8,7 +8,7 @@ $topbar-bg-color: #fff !default;
 $topbar-bg: $topbar-bg-color !default;
 
 // Height and margin
-$topbar-height: 65px !default;
+$topbar-height: 55px !default;
 $topbar-margin-bottom: 0 !default;
 
 // Control Input height for top bar
@@ -129,6 +129,9 @@ $g2-color2: $header-background-c2;
       height: $topbar-height;
       margin: 0;
       font-size: $em-base;
+      display: flex;
+      align-items: center;
+
       h1 {
         line-height: $topbar-height;
         font-size: $topbar-title-font-size;
@@ -149,7 +152,7 @@ $g2-color2: $header-background-c2;
       top: 0;
       a {
         color: $topbar-link-color;
-        text-transform: $topbar-menu-link-transform;
+        // text-transform: $topbar-menu-link-transform;
         font-size: $topbar-menu-link-font-size;
         font-weight: $topbar-menu-link-weight;
         position: relative;
@@ -240,7 +243,7 @@ $g2-color2: $header-background-c2;
       & > a {
         display: block;
         width: 100%;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         color: $topbar-link-color;
         padding: 12px 0 12px 0;
         padding-#{$default-float}: $topbar-height / 3;
@@ -311,7 +314,7 @@ $g2-color2: $header-background-c2;
           right: 10px;
           bottom: -2px;
           border-radius: 5px;
-          border: 1px #555 solid;
+          border: 1px #4A89DC solid;
           z-index: 1;
         }
       }
@@ -539,13 +542,13 @@ $g2-color2: $header-background-c2;
       ul li {
         // Apply the hover link color when it has that class
         &:hover > a {
-          background: $topbar-link-bg-hover;
-          color: $topbar-link-color-hover;
+          // background: $topbar-link-bg-hover;
+          // color: $topbar-link-color-hover;
         }
         // Apply the active link color when it has that class
         &:active > a {
-          background: $topbar-link-bg-active;
-          color: $topbar-link-color-active;
+          // background: $topbar-link-bg-active;
+          // color: $topbar-link-color-active;
         }
       }
       .has-dropdown {
