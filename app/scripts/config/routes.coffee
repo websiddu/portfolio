@@ -9,14 +9,18 @@ websidduApp.config(($routeProvider, $locationProvider) ->
       projects: ($q, Project, $http) ->
         deferred = $q.defer()
 
-        Project.query((data) ->
-          deferred.resolve data
-        , (err) ->
-          #Fail safe :)
-          $http.get 'data/projects.json'
-            .success (result) ->
-              deferred.resolve result
-        )
+        # Project.query((data) ->
+        #   deferred.resolve data
+        # , (err) ->
+        #   #Fail safe :)
+        #   $http.get 'data/projects.json'
+        #     .success (result) ->
+        #       deferred.resolve result
+        # )
+
+        $http.get 'data/projects.json'
+          .success (result) ->
+            deferred.resolve result
 
         return deferred.promise
   )
@@ -33,14 +37,17 @@ websidduApp.config(($routeProvider, $locationProvider) ->
       projects: ($q, Project, $http) ->
         deferred = $q.defer()
 
-        Project.query((data) ->
-          deferred.resolve data
-        , (err) ->
-          #Fail safe :)
-          $http.get 'data/projects.json'
-            .success (result) ->
-              deferred.resolve result
-        )
+        # Project.query((data) ->
+        #   deferred.resolve data
+        # , (err) ->
+        #   #Fail safe :)
+        #   $http.get 'data/projects.json'
+        #     .success (result) ->
+        #       deferred.resolve result
+        # )
+        $http.get 'data/projects.json'
+          .success (result) ->
+            deferred.resolve result
 
         return deferred.promise
 
@@ -52,15 +59,20 @@ websidduApp.config(($routeProvider, $locationProvider) ->
     resolve:
       project: ($q, $timeout, Project, $route, $http) ->
         deferred = $q.defer()
-        Project.get(
-          id: $route.current.params.projectId
-          , (data) ->
-              deferred.resolve data
-          , (err) ->
-            $http.get 'data/projects/' + $route.current.params.projectId + '.json'
-              .success (result) ->
-                deferred.resolve result
-          )
+        # Project.get(
+        #   id: $route.current.params.projectId
+        #   , (data) ->
+        #       deferred.resolve data
+        #   , (err) ->
+        #     $http.get 'data/projects/' + $route.current.params.projectId + '.json'
+        #       .success (result) ->
+        #         deferred.resolve result
+        #   )
+
+        $http.get 'data/projects/' + $route.current.params.projectId + '.json'
+          .success (result) ->
+            deferred.resolve result
+
         deferred.promise
   )
   .when("/design",
